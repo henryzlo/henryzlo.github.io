@@ -1,0 +1,101 @@
+\documentclass{article}
+\usepackage{amsthm}
+\usepackage{amsmath}
+
+\newtheorem{problem}{Problem}
+
+\begin{document}
+\title{Programming Assignment 4}
+\author{Henry Z. Lo}
+\date{Due: Tuesday, July 15 at midnight}
+\maketitle
+
+\section{Goals}
+This assignment will help you with the following:
+
+\begin{enumerate}
+\item Construct spanning trees for a graph-like structure.
+\item Navigate a graph-like structure with traversal algorithms.
+\end{enumerate}
+
+\section{Overview}
+You will first write a spanning tree algorithm for constructing a maze.  Then, you will use depth-first search to guide a traveller from one corner of the maze to another.  
+
+You will touch \texttt{Maze.java} and \texttt{Traveller.java}.
+
+In \texttt{Maze.java}, you will need to implement the randomized Prim's algorithm.  The algorithm is very similar to Prim's algorithm, but there are several modifications needed.  The general idea:
+
+\begin{enumerate}
+\item Keep a collection of visited nodes, unvisited nodes, and candidate walls.
+\item Pick a random node.  Add it to the visited nodes, add its walls to the set of candidate walls.
+\item Every other node is unvisited.
+\item While there are unvisited nodes, do the following:
+\item Pick a candidate wall randomly.
+\item If it connects a visited node and unvisited node, mark the unvisited node as visited, add the wall to the edge set, and add the node's walls to the set.
+\item Otherwise remove the wall from the candidate set.
+\end{enumerate}
+
+Initially, the maze consists of a set of nodes, but no edges.  You will need to implement randomized Prim's in the \texttt{makeEdges()} function to generate the walls of the maze (edges of the graph). 
+
+After doing this, implement the \texttt{travel()} function in the \texttt{Traveller} class.  Use depth-first search to travel from the top left node to the bottom right node.  Note that depending on where the traveler is, there is a limited set of legal moves.
+
+Some functions of interest in \texttt{Maze}:
+\begin{itemize}
+\item \texttt{print()}: print out the entire \texttt{Maze}, showing all nodes, walls, and the position of the traveller, if marked.
+\item \texttt{getNode(int, int)}, \texttt{hasEdge(Node, Node)}: use these functions rather than manipulating internal representation of the graph directly.
+\item \texttt{addEdge(Node, Node)}: creates an edge (different from a wall!) between two nodes and stores it in the \texttt{Maze}.
+\item \texttt{go(Node)}: move the traveller if the node is valid, throws exception otherwise.
+\item \texttt{currentNode()}: returns current marked node (where the traveller is).
+\item \texttt{getMoves()}: returns an iterator for the nodes next to the current node.
+\item \texttt{atEnd()}: returns true if the traveller is at the bottom right corner.
+\end{itemize}
+
+There are also the subclasses \texttt{Node} and \texttt{Wall}, which have the following useful functions:
+\begin{itemize}
+\item \texttt{print()}: print out the entire \texttt{Maze}, showing all nodes, walls, and the position of the traveller, if marked.
+\item \texttt{Wall.getStartNode()}, \texttt{Wall.getEndNode()}: returns the \texttt{Node} at the start and end of the wall, respectively.
+\item \texttt{Node.walls()}: returns a \texttt{Collection} of \texttt{Wall} objects from this \texttt{Node}.
+\end{itemize}
+
+\section{Instructions}
+\begin{enumerate}
+\item Implement randomized Prim's algorithm in \texttt{Maze.makeEdges()} to create the walls of the maze. 
+\begin{itemize}
+\item Randomly select the starting position, and randomly select walls after that. 
+\item For every valid wall you select, add an edge to the \texttt{Maze} consisting of its connected nodes. 
+\item Use \texttt{print()} to visualize the state of your \texttt{Maze}.
+\item The resulting spanning tree should cover every node in the maze and not contain any cycles.
+\end{itemize}
+\item Implement depth-first search in \texttt{Traveller.travel()} to traverse the maze.
+\begin{itemize}
+\item Use \texttt{getMoves()} to get the possible moves. 
+\item Call \texttt{go()} to move the traveller. 
+\item You will need to move backwards sometimes, or \texttt{go()} will throw an exception.
+\item Be sure not to travel down the same path multiple times.
+\item Use \texttt{print()} to visualize the movement of your \texttt{Traveller}.
+\item The result should be a traversal from the top left to the bottom right.
+\end{itemize}
+\item Classes must compile.
+\item Put all deliverables in your cs310/pa4 folder.  Deliverables include:
+\begin{itemize}
+\item Maze.java
+\item Traveller.java
+\item memo.txt
+\end{itemize}
+\item Answer the questions in section 4, put answers in memo.txt.
+\end{enumerate}
+
+\section{Questions}
+\begin{enumerate}
+\item Pick 2 sizes of \texttt{Maze}s.  Construct 2 \texttt{Maze}s, one of each size, for 4 in total.  Show their construction step by step.
+\item Show the action of the traveller for two of these \texttt{Maze}s.
+\item It is possible to use breadth-first search for your traveller, but why is this a bad idea?
+\item How can we apply Prim's algorithm to generate a maze instead of the randomized algorithm used here?
+\item Describe how you could use breadth-first and depth-first traversal to \textit{construct} a maze.
+\end{enumerate}
+
+\section{Extra Credit}
+You can make the traveller much more efficient by using the distance from the bottom right as a heuristic.  In this case, instead of picking the next move randomly, you should pick the move which has the least heuristic value.  For the heuristic, you can use either the Manhattan distance between the node and the destination, or the Euclidean distance.
+
+If you do this correctly (you must use a heuristic function), you will get extra points.  Traversal should be much faster.  Email me if you have any questions.
+\end{document}

@@ -1,0 +1,2263 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 12">
+<meta name=Originator content="Microsoft Word 12">
+<link rel=File-List href="class20_files/filelist.xml">
+<title>Class 20 Backtracking and Dynamic Programming</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Elizabeth O'Neil</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Betty O'Neil</o:LastAuthor>
+  <o:Revision>30</o:Revision>
+  <o:TotalTime>4773</o:TotalTime>
+  <o:LastPrinted>2010-04-12T16:13:00Z</o:LastPrinted>
+  <o:Created>2009-04-15T14:28:00Z</o:Created>
+  <o:LastSaved>2012-04-06T15:15:00Z</o:LastSaved>
+  <o:Pages>3</o:Pages>
+  <o:Words>2661</o:Words>
+  <o:Characters>15172</o:Characters>
+  <o:Company>University of Massachusetts, Boston</o:Company>
+  <o:Lines>126</o:Lines>
+  <o:Paragraphs>35</o:Paragraphs>
+  <o:CharactersWithSpaces>17798</o:CharactersWithSpaces>
+  <o:Version>12.00</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<link rel=themeData href="class20_files/themedata.thmx">
+<link rel=colorSchemeMapping href="class20_files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>125</w:Zoom>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"New York";
+	panose-1:2 4 5 3 6 5 6 2 3 4;
+	mso-font-alt:"Times New Roman";
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:3 0 0 0 1 0;}
+@font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-alt:"\FF2D\FF33 \660E\671D";
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1107305727 0 0 415 0;}
+@font-face
+	{font-family:"\@MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-520092929 1073806591 9 0 415 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"New York","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"New York";}
+h3
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 3 Char";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	text-autospace:none;
+	font-size:13.0pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+p.MsoDate, li.MsoDate, div.MsoDate
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"Date Char";
+	mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"New York","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"New York";}
+a:link, span.MsoHyperlink
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+code
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+pre
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"HTML Preformatted Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"MS Mincho";
+	color:black;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 3";
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;
+	font-weight:bold;}
+span.HTMLPreformattedChar
+	{mso-style-name:"HTML Preformatted Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"HTML Preformatted";
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	mso-bidi-font-family:"New York";}
+span.DateChar
+	{mso-style-name:"Date Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:Date;
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"New York","serif";
+	mso-ascii-font-family:"New York";
+	mso-hansi-font-family:"New York";
+	mso-bidi-font-family:"New York";}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:539784398;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1780845572 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l0:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1
+	{mso-list-id:1151560833;
+	mso-list-template-ids:-1034631870;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+table.MsoTableGrid
+	{mso-style-name:"Table Grid";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-priority:59;
+	mso-style-unhide:no;
+	border:solid windowtext 1.0pt;
+	mso-border-alt:solid windowtext .5pt;
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-border-insideh:.5pt solid windowtext;
+	mso-border-insidev:.5pt solid windowtext;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="7170"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Class 20 Prefix
+codes, also Unicode and other important character encodings (<a
+href="CharEncodings.html">handout on character encodings</a>)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Recall from last
+class:<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>By itself,
+prefix just means some initial substring. For example 110 is a prefix of 11011.<span
+style='mso-spacerun:yes'>  </span>We can underline the matching bits: <u>110</u>11.<span
+style='mso-spacerun:yes'>   </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>A set of <b
+style='mso-bidi-font-weight:normal'>prefix codes</b> has the property that no
+code (a bitstring) is the prefix of another code.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>With a set of
+prefix codes, if you match up the initial bits of the compressed data with all
+the bits of a certain code, it can only be that code.<span
+style='mso-spacerun:yes'>  </span>Then you move to the next bits, etc.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>For example {00,
+10, and 110} is a set of prefix codes, because all three pass the test:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Binary trees for
+prefix codes: go left for 0, right for 1, as you go down the tree. The leaves
+give the codes.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>For example:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>               </span>/\<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>             </span>/\<span style='mso-spacerun:yes'> 
+</span>/\<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>                </span>/\ <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>               </span>/\ <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>              </span>/\<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>     </span></span><span style='font-size:9.0pt;
+font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>This defines 00
+and 01 from the leaves at the left, and 10000 and 10001 for the leaves at the
+bottom, and 10001, 1001, 101, and 11 for the leaves going up the right-hand
+side.<span style='mso-spacerun:yes'>  </span>Now we have some short codes for
+frequent symbols, and some longer codes for less frequent symbols. No bitstring
+is a prefix of another, because each bitstring specifies a different path, to a
+different leaf.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Huffman’s
+algorithm takes information on the frequency of each symbol, and invents a code
+that is optimal for this frequency distribution. It works with the individual
+frequencies, finding the lowest two frequencies, combines their symbols into
+new meta-character with frequency the sum of the two individual frequencies,
+and then repeats the process until everything is turned into one
+meta-character. Each meta-character represents a binary tree with symbols at
+the leaves, and the combination is taking two binary trees and making them into
+one bigger binary tree by adding a node at the top. Thus this process is
+defining a binary tree with the symbols at the leaves. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Why is Huffman’s
+algorithm optimal?<span style='mso-spacerun:yes'>  </span>(Not covered in class,
+and you are not responsible for this proof)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'>Consider the optimal coding scheme for n characters.<span
+style='mso-spacerun:yes'>  </span>It will have a longest code, corresponding to
+the lightest char, or we could rearrange and do better.<span
+style='mso-spacerun:yes'>   </span>Further, it will have at least two codes of
+this longest length, or we could shorten the singleton longest one by trimming
+off the last (unneeded) bit.<span style='mso-spacerun:yes'>  </span>The two
+chars of lightest weight will be of this particular longest length, or we could
+rearrange and do better. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'>Thus an optimal coding scheme has its two lightest-weight chars with
+codes of the same length, the longest code length.<span
+style='mso-spacerun:yes'>  </span>If there are more than two codes of this
+length, they are interchangeable, so get the two lightest-weight ones paired up
+to share all but the last bit of their codes.<span style='mso-spacerun:yes'> 
+</span>Then merge the two characters into one new imaginary char with summed
+weight.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'>The optimal coding scheme for this new char set will yield the optimal
+coding scheme for the original set (by splitting back). If it didn’t, there
+would be a better scheme for the original set, but then we rearrange it to get
+the two lightest-weight symbols together, and combine them to devise a better
+scheme for the new char set, i.e., better than the optimal scheme, as we will
+show now. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'>The change to the total bits from doing a combine of the two lightest
+symbols is –(sum of their 2 frequencies), while the change from doing a split
+is +(sum of their 2 frequencies).<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><span style='mso-spacerun:yes'>     </span>totalbits(“new better scheme
+for new char set”)<span style='mso-spacerun:yes'>    </span>// make a scheme
+for new set by combining<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><span style='mso-spacerun:yes'>     </span>= totalbits(“better scheme for
+orig. charset”) –(sum of 2 freqs)<span style='mso-spacerun:yes'>    </span>//
+using conjectured better scheme<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><span style='mso-spacerun:yes'>    </span>&lt; totalbits(“proposed scheme
+for orig. charset”) – (sum of 2 freqs)<span style='mso-spacerun:yes'> 
+</span>// meaning of better<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><span style='mso-spacerun:yes'>      </span>= totalbits(“optimal scheme
+for new charset”) + (sum of 2 freqs) – (sum of 2 freqs) // how proposed scheme
+works<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><span style='mso-spacerun:yes'>     </span>= totalbits(“optimal scheme
+for new charset”)<span style='mso-spacerun:yes'>    </span>//simplify<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'>So first to last contradicts optimality of “optimal scheme for new
+charset”. So the conjectured scheme can’t exist and we have the best scheme the
+Huffman way.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'>Similarly, we keep coalescing until the problem is trivial, and then
+expand back.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Alphabetic
+Trees, a Digression (ignore if you want)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'>Alphabetic Trees are binary trees with symbols at the leaves in their
+natural order.<span style='mso-spacerun:yes'>  </span>For characters, this is
+the ASCII order.<span style='mso-spacerun:yes'>  </span>For our example, the
+order is (nl, sp 0 1 2 3 4 5 6 7 8 9).<span style='mso-spacerun:yes'> 
+</span>It’s easy to rearrange the first prefix tree so that the leaves are in
+that order:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>       </span>/\<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>    </span>/\<span style='mso-spacerun:yes'>   
+</span>/\<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span>sp nl /\<span style='mso-spacerun:yes'>  
+</span>/\ <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>       </span>0 1 /\<span style='mso-spacerun:yes'>  
+</span>/\ <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>          </span>/\ /\ /\ /\<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>   </span><span style='mso-spacerun:yes'>      </span></span><span
+style='font-size:9.0pt;font-family:"Courier New"'>2 3 4 5 6 7 8 9<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'>We can also rearrange the optimal Huffman tree for this
+distribution.<span style='mso-spacerun:yes'>  </span>However, the Huffman tree
+in the book on pg. 425 can’t be rearranged into ASCII order on the leaves
+without changing some code length. The trouble is that s and nl are neatly
+paired by frequency, but are in very different places in the ASCII order.<span
+style='mso-spacerun:yes'>  </span>Similarly at the other end with i and sp.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'>One of the nice properties of coding using an alphabetic prefix code is
+that the string order is maintained across compression.<span
+style='mso-spacerun:yes'>  </span>Thus if strings satisfy x &lt; y in
+uncompressed form, and x’ and y’ are the corresponding compressed strings, then
+x’ &lt; y’ in compressed form.<span style='mso-spacerun:yes'>  </span>You can
+sort compressed strings and then uncompress them to sorted order.<span
+style='mso-spacerun:yes'>  </span>The compressed sort will go faster, but I
+don’t promise it can pay for the compression and decompression!<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Implementation
+of Huffman’s Algorithm in File Compression (for fax or other comm)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'>The basic idea is that we can take a document, build a Huffman tree for
+its char frequencies, then compress its contents using the resulting
+codes.<span style='mso-spacerun:yes'>  </span>We send the compressed document
+and the char frequency table to the other end, where the same Huffman tree is
+built and used to decompress the compressed data.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'>So there are three big parts to the implementation:<o:p></o:p></span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='margin-right:10.5pt;mso-list:l0 level1 lfo3;
+     tab-stops:list .5in left 477.0pt'><span style='font-size:10.0pt;
+     font-family:"Times New Roman","serif";mso-bidi-font-weight:bold'>Building
+     a Huffman tree from the document, based on its char frequencies.<o:p></o:p></span></li>
+ <li class=MsoNormal style='margin-right:10.5pt;mso-list:l0 level1 lfo3;
+     tab-stops:list .5in left 477.0pt'><span style='font-size:10.0pt;
+     font-family:"Times New Roman","serif";mso-bidi-font-weight:bold'>Compressing
+     the document using the Huffman tree.<o:p></o:p></span></li>
+ <li class=MsoNormal style='margin-right:10.5pt;mso-list:l0 level1 lfo3;
+     tab-stops:list .5in left 477.0pt'><span style='font-size:10.0pt;
+     font-family:"Times New Roman","serif";mso-bidi-font-weight:bold'>Decompressing
+     the document using the Huffman tree.<o:p></o:p></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Fast Decoding
+using array lookup (not in Weiss)</span></b><span style='font-size:10.0pt;
+font-family:"Times New Roman","serif";mso-bidi-font-weight:bold'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'>Consider our final example above:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:191;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>Char<o:p></o:p></span></p>
+  </td>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>Code<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>sp<o:p></o:p></span></p>
+  </td>
+  <td width=163 valign=top style='width:122.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>00<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>nl<o:p></o:p></span></p>
+  </td>
+  <td width=163 valign=top style='width:122.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>11<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>0<o:p></o:p></span></p>
+  </td>
+  <td width=163 valign=top style='width:122.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>101<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>1<o:p></o:p></span></p>
+  </td>
+  <td width=163 valign=top style='width:122.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>0101<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>2<o:p></o:p></span></p>
+  </td>
+  <td width=163 valign=top style='width:122.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>0110<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>3<o:p></o:p></span></p>
+  </td>
+  <td width=163 valign=top style='width:122.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>1001<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>4<o:p></o:p></span></p>
+  </td>
+  <td width=163 valign=top style='width:122.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>01000<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>5<o:p></o:p></span></p>
+  </td>
+  <td width=163 valign=top style='width:122.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>01001<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9'>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>6<o:p></o:p></span></p>
+  </td>
+  <td width=163 valign=top style='width:122.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>01110<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10'>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>7<o:p></o:p></span></p>
+  </td>
+  <td width=163 valign=top style='width:122.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>01111<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11'>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>8<o:p></o:p></span></p>
+  </td>
+  <td width=163 valign=top style='width:122.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>10000<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12;mso-yfti-lastrow:yes'>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>9<o:p></o:p></span></p>
+  </td>
+  <td width=163 valign=top style='width:122.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>10001<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'>Sort it by code value, as bitstrings, or just read off the leaves of the
+binary tree from left to right:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:191;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>Char<o:p></o:p></span></p>
+  </td>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>Code<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>sp<o:p></o:p></span></p>
+  </td>
+  <td width=163 valign=top style='width:122.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>00<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>4<o:p></o:p></span></p>
+  </td>
+  <td width=163 valign=top style='width:122.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>01000<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>5<o:p></o:p></span></p>
+  </td>
+  <td width=163 valign=top style='width:122.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>01001<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>1<o:p></o:p></span></p>
+  </td>
+  <td width=163 valign=top style='width:122.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>0101<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>2<o:p></o:p></span></p>
+  </td>
+  <td width=163 valign=top style='width:122.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>0110<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>6<o:p></o:p></span></p>
+  </td>
+  <td width=163 valign=top style='width:122.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>01110<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>7<o:p></o:p></span></p>
+  </td>
+  <td width=163 valign=top style='width:122.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>01111<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>8<o:p></o:p></span></p>
+  </td>
+  <td width=163 valign=top style='width:122.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>10000<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9'>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>9<o:p></o:p></span></p>
+  </td>
+  <td width=163 valign=top style='width:122.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>10001<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10'>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>3<o:p></o:p></span></p>
+  </td>
+  <td width=163 valign=top style='width:122.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>1001<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11'>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>0<o:p></o:p></span></p>
+  </td>
+  <td width=163 valign=top style='width:122.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>101<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12;mso-yfti-lastrow:yes'>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>nl<o:p></o:p></span></p>
+  </td>
+  <td width=163 valign=top style='width:122.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>11<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'>Add “don’t-care bits” to fill out a byte:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:191;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>Char<o:p></o:p></span></p>
+  </td>
+  <td width=208 valign=top style='width:156.0pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>Code<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>sp<o:p></o:p></span></p>
+  </td>
+  <td width=208 valign=top style='width:156.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>00xxxxxx (64 patterns)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>4<o:p></o:p></span></p>
+  </td>
+  <td width=208 valign=top style='width:156.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>01000xxx<span
+  style='mso-spacerun:yes'>  </span>(8 patterns)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>5<o:p></o:p></span></p>
+  </td>
+  <td width=208 valign=top style='width:156.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>01001xxx<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>1<o:p></o:p></span></p>
+  </td>
+  <td width=208 valign=top style='width:156.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>0101xxxx<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>2<o:p></o:p></span></p>
+  </td>
+  <td width=208 valign=top style='width:156.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>0110xxxx<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>6<o:p></o:p></span></p>
+  </td>
+  <td width=208 valign=top style='width:156.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>01110xxx<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>7<o:p></o:p></span></p>
+  </td>
+  <td width=208 valign=top style='width:156.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>01111xxx<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>8<o:p></o:p></span></p>
+  </td>
+  <td width=208 valign=top style='width:156.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>10000xxx<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9'>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>9<o:p></o:p></span></p>
+  </td>
+  <td width=208 valign=top style='width:156.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>10001xxx<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10'>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>3<o:p></o:p></span></p>
+  </td>
+  <td width=208 valign=top style='width:156.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>1001xxxx<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11'>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>0<o:p></o:p></span></p>
+  </td>
+  <td width=208 valign=top style='width:156.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>101xxxxx<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12;mso-yfti-lastrow:yes'>
+  <td width=163 valign=top style='width:122.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>nl<o:p></o:p></span></p>
+  </td>
+  <td width=208 valign=top style='width:156.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>11xxxxxx<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'>This means that a coded string that starts with a byte of form 00
+followed by anything has sp as its first char, or if it starts with 01000
+followed by anything it starts with a ‘4’, etc.<span style='mso-spacerun:yes'> 
+</span>Note that all 8-bit bit patterns are covered here, a total of 256
+patterns.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'>Set up an array of 256 bytes, one for each bit pattern, showing char
+being decoded:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:480;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=137 valign=top style='width:103.1pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+  style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+  bold'>Bit pattern=index<o:p></o:p></span></p>
+  </td>
+  <td width=90 valign=top style='width:67.2pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+  style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+  bold'>char<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=137 valign=top style='width:103.1pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+  style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+  bold'>00 000000<o:p></o:p></span></p>
+  </td>
+  <td width=90 valign=top style='width:67.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+  style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+  bold'>sp<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=137 valign=top style='width:103.1pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+  style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+  bold'>00 000001<o:p></o:p></span></p>
+  </td>
+  <td width=90 valign=top style='width:67.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+  style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+  bold'>sp<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=137 valign=top style='width:103.1pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+  style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+  bold'>… (64 cases here)<o:p></o:p></span></p>
+  </td>
+  <td width=90 valign=top style='width:67.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+  style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+  bold'>sp<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width=137 valign=top style='width:103.1pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+  style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+  bold'>00 111111<o:p></o:p></span></p>
+  </td>
+  <td width=90 valign=top style='width:67.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+  style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+  bold'>sp<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td width=137 valign=top style='width:103.1pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+  style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+  bold'>01000 000<o:p></o:p></span></p>
+  </td>
+  <td width=90 valign=top style='width:67.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+  style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+  bold'>4<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td width=137 valign=top style='width:103.1pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+  style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+  bold'>… (8 cases here)<o:p></o:p></span></p>
+  </td>
+  <td width=90 valign=top style='width:67.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+  style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+  bold'>4<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td width=137 valign=top style='width:103.1pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+  style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+  bold'>01000 111<o:p></o:p></span></p>
+  </td>
+  <td width=90 valign=top style='width:67.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+  style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+  bold'>4<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td width=137 valign=top style='width:103.1pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+  style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+  bold'>01001 000<o:p></o:p></span></p>
+  </td>
+  <td width=90 valign=top style='width:67.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+  style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+  bold'>5<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9'>
+  <td width=137 valign=top style='width:103.1pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+  style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+  bold'>…<o:p></o:p></span></p>
+  </td>
+  <td width=90 valign=top style='width:67.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+  style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+  bold'>5<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10'>
+  <td width=137 valign=top style='width:103.1pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+  style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+  bold'>01001 111<o:p></o:p></span></p>
+  </td>
+  <td width=90 valign=top style='width:67.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+  style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+  bold'>5<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11;mso-yfti-lastrow:yes'>
+  <td width=137 valign=top style='width:103.1pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+  style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+  bold'>and so on…<o:p></o:p></span></p>
+  </td>
+  <td width=90 valign=top style='width:67.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+  style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+  bold'><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<h3><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";font-weight:normal;mso-bidi-font-weight:
+bold'>Suppose this is array “byte decode[] = new byte [256];”, filled in as
+above.<span style='mso-spacerun:yes'>  </span>Then if x is the first byte (8 bits)
+of the bitstring, decode[x] is the first ASCII<span style='mso-spacerun:yes'> 
+</span>char in the string.<o:p></o:p></span></h3>
+
+<h3><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";font-weight:normal;mso-bidi-font-weight:
+bold'>Once you know the char, it’s easy to look up its bit length (in another
+array, or squeezed into the values of the first array) and shift off the
+decoded bits, ready to interpret the first char of the remaining bits. <o:p></o:p></span></h3>
+
+<h3><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";font-weight:normal;mso-bidi-font-weight:
+bold'>This approach is really fast!<span style='mso-spacerun:yes'>  </span>In
+today’s processors, you can do any processing <i style='mso-bidi-font-style:
+normal'>in</i> the CPU in a few nanoseconds.<span style='mso-spacerun:yes'> 
+</span>The cache can hold the lookup table, so the lookups here are done
+without memory reference once it gets going.<span style='mso-spacerun:yes'> 
+</span>The speed of the whole process will be limited by the access to the
+coded data in memory and writing the results in memory.<span
+style='mso-spacerun:yes'>  </span><o:p></o:p></span></h3>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Implementation
+code in Weiss for Huffman’s algorithm</span></b><span style='font-size:10.0pt;
+font-family:"Times New Roman","serif";mso-bidi-font-weight:bold'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'>To build the Huffman tree, we need the frequencies of the chars, so first
+the document is read and a histogram made, using class CharCounter, pg.
+483(429).<span style='mso-spacerun:yes'>  </span>These frequencies drive the
+Huffman tree building, out of binary tree nodes HuffNode, pg. 484(430).<span
+style='mso-spacerun:yes'>  </span>Note the comparison by weight.<span
+style='mso-spacerun:yes'>  </span>Then these HuffNodes become elements of a PQ
+(pg. 489(435)), and deleteMin (pq.remove()), provides the lowest weight one,
+twice, to get the nodes to stick together and put back in the PQ.<span
+style='mso-spacerun:yes'>  </span>Note how the tree is knitted together by
+setting appropriate left, right and parent refs in the HuffNodes. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'>Here’s a quick example of 3 symbols: A with frequency 10, B with
+frequency 20, and C with frequency 40.<span style='mso-spacerun:yes'> 
+</span>First three HuffNodes are constructed with these weights (values) and
+put in the PQ, pg. 489(435).<span style='mso-spacerun:yes'>  </span>Then two
+are deleteMin’d the 10 and 20, and a new HuffNode is created to hold the
+combined weight of 30, with left and right refs to the 10 and 20-weight nodes,
+each of which has a parent ref back to the new 30-weight node.<span
+style='mso-spacerun:yes'>  </span>The 30-weight node is put in the PQ.<span
+style='mso-spacerun:yes'>  </span>Then the 30 and 40-weight nodes are deleteMin’d
+from the PQ, and a new 70-weight HuffNode is created and knitted in, making the
+final binary tree of 5 nodes.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'>The code that handles the binary encoding and decoding is not that
+efficient.<span style='mso-spacerun:yes'>  </span>Here are some notes on it,
+but you can ignore it if you want.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:477.0pt'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>[Begin optional
+notes, not covered in class]<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'>The histogram is output by writeEncodingTable, and read back in later
+(for decompression) by readEncodingTable, pg.488(434).<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'>To encode a char, getCode on pg. 486(432) is called.<span
+style='mso-spacerun:yes'>  </span>The char is used to locate the Huffman node
+at the bottom of the tree, and then the code climbs the Huffman tree,
+prepending ‘0’ or ‘1’ at each edge, to make a string of<span
+style='mso-spacerun:yes'>  </span>text 0’s and 1’s representing the binary
+code.<span style='mso-spacerun:yes'>  </span>At the end, it is converted to an
+array of ints 0 or 1.<span style='mso-spacerun:yes'>  </span>This array of ints
+gets passed to writeBits, pg. 482(428), which sets bits in bytes and writes out
+a full byte every 8 bits.<span style='mso-spacerun:yes'>  </span>This code is
+general purpose, so consider using it if you need to write bits.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'>To decode a char, some bits are turned into a string of text 0s and 1s,
+and getChar, pg 487(433) is called to interpret them.<span
+style='mso-spacerun:yes'>  </span>The bits (if enough of them) guide the path
+down from the root of the Huffman tree to some leaf, where the char resides.<span
+style='mso-spacerun:yes'>  </span>If one try doesn’t work, another is done with
+more bits.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'>The compression-loop code is on pg. 491(437), and its class subclasses
+OutputStream.<span style='mso-spacerun:yes'>  </span>We’re not covering the
+details of layered i/o, so just look at the code inside close() as the
+top-level code for compression, given the input data in a byte array filled on
+the first line. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;tab-stops:477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'>The uncompression-loop code is on pg. 492(438) (and 494(440), its
+caller.)<span style='mso-spacerun:yes'>  </span>It uses a string of 0/1 digits
+to hold the binary input data, with string appends for ever bit.<span
+style='mso-spacerun:yes'>  </span>This is inefficient.<span
+style='mso-spacerun:yes'>  </span>We have discussed the “fast decoding” trick, not
+used here.<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>[End optional notes]<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:9.0pt;
+font-family:"Times New Roman","serif";mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-bidi-font-weight:bold'>Here we looked at the <b><a href="CharEncodings.html">handout
+on character encodings</a></b>.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-bidi-font-weight:bold'>We see that the set {0, 110, 1110, and 11110} is a
+prefix code set, and we can add the trailer-byte marking 10 to this and see that
+{0, 110, 1110, and 11110, 10} is a prefix code set as well. From the first, we
+can see that the set of UTF-8 codes are a prefix set.<span
+style='mso-spacerun:yes'>  </span>Thus we can decode UTF-8 by matching the
+first byte.<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-bidi-font-weight:bold'>The use of a prefix code to mark the trailing bytes
+gives UTF-8 another form of robustness. If some error causes you to lose a byte
+or two, you can restart decoding by skipping bytes with 10 prefix until you
+find one with one of the starting-prefixes.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Using
+Java to read UTF-8 or other text encodings<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-bidi-font-weight:bold'>You can use Java to read UTF-8 documents without
+doing your own conversion.<span style='mso-spacerun:yes'>  </span>To use
+Scanner to read a file config.xml in UTF-8:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-bidi-font-weight:bold'>Scanner scanner = new Scanner(new
+File(“config.xml”), “UTF-8”);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-bidi-font-weight:bold'>Similarly, use “ISO-8859-15” to read Latin-1
+encoding, including the euro sign (used by default in HTML), “US-ASCII” to use
+ASCII explicitly in case the default is otherwise, and “Big5” for traditional
+Chinese.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-bidi-font-weight:bold'>Reference: Core Java Vol 1, 7<sup>th</sup> ed., pg.
+633-639 (hopefully in Vol 2 of 8<sup>th</sup> ed).<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Using
+Jave to write UTF-8 or other text encodings: a challenge!<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-bidi-font-weight:bold'>Suppose we want to output in a certain charset, for
+example, to output to file named “foo.txt”, in charset UTF-8. The output class
+that accepts a charset at construction time is the OutputStreamWriter, the
+superclass of the more familiar FileWriter (see Weiss, pg. 58(57) for example
+of use). For some unknown reason, FileWriter itself does not offer such a
+constructor. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-bidi-font-weight:bold'>The example shows:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-bidi-font-weight:bold'><span style='mso-tab-count:1'>                </span></span><span
+style='font-size:9.0pt;font-family:"Courier New";mso-bidi-font-weight:bold'>PrintWriter
+fileOut = new PrintWriter( new FileWriter(filename + “.ds”));<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-bidi-font-weight:bold'>This is using the constructor for PrintWriter: </span><code><b><span
+style='font-size:9.0pt;color:black'><a
+href="http://java.sun.com/javase/6/docs/api/java/io/PrintWriter.html#PrintWriter(java.io.Writer)">PrintWriter</a></span></b></code><code><span
+style='font-size:9.0pt;color:black'>(<a
+href="http://java.sun.com/javase/6/docs/api/java/io/Writer.html"
+title="class in java.io">Writer</a>&nbsp;out</span></code><code><span
+style='font-size:10.0pt;color:black'>),</span></code><span style='font-size:
+10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:bold'>which
+matches because FileWriter ISA OutputStreamWriter ISA Writer. Here we want a
+PrintWriter that is using a different Charset than the default ASCII.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-bidi-font-weight:bold'>We can put an OutputStreamWriter in the PrintWriter
+constructor instead of the FileWriter, since OutputStreamWriter ISA Writer:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-bidi-font-weight:bold'><span style='mso-spacerun:yes'>   </span></span><span
+style='font-size:9.0pt;font-family:"Courier New";mso-bidi-font-weight:bold'>fileOut
+= new PrintWriter( new OutputStreamWriter(...))<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-autospace:ideograph-other'><span
+style='font-size:9.0pt;font-family:"Courier New";mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-bidi-font-weight:bold'>and then look at the constructors for
+OutputStreamWriter: the easiest one to use is </span><code><b><span
+style='font-size:9.0pt;color:black'><a
+href="http://java.sun.com/javase/6/docs/api/java/io/OutputStreamWriter.html#OutputStreamWriter(java.io.OutputStream, java.lang.String)">OutputStreamWriter</a></span></b></code><code><span
+style='font-size:9.0pt;color:black'>(<a
+href="http://java.sun.com/javase/6/docs/api/java/io/OutputStream.html"
+title="class in java.io">OutputStream</a></span></code></p>
+
+<p class=MsoNormal style='text-autospace:ideograph-other'><code><span
+style='font-size:9.0pt;color:black'>&nbsp;out, <a
+href="http://java.sun.com/javase/6/docs/api/java/lang/String.html"
+title="class in java.lang">String</a>&nbsp;charsetName);</span></code><span
+style='font-family:"Times New Roman","serif"'> </span><code><span
+style='font-size:10.0pt;color:black'><o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span style='font-size:10.0pt;color:black'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-bidi-font-weight:bold'>Now we need to get an OutputStream for file
+“foo.txt”. OutputStream itself has no such constructor. Looking at the class
+hierarchy for OutputStream (pg. 623 of Core Java Vol 1, 7<sup>th</sup> ed, or
+look at subclass list in JDK Javadoc for OutputStream) we see FileOutputStream
+ISA OutputStream, and bingo, FileOutputStream has a constructor </span><code><b><span
+style='font-size:9.0pt;color:black'><a
+href="http://java.sun.com/javase/6/docs/api/java/io/FileOutputStream.html#FileOutputStream(java.lang.String)">FileOutputStream</a></span></b></code><code><span
+style='font-size:9.0pt;color:black'>(<a
+href="http://java.sun.com/javase/6/docs/api/java/lang/String.html"
+title="class in java.lang">String</a>&nbsp;filename).</span></code><code><span
+style='font-size:10.0pt;color:black'><o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span style='font-size:10.0pt;color:black'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-bidi-font-weight:bold'>Result: to output to file named “foo.txt”, in
+charset UTF-8, use a PrintWriter with the following construction:</span><span
+style='font-family:"Times New Roman","serif";mso-bidi-font-weight:bold'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-bidi-font-weight:bold'>PrintWriter fileOut = <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:9.0pt;
+font-family:"Courier New";mso-bidi-font-weight:bold'>new PrintWriter(new
+OutputStreamWriter(new FileOutputStream(“outfile.ds”), “UTF-8”));<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-bidi-font-weight:bold'>To check that this is working, we can put a
+non-ASCII char in a file and see it shows up with multiple bytes. See program <a
+href="TestUTF8Output.java">TestUTF8Output.java</a> in the class web site.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><b style='mso-bidi-font-weight:
+normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><b style='mso-bidi-font-weight:
+normal'>Summary of Algorithm Techniques<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><b style='mso-bidi-font-weight:
+normal'>Divide and Conquer:<span style='mso-spacerun:yes'>  </span></b>the
+basic recursion idea—break a problem down into subproblems of the same kind,
+then combine the answers to the subproblems to get the answer to the whole
+problem.<span style='mso-spacerun:yes'>  </span>Don’t forget the base
+case(s).<span style='mso-spacerun:yes'>  </span>Sometimes you need to solve a
+more general problem. For example, when asked for a count of some kind of item,
+you determine the actual sets of items, and then count them at the end.</p>
+
+<p class=MsoNormal style='margin-right:10.5pt'>Example 1.<span
+style='mso-spacerun:yes'>  </span>merge sort an array—sort each half of the
+array, merge the result.<span style='mso-spacerun:yes'>  </span>Base case:
+array of one element is sorted.</p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'>Example 2. Find count of ways of
+making change for a certain amount.<span style='mso-spacerun:yes'> 
+</span>Generalize to finding the set of ways of making change for a certain
+amount.<span style='mso-spacerun:yes'>  </span>Subproblems: making change for
+part of that amount, rest of that amount, can be combined into a way for that
+amount.<span style='mso-spacerun:yes'>  </span>Base cases: making change for the
+value of one coin is just that one coin.</p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><b style='mso-bidi-font-weight:
+normal'>Greedy:</b> Take the most obviously reasonable “local” choices, hope
+for the best in the long term.</p>
+
+<p class=MsoNormal style='margin-right:10.5pt'>Example 1: Find the minimum
+number of coins in change for some given amount.<span
+style='mso-spacerun:yes'>  </span>Big coins are better for minimizing number of
+coins, so use as many as possible of the largest coin, then handle the rest
+with the smaller coins, at each stage using the maximum number possible of the
+largest remaining coin.<span style='mso-spacerun:yes'>   </span>Optimal for
+U.S. currency, but not for arbitrary currencies.</p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'>Example 2: Huffman’s
+Algorithm.<span style='mso-spacerun:yes'>  </span>We want to assign short codes
+to frequent symbols and longer codes to less frequent symbols, by building the
+best binary tree.<span style='mso-spacerun:yes'>  </span>So we start adding height
+to our growing tree by combining least-weight subtrees, delaying the use of
+heavy nodes to the end.<span style='mso-spacerun:yes'>  </span>What isn’t so
+clear here is that the weights should be added up on a tree-merge, so this
+algorithm is not completely obvious greedy algorithm.</p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'>Example 3.<span
+style='mso-spacerun:yes'>  </span>Find count of neighboring spots on a grid,
+given one spot in the group.<span style='mso-spacerun:yes'>  </span>Generalize
+to finding set of neighboring spots.<span style='mso-spacerun:yes'>  </span>Set
+of neighbors needs to contain the neighbors of the given spot, so add
+them.<span style='mso-spacerun:yes'>  </span>Then add their neighbors, and so
+on.</p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><b style='mso-bidi-font-weight:
+normal'>Dynamic Programming<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'>In a problem that uses divide and
+conquer, and has duplication among the subproblems, use a map (or table, same
+thing) to save answers to subproblems.<span style='mso-spacerun:yes'> 
+</span>Before doing a subproblem by recursion, look in the map for the answer.<span
+style='mso-spacerun:yes'>  </span>If it’s not there, do the recursion and save
+the answer in the map.</p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'>Example 1. Making change with
+minimum coin count where greedy doesn’t work.<span style='mso-spacerun:yes'> 
+</span>This is divide and conquer with subproblems: coin count for part of
+amount, coin count for rest of amount, add to get coin count for whole amount.<span
+style='mso-spacerun:yes'>  </span>Base case: making change for the value of one
+coin takes one coin.<span style='mso-spacerun:yes'>  </span>There are duplicate
+subproblems here.<span style='mso-spacerun:yes'>  </span>For example, 6 = 2 +
+4, and 4 = 2 + 2, so the subproblem of how many coins to use for 2 is reached
+at least 3 times in doing the calculation for 6.</p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'>Non-example 2.<span
+style='mso-spacerun:yes'>  </span>Merge sort.<span style='mso-spacerun:yes'> 
+</span>In this case all the subproblems are different.<span
+style='mso-spacerun:yes'>  </span>Dynamic programming can’t help.</p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'>Example 3. Evaluation of a game
+position.</p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:10.0pt'>Next time: intro to
+graphs<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

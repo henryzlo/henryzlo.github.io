@@ -1,0 +1,620 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:m="http://schemas.microsoft.com/office/2004/12/omml" xmlns:st1="urn:schemas-microsoft-com:office:smarttags" xmlns="http://www.w3.org/TR/REC-html40"><head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="ProgId" content="Word.Document">
+<meta name="Generator" content="Microsoft Word 12">
+<meta name="Originator" content="Microsoft Word 12">
+<link rel="File-List" href="http://www.cs.umb.edu/cs310/Syllabus_files/filelist.xml">
+<title>CS310 Advanced Data Structures and Algorithms</title>
+<o:smarttagtype namespaceuri="urn:schemas-microsoft-com:office:smarttags" name="PlaceName"></o:smarttagtype>
+<o:smarttagtype namespaceuri="urn:schemas-microsoft-com:office:smarttags" name="place"></o:smarttagtype>
+<link rel="themeData" href="http://www.cs.umb.edu/cs310/Syllabus_files/themedata.thmx">
+<link rel="colorSchemeMapping" href="http://www.cs.umb.edu/cs310/Syllabus_files/colorschememapping.xml">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-alt:"\FF2D\FF33 \660E\671D";
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610611985 1107304683 0 0 159 0;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610611985 1073750091 0 0 159 0;}
+@font-face
+	{font-family:"\@MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 1 Char";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-font-kerning:16.0pt;
+	font-weight:bold;}
+h2
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 2 Char";
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	font-size:18.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	font-weight:bold;}
+h3
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 3 Char";
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:13.5pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"MS Mincho";}
+code
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+pre
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"HTML Preformatted Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 1";
+	mso-ansi-font-size:16.0pt;
+	mso-bidi-font-size:16.0pt;
+	font-family:"Arial","sans-serif";
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	mso-font-kerning:16.0pt;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:JA;
+	mso-bidi-language:AR-SA;
+	font-weight:bold;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 2";
+	mso-ansi-font-size:13.0pt;
+	mso-bidi-font-size:13.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;
+	font-weight:bold;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 3";
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;
+	font-weight:bold;}
+span.HTMLPreformattedChar
+	{mso-style-name:"HTML Preformatted Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"HTML Preformatted";
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:654338086;
+	mso-list-template-ids:-1695138496;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l1
+	{mso-list-id:1261600420;
+	mso-list-template-ids:2136234186;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l1:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2
+	{mso-list-id:1598054038;
+	mso-list-template-ids:-1173083146;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3
+	{mso-list-id:1645506295;
+	mso-list-template-ids:2043025268;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l4
+	{mso-list-id:1983269351;
+	mso-list-template-ids:-423717012;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head><body style="" vlink="blue" lang="EN-US" link="blue">
+
+<div class="Section1">
+
+<h3 style="text-align: center;" align="center"><span class="Heading1Char"><span style="font-size: 16pt;">CS310
+Advanced Data Structures and Algorithms</span></span><span style=""><br>
+Syllabus <br>
+Spring 2014<o:p></o:p></span></h3>
+
+<h3 style="text-align: center;" align="center"><span style="">Nurit Haspel (nurith@cs.umb.edu)<o:p></o:p></span></h3>
+
+<h3><span style="">Course Description<o:p></o:p></span></h3>
+
+<p class="MsoNormal">A systematic study of the methods of structuring and
+manipulating data in computing. Application programming interfaces (APIs), data
+abstraction, and the encapsulation of implementations.<span style="">&nbsp; </span>The Java Collection Classes. The design
+and analysis of algorithms. Advanced techniques for program development and
+organization. </p>
+
+<h3><span style="">Prerequisites<o:p></o:p></span></h3>
+
+<ul type="disc">
+ <li class="MsoNormal" style="">CS110 and CS210 (or one year
+     of higher-level language instruction in Java, C, C++ or similar computer
+     language, and fluency in Java). </li>
+ <li class="MsoNormal" style="">CS240 (or knowledge of C). </li>
+ <li class="MsoNormal" style="">Knowledge of stacks, queues,
+     binary search trees, sorting (covered in CS210). </li>
+ <li class="MsoNormal" style="">Static and dynamic memory
+     allocation, the stack and the heap (covered in CS240) </li>
+ <li class="MsoNormal" style="">MATH140 (or one term of
+     calculus).</li>
+</ul>
+
+<h3><span style="">Textbook<o:p></o:p></span></h3>
+
+<h3><span style="font-size: 12pt; font-weight: normal;">M. A. Weiss, Data Structures and
+Problem Solving using Java, 4<sup>th</sup> Edition, Addison Wesley, 2010.<span style="">&nbsp; </span><o:p></o:p></span></h3>
+
+<h3><span style="">Topics<o:p></o:p></span></h3>
+
+<ul type="disc">
+ <li class="MsoNormal" style="">Review of and advanced
+     algorithm analysis: Big O. The tyranny of growth rates. Weiss, Chap. 5.</li>
+ <li class="MsoNormal" style="">Collection classes, continued
+     from CS210. Maps and Sets and the search for O(1). Looking for fast
+     insertion and retrieval algorithms in various contexts. Hash tables.
+     Memory allocation questions, pointer, shallow and deep copy. Simple array
+     and linked list storage schemes, bitmaps, various kinds of trees, priority
+     queues. Recognizing the right collection for an application. Weiss, Chap.
+     6, 15 - 19, 20, 21.</li>
+ <li class="MsoNormal" style="">Sorting (also continued from
+     CS210): Heapsort, mergesort, proof that sorting is Omega(n log(n)) Chap
+     8,<span style="">&nbsp; </span>21.</li>
+ <li class="MsoNormal" style="">Algorithm techniques:
+     Divide-and-conquer, dynamic programming, greedy, and backtracking. Games.
+     Chap 7, 10.</li>
+ <li class="MsoNormal" style="">Graph algorithms: Graph API
+     and implementations. traversals, shortest paths; spanning trees. Chap. 14.</li>
+<li class="MsoNormal" style="">Other topics if time permits.</li>
+</ul>
+
+<p><b><font size="1" face="Arial"><span style="font-size: 12pt; font-family: Arial; font-weight: bold;">Assignments and Grading</span></font></b><font size="1" face="Arial"><span style="font-size: 12pt; font-family: Arial;"> <o:p></o:p></span></font></p>
+
+<p><font size="1" face="Arial"><span style="font-size: 12pt; font-family: Arial;">The
+following grading scheme is subject to change with or without notice:<o:p></o:p></span></font></p>
+
+<ul type="disc">
+ <li class="MsoNormal" style=""><i><font size="1" face="Arial"><span style="font-size: 12pt; font-style: italic;">Homework<span style="">&nbsp; </span>and Programming Assignments - 15% of
+     your final grade for each type of assignment (30% total)</span></font></i> <i><span style="font-style: italic;"><o:p></o:p></span></i></li>
+</ul>
+
+<ul type="disc">
+ <li class="MsoNormal" style=""><i><font size="1" face="Arial"><span style="font-size: 12pt; font-style: italic;">Midterm
+     - 30 % of your final grade</span></font></i> <i><span style="font-style: italic;"><o:p></o:p></span></i></li>
+</ul>
+
+<ul type="disc">
+ <li class="MsoNormal" style=""><i><font size="1" face="Arial"><span style="font-size: 12pt; font-style: italic;">Final
+     exam<span style="">&nbsp; </span>- 40% of your final grade</span></font></i>
+     <i><span style="font-style: italic;"><o:p></o:p></span></i></li>
+</ul>
+
+<p style="margin-left: 0.5in;"><font size="1" face="Arial"><span style="font-size: 12pt; font-family: Arial;">You must have a documented reason to schedule a makeup exam.<span style="">&nbsp; </span>I must know that you need a makeup
+exam within 2 days after the exam date.<o:p></o:p></span></font></p>
+
+<ul type="disc">
+ <li class="MsoNormal" style=""><i><font size="1" face="Arial"><span style="font-size: 12pt; font-style: italic;">Final
+     Grade</span></font></i> <i><span style="font-style: italic;"><o:p></o:p></span></i></li>
+</ul>
+
+<p class="MsoBodyTextIndent"><font size="1" face="Arial"><span style="font-size: 12pt;">Your
+final grade will be calculated using the following table.<span style="">&nbsp; </span>The minimum standard for passing the course
+is a percentage score of 40%.<span style="">&nbsp; </span>You also
+must pass the final exam (score at least 40% in the final exam).<span style="">&nbsp; </span>Keeping
+this in mind, your grade for the course will be calculated using the following
+table.<span style="">&nbsp; </span>Assume your final percentage
+score for the course is P:</span></font></p>
+
+<table class="MsoNormalTable" style="width: 200.7pt; margin-left: 103.8pt;" width="268" border="0" cellpadding="0" cellspacing="0">
+ <tbody><tr style="height: 13.65pt;" height="18">
+ </tr><tr style="height: 13.65pt;" height="18">
+  <td style="border-style: solid; border-color: black; border-width: 1.5pt 1pt 1pt 1.5pt; padding: 0in; width: 117.7pt; height: 13.65pt;" valign="top" width="157" height="18">
+  <p class="MsoBodyTextIndent"><font size="1" face="Arial"><span style="font-size: 12pt;">P &gt; 90</span></font></p>
+  </td>
+  <td style="border-style: solid; border-color: black; border-width: 1.5pt 1.5pt 1pt 1pt; padding: 0in; width: 83pt; height: 13.65pt;" valign="top" width="111" height="18">
+  <p class="MsoBodyTextIndent"><font size="1" face="Arial"><span style="font-size: 12pt;">A</span></font></p>
+  </td>
+ </tr>
+ <tr style="height: 13.65pt;" height="18">
+  <td style="border-style: solid; border-color: black; border-width: 1pt 1pt 1pt 1.5pt; padding: 0in; width: 117.7pt; height: 13.65pt;" valign="top" width="157" height="18">
+  <p class="MsoBodyTextIndent"><font size="1" face="Arial"><span style="font-size: 12pt;">90 &#8805; P &gt; 85</span></font></p>
+  </td>
+  <td style="border-style: solid; border-color: black; border-width: 1pt 1.5pt 1pt 1pt; padding: 0in; width: 83pt; height: 13.65pt;" valign="top" width="111" height="18">
+  <p class="MsoBodyTextIndent"><font size="1" face="Arial"><span style="font-size: 12pt;">A-</span></font></p>
+  </td>
+ </tr>
+ <tr style="height: 13.65pt;" height="18">
+  <td style="border-style: solid; border-color: black; border-width: 1pt 1pt 1pt 1.5pt; padding: 0in; width: 117.7pt; height: 13.65pt;" valign="top" width="157" height="18">
+  <p class="MsoBodyTextIndent"><font size="1" face="Arial"><span style="font-size: 12pt;">85 &#8805; P &gt; 80 </span></font></p>
+  </td>
+  <td style="border-style: solid; border-color: black; border-width: 1pt 1.5pt 1pt 1pt; padding: 0in; width: 83pt; height: 13.65pt;" valign="top" width="111" height="18">
+  <p class="MsoBodyTextIndent"><font size="1" face="Arial"><span style="font-size: 12pt;">B+</span></font></p>
+  </td>
+ </tr>
+ <tr style="height: 13.65pt;" height="18">
+  <td style="border-style: solid; border-color: black; border-width: 1pt 1pt 1pt 1.5pt; padding: 0in; width: 117.7pt; height: 13.65pt;" valign="top" width="157" height="18">
+  <p class="MsoBodyTextIndent"><font size="1" face="Arial"><span style="font-size: 12pt;">80 &#8805; P &gt; 75</span></font></p>
+  </td>
+  <td style="border-style: solid; border-color: black; border-width: 1pt 1.5pt 1pt 1pt; padding: 0in; width: 83pt; height: 13.65pt;" valign="top" width="111" height="18">
+  <p class="MsoBodyTextIndent"><font size="1" face="Arial"><span style="font-size: 12pt;">B</span></font></p>
+  </td>
+ </tr>
+ <tr style="height: 13.65pt;" height="18">
+  <td style="border-style: solid; border-color: black; border-width: 1pt 1pt 1pt 1.5pt; padding: 0in; width: 117.7pt; height: 13.65pt;" valign="top" width="157" height="18">
+  <p class="MsoBodyTextIndent"><font size="1" face="Arial"><span style="font-size: 12pt;">75 &#8805; P &gt; 70 </span></font></p>
+  </td>
+  <td style="border-style: solid; border-color: black; border-width: 1pt 1.5pt 1pt 1pt; padding: 0in; width: 83pt; height: 13.65pt;" valign="top" width="111" height="18">
+  <p class="MsoBodyTextIndent"><font size="1" face="Arial"><span style="font-size: 12pt;">B-</span></font></p>
+  </td>
+ </tr>
+ <tr style="height: 13.65pt;" height="18">
+  <td style="border-style: solid; border-color: black; border-width: 1pt 1pt 1pt 1.5pt; padding: 0in; width: 117.7pt; height: 13.65pt;" valign="top" width="157" height="18">
+  <p class="MsoBodyTextIndent"><font size="1" face="Arial"><span style="font-size: 12pt;">70 &#8805; P &gt; 65</span></font></p>
+  </td>
+  <td style="border-style: solid; border-color: black; border-width: 1pt 1.5pt 1pt 1pt; padding: 0in; width: 83pt; height: 13.65pt;" valign="top" width="111" height="18">
+  <p class="MsoBodyTextIndent"><font size="1" face="Arial"><span style="font-size: 12pt;">C+</span></font></p>
+  </td>
+ </tr>
+ <tr style="height: 13.65pt;" height="18">
+  <td style="border-style: solid; border-color: black; border-width: 1pt 1pt 1pt 1.5pt; padding: 0in; width: 117.7pt; height: 13.65pt;" valign="top" width="157" height="18">
+  <p class="MsoBodyTextIndent"><font size="1" face="Arial"><span style="font-size: 12pt;">65 &#8805; P &gt; 60 </span></font></p>
+  </td>
+  <td style="border-style: solid; border-color: black; border-width: 1pt 1.5pt 1pt 1pt; padding: 0in; width: 83pt; height: 13.65pt;" valign="top" width="111" height="18">
+  <p class="MsoBodyTextIndent"><font size="1" face="Arial"><span style="font-size: 12pt;">C</span></font></p>
+  </td>
+ </tr>
+ <tr style="height: 13.65pt;" height="18">
+  <td style="border-style: solid; border-color: black; border-width: 1pt 1pt 1pt 1.5pt; padding: 0in; width: 117.7pt; height: 13.65pt;" valign="top" width="157" height="18">
+  <p class="MsoBodyTextIndent"><font size="1" face="Arial"><span style="font-size: 12pt;">60 &#8805; P &gt; 55 </span></font></p>
+  </td>
+  <td style="border-style: solid; border-color: black; border-width: 1pt 1.5pt 1pt 1pt; padding: 0in; width: 83pt; height: 13.65pt;" valign="top" width="111" height="18">
+  <p class="MsoBodyTextIndent"><font size="1" face="Arial"><span style="font-size: 12pt;">C-</span></font></p>
+  </td>
+ </tr>
+ <tr style="height: 13.65pt;" height="18">
+  <td style="border-style: solid; border-color: black; border-width: 1pt 1pt 1pt 1.5pt; padding: 0in; width: 117.7pt; height: 13.65pt;" valign="top" width="157" height="18">
+  <p class="MsoBodyTextIndent"><font size="1" face="Arial"><span style="font-size: 12pt;">55 &#8805; P &gt; 50</span></font></p>
+  </td>
+  <td style="border-style: solid; border-color: black; border-width: 1pt 1.5pt 1pt 1pt; padding: 0in; width: 83pt; height: 13.65pt;" valign="top" width="111" height="18">
+  <p class="MsoBodyTextIndent"><font size="1" face="Arial"><span style="font-size: 12pt;">D+</span></font></p>
+  </td>
+ </tr>
+ <tr style="height: 13.65pt;" height="18">
+  <td style="border-style: solid; border-color: black; border-width: 1pt 1pt 1pt 1.5pt; padding: 0in; width: 117.7pt; height: 13.65pt;" valign="top" width="157" height="18">
+  <p class="MsoBodyTextIndent"><font size="1" face="Arial"><span style="font-size: 12pt;">50 &#8805; P &gt; 45</span></font></p>
+  </td>
+  <td style="border-style: solid; border-color: black; border-width: 1pt 1.5pt 1pt 1pt; padding: 0in; width: 83pt; height: 13.65pt;" valign="top" width="111" height="18">
+  <p class="MsoBodyTextIndent"><font size="1" face="Arial"><span style="font-size: 12pt;">D</span></font></p>
+  </td>
+ </tr>
+ <tr style="height: 13.65pt;" height="18">
+  <td style="border-style: solid; border-color: black; border-width: 1pt 1pt 1pt 1.5pt; padding: 0in; width: 117.7pt; height: 13.65pt;" valign="top" width="157" height="18">
+  <p class="MsoBodyTextIndent"><font size="1" face="Arial"><span style="font-size: 12pt;">45 &#8805; P &#8805; 40</span></font></p>
+  </td>
+  <td style="border-style: solid; border-color: black; border-width: 1pt 1.5pt 1pt 1pt; padding: 0in; width: 83pt; height: 13.65pt;" valign="top" width="111" height="18">
+  <p class="MsoBodyTextIndent"><font size="1" face="Arial"><span style="font-size: 12pt;">D-</span></font></p>
+  </td>
+ </tr>
+ <tr style="height: 13.65pt;" height="18">
+  <td style="border-style: solid; border-color: black; border-width: 1pt 1pt 1.5pt 1.5pt; padding: 0in; width: 117.7pt; height: 13.65pt;" valign="top" width="157" height="18">
+  <p class="MsoBodyTextIndent"><font size="1" face="Arial"><span style="font-size: 12pt;">40 &gt; P</span></font></p>
+  </td>
+  <td style="border-style: solid; border-color: black; border-width: 1pt 1.5pt 1.5pt 1pt; padding: 0in; width: 83pt; height: 13.65pt;" valign="top" width="111" height="18">
+  <p class="MsoBodyTextIndent"><font size="1" face="Arial"><span style="font-size: 12pt;">F</span></font></p>
+  </td>
+ </tr>
+</tbody></table>
+
+<p class="MsoBodyTextIndent"><font size="1" face="Arial"><span style="font-size: 9pt;"><o:p>&nbsp;</o:p></span></font></p>
+
+<h2><span style="font-size: 12pt;">Accommodations<o:p></o:p></span></h2>
+
+<p>Section 504 of the Americans with Disabilities Act of 1990 offers guidelines
+for curriculum modifications and adaptations for students with documented
+disabilities. If applicable, students may obtain adaptation recommendations
+from the <st1:place w:st="on"><st1:placename w:st="on">Ross</st1:placename> <st1:placename w:st="on">Center</st1:placename></st1:place> for Disability Services, M-1-401,
+(617-287-7430). The student must present these recommendations and discuss them
+with each professor within a reasonable period, preferably by the end of
+Drop/Add period. <o:p></o:p></p>
+
+<p class="MsoNormal" style=""><b><!--
+See pages 43 - 51 of the <em>'98 - '99 Undergraduate Catalog</em>
+for a full discussion of Academic Standards and Student Rights and
+Responsibilities.
+-->Student
+Conduct<o:p></o:p></b></p>
+
+<h2><span style="font-size: 12pt; font-weight: normal;">Students are required to adhere
+to the University Policy on Academic Standards and Cheating, to the University
+Statement on Plagiarism and the Documentation of Written Work, and to the Code
+of Student Conduct as delineated in the catalog of Undergraduate Programs, pp.
+44-45, and 48-52. The Code is available online at <a href="http://www.umb.edu/student_services/student_rights/code_conduct.html">www.umb.edu/student_services/student_rights/code_conduct.html
+</a><o:p></o:p></span></h2>
+
+<p class="MsoNormal" style=""><b>UNIX accounts, class
+email<o:p></o:p></b></p>
+
+<p class="MsoNormal" style=""><b><o:p>&nbsp;</o:p></b></p>
+
+<p class="MsoNormal">You can do all your work on the Department's network of Unix
+systems, or you can work on your home computer and deliver projects to the
+Department&#8217;s systems, but be sure to test them there.<span style="">&nbsp; </span>Either way, you need an account at our
+site.</p>
+
+<ul style="margin-top: 0in;" type="disc">
+ <li class="MsoNormal" style="">Apply
+     for an account as soon as possible, following the instructions posted in
+     the Unix lab (S-3-158). When your application for a course account has
+     been approved you will have been added to the cs310 mailing list.<span style="">&nbsp; </span></li>
+ <li class="MsoNormal" style="">You
+     should arrange to read mail sent to your account by logging in every day
+     or so and running pine (say), or setting up forwarding to your off-site mailbox
+     (put your other mailbox address in file .forward in your login directory,
+     for example user@yahoo.com). Mail sent to the class will be archived for
+     reference. </li>
+ <li class="MsoNormal" style="">Look
+     for the line &#8220;module load &#8230;&#8221; in your UNIX .cshrc file
+     and add &#8220; java&#8221; to the end of it, so you will be using a
+     current Java distribution </li>
+</ul>
+
+<h3><span style="">Homepage <o:p></o:p></span></h3>
+
+<p class="MsoNormal">The course home page is <a href="http://www.cs.umb.edu/cs310"><code><span style="font-size: 10pt;">http://www.cs.umb.edu/cs310</span></code></a>.<span style="">&nbsp; </span>This directory is visible in the
+filesystem of our UNIX machines as <code><span style="font-size: 10pt;">/data/htdocs/cs310</span></code>.
+All material for this course will be kept in this area, which may sometimes be
+called &#8220;$cs310&#8221;.</p>
+
+</div>
+
+</body></html>

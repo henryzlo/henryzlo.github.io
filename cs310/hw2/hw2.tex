@@ -1,0 +1,77 @@
+\documentclass{article}
+\usepackage{amsthm}
+\usepackage{amsmath}
+
+\newtheorem{problem}{Problem}
+
+\begin{document}
+\title{Homework 2}
+\author{Henry Z. Lo}
+\date{Due: Tuesday, June 24 in class}
+\maketitle
+
+This homework assignment will review data structures and algorithms that we've studied.  For these problems, write pseudo-code; your algorithms should contain enough detail to implement.  Try to solve these problems on your own, but if you look up help, be sure to acknowledge your source and its contributions.
+
+\begin{enumerate}
+\item Hash tables:
+\begin{enumerate}
+\item Given an array of integers, find three numbers which sum to 0.  Write an $O(n^2)$ algorithm for this problem.  Example input / output:
+\begin{align*}
+\texttt{threesum([4,-2,6,-3,-5,1]) == [4,-5,1]}
+\end{align*}
+\item Given an array of integers, reverse the array in place.  Do not use another array or variable to store any values.  Example:
+\begin{align*}
+\texttt{reverse([4,1,5,3]) == [3,5,1,4]}
+\end{align*}
+\end{enumerate}
+
+\item Dynamic programming:
+\begin{enumerate}
+\item Write an $O(n)$ algorithm for $\texttt{strstr(x,y)}$, where $n$ is the length of $x$.  This algorithm determines if a string $y$ is contained in a string $x$.  Assume $x$ contains unique characters.  Example input / output:
+\begin{align*}
+\texttt{strstr("reader","read") == \texttt{true}} \\
+\texttt{strstr("reader","and") == \texttt{false}}
+\end{align*}
+\item Consider the algorithm $\texttt{substr(x,y)}$, which returns the longest common substring between $x$ and $y$.  For some example strings $x$ and $y$, draw a $m \times n$ table to represent the comparison of $x$ and $y$.  $m$ and $n$ are the lengths of $x$ and $y$.
+\item Write an $O(mn)$ algorithm for $\texttt{substr}$.
+Example input / output:
+\begin{align*}
+\texttt{substr("explain","plant") == \texttt{"pla"}} \\
+\texttt{substr("everything","herring") == \texttt{"ing"}} \\
+\texttt{substr("cheese","mat") == \texttt{""}}
+\end{align*}
+\end{enumerate}
+
+\item Memoization:
+\begin{enumerate}
+\item 
+Every integer can be written as a multiple of prime numbers; furthermore, this set of prime numbers is unique.  Some examples:
+\begin{align*}
+\texttt{factors(24)}  &= 2*2*2*2*3 \\
+\texttt{factors(15)}  &= 3*5 \\
+\texttt{factors(100)} &= 2*2*5*5
+\end{align*}
+
+Given a function $\texttt{prime(x)}$, which returns the $x^{th}$ prime number, and an input $n$, write an algorithm for calculating the prime factors of $n$.
+\item Rewrite the previous algorithm using memoization.
+\end{enumerate}
+
+\item Divide and conquer:
+\begin{enumerate}
+\item Given a sorted integer array of length $n$ and number $i$, find the number of times $i$ occurs in $n$.  Your algorithm should be $O(\log n)$.  Example input / output:
+\begin{align*}
+\texttt{count([1,2,2,2,4,6], 2)} = \texttt{3}
+\end{align*}
+
+\item Recall the maximum subarray problem -- given an integer array, find the subarray with the largest sum.  Example input / output:
+\begin{align*}
+\texttt{maxsubarray([6,-2,-5,7,4,-3,6,-9,5])}  = \texttt{[7,4,-3,6]}
+\end{align*}
+
+If you were to use divide and conquer, what are the three cases for  where the start and end of the subarray can be?
+
+\item Write a \textbf{divide and conquer} algorithm for this problem.  You can just return the largest sum.  You should get an $O(n \log n)$ algorithm.
+\end{enumerate}
+\end{enumerate}
+
+\end{document}

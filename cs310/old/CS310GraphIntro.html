@@ -1,0 +1,379 @@
+<html><head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="Generator" content="Microsoft Word 12 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+h1
+	{mso-style-link:"Heading 1 Char";
+	margin-top:24.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Cambria","serif";
+	color:#365F91;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"Cambria","serif";
+	color:#4F81BD;}
+p.MsoNoSpacing, li.MsoNoSpacing, div.MsoNoSpacing
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-link:"Heading 1";
+	font-family:"Cambria","serif";
+	color:#365F91;
+	font-weight:bold;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	font-weight:bold;}
+.MsoPapDefault
+	{margin-bottom:10.0pt;
+	line-height:115%;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head><body lang="EN-US">
+
+<div class="Section1">
+
+<h2>CS310 Graph Intro </h2>
+
+<p class="MsoNoSpacing">&nbsp;</p>
+
+<p class="MsoNoSpacing"><strong><span style="font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">Graph&lt;V,
+E&gt; API</span></strong></p>
+
+<p class="MsoNoSpacing">&nbsp;</p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;; color: black;">&nbsp;</span><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">boolean</span><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;"> addVertex(V v);</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;boolean
+removeVertex(V v);</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;boolean
+containsVertex(V v);</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;Set&lt;V&gt;
+vertexSet();</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt;">&nbsp;</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;E
+addEdge(V sourceVertex, V targetVertex);&nbsp; // let Graph gen. edge</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;boolean
+addEdge(V sourceVertex, V targetVertex, E e); // app edge</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;boolean
+containsEdge(V sourceVertex, V targetVertex);</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;boolean
+containsEdge(E e);</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;V
+getEdgeSource(E e);</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;V
+getEdgeTarget(E e);</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;double</span><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;"> getEdgeWeight(E e);&nbsp; // for
+weighted graphs, ignore for now</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;Set&lt;E&gt;
+edgeSet();</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;//
+edges for vertices:</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;Set&lt;E&gt;
+getAllEdges(V sourceVertex, V targetVertex);</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;Set&lt;E&gt;
+edgesOf(V vertex);&nbsp; // all edges touching vertex</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;E
+removeEdge(V sourceVertex, V targetVertex);&nbsp; // remove an edge</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;boolean</span><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;"> removeEdge(E e);&nbsp; // remove
+the edge</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;Set&lt;E&gt;
+removeAllEdges(V sourceVertex, V targetVertex);</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;removeAllEdges(Collection&lt;?
+extends E&gt; edges);</span></p>
+
+<p class="MsoNoSpacing"><span style="font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;&nbsp;</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 10pt;">These are all valid for
+directed and undirected graphs. Only a few of them need special interpretation
+for undirected graphs: In an undirected graph, there is (conceptually) an edge
+from one vertex to the other, but it stands for a symmetric connection.</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 10pt;">containsEdge(V, V): the
+qualifying edge can go from target to source</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 10pt;">getEdgeSource, Target: the
+actual source and target (may be backwards to what you are expecting)</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 10pt;">getAllEdges(V,V): some
+returned edges may go from target to source</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 10pt;">removeAllEdges(V,V):
+removes ones connected the other way too</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 10pt;">removeEdge(V,V): removes
+one which may be connected the other way</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 10pt;">&nbsp;</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 10pt;">For directed graphs,
+edgesOf needs comment. It will return inbound edges as well as outbound, unlike
+what is described by an adjacency list (which only lists outbound edges).</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 10pt;">In addition to Graph,
+there are subinterfaces DirectedGraph and UndirectedGraph:</span></p>
+
+<p class="MsoNoSpacing">&nbsp;</p>
+
+<p class="MsoNoSpacing"><b>DirectedGraph:</b></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">int</span><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;"> inDegreeOf(V vertex);</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">Set&lt;E&gt;
+incomingEdgesOf(V vertex);</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">int</span><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;"> outDegreeOf(V vertex);</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">Set&lt;E&gt;
+outgoingEdgesOf(V vertex);</span></p>
+
+<p class="MsoNoSpacing"><b><span style="font-family: &quot;Courier New&quot;;">&nbsp;</span></b></p>
+
+<p class="MsoNoSpacing"><b>UndirectedGraph:</b></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">int</span><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;"> degreeOf(V vertex);</span></p>
+
+<p class="MsoNoSpacing"><span style="font-family: &quot;Courier New&quot;;">&nbsp;</span></p>
+
+<p class="MsoNoSpacing"><b>Constructors:</b></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 10pt;">Example: a simple
+undirected Graph with String vertices and default edges:</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">Graph&lt;String,DefaultEdge&gt;
+g = new SimpleGraph&lt;String,DefaultEdge&gt;();</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 10pt;">The concrete class
+SimpleGraph implements UndirectedGraph, while SimpleDirectedGraph implements
+DirectedGraph. We could put:</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 10pt;">&nbsp;</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">UndirectedGraph&lt;String,DefaultEdge&gt;
+g = new SimpleGraph&lt;String,DefaultEdge&gt;();</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 10pt;">if we wanted to use
+degreeOf(V) as well as all the Graph methods.</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 10pt;">&nbsp;</span></p>
+
+<p class="MsoNoSpacing"><b><span style="font-size: 10pt;">Getting started:</span></b><span style="font-size: 10pt;"> Unzip jgrapht.zip</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 10pt;">(Set up a Java project in
+eclipse with output directory “build”, replacing the default “bin”.)</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 10pt;">&nbsp;</span></p>
+
+<p class="MsoNoSpacing"><b><span style="font-size: 10pt;">LoadGraph</span></b><span style="font-size: 10pt;">: loads a Graph&lt;String,String&gt; from a file,
+defaulting to test.dat</span></p>
+
+<p class="MsoNoSpacing">&nbsp;</p>
+
+<p class="MsoNoSpacing"><span style="font-size: 10pt;">file &nbsp;test.dat</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">A
+B 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;---edge from A to B, weight 1 (ignore weight for now)</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">B
+X 2</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">X
+Y 2</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">Y
+Z 1</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">C
+J 3</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">A
+C 2</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">J
+X 1</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">M
+X 2</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">cd
+build&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+// Note: build, not classes, for this project</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">java
+cs310.LoadGraph ../test.dat</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">A
+B 1</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;edge
+= edgeA-B, source = A, target = B</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">B
+X 2</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;edge
+= edgeB-X, source = B, target = X</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">X
+Y 2</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;edge
+= edgeX-Y, source = X, target = Y</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">Y
+Z 1</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;edge
+= edgeY-Z, source = Y, target = Z</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">C
+J 3</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;edge
+= edgeC-J, source = C, target = J</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">A
+C 2</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;edge
+= edgeA-C, source = A, target = C</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">J
+X 1</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;edge
+= edgeJ-X, source = J, target = X</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">M
+X 2</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;edge
+= edgeM-X, source = M, target = X</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">Graph:
+([A, B, X, Y, Z, C, J, M], [edgeA-B={A,B}, edgeB-X={B,X}, edgeX-Y={X,Y},
+edgeY-Z={Y,Z}, edgeC-J={C,J}, edgeA-C={A,C}, edgeJ-X={J,X}, edgeM-X={M,X}]) </span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">...<br>
+<br>
+</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 10pt;">The &nbsp;overall directory
+structure is something like games:</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;$cs310/jgrapht/src: Java sources</span></p>
+
+<p class="MsoNoSpacing" style="margin-left: 1in; text-indent: 0.5in;"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">/javadoc: HTML API</span></p>
+
+<p class="MsoNoSpacing" style="margin-left: 1in; text-indent: 0.5in;"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">/build:&nbsp; class files&nbsp;&nbsp;
+&lt;--build instead of classes</span></p>
+
+<p class="MsoNoSpacing" style="margin-left: 1in; text-indent: 0.5in;"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">/lib: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;--needed
+library: &nbsp;jgraph, for Swing graphics</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">Source
+packages under src:</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;
+cs310: for pa5, pa6: LoadGraph.java, etc.</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;
+cs310.visualization: support for Swing graphics</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;
+org.jgrapht: top-level package: Graph.java, etc.</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;
+org.jgrapht.graph: implementation of graphs: SimpleGraph.java,
+SimpleDirectedGraph.java,...</span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 9pt; font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;
+org.jgrapht.*: other implementation directories<br>
+<br>
+</span></p>
+
+</div>
+
+</body></html>

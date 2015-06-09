@@ -1,0 +1,19 @@
+CS105 Homework 7
+
+Instructions: Please print or write your answers LEGIBLY, and turn in a hard copy of the assignment in class.
+
+1. Hacking
+
+  a. What are the three phases of a hack?
+  b. What is port scanning?
+  c. Explain directory traversal attacks.
+  d. What is a backdoor?
+  e. What is a session token? 
+
+2. Security
+
+  a. What does firewalling do?
+  b. Why are blocking ports and IPs not enough to prevent a motivated attacker?
+  c. What is the principle of least privilege? 
+  d. What does an antivirus do?
+  e. Why must an encryption key be sent unencrypted?

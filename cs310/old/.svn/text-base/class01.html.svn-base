@@ -1,0 +1,1159 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:m="http://schemas.microsoft.com/office/2004/12/omml" xmlns:st1="urn:schemas-microsoft-com:office:smarttags" xmlns="http://www.w3.org/TR/REC-html40"><head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="ProgId" content="Word.Document">
+<meta name="Generator" content="Microsoft Word 12">
+<meta name="Originator" content="Microsoft Word 12">
+<link rel="File-List" href="http://www.cs.umb.edu/cs310/class01_files/filelist.xml">
+<title>Daily Course Notes for CS310</title>
+<o:smarttagtype namespaceuri="urn:schemas-microsoft-com:office:smarttags" name="City"></o:smarttagtype>
+<o:smarttagtype namespaceuri="urn:schemas-microsoft-com:office:smarttags" name="place"></o:smarttagtype>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Elizabeth O'Neil</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>eoneil</o:LastAuthor>
+  <o:Revision>10</o:Revision>
+  <o:TotalTime>1423</o:TotalTime>
+  <o:LastPrinted>2005-01-25T17:31:00Z</o:LastPrinted>
+  <o:Created>2009-01-25T16:59:00Z</o:Created>
+  <o:LastSaved>2009-01-26T16:14:00Z</o:LastSaved>
+  <o:Pages>3</o:Pages>
+  <o:Words>1937</o:Words>
+  <o:Characters>11042</o:Characters>
+  <o:Company>University of Massachusetts, Boston</o:Company>
+  <o:Lines>92</o:Lines>
+  <o:Paragraphs>25</o:Paragraphs>
+  <o:CharactersWithSpaces>12954</o:CharactersWithSpaces>
+  <o:Version>12.00</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<link rel="themeData" href="http://www.cs.umb.edu/cs310/class01_files/themedata.thmx">
+<link rel="colorSchemeMapping" href="http://www.cs.umb.edu/cs310/class01_files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]--><!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"New York";
+	panose-1:2 4 5 3 6 5 6 2 3 4;
+	mso-font-alt:"Times New Roman";
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:3 0 0 0 1 0;}
+@font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-alt:"\FF2D\FF33 \660E\671D";
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610611985 1107304683 0 0 159 0;}
+@font-face
+	{font-family:"\@MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"New York","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"New York";}
+h2
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 2 Char";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	font-style:italic;}
+a:link, span.MsoHyperlink
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+code
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"MS Mincho";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+tt
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"MS Mincho";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 2";
+	mso-ansi-font-size:13.0pt;
+	mso-bidi-font-size:13.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;
+	font-weight:bold;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:1217662653;
+	mso-list-type:simple;
+	mso-list-template-ids:656051114;}
+@list l0:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:.25in;
+	mso-level-legacy-space:0in;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l0:level1 lfo2
+	{mso-level-numbering:continue;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:.25in;
+	mso-level-legacy-space:0in;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l0:level1 lfo3
+	{mso-level-numbering:continue;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:.25in;
+	mso-level-legacy-space:0in;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l0:level1 lfo4
+	{mso-level-numbering:continue;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:.25in;
+	mso-level-legacy-space:0in;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l0:level1 lfo5
+	{mso-level-numbering:continue;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:.25in;
+	mso-level-legacy-space:0in;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l0:level1 lfo6
+	{mso-level-numbering:continue;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:.25in;
+	mso-level-legacy-space:0in;
+	margin-left:.25in;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head><body style="" vlink="purple" lang="EN-US" link="blue">
+
+<div class="Section1">
+
+<p class="MsoNormal" style="margin-right: -0.5in; text-align: center;" align="center"><b><span style="font-size: 18pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Daily Course
+Notes for CS310<o:p></o:p></span></b></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in; text-align: center;" align="center"><b><span style="font-size: 14pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Advanced Data Structures and Algorithms - Fall 2013<o:p></o:p></span></b></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in; text-align: center;" align="center"><b><span style="font-size: 14pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Nurit Haspel (notes adapted from Prof. Betty O'Neil)<o:p></o:p></span></b></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><b><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Class 1.<o:p></o:p></span></b></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Hand out:<span style="">&nbsp;&nbsp;&nbsp;&nbsp; </span>Syllabus.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin: 0in -0.5in 0.0001pt 0.25in; text-indent: -0.25in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Hand out:<span style="">&nbsp; </span>Qual Exam – DUE Thursday., the TA will grade and we will
+email or phone you if I think you should Drop.<u><o:p></o:p></u></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Go over
+Syllabus.<span style="">&nbsp; </span>Text:<span style="">&nbsp; </span>Weiss DS&amp;PS in Java, 4<sup>th</sup> ed. (you can use the 3rd at your own risk. Notice change in page numbers)<span style="">&nbsp; </span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">CS240 teaches
+low-level programming skills, makes you ready to be an application
+programmer.<span style="">&nbsp; </span>CS210 teaches basic
+algorithms &amp; data structures.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">CS310 teaches
+more advanced programming principles, allows you to be senior
+programmer/designer.<span style="">&nbsp; </span>(Facility with
+CS310 is exactly what you need to pass Microsoft developer interviews.)<span style="">&nbsp; </span>Might say principles taught are abstract, but
+in fact they will be made concrete by <b>many</b> exercises.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">As soon as
+possible, <b><u>Apply for CS310, EVEN IF YOU ALREADY HAVE AN ACCOUNT!!!!</u></b><span style="">&nbsp; </span>By applying, you are placed on the classlist
+and will get email sent to the class, and get a special cs310 subdirectory for
+the class.<span style="">&nbsp; </span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><st1:city w:st="on"><st1:place w:st="on"><b style=""><u><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Reading</span></u></b></st1:place></st1:city><u><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"> </span></u><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">.<span style="">&nbsp; </span>Make sure you know everything in Chap 1-4
+(through pg. 131) of Weiss, from CS110-210. <span style="">&nbsp;</span>Also you should know the basics of Chap. 7
+(Recursion), 8 (Sorting), 16 (Stacks and Queues), and 17 (Linked Lists).<span style="">&nbsp; </span>We’ll start with Chap. 5 (Algorithm Analysis)
+and 6 (Collections API) after an intro on APIs and encapsulation related to the
+material in Chapters 3 and 4.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Go over
+Qual.<span style="">&nbsp; </span>Qual tests that you learned Java
+and that you understand data structures you should have had in CS210 and/or
+CS240.<span style="">&nbsp; </span>If you have a lot of trouble with
+it, Drop.<span style="">&nbsp; </span>(Or contact me if want to
+talk.)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><b><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Idea</span></b><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">.<span style="">&nbsp; </span>We have 500 communication lines and our comm.
+system outputs every 10 minutes to a log the communication lines in use and the
+usernames that are and logged on them.<span style="">&nbsp;
+</span>Here is part of the log:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>... ......<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>9 ALTEREGO<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp;</span><span style=""> </span><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="">&nbsp;&nbsp; </span>12
+ALIMONY<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>433 HOTTIPS<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>433 USERMGR<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>12 BLONDIE<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>433 HOTTIPS<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>354 ALIMONY<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>... ...<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Note that
+HOTTIPS was on line 433 twice, USERMGR in between. ALIMONY was on line 12 at
+one time, line 354 later on.<span style="">&nbsp; </span>OK that no
+times given.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Want to write
+Java program to read all information in from the file (use scanf to parse the
+lines, use input redirection to access the file as stdin).<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Then print out
+report.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span><span style="">&nbsp; </span>Line<span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Most Common User<span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Count<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1<span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>OPERATOR<span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>174983<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span><span style="">&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="">&nbsp; </span><span style="">&nbsp;</span>2<span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><st1:city w:st="on"><st1:place w:st="on">HANNIBAL</st1:place></st1:city><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>432<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>3<span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>&lt;NONE&gt;<span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>0<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>4<span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>SYSMGR<span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>945<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="">&nbsp;&nbsp;&nbsp;</span>...<span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>...<span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>...<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">The way this is
+to be done is that as information is read in we record it in an array of 500
+chain linked lists, one for each communication line.<span style="">&nbsp; </span>We have list 0, 1, . . ., 499.<span style="">&nbsp; </span>(Draw a schematic picture.)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Each list is
+based in an array entry something[i], and holds all the needed information for
+line i.<span style="">&nbsp; </span>Each node of the list
+corresponds to one username, and a count of times the username was encoun­tered
+on this line (and a pointer to the next node).<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">class
+SinglyLinkedList is provided.<span style="">&nbsp; </span>It can add
+elements to the list via add(), and supports indexed access with get(i).<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Look at main: a
+test program.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">The qual
+assignment (available online) has the SinglyLinkedList code, or SLL for short.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">You should wrap
+the given list to make a special-purpose container for a single terminal line
+called LineUsageData.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">class
+LineUsageData:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">HASA
+SinglyLinkedList&lt;someListElementType&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">This means it
+has a field of type SLL, so it has the use of the SLL to do its own work.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">LineUsageData methods:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -22pt;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">int addObservation(String
+userName);<span style="">&nbsp; </span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -22pt;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">Usage getMaxUsage();<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Top level code:
+TermReport.java: set up a master array of LineUsageData objects, one for each
+line number.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Create
+LineUsageData objects for all elements of the master array.<span style="">&nbsp; </span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Read in data from
+standard input and access entry in array by line number, then do
+“addObservation”<span style="">&nbsp; </span>to that LineUsageData.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Inside
+LineUsageData, addObservation searches list for name, when finds name,
+increments count, else adds new Usage object to SLL. <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">When all data
+has been read in, time for report.<span style="">&nbsp; </span>Loop
+through all objects in array.<span style="">&nbsp; </span>For each,
+call getMaxUsage and print out line of report.<span style="">&nbsp;
+</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><span style="">&nbsp;&nbsp; </span>Inside LineUsageData, loop through list and
+remember Node pointer and count for max. <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Here the SLL is
+a collection class, though not a JDK Collection class.<span style="">&nbsp; </span>A wrapper class LineUsageData is a class that
+HAS-A SLL and changes the API.<o:p></o:p></span></p>
+
+<h2><span style="">APIs<o:p></o:p></span></h2>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">An Application
+Programming Interface (API) is simply a <b style="">group
+of related function specifications</b> that are meant to provide some service
+or services to programs, clients of the API.<span style="">&nbsp;
+</span>In the pure form that we will always use, there are no shared memory
+objects between the clients and the implementation of the API functions.<span style="">&nbsp; </span>Thus all the actions need to be done by
+function/method calls.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Example: The C
+string library has an API with strcpy(char *s, char *t), strcmp(...), and so
+on.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Example: The
+Person class in Weiss, pg. 95, has an API consisting of the methods toString(),
+getName(), getAge(), … setPhoneNumber()<o:p></o:p></span></p>
+
+<h2><span style="">Encapsulation in
+Java and C<o:p></o:p></span></h2>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Data
+encapsulation means hiding the data of the implementation of the API functions
+so well that the client can’t get at it by normal programming methods.<span style="">&nbsp; </span>They <b>have</b> to use the API functions to
+get their work done.<o:p></o:p></span></p>
+
+<h2><span style="">Data Encapsulation
+in Java</span><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p></o:p></span></h2>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">It’s easy to do data
+encapsulation in Java because it is object-oriented.<span style="">&nbsp; </span>All object-oriented languages support objects
+that completely hide their data, in many cases along with some other objects
+that do allow direct access to some data within them.<span style="">&nbsp; </span>All we have to do in Java (or C++) is <b style="">make all the fields of the class private</b>.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><u><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">An Example.<span style="">&nbsp; </span>Bank Account:<span style="">&nbsp;
+</span>BA for short (a classic object example)</span></u><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">.<span style="">&nbsp; </span>A bank account has an id, an int, a name
+string, and a current balance, also an int.<span style="">&nbsp;
+</span>The actions are create an account, deposit, withdraw, and get-balance,
+and possibly destroy an account.<span style="">&nbsp; </span>We turn
+these actions into an API.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">public class BankAccnt {<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>public BankAccnt(String name, int id, int bal) {...} // create a BA
+<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>public int withdraw(int amt) {...} <span style="">&nbsp;&nbsp;&nbsp;&nbsp; </span>// withdraw amt from this BA <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>public void deposit(int amt) {...}<span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>//
+deposit amt to this BA <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>public int getBalance() {...}<span style="">&nbsp;&nbsp;&nbsp;
+</span>// return balance for this BA<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>// also public toString, equals, no-args
+constructor<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>// Fields—all private<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>private int id;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>private String name;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>private int balance;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">}<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">We see this
+class (AKA data type) has an API with its methods BankAccnt, withdraw, deposit,
+getBalance, etc.<span style="">&nbsp; </span>A calling client
+constructs a BA using “BankAccnt ba = new BankAccnt(“JJ”, 234, 100)” for
+example, and then modifies the balance via calls like ba.withdraw(20) and
+ba.deposit(10).<span style="">&nbsp; </span>The balance itself is
+hidden away inside ba, so “ba.balance” is invalid.<span style="">&nbsp; </span>Instead, the caller can use ba.getBalance()
+to find out the current balance.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">This is a sealed
+up class, an encapsulated combination of functions (methods) and data.<span style="">&nbsp; </span>All the data is hidden from the outside,
+i.e., any caller of the methods that make up the API. These callers are called
+clients of the class.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Note that the
+API consists of the set of method specifications, not including their
+implementations in {...}. The code in the curly braces is the implementation of
+the class An API lies <b>between</b> two bodies of code, the client code and
+the class implementation.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">In Java, we can
+make a cleaner statement of the API by using a Java interface:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">public interface Account {</span><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>int withdraw(int amount); <span style="">&nbsp; </span>// withdraw amt from this BA <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>void deposit(int amount);<span style="">&nbsp;&nbsp; </span>//
+deposit amt to this BA <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>int getBalance();<span style="">&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="">&nbsp;&nbsp;</span>// return balance for this BA<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">}<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Now in any class that has a balance going up and down via
+deposits and withdrawals, we can use this interface.<span style="">&nbsp; </span>The interface defines partial functionality,
+and isn’t loaded down with object responsibilities like construction,
+conversion to string, equals, etc.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">public class BankAccount
+implements Account {<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>// constructor<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>public BankAccount(String name, int id, int bal) {...} // create a
+BA <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>// Account API functions<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>public int withdraw(int amt) {...} <span style="">&nbsp;&nbsp;&nbsp;&nbsp; </span>// withdraw amt from this BA <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>public void deposit(int amt) {...}<span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>//
+deposit amt to this BA <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>public int getBalance() {...}<span style="">&nbsp;&nbsp;&nbsp;
+</span>// return balance for this BA<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>// also public toString, possibly a no-args
+constructor<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>// Fields—all private<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>private int id;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>private String name;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>private int balance;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">}<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">----------------------------------------------------------------------------------------------------------------------------------------<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>// client code example: TestBankAccnt.java */<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">public class TestBankAccount
+{<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>static void main(String [] args)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>{<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span><span style="">&nbsp;</span><span style=""> </span>BankAccount ba = BankAccount(“JJ”, 234, 100);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span><span style="">&nbsp; </span>ba.withdraw(20);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp; </span>ba.deposit(10);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>}<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">}<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<h2><span style="">Encapsulation in C,
+the bigger challenge (optional material, for the rest of this file)<o:p></o:p></span></h2>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">In C, we use
+structs instead of classes, and of course all the members are public, so any
+code with a variable “acct” of type struct bankaccnt can access acct.balance.<span style="">&nbsp; </span>C does provide <b style="">data hiding within source files</b> through use of static variables.
+See Section 4.6 of K&amp;R for the basics. A static variable is hidden from
+code in other .c files.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">The standard
+(advanced C) trick to hide the members of a struct is based on making the
+client code use only <b style="">pointers</b> to
+BankAccount structs, and not letting the client code see the full struct
+declaration, <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">For the minimal
+example, we need two .c files both including one <b style="">header file providing the incomplete struct definition</b> along with
+the API, and possibly some constants.<span style="">&nbsp;
+</span>Then one .c file is the ADT implementation and the other holds the
+client code, here just a test program. If you get tired of writing “struct
+bankacct” all the time, you can use a typedef’d name to stand for it.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">----------------------------------------------------------------------------------------------------------------------------------------<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>/* account.h, header for struct bankacct data
+type */<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>/* this allows clients to use struct bankacct
+pointers<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp;&nbsp; </span>* without access to their internals */<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>struct bankacct;<span style="">&nbsp; </span>/* incomplete struct declaration */<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>/* max name length allowed */<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>#define NAMELEN 100<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>/* API (int return values provide error codes
+if necessary, or 0 for success */<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>struct bankacct *make</span><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">BankAccnt</span><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"> (char *name, int id, int
+bal); /* create a BA */<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>int withdraw(struct </span><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">bankacct</span><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"> *ba, int amt); <span style="">&nbsp; </span>/* withdraw amt from BA ba */<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>int deposit(struct </span><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">bankacct *</span><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">ba, int amt); <span style="">&nbsp;&nbsp; </span>/* deposit amt to BA ba */<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>int destroyBA(struct bankacct *ba);<span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>/* needed in C: explicit destruction
+*/<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>int getbalance(const struct </span><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">bankacct *</span><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">ba)<span style="">&nbsp;&nbsp;&nbsp; </span>/* return balance for BA ba */<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>(also, getid, getname)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">----------------------------------------------------------------------------------------------------------------------------------------<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>/* account.c, implementation of bankacct data
+type */<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>#include “account.h”<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>/* fill in the incomplete struct definition,
+inside this file */<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>typedef struct bankacct {<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp; </span>int id;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp; </span>char name[NAMELEN+1];<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp; </span>int balance;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>} BankAccnt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>/* bankacct implementation code */<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>struct bankacct *make</span><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">BankAccnt</span><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"> (char *name, int id, int
+bal) { ...} /* create a BA */<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>int withdraw(struct bankacct *ba, int amt)
+{...} <span style="">&nbsp;&nbsp; </span>/* withdraw amt from BA ba */<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>int deposit(struct bankacct *ba, int amt) {...} <span style="">&nbsp;&nbsp;&nbsp; </span>/* deposit amt to BA ba */<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>int getbalance(const struct bankacct *ba) {...}<span style="">&nbsp;&nbsp;&nbsp; </span>/* return balance for BA ba */<o:p></o:p></span></p>
+
+<div style="margin-right: -0.5in;">
+
+<div style="border-style: none none solid; border-color: -moz-use-text-color -moz-use-text-color windowtext; border-width: medium medium 1pt; padding: 0in 0in 1pt;">
+
+<p class="MsoNormal" style="border: medium none ; padding: 0in; text-indent: 12pt;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">(also, getid, getname, destroyBA)<o:p></o:p></span></p>
+
+</div>
+
+</div>
+
+<p class="MsoNormal" style="margin-right: -0.5in; text-indent: 12pt;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">/* example implementation
+code */<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in; text-indent: 12pt;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">int getbalance(struct bankacct
+*ba)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in; text-indent: 12pt;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">{<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in; text-indent: 12pt;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp;&nbsp; </span><span style="">&nbsp; </span>return ba-&gt;balance;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in; text-indent: 12pt;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">}<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in; text-indent: 12pt;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp;&nbsp; </span></span><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><span style="">&nbsp;</span></span><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">----------------------------------------------------------------------------------------------------------------------------------------<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>/* client code example: app.c */<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>#include “account.h”<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>int main()<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>{<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span><span style="">&nbsp;</span><span style=""> </span>struct bankacct *ba = makeBankAccnt(“JJ”, 234, 100);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span><span style="">&nbsp; </span>withdraw(ba, 20);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp; </span>deposit(ba, 10);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp; </span>destroyBankAccnt(ba);<span style="">&nbsp; </span>/* in
+C, we need explicit destruction */<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>}<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">Debug build, all warnings:
+gcc –g –Wall app.c account.c<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">The bankaccnt struct
+type is declared by the implementation and understood by it <b>ONLY!!!</b> <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">The idea is that
+<i>all</i> operations on a BankAccnt instance in Java or C occur via the API.<span style="">&nbsp;&nbsp; </span>A sealed-up C struct instance is very much
+the same as an object, so we will often use “object” for it, even though
+officially C has no objects.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><b><u><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Advantages of <span style="">&nbsp;</span>object encapsulation:</span></u></b><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin: 0in -0.5in 0.0001pt 0.25in; text-indent: -0.25in;"><!--[if !supportLists]--><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><span style="">1.<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal; -x-system-font: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Clear
+statement of functionality in use — what is intended/provided by a Bank Account
+or a Stack.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin: 0in -0.5in 0.0001pt 0.25in; text-indent: -0.25in;"><!--[if !supportLists]--><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><span style="">2.<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal; -x-system-font: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Partition
+of responsibility/code.<span style="">&nbsp; </span>Important if
+many programmers.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin: 0in -0.5in 0.0001pt 0.25in; text-indent: -0.25in;"><!--[if !supportLists]--><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><span style="">3.<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal; -x-system-font: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Can
+share General Purpose objects across many apps (if do them right). Saves
+coding. At worst have to make<span style="">&nbsp;&nbsp; </span>minor
+improvements later.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin: 0in -0.5in 0.0001pt 0.25in; text-indent: -0.25in;"><!--[if !supportLists]--><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><span style="">4.<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal; -x-system-font: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Safety
+of contents of Stack, etc.<span style="">&nbsp; </span>Primitive
+functions can check argu­ments, etc., whereas in open coding we tend to do the minimum.
+Sharing the implementation here, so worth it. <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin: 0in -0.5in 0.0001pt 0.25in; text-indent: -0.25in;"><!--[if !supportLists]--><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><span style="">5.<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal; -x-system-font: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Worth
+it to carefully test implementation code, remove all bugs, put special trace
+capabilities in, etc.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin: 0in -0.5in 0.0001pt 0.25in; text-indent: -0.25in;"><!--[if !supportLists]--><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><span style="">6.<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal; -x-system-font: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Debugability.<span style="">&nbsp; </span>No mystery changes to data—can breakpoint the
+functions that change data.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-right: -0.5in;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body></html>

@@ -1,0 +1,79 @@
+\documentclass{article}
+\usepackage{amsthm}
+\usepackage{amsmath}
+
+\newtheorem{problem}{Problem}
+
+\begin{document}
+\title{Programming Assignment 1}
+\author{Henry Z. Lo}
+\date{Due: Tuesday, June 10 at midnight}
+\maketitle
+
+\section{Goals}
+This assignment will help you with the following:
+
+\begin{enumerate}
+\item Review hash tables.
+\item Investigate various collision resolution methods.
+\item Recall how to work with abstract classes.
+\end{enumerate}
+
+\section{Overview}
+Given an \verb|AbstractHashSet| class, create the following classes:
+\begin{enumerate}
+\item \verb|LinearHashSet|, a linear probing hash table.
+\item \verb|QuadraticHashSet|, a quadratic probing hash table.
+\item \verb|ChainingHashSet|, a chaining hash table.
+\end{enumerate}
+You will also be given a \verb|Main| class.  The main method in this class will output data like this:
+\begin{verbatim}
+linear,0.00,0.00,0.00,...
+quadratic,0.00,0.00,0.00,...
+chaining,0.00,0.00,0.00,...
+\end{verbatim}
+Each line here represents an experiment, in which values are added into the hash set, one by one.  Each number represents the total number of collisions encountered after that add.  First number is after adding one element, and so on.  The numbers are floats, because they are averaged.
+
+This comma-separated values (CSV) format can be put into any spreadsheet program.  The idea is that if you plot them, you can see how well each collision resolution method resolves future collisions.
+
+\section{Instructions}
+\begin{enumerate}
+\item Code \verb|LinearHashSet|, \verb|QuadraticHashSet|, and \verb|ChainingHashSet|, which all subclass the \verb|AbstractHashSet| given.
+\item Implement the \verb|size| and \verb|add| methods.
+\item You don't need to implement \verb|get| or \verb|remove|, but it should be easy.
+\item Constructors should take in the number of slots in the hash set as an argument.
+\item The collision variable should count the total number of collisions.  Note:
+\begin{itemize}
+\item Probing methods might collide multiple times per insert.  Increment the collision variable every time this happens.
+\item Use step size of 3 for the linear and quadratic implementations.
+\item For \verb|ChainingHashSet|, you can directly add an element to the end of the \verb|LinkedList|.  Consider the length of this \verb|LinkedList| to be the number of collisions needed for this insert.
+\end{itemize}
+\item Classes must compile.
+\item Run the main method, save the output into a file named "data.csv".
+\item Put all deliverables in your cs310/pa1 folder.  Deliverables include:
+\begin{itemize}
+\item AbstractHashSet.java (do not modify)
+\item Main.java (do not modify)
+\item LinearHashSet.java
+\item QuadraticHashSet.java
+\item ChainingHashSet.java
+\item data.csv
+\item memo.txt
+\end{itemize}
+\item Answer the questions in section 4, put answers in memo.txt.
+\end{enumerate}
+
+\section{Questions}
+\begin{enumerate}
+\item For each implementation, what is the average number of collisions for 1000 inserts?  Which implementation resulted in the least collisions?  What are its drawbacks?
+\item The \verb|collisions| variable in \verb|AbstractHashSet| is cumulative.  What would you change to have it represent the number of collisions for the previous insert, rather than for all previous inserts?
+\item What could happen if your step size was not co-prime with the hash table size?
+\end{enumerate}
+
+\section{Tips}
+\begin{enumerate}
+\item The only difference between \verb|LinearHashSet| and \verb|QuadraticHashSet| is one expression.  You may want to have both subclass one parent class.  This up to you.
+\item \verb|ChainingHashSet| is fundamentally different; its main data structure should be an \verb|ArrayList| of \verb|LinkedList| objects.
+\item The number of collisions should constantly go up, because it is cumulative.  You only need to find the places where it should be incremented.
+\end{enumerate}
+\end{document}

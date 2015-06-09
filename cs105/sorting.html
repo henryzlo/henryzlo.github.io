@@ -1,0 +1,144 @@
+<h1>Sorting</h1>
+
+We investigate two different methods to sort an array, and analyze their speed and scalability.
+
+<h2>The Sorting Problem</h2>
+<ul>
+  <li>Assume we have a numerical array, for example <code>[5,6,2,3]</code>.</li>
+    <ul>
+      <li>This can be generalized to sorting string arrays too.</li>
+    </ul>
+  <li>We want to sort this array, i.e. get something like <code>[2,3,5,6]</code>.</li>
+    <ul>
+      <li>How do we do this?</li>
+      <li>How do we compare different methods?</li>
+      <li>How scalable is sorting?</li>
+    </ul>
+</ul>
+
+<h2>Bubble Sort</h2>
+<ul>
+  <li>
+    Bubble sort is one of the most basic sorting algorithms.
+    <ul> 
+      <li>First, we go through the whole list.</li>
+      <li>If the current element is smaller than the previous one, then it is out of order.</li>
+      <li>Correct this by swapping the two elements.</li>
+      <li>Move on to next element and repeat.</li>
+      <li>After we have gone through all elements, if some swaps were made, then go through all elements again.</li>
+    </ul>
+  </li>
+  <li>
+    Visualization taken from http://www.algolist.net/Algorithms/Sorting/Bubble_sort: <br/>
+    <img src="http://www.algolist.net/img/sorts/bubble-sort-1.png"/>
+  </li>
+  <li>
+    Code is easy to implement: <br/>
+<code>
+1.  function bubble_sort(numbers) <br/>
+2.  { <br/>
+3.  &nbsp swaps = 1 <br/>
+4.  &nbsp while (swaps > 0) <br/>
+5.  &nbsp { <br/>
+6.  &nbsp &nbsp swaps = 0 <br/>
+7.  &nbsp &nbsp for(i=1; i < length(numbers); i=i+1) <br/>
+8.  &nbsp &nbsp { <br/>
+9.  &nbsp &nbsp &nbsp if(numbers[i] < numbers[i-1]) <br/>
+10. &nbsp &nbsp &nbsp {  <br/>
+11. &nbsp &nbsp &nbsp &nbsp a = numbers[i] <br/>
+12. &nbsp &nbsp &nbsp &nbsp numbers[i] = numbers[i-1] <br/>
+13. &nbsp &nbsp &nbsp &nbsp numbers[i-1] = a <br/>
+14. &nbsp &nbsp &nbsp &nbsp swaps = swaps + 1 <br/>
+15. &nbsp &nbsp &nbsp } <br/>
+16. &nbsp &nbsp }<br/>
+17. &nbsp } <br/>
+18. &nbsp return(numbers) <br/>
+19. }
+</code>
+    <ul>
+      <li>Line 3 guarantees that we enter the while loop at least once.</li>
+      <li>
+        Line 4 states that we continue going through all the numbers if everything wasn't sorted last time.
+      </li>
+      <li>
+        Line 5 sets the current number of swaps to 0 before any processing actually begins.
+      </li>
+      <li>
+        Line 7 goes through every element in the number list, starting from the second. 
+      </li>
+      <li>
+        Line 9 checks whether the current number is smaller than the previous number (if so, it is out of place.)
+      </li>
+      <li>
+        If the current number is out of place, lines 11-14 swap the two numbers.
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Merge Sort</h2>
+<ul>
+  <li>Merge sort breaks up the array into pieces, then combines them back in a sorted way.</li>
+    <ul>
+      <li>First, we split the array into two pieces.</li>
+      <li>Then split each of these pieces into two pieces.  Continue until we only have one element pieces.</li>
+      <li>For each pair of one element pieces, sort and merge them.</li>
+      <li>For each pair of pieces, sort and merge them.  Continue until we get back the original list sorted.</li>
+    </ul>
+  <li>Image taken from http://upload.wikimedia.org/wikipedia/commons/e/e6/Merge_sort_algorithm_diagram.svg:<br/>
+  <img src="http://upload.wikimedia.org/wikipedia/commons/e/e6/Merge_sort_algorithm_diagram.svg"/></li>
+  <li>Code is more involved than bubble sort and will not be shown.</li>
+</ul>
+
+<h2>Analysis</h2>
+<ul>
+  <li>Suppose we have <code>n</code> elements in the list.  How does performance scale with <code>n</code>?</li>
+  <li>Consider the best case in bubble sort, in which the list is already sorted.</li>
+    <ul>
+      <li>In this scenario, bubble sort will go through the entire list once.</li>
+      <li>Each pair in the list will already be sorted, so there will be no swaps.</li>
+      <li>Since there are no swaps, bubble sort ends.</li>
+      <li>In total, since there were <code>n</code> elements in the list, <code>n</code> computations were made.</li>
+    </ul>
+  <li>Consider the worst case in bubble sort, in which the list is reversed.</li>
+    <ul>
+      <li>In this scenario, the smallest element is at the end (<code>n</code>-th location), but should be at the beginning (1st location).</li>
+      <li>Every time bubble sort loops once, the smallest element is only moved once to the left.</li>
+      <li>There are <code>n</code>-1 spots between where the smallest element begins and where it should be.</li>
+      <li>So there are <code>n</code>-1 runs through the loop, plus one to check the list one last time.</li>
+      <li>So there are <code>n</code> runs through the loop total.</li>
+      <li>At each run through the loop, we compare all <code>n</code> elements.</li>
+      <li>The total number of elements processed then, is <code>n*n</code>, so <code>n^2</code> computations were needed.</li>
+    </ul>
+  <li>Consider mergesort.</li>
+    <ul>
+      <li>In every scenario, mergesort performs the same.  It splits the list into one element chunks, then merges them.</li>
+      <li>How many split / merge steps?</li>
+      <li>There are the same number of splits as merges.</li>
+      <table>
+        <tr><th>Number of Elements</th><th>Number of Splits / Merges</th></tr>
+        <tr><td>2</td><td>1</td></tr>
+        <tr><td>4</td><td>2</td></tr>
+        <tr><td>8</td><td>3</td></tr>
+        <tr><td>16</td><td>4</td></tr>
+        <tr><td>32</td><td>5</td></tr>
+        <tr><td>n</td><td>log_2 (n)</td></tr>
+      </table>
+      <li>Note that the number of split / merge steps is the base 2 log of <code>n</code>.</li>
+      <li>So there are 2*log_2 <code>n</code> split and merge steps.</li>
+      <li>At each split and merge step, we have to process <code>n</code> elements.</li>
+      <li>In total, 2<code>n</code> log_2 <code>n</code> computations are performed.</li>
+    </ul>
+  <li>Taken from: https://lh4.googleusercontent.com/-Hy2zFe-ykY0/TXc_ooJeAjI/AAAAAAAAACA/Vgw9S51QChY/s1600/performance.png <br/>
+    <img src="https://lh4.googleusercontent.com/-Hy2zFe-ykY0/TXc_ooJeAjI/AAAAAAAAACA/Vgw9S51QChY/s1600/performance.png"/>
+  </li>
+</ul>
+
+<h2>Suggested readings</h2>
+<ul>
+  <li>An article about bubble sort: <a href="http://en.wikipedia.org/wiki/Bubble_sort">http://en.wikipedia.org/wiki/Bubble_sort</a></li>
+  <li>An article about merge sort: <a href="http://en.wikipedia.org/wiki/Merge_sort">http://en.wikipedia.org/wiki/Merge_sort</a></li>
+  <li>A site with sorting algorithm visualizations: <a href="http://www.sorting-algorithms.com/">http://www.sorting-algorithms.com/</a></li>
+  <li>Eric Schmidt asking Obama about sorting: <a href="http://www.youtube.com/watch?v=k4RRi_ntQc8">http://www.youtube.com/watch?v=k4RRi_ntQc8</a></li>
+</ul>
+

@@ -1,0 +1,911 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 12">
+<meta name=Originator content="Microsoft Word 12">
+<link rel=File-List href="class10_files/filelist.xml">
+<title>CS310 Class 10</title>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="place"/>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Elizabeth O'Neil</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Betty O'Neil</o:LastAuthor>
+  <o:Revision>25</o:Revision>
+  <o:TotalTime>3413</o:TotalTime>
+  <o:LastPrinted>2012-02-22T19:01:00Z</o:LastPrinted>
+  <o:Created>2009-03-02T17:41:00Z</o:Created>
+  <o:LastSaved>2012-02-24T02:37:00Z</o:LastSaved>
+  <o:Pages>2</o:Pages>
+  <o:Words>1896</o:Words>
+  <o:Characters>10812</o:Characters>
+  <o:Company>University of Massachusetts, Boston</o:Company>
+  <o:Lines>90</o:Lines>
+  <o:Paragraphs>25</o:Paragraphs>
+  <o:CharactersWithSpaces>12683</o:CharactersWithSpaces>
+  <o:Version>12.00</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<link rel=themeData href="class10_files/themedata.thmx">
+<link rel=colorSchemeMapping href="class10_files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>150</w:Zoom>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]--><!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"New York";
+	panose-1:2 4 5 3 6 5 6 2 3 4;
+	mso-font-alt:"Times New Roman";
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:3 0 0 0 1 0;}
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1107305727 0 0 415 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"New York","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"New York";}
+h2
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 2 Char";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	font-style:italic;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoNoSpacing, li.MsoNoSpacing, div.MsoNoSpacing
+	{mso-style-priority:1;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"New York","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"New York";}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 2";
+	mso-ansi-font-size:13.0pt;
+	mso-bidi-font-size:13.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;
+	font-weight:bold;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="11266"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=WordSection1>
+
+<p class=MsoNoSpacing>CS310 - Class 10.</p>
+
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Note: midterm will take place on Thursday, March 14.<o:p></o:p></span></b></p>
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'>Priority Queues (PQs), last part of Chap 6 (note
+there will be two problems on hw4)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>The last collection
+ADT discussed in Weiss, Chap. 6 is the priority queue, Sec. 6.9.<span
+style='mso-spacerun:yes'>  </span>See Figure 6.40 (6.34).<span
+style='mso-spacerun:yes'>  </span>A priority queue holds elements that each
+have a “priority” value, and we can add new elements of this sort, or get back
+out the one with minimum priority value.<span style='mso-spacerun:yes'> 
+</span>The classic names for these actions are insert and deleteMin, as shown
+on Fig 6.40 (6.34), plus findMin.<span style='mso-spacerun:yes'>  </span>However,
+the JDK uses other names.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>For example,
+suppose incoming messages to an email support center each have a priority
+(lowest number is highest priority.)<span style='mso-spacerun:yes'>  
+</span>The pool of unanswered messages could be held in a priority queue, and
+new messages are added to it.<span style='mso-spacerun:yes'>  </span>When a
+support engineer becomes free, he or she takes out the message of highest
+priority to work on.<span style='mso-spacerun:yes'>  </span>It might be a
+recently received message or an old message—this is not a normally-ordered
+queue.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Although a
+priority queue is an important data structure, it was not directly supported in
+the Java Collections API until Java 5. We now have PriorityQueue&lt;T&gt; in
+the JDK, as a class, not a separate interface, unfortunately.<span
+style='mso-spacerun:yes'>  </span>Its API is an extension of the Queue
+interface, pg. 262(229), with “element” for findMin and “T remove()” for
+deleteMin. add() is used for enqueue/insert.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>It’s easy to set
+up a priority queue of Integers, as done on pg. 276(242).<span
+style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>What methods of
+PriorityQueue are called in this program?<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Answer:<span
+style='mso-spacerun:yes'>  </span>insert (add), isEmpty, and deleteMin
+(remove).<span style='mso-spacerun:yes'>  </span>These plus findMin (element)
+are the basic PriorityQueue methods, that are useful in ordinary apps like the
+pool of incoming support messages.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>What output is
+expected here?<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Answer: min
+value first--<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>minPQ:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>3<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>4<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>5<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Note that
+duplicates are OK here: If we add another 3 in the little example, we just get
+two 3s back:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>minPQ:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>3<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>3<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>4<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>5<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'>Is it possible to implement a PQ withTreeMap?<span
+style='mso-spacerun:yes'>  </span><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Yes.<span
+style='mso-spacerun:yes'>  </span>We can use the domain set (the map keys) to
+hold the PQ elements, and the range element (map value) to hold the multiple
+elements of a certain priority.<span style='mso-spacerun:yes'>  </span>Then
+insert works like using a map for counting, and deleteMin finds the first key
+in keySet via an iterator, then uses get() for its set of elements at that
+priority, and either decreases the count by one or removes the key if the count
+reaches 0. Problem on hw4.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'>Next :Look at Call Bank Simulation: Weiss 13.2, Event-driven
+Simulation<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Idea of
+simulation: have computer go through the motions, usually much faster than the
+real-life system being simulated.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Idea of
+Event-driven Simulations:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Consider a
+time-line, with points representing events.<span style='mso-spacerun:yes'> 
+</span>Each event fires off future events, adding points further to the right
+on the line, sometimes near, sometimes further, past other events. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>&lt;&lt; picture
+of time line, with arrows pointing down for incoming events, and arrows arcing
+over from one event point in time to another point in time, for events that
+trigger other events&gt;&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>How do we keep
+track of which event is next?<span style='mso-spacerun:yes'>  </span>Answer:
+use a priority queue with time = priority.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Note that a
+simulation itself takes hardly any time.<span style='mso-spacerun:yes'> 
+</span>It processes events in time order, typically handling a whole day in a
+second or less.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'>Weiss’s call bank simulator</span></b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>: look at
+output, pg. 515(459), Fig. 13.4.<span style='mso-spacerun:yes'>  </span>Here
+one call is coming in every minute, that is, each call event generates another
+call event one minute later.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>The calls each
+last a random length of time, with average of 5 mins.<span
+style='mso-spacerun:yes'>  </span>Each call generates a hangup event in the
+future in x minutes, where x is random with average 5 min., in addition to
+generating the next call in 1 min.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>In particular,
+the first call is 1 min. long, the second 5 mins, third is 4, and so on.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Now here’s a
+good question: how do we programmers generate a random distribution like this
+when we need it?<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Someone has
+specified the average, and expects a nice distribution around that
+average.<span style='mso-spacerun:yes'>  </span>Sort of a bell curve, but the
+real bell curve (normal distribution) expects us to specify a standard
+deviation for the width of the bell. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Weiss uses the <b
+style='mso-bidi-font-weight:normal'>Poisson distribution</b>, which has the
+right shape and only expects us to specify the average. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><span
+style='mso-tab-count:2'>            </span>P(k) = a^k*e^(-a)/k!<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>See <a
+href="http://en.wikipedia.org/wiki/File:Poisson_distribution_PMF.png">http://en.wikipedia.org/wiki/File:Poisson_distribution_PMF.png</a><span
+style='mso-spacerun:yes'>  </span>where lambda = a. Green curve for lambda = 4 is
+close to what we want for a=5, the value used in the modem simulator.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>If you graph
+this over k, you get a small value at 0, rising to a maximum around 5, and
+dropping off to the right, tailing off towards zero.<span
+style='mso-spacerun:yes'>  </span>This distribution is used for all sorts of
+random occurrences, over space as well as time.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Now it’s tricky
+to use a random number generator to follow a certain (non-uniform)
+distribution.<span style='mso-spacerun:yes'>  </span>Luckily, Weiss has done
+the coding for us, in his version of class Random.<span
+style='mso-spacerun:yes'>  </span>See pg.404(352), Figure 9.5(9.4).<span
+style='mso-spacerun:yes'>  </span>Note how you only need to specify the
+expectedValue (a) to use this.<span style='mso-spacerun:yes'>  </span>This
+method is not available in JDK Random. This algorithm is from Knuth and is
+shown on the same Wikipedia page as the above-linked graph (the Poisson
+Distribution page).<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Aside: in fact
+there is no classical “Poisson distribution” scenario here. If you know
+statistics, you know that the Poisson distribution gives probabilities of
+certain numbers of events happening, not the duration of anything. But all that
+we need here is a distribution that looks more-or-less right for the duration
+of calls.<span style='mso-spacerun:yes'>  </span>Simulation results usually
+don’t depend on details of distributions, just their major
+characteristics.<span style='mso-spacerun:yes'>  </span>Simulation has other
+inaccuracies anyway.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>On line 30 of
+Figure 13.9, you can see the call to </span><span style='font-size:9.0pt;
+font-family:"Courier New"'>r.nextPoisson(avgCallLen) </span><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>that gets the
+length in minutes for a particular call.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Let’s graph the
+connect times generated by this using avgCallLen = expectedValue, listed in
+Fig. 13.4: 1, 5, 4, 11, 8, 6, 6, 3, 5, 7<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><span
+style='mso-spacerun:yes'> </span></span><span style='font-size:9.0pt;
+font-family:"Courier New"'>---x------------x---xx--xx—--x---x------------x<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:9.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>   </span>1<span style='mso-spacerun:yes'>           
+</span>4<span style='mso-spacerun:yes'>    </span>5<span
+style='mso-spacerun:yes'>   </span>6<span style='mso-spacerun:yes'>  
+</span>7<span style='mso-spacerun:yes'>   </span>8<span
+style='mso-spacerun:yes'>            </span>11 <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>average = sum/10
+= 56/10 = 5.6<span style='mso-spacerun:yes'>   </span>close to the theoretical
+5<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Look at the
+Event class, Fig. 13.5.<span style='mso-spacerun:yes'>  </span>It’s a private
+static nested class, with non-private fields.<span style='mso-spacerun:yes'> 
+</span>Since the nested class is private, and the only nested class of CallSim
+(ModemSim), the outer class, and a nested class can’t hide fields from its
+outer class (or vice versa), it actually doesn’t matter whether we make fields
+of Event “private” or not. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Remember that a
+static nested class does not have an implicit reference to the outer class, and
+can be instantiated on its own. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Look at
+compareTo for Event: the comparison is based on the time for the event, as we
+expect.<span style='mso-spacerun:yes'>  </span>However, this code is not
+bulletproof, because integer overflow can produce the wrong answer.<span
+style='mso-spacerun:yes'>  </span>However, this simulation is unlikely to
+overflow an int.<span style='mso-spacerun:yes'>  </span>Better to use
+Integer.compareTo().<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>CallSim
+(ModemSim) itself: <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>--constructor
+calls nextCall to get started<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>--runSim loops through
+events, doing remove (i.e, deletemin) from the priority queue for the event to
+handle, and handling it, adding newly-generated events back in the priority
+queue.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Look at the
+trace of the priority-queue contents of Fig. 13.10.<span
+style='mso-spacerun:yes'>  </span>Also on hw4.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+CS105 Homework 2
+
+Instructions: Please print or write your answers LEGIBLY, and turn in a hard copy of the assignment in class next Friday.
+
+1. Expressions:
+
+  a. What are the three kinds of data?
+  b. What does ((4*2) + 6) evaluate to?
+  c. What does (false or (4>2)) evaluate to?
+  d. Identify two expressions, and state what kind they are, in the following code:
+
+     i = i + 1
+     if (i < 3) 
+     {
+       print("good")
+     }
+
+2. Statements:
+
+  a. What does the following code print out?
+
+     i = 1
+     while (i < 3)
+     {
+       print(i*2)
+       i = i + 1
+     }
+
+  b. Identify one function call and one assignment statement in the previous code.   
+  c. What are the input and output variable names in the function definition below?
+
+    function like(somestring)
+    {
+      newstring = "i like " + somestring
+      return(newstring)
+    }
+
+  d. What is the value that the function call like("everything") returns?
+
+3. Arrays:
+
+  Let arr = ["chair", "table", "board"]
+
+  a. What is arr[0]?
+  b. What is arr after the following code is run?
+
+     arr[0] = arr[1] + arr[2]

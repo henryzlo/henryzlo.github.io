@@ -1,0 +1,159 @@
+<h1>Artificial Intelligence</h1>
+
+Artificial intelligence is an ancient goal (yet it always seems novel) to construct human-level intelligence.
+
+<h2>Artificial Intelligence</h2>
+<ul>
+  <li>
+    Since ancient times, people have wondered about building humanoid automatons.
+    <ul>
+      <li>Hephaestus, Greek god of craftsmen, created automatons out of metal to help him with his work in myth.</li>
+      <li>Yan Shi, artificer in the 3rd century of China, built a life-sized human machine to sing and dance.</li>
+      <li>al-Jazari, inventor in the 12th century Middle East, built machines to serve drinks, play music, and wash hands.</li>
+    </ul>
+  </li>
+  <li>
+    Programmable computers simplified developing AI.
+    <ul>
+      <li>Instead of having to build machines and robots, now artificial intelligence seekers only need to write code.</li>
+      <li>Essentially, with computers, engineers now face only the core problem: how to think?</li>
+    </ul>
+  </li>
+  <li>
+    Four different ways of approaching AI:<br/>
+    <table border="1">
+      <tr>
+        <td>Acting Humanly</td>
+        <td>Acting Rationally</td>
+      </tr>
+      <tr>
+        <td>Thinking Humanly</td>
+        <td>Thinking Rationally</td>
+      </tr>
+    </table>
+  </li>
+  <li>
+    The "acting like a human" approach seeks to create computers which emulate humans.
+    <ul>
+      <li>For example, this approach may attempt to pass the Turing test.</li>
+      <li>The test is this: put a person in a room with a door.  This person interacts with another entity through notes slipped under the door.</li>
+      <li>If a computer behind the door can fool the person into thinking it is in fact human, then the computer has passed the Turing test.</li>
+        <img src="http://t3.gstatic.com/images?q=tbn:ANd9GcQbJ1wYAHx-Z4sXW4faAd83RBzOGV3CMT-W1_F_gtWtw51K-pFl" />
+    </ul>
+  </li>
+  <li>
+    The "acting rationally" approach seeks to create computers which perform correctly in various situations.
+    <ul>
+      <li>Defining correct behavior is a lot easier than defining human behavior.</li>
+      <li>Thus, most work has been done on this approach.  This is what we will focus on.</li>
+    </ul>
+  </li>
+  <li>
+    The "thinking humanly" approach seeks to understand human thought, and then use this knowledge to create intelligent machines.
+  </li>
+  <li>
+    The "thinking rationally" approach seeks to model the foundations of logical thought.
+  </li>
+  <li>
+    Traditionally, the goal of AI is to develop human-like intelligence.
+    <ul>
+      <li>Problems include: planning and reasoning.</li>
+      <li>Representing knowledge.</li>
+      <li>Learning.</li>
+      <li>Speech recognition.</li>
+      <li>Image understanding.</li>
+    </ul>
+  </li>
+  <li>
+    We will show some models of thinking, and then show problems with them, to illustrate the difficulty of AI.
+    <ul>
+      <li>We do not know what intelligence is (only know it by analogy).</li>
+      <li>In order to build an intelligent machine, we model some aspect of intelligence.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Reasoning as a Graph Search</h2>
+<ul>
+  <li>
+    Playing games intelligently is one of the classic problems of AI.
+  </li>
+  <li>Games can be represented in game states.
+    <ul>
+      <li>In the beginning, the state of the game is that there are no marks on the board.</li>
+      <li>The end states (there are multiple) consist of three marks of the same kind in a row, or all nine marks on the board.</li>
+      <li>At the beginning, there is one possible state.</li>
+      <li>We then progress to one of many states, and continue until we get to an end state.</li>
+    </ul>
+  </li>
+  <li>Game states can be connected in a tree.
+    <ul>
+      <li>The root is the beginning of the game.</li>
+      <li>The leaves of the tree are the end of the game.</li>
+      <li>A single game is represented as a path from the root to a leaf.</li>
+      <li>The game of tic-tac-toe can be represented in a tree.</li>
+    </ul>
+  </li>
+  <li>Example (ignore the numbers): <br>
+    <img src="http://www.ocf.berkeley.edu/~yosenl/extras/alphabeta/alphabeta.jpg">
+  </li>
+  <li>The intelligent behavior in this situation is the one that gets us to win.
+    <ul>
+      <li>At each step in the game, we proceed one step down the tree.</li>
+      <li>The goal is to manipulate the path so that we get to a leaf which represents a "win".</li>
+      <li>Note that if we are player "X", we only get control of the "X" moves.</li>
+    </ul>
+  </li>
+  <li>This type of representation can be used for other games as well (e.g. chess, checkers, etc.).
+    <ul>
+      <li>However, for complicated games like chess, the tree can get too large to fit in memory.</li>
+      <li>Efficient algorithms must do something to reduce the number of states processed, often sacrificing performance.</li>
+    </ul>
+  </li>
+  <li>Other than games, graphs can be used to represent states in general, and this can be used to solve certain problems.
+    <ul>
+      <li>The pathfinding example: states represent places, connections represent paths, and the goal is to find the shortest path from one place to another.</li>
+      <li>Becoming CEO: states represent positions, connections represent ways of getting there, edge weights may represent difficulty, and the goal is to get to the CEO position from where you begin.</li>
+      <li>In general, state graphs can be used to represent decision-making problems if we know the outcomes beforehand.</li>
+    </ul>
+  </li>
+  <li>Some problems, however, cannot be represented by graphs.
+    <ul>
+      <li>Problems without discrete states cannot be represented by graphs.</li>
+      <li>For example, in air hockey, the velocity of the puck, angle, position, etc. are all variables, too many states to represent in a graph.</li>
+      <li>Problems where you do not know the outcome cannot be represented by graphs.</li>
+      <li>Each state represents an outcome of some decision, so if you don't know the outcome of your decisions, you can't represent it.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Decision Trees</h2>
+<ul>
+  <li>You've probably seen decision trees before:<br>
+    <img src="http://media.tumblr.com/tumblr_l5hzli0czl1qznyy8.png">
+  </li>
+  <li>Decision trees represent knowledge similarly to graphs, but how we use them is different.
+    <ul>
+      <li>Each node represents a decision we can make, rather than an outcome.</li>
+      <li>Depending on the decision we make, we follow the tree down to the next decision.</li>
+      <li>We keep doing this until we reach a conclusion.</li>
+      <li>Thus, the tree represents a decision making process, rather than a state space.</li>
+    </ul>
+  </li>
+  <li>Decision trees can be built for expert systems, which are computerized decision making machines.
+    <ul>
+      <li>For example, programs which automatically diagnose based on user input can use decision trees.</li>
+      <li>Another example, automated telephone systems are a form of expert system.</li>
+      <li>These types of systems are not very flexible because they can only handle what they have been scripted for.</li>
+      <li>However, by essentially not thinking, these types of systems are very fast.</li>
+    </ul>
+  </li>
+  <li>We can also learn decision trees automatically from data.
+    <ul>
+      <li>The image here shows a decision tree, which determines what species of iris our plant is, depending on some measurements.<br>
+        <img src="http://www.sgi.com/tech/mlc/util/util/img4.gif">
+      </li>
+    </ul>
+  </li>
+</ul>
+</body></html>

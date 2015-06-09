@@ -1,0 +1,1733 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 12">
+<meta name=Originator content="Microsoft Word 12">
+<link rel=File-List href="class25_files/filelist.xml">
+<title>Class 22 Shortest-path Algorithms</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Elizabeth O'Neil</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Betty O'Neil</o:LastAuthor>
+  <o:Revision>20</o:Revision>
+  <o:TotalTime>2976</o:TotalTime>
+  <o:LastPrinted>2012-04-26T13:15:00Z</o:LastPrinted>
+  <o:Created>2009-04-29T17:33:00Z</o:Created>
+  <o:LastSaved>2012-04-27T15:57:00Z</o:LastSaved>
+  <o:Pages>3</o:Pages>
+  <o:Words>2107</o:Words>
+  <o:Characters>12015</o:Characters>
+  <o:Company>University of Massachusetts, Boston</o:Company>
+  <o:Lines>100</o:Lines>
+  <o:Paragraphs>28</o:Paragraphs>
+  <o:CharactersWithSpaces>14094</o:CharactersWithSpaces>
+  <o:Version>12.00</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<link rel=themeData href="class25_files/themedata.thmx">
+<link rel=colorSchemeMapping href="class25_files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>150</w:Zoom>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1107305727 0 0 415 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:blue;
+	mso-themecolor:hyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:purple;
+	mso-themecolor:followedhyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:1386180702;
+	mso-list-template-ids:288785182;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l1
+	{mso-list-id:1386248427;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1109717700 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+table.MsoTableGrid
+	{mso-style-name:"Table Grid";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-priority:59;
+	mso-style-unhide:no;
+	border:solid black 1.0pt;
+	mso-border-themecolor:text1;
+	mso-border-alt:solid black .5pt;
+	mso-border-themecolor:text1;
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-border-insideh:.5pt solid black;
+	mso-border-insideh-themecolor:text1;
+	mso-border-insidev:.5pt solid black;
+	mso-border-insidev-themecolor:text1;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="6146"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Class 22<o:p></o:p></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>pa6 is
+available, due Wed., Dec. 5 (last assignments in
+course)<o:p></o:p></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Handout: </b><strong><span
+style='font-weight:normal'>Unweighted shortest paths Algorithm, using JGraphT:
+Unweighted.java, a main for it, output for test.dat</span></strong><b
+style='mso-bidi-font-weight:normal'><o:p></o:p></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Working on shortest path
+algorithms: unweighted case (all edges have cost = 1 to traverse)<o:p></o:p></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Last time:<o:p></o:p></b></p>
+
+<p class=MsoNormal>Fixing Fig. 14.21 and seeing how a BFS finds the distances
+(# steps in paths) in it from the starting vertex V2. </p>
+
+<p class=MsoNormal>We can also find the paths by tracking what edges lead to best-costs.
+See the <a href="class24.html">notes</a> for details.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Recap: do BFS on Fig.
+14.25</b>, the graph we later want to use for Dijkstra’s algorithm (weighted
+edges). This organizes the graph visually into levels, one for distance 1,
+another for distance 2, etc.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Then we showed the queues in use in the unweighted algorithm
+by circling nodes.<span style='mso-spacerun:yes'>  </span>We see how the queue
+holds the nodes of the advancing edge of the area of graph exploration done by
+the algorithm, and how it sometimes holds nodes on two levels of the BFS tree,
+not just one level, when it is working on a node in the middle of the nodes on
+one level.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Now our challenge is to write this unweighted shortest path
+algorithm with our Graph API.<span style='mso-spacerun:yes'>  </span>The result
+of the algorithm is a distance and previous node for each node in the graph. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Unlike Weiss’s setup, we can’t store the distances, etc. in
+the Graph itself.<span style='mso-spacerun:yes'>  </span>So we set up a Map
+from V to what we need, in this case the combo of distance and prev-of Node:
+that’s a DistInfo object.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>From cs310.Unweighted.java (on back of handout)—</p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'><span
+style='mso-spacerun:yes'>     </span></span><b><span style='font-size:9.0pt;
+font-family:"Courier New";color:#7F0055'>static</span></b><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'> </span><b><span
+style='font-size:9.0pt;font-family:"Courier New";color:#7F0055'>public</span></b><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'> </span><b><span
+style='font-size:9.0pt;font-family:"Courier New";color:#7F0055'>class</span></b><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'> DistInfo {</span><span
+style='font-size:9.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'><span
+style='mso-spacerun:yes'>          </span></span><b><span style='font-size:
+9.0pt;font-family:"Courier New";color:#7F0055'>public</span></b><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'> </span><b><span
+style='font-size:9.0pt;font-family:"Courier New";color:#7F0055'>final</span></b><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'> </span><b><span
+style='font-size:9.0pt;font-family:"Courier New";color:#7F0055'>static</span></b><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'> </span><b><span
+style='font-size:9.0pt;font-family:"Courier New";color:#7F0055'>int</span></b><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'> </span><i><span
+style='font-size:9.0pt;font-family:"Courier New";color:#0000C0'>INFINITY</span></i><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'> = Integer.</span><i><span
+style='font-size:9.0pt;font-family:"Courier New";color:#0000C0'>MAX_VALUE</span></i><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'>;</span><span
+style='font-size:9.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'><span
+style='mso-spacerun:yes'>          </span></span><b><span style='font-size:
+9.0pt;font-family:"Courier New";color:#7F0055'>private</span></b><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'> </span><b><span
+style='font-size:9.0pt;font-family:"Courier New";color:#7F0055'>int</span></b><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'> </span><span
+style='font-size:9.0pt;font-family:"Courier New";color:#0000C0'>dist</span><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'> = </span><i><span
+style='font-size:9.0pt;font-family:"Courier New";color:#0000C0'>INFINITY</span></i><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'>;</span><span
+style='font-size:9.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'><span
+style='mso-spacerun:yes'>          </span></span><b><span style='font-size:
+9.0pt;font-family:"Courier New";color:#7F0055'>private</span></b><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'> Object </span><span
+style='font-size:9.0pt;font-family:"Courier New";color:#0000C0'>prev</span><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'> = </span><b><span
+style='font-size:9.0pt;font-family:"Courier New";color:#7F0055'>null</span></b><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'>; // a vertex
+object</span><span style='font-size:9.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:9.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'><span
+style='mso-spacerun:yes'>          </span></span><b><span style='font-size:
+9.0pt;font-family:"Courier New";color:#7F0055'>public</span></b><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'> </span><b><span
+style='font-size:9.0pt;font-family:"Courier New";color:#7F0055'>int</span></b><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'> getDist() { </span><b><span
+style='font-size:9.0pt;font-family:"Courier New";color:#7F0055'>return</span></b><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'> </span><span
+style='font-size:9.0pt;font-family:"Courier New";color:#0000C0'>dist</span><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'>; }</span><span
+style='font-size:9.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:9.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'><span
+style='mso-spacerun:yes'>          </span></span><b><span style='font-size:
+9.0pt;font-family:"Courier New";color:#7F0055'>public</span></b><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'> Object getPrev()
+{ </span><b><span style='font-size:9.0pt;font-family:"Courier New";color:#7F0055'>return</span></b><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'> </span><span
+style='font-size:9.0pt;font-family:"Courier New";color:#0000C0'>prev</span><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'>; }</span><span
+style='font-size:9.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:9.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'><span
+style='mso-spacerun:yes'>          </span></span><b><span style='font-size:
+9.0pt;font-family:"Courier New";color:#7F0055'>public</span></b><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'> String
+toString() {</span><span style='font-size:9.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'><span
+style='mso-spacerun:yes'>               </span></span><b><span
+style='font-size:9.0pt;font-family:"Courier New";color:#7F0055'>return</span></b><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'> </span><span
+style='font-size:9.0pt;font-family:"Courier New";color:#2A00FF'>&quot;&quot;</span><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'> + (</span><span
+style='font-size:9.0pt;font-family:"Courier New";color:#0000C0'>dist</span><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'> == </span><i><span
+style='font-size:9.0pt;font-family:"Courier New";color:#0000C0'>INFINITY</span></i><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'> ? </span><span
+style='font-size:9.0pt;font-family:"Courier New";color:#2A00FF'>&quot;INF&quot;</span><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'> : </span><span
+style='font-size:9.0pt;font-family:"Courier New";color:#2A00FF'>&quot;&quot;</span><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'> + </span><span
+style='font-size:9.0pt;font-family:"Courier New";color:#0000C0'>dist</span><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'>)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:2.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:9.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'> </span>+ </span><span
+style='font-size:9.0pt;font-family:"Courier New";color:#2A00FF'>&quot; (prev =
+&quot;</span><span style='font-size:9.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'><span
+style='mso-spacerun:yes'>                         </span>+ (</span><span
+style='font-size:9.0pt;font-family:"Courier New";color:#0000C0'>prev</span><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'> == </span><b><span
+style='font-size:9.0pt;font-family:"Courier New";color:#7F0055'>null</span></b><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'> ? </span><span
+style='font-size:9.0pt;font-family:"Courier New";color:#2A00FF'>&quot;null&quot;</span><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'> : </span><span
+style='font-size:9.0pt;font-family:"Courier New";color:#0000C0'>prev</span><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'>) + </span><span
+style='font-size:9.0pt;font-family:"Courier New";color:#2A00FF'>&quot;)&quot;</span><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'>;</span><span
+style='font-size:9.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:9.0pt;font-family:"Courier New";color:black'><span
+style='mso-spacerun:yes'>   </span><span
+style='mso-spacerun:yes'>       </span>}</span><span style='font-size:9.0pt;
+font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>     </span>}</span><span
+style='font-size:9.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal>This is a simple class, grouping two numbers, and defining
+one constant.<span style='mso-spacerun:yes'>  </span>The constant is needed to
+express the idea that a node is unreachable, that is, it’s a special value for
+“dist”.<span style='mso-spacerun:yes'>  </span>This class doesn’t even have a
+constructor defined, so it gets a default constructor.<span
+style='mso-spacerun:yes'>  </span>The initializers of the fields (INFINITY,
+null) are set by that default constructor. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Although the fields are private, there is no barrier to
+access from the outer class.<span style='mso-spacerun:yes'>  </span>Since it’s
+public, code outside the outer class can use Unweighted.DistInfo as a type, but
+of course cannot access the fields.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>DistInfo is a class that is a helper to Unweighted, so we
+make it a nested class to express its relationship.<span
+style='mso-spacerun:yes'>  </span>DistInfo is “static”, so its objects are
+independent objects, not tied to any outer class object.<span
+style='mso-spacerun:yes'>  </span>There is no outer class <i style='mso-bidi-font-style:
+normal'>object</i> in this case anyway, since the class Unweighted is never
+instantiated.<span style='mso-spacerun:yes'>  </span>So we cannot use an inner
+class here.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>We will be using this DistInfo class outside Unweighted as
+well as inside, defining DistInfo objects that get passed back from the
+unweighted method to its caller. The client knows them as type
+Unweighted.DistInfo.<span style='mso-spacerun:yes'>   </span>Here they are the
+values in a Map, where the keys are the vertices.<span
+style='mso-spacerun:yes'>  </span>Since the caller needs to interpret them, the
+DistInfo class needs to be public.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>This gives us a good <b style='mso-bidi-font-weight:normal'>example
+of use of a public nested class</b>—most of our previous examples have been
+private nested classes and private inner classes, for implementation details,
+but here we have a detail that’s reported to the client, namely the info on the
+distance for each vertex. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>We see “getters” here, getDist() and getPrev(), but no
+“setters” such as setDist()—why?<span style='mso-spacerun:yes'>  </span>Answer:
+because Unweighted will be setting these fields, and as an outer class, can
+access private fields of its nested classes.<span style='mso-spacerun:yes'>  
+</span>So this way, the outside classes can’t set anything, but the right class
+can, so it’s nicely encapsulated.<span style='mso-spacerun:yes'>  </span>And
+outside class code can <i style='mso-bidi-font-style:normal'>read</i> the dist
+and prev values through use of the public getters.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>For our previous examples of private nested and inner
+classes, it didn’t matter if we marked the fields private or not, but it does
+matter for a public nested class, because those objects fall into the hands of
+the clients.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>The unweighted
+method, like Weiss, Fig. 14.22<o:p></o:p></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Look at cs310.Unweighted.java. Note that Unweighted is
+itself not a generic class, because there’s no &lt;..&gt; in “public class
+Unweighted ...” Instead, the generic types are introduced at the method level.
+See pg. 152-153(133-134) for discussion of this use of generics.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Note that Unweighted is a pure client of Graph, unlike
+Weiss’s code in Fig. 14.22, which needs to be a method of his Graph class to
+access vertexMap.<span style='mso-spacerun:yes'>  </span>Our Graph API is much
+more encapsulated than his. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Note that there is another .java file in the cs310 package
+called UnweightedObservable.java that is very similar to Unweighted.java. The
+only difference involves the addition of the Observable/Observer pattern to
+UnweightedObservable.java. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Usually it’s not a good idea to try to have two so similar
+sources, because when you copy your code, you copy your bugs too. In fact, the
+bug marked and fixed in Unweighted.java also occured in
+UnweightedObservable.java because it was copied from there. In this case, I wanted
+to show that we don’t need Observable in Unweighted for it to work, but that
+it’s easy to add.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Dijkstra's Algorithm:
+Least Cost Path from a Certain Vertex to all others, any positive weights.<o:p></o:p></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>This is a generalization of the unweighted case, so we really
+don’t need the unweighted code once we have an implementation of Dijkstra’s
+famous algorithm.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Clearly the BFS of the unweighted case is too simplistic:
+it’s not smart enough to avoid high-cost edges. We need to be cost-sensitive
+when choosing where to work next.<span style='mso-spacerun:yes'>  </span>Again
+we have the notion of an “eyeball node” where we are currently working. Again
+we hold the nodes “seen” by the advancing exploration of the graph in a data
+structure, this time a priority queue (it turns out.)</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Dijkstra's algorithm is a (fully successful) greedy
+algorithm.<span style='mso-spacerun:yes'>  </span>We proceed in little steps of
+greediness, carefully expanding the set of eyeball-visited nodes.<span
+style='mso-spacerun:yes'>  </span>Remember we're starting from a certain vertex
+v0.<span style='mso-spacerun:yes'>  </span>At each step, we move the eyeball to
+a new node, the one with the least cost from v0 that has not been visited by
+the eyeball.<span style='mso-spacerun:yes'>   </span>Also, we set up a Map to
+hold all the running min costs D<sub>i</sub> to various destinations:</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='text-indent:.3in'>D<sub>i</sub> = min cost from v0 to
+i following any path through the visited nodes, plus one edge to i if i is not
+yet visited.</p>
+
+<p class=MsoNormal style='text-indent:.3in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Initially, we mark V0 as distance 0 from itself, and call it
+the first eyeball-visited node.<span style='mso-spacerun:yes'>  </span>We set
+the rest of the distances to INFINITY.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Then the paths for Ds at this stage are just from V0 to i in
+one edge.<span style='mso-spacerun:yes'>  </span>See pane 2 of Figure 14.25, pg
+493, where 2 adjacent nodes to V0 (V1 and V3)are marked with their D<sub>i</sub>’s.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>We drew this as the top part of the same old BFS tree, with
+the same queue (now “pq”) holding V1 and V3.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Then D<sub>i</sub> is ready for us to scan for the min cost
+to all i's.<span style='mso-spacerun:yes'>  </span>We find the min cost node,
+here V3, and make it the next eyeball node. Then we need to update D<sub>i</sub>
+to consider steps out from V3 as well.<span style='mso-spacerun:yes'> 
+</span>There are 4 ways out from V3.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>We drew this as four arrows down from V3 in our BFS-like
+graph. Note that the resulting tree is different from the pure BFS tree we drew
+earlier (for unweighted) because V4 now hangs off of V3 instead of off of V1 in
+the trees defined by the algorithms.<span style='mso-spacerun:yes'>  </span>The
+cost-sensitive algorithm chases down cheap routes faster than expensive routes,
+so V4 is visited first from V3, not V1.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>That doesn’t mean that the first finite D assigned to a node
+is the best-ever, though.<span style='mso-spacerun:yes'>  </span>The
+exploration may find a better route later on.<span style='mso-spacerun:yes'> 
+</span>We have to be ready to change D values for a vertex as the exploration
+continues.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Consider a particular i, say v.<span
+style='mso-spacerun:yes'>   </span>We already have Dv, the direct V0<span
+style='font-family:Wingdings;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman";mso-char-type:symbol;mso-symbol-font-family:
+Wingdings;mso-no-proof:yes'><span style='mso-char-type:symbol;mso-symbol-font-family:
+Wingdings'>à</span></span> v cost, but now the path may go V0<span
+style='font-family:Wingdings;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman";mso-char-type:symbol;mso-symbol-font-family:
+Wingdings;mso-no-proof:yes'><span style='mso-char-type:symbol;mso-symbol-font-family:
+Wingdings'>à</span></span> V3 <span style='font-family:Wingdings;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman";mso-char-type:symbol;
+mso-symbol-font-family:Wingdings;mso-no-proof:yes'><span style='mso-char-type:
+symbol;mso-symbol-font-family:Wingdings'>à</span></span> v, and this might be
+cheaper.<span style='mso-spacerun:yes'>  </span>Its cost is D<sub>3 </sub>for
+V0<span style='font-family:Wingdings;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman";mso-char-type:symbol;mso-symbol-font-family:
+Wingdings;mso-no-proof:yes'><span style='mso-char-type:symbol;mso-symbol-font-family:
+Wingdings'>à</span></span> V3, plus edge-cost for V3<span style='font-family:
+Wingdings;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";
+mso-char-type:symbol;mso-symbol-font-family:Wingdings;mso-no-proof:yes'><span
+style='mso-char-type:symbol;mso-symbol-font-family:Wingdings'>à</span></span>v.<span
+style='mso-spacerun:yes'>  </span>So we compare Dv and D<sub>3</sub> +
+edge-cost and see which is smaller, and that becomes the new Dv, ready for
+another scan for minimum.<span style='mso-spacerun:yes'>  </span>And so on. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Go through the computation of Fig. 14.25, pg. 493.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Trace of Dijkstra’s
+algorithm for graph of Fig. 14.25, pg. 470, D’s for each eyeball node “stage”:<o:p></o:p></b></p>
+
+<p class=MsoNormal>Here we need to consult the graph for the new D’s, line by
+line, and record them in this table:</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>eyeball V0<span
+style='mso-spacerun:yes'>   </span>V1<span style='mso-spacerun:yes'>  
+</span>V2<span style='mso-spacerun:yes'>   </span>V3<span
+style='mso-spacerun:yes'>   </span>V4<span style='mso-spacerun:yes'>   
+</span>V5<span style='mso-spacerun:yes'>    </span>V6<span
+style='mso-spacerun:yes'>     </span>pq<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span>--<span style='mso-spacerun:yes'>   
+</span>0<span style='mso-spacerun:yes'>    </span>inf<span
+style='mso-spacerun:yes'>  </span>inf<span style='mso-spacerun:yes'> 
+</span>inf<span style='mso-spacerun:yes'>  </span>inf<span
+style='mso-spacerun:yes'>   </span>inf<span style='mso-spacerun:yes'>  
+</span>inf<span style='mso-spacerun:yes'>   </span>[V0]<span
+style='mso-spacerun:yes'>  </span>(V0 is min)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span>V0<span style='mso-spacerun:yes'>   
+</span>0<span style='mso-spacerun:yes'>    </span>2<span
+style='mso-spacerun:yes'>    </span>inf<span style='mso-spacerun:yes'> 
+</span>1<span style='mso-spacerun:yes'>    </span>inf<span
+style='mso-spacerun:yes'>   </span>inf<span style='mso-spacerun:yes'>  
+</span>inf<span style='mso-spacerun:yes'>  </span><span
+style='mso-spacerun:yes'> </span>[V3, V1] (V3 is min)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span>V3<span style='mso-spacerun:yes'>   
+</span>|<span style='mso-spacerun:yes'>    </span>2<span
+style='mso-spacerun:yes'>    </span>3<span style='mso-spacerun:yes'>   
+</span>|<span style='mso-spacerun:yes'>    </span>3<span
+style='mso-spacerun:yes'>     </span>9<span style='mso-spacerun:yes'>    
+</span>5<span style='mso-spacerun:yes'>     </span>[V1, V2, V4, V5, V6] (V1 is
+min)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span>V1<span style='mso-spacerun:yes'>   
+</span>|<span style='mso-spacerun:yes'>    </span>|<span
+style='mso-spacerun:yes'>    </span>3<span style='mso-spacerun:yes'>   
+</span>|<span style='mso-spacerun:yes'>    </span>3*<span
+style='mso-spacerun:yes'>    </span>9<span style='mso-spacerun:yes'>    
+</span>5<span style='mso-spacerun:yes'>     </span>[V2, V4, V5, V6] (V4 is min
+(tied))<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span>V4<span style='mso-spacerun:yes'>   
+</span>|<span style='mso-spacerun:yes'>    </span>|<span
+style='mso-spacerun:yes'>    </span>3<span style='mso-spacerun:yes'>   
+</span>|<span style='mso-spacerun:yes'>    </span>|<span
+style='mso-spacerun:yes'>     </span>9<span style='mso-spacerun:yes'>    
+</span>5*<span style='mso-spacerun:yes'>    </span>[V2, V5, V6] (V2 is min)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span>V2<span style='mso-spacerun:yes'>   
+</span>|<span style='mso-spacerun:yes'>    </span>|<span
+style='mso-spacerun:yes'>    </span>|<span style='mso-spacerun:yes'>   
+</span>|<span style='mso-spacerun:yes'>    </span>|<span
+style='mso-spacerun:yes'>     </span>8**<span style='mso-spacerun:yes'>  
+</span>5<span style='mso-spacerun:yes'>     </span>[V5, V6] (V6 is min)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span>V6<span style='mso-spacerun:yes'>   
+</span>|<span style='mso-spacerun:yes'>    </span>|<span
+style='mso-spacerun:yes'>    </span>|<span style='mso-spacerun:yes'>   
+</span>|<span style='mso-spacerun:yes'>    </span>|<span
+style='mso-spacerun:yes'>     </span>6**<span style='mso-spacerun:yes'>  
+</span>|<span style='mso-spacerun:yes'>     </span>[V5]<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span>V5<span style='mso-spacerun:yes'>   
+</span>|<span style='mso-spacerun:yes'>    </span>|<span
+style='mso-spacerun:yes'>    </span>|<span style='mso-spacerun:yes'>   
+</span>|<span style='mso-spacerun:yes'>    </span>|<span
+style='mso-spacerun:yes'>     </span>|<span style='mso-spacerun:yes'>    
+</span>|<span style='mso-spacerun:yes'>     </span>[]<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>final:<span
+style='mso-spacerun:yes'>  </span>0<span style='mso-spacerun:yes'>   
+</span>2<span style='mso-spacerun:yes'>    </span>3<span
+style='mso-spacerun:yes'>    </span>1<span style='mso-spacerun:yes'>   
+</span>3<span style='mso-spacerun:yes'>     </span>6<span
+style='mso-spacerun:yes'>     </span>5<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal>The starred and double-starred entries are ones where two
+competing paths were compared and the shorter choice made.<span
+style='mso-spacerun:yes'>  </span>For example, at the first single-starred one,
+the eyeball node is V1 and the target node is V4.<span
+style='mso-spacerun:yes'>  </span>V0 -&gt; V1 has cost 2, and V1-&gt;V4 has
+cost 10, totaling 12, vs. the already established V0-&gt;V4 path cost of 3,
+which better, and kept as the D value.<span style='mso-spacerun:yes'> 
+</span>Similarly, the other single-starred entry kept its old D values.<span
+style='mso-spacerun:yes'>  </span>The double-starred entries had
+actually-better paths found, so their D’s dropped in value.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The vertical bars indicate frozen D values of nodes already
+visited by the eyeball.<span style='mso-spacerun:yes'>  </span>Only the nodes
+not yet so visited change D values as competing paths to them and are explored.</p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Finding the Paths for
+Dijkstra </b></p>
+
+<p class=MsoNormal>This can be done with the same trick as the simpler
+unweighted case.<span style='mso-spacerun:yes'>  </span>Every time you find a
+new better final edge for a path, you save the node it came from as “prev”,
+possibly overwriting its older prev node.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='text-indent:.5in'><o:p>&nbsp;</o:p></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid black .5pt;
+ mso-border-themecolor:text1;mso-yfti-tbllook:1184;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=44 valign=top style='width:33.3pt;border:solid black 1.0pt;
+  mso-border-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>eyeball<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border:solid black 1.0pt;
+  mso-border-themecolor:text1;border-left:none;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>D0<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border:solid black 1.0pt;
+  mso-border-themecolor:text1;border-left:none;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>D1<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border:solid black 1.0pt;
+  mso-border-themecolor:text1;border-left:none;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>D2<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border:solid black 1.0pt;
+  mso-border-themecolor:text1;border-left:none;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>D3<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border:solid black 1.0pt;
+  mso-border-themecolor:text1;border-left:none;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>D4<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border:solid black 1.0pt;
+  mso-border-themecolor:text1;border-left:none;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>D5<o:p></o:p></span></p>
+  </td>
+  <td width=73 valign=top style='width:54.8pt;border:solid black 1.0pt;
+  mso-border-themecolor:text1;border-left:none;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>D6<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=44 valign=top style='width:33.3pt;border:solid black 1.0pt;
+  mso-border-themecolor:text1;border-top:none;mso-border-top-alt:solid black .5pt;
+  mso-border-top-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>0<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>inf<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>inf<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>inf<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>inf<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>inf<o:p></o:p></span></p>
+  </td>
+  <td width=73 valign=top style='width:54.8pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>inf<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=44 valign=top style='width:33.3pt;border:solid black 1.0pt;
+  mso-border-themecolor:text1;border-top:none;mso-border-top-alt:solid black .5pt;
+  mso-border-top-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>V0<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>0<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>2, prev(V1)=V0<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>inf<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>1, prev(V3)=V0<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>inf<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>inf<o:p></o:p></span></p>
+  </td>
+  <td width=73 valign=top style='width:54.8pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>inf<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=44 valign=top style='width:33.3pt;border:solid black 1.0pt;
+  mso-border-themecolor:text1;border-top:none;mso-border-top-alt:solid black .5pt;
+  mso-border-top-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>V3<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>0<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>2<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>3, prev(V2)=V3<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>1<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>3, prev(V4)=V3<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>9, prev(V5)=V3<o:p></o:p></span></p>
+  </td>
+  <td width=73 valign=top style='width:54.8pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>5, prev(V6)=V3<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width=44 valign=top style='width:33.3pt;border:solid black 1.0pt;
+  mso-border-themecolor:text1;border-top:none;mso-border-top-alt:solid black .5pt;
+  mso-border-top-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>V1<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>0<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>2<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>3<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>1<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>3<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>9<o:p></o:p></span></p>
+  </td>
+  <td width=73 valign=top style='width:54.8pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>5<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td width=44 valign=top style='width:33.3pt;border:solid black 1.0pt;
+  mso-border-themecolor:text1;border-top:none;mso-border-top-alt:solid black .5pt;
+  mso-border-top-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>V4<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>0<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>2<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>3<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>1<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>3<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>9<o:p></o:p></span></p>
+  </td>
+  <td width=73 valign=top style='width:54.8pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>5<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td width=44 valign=top style='width:33.3pt;border:solid black 1.0pt;
+  mso-border-themecolor:text1;border-top:none;mso-border-top-alt:solid black .5pt;
+  mso-border-top-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>V2<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>0<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>2<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>3<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>1<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>3<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>8, prev(V5)=V2<o:p></o:p></span></p>
+  </td>
+  <td width=73 valign=top style='width:54.8pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>5<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td width=44 valign=top style='width:33.3pt;border:solid black 1.0pt;
+  mso-border-themecolor:text1;border-top:none;mso-border-top-alt:solid black .5pt;
+  mso-border-top-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>V6<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>0<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>2<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>3<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>1<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>3<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>6, prev(V5)=V6<o:p></o:p></span></p>
+  </td>
+  <td width=73 valign=top style='width:54.8pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>5<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8;mso-yfti-lastrow:yes'>
+  <td width=44 valign=top style='width:33.3pt;border:solid black 1.0pt;
+  mso-border-themecolor:text1;border-top:none;mso-border-top-alt:solid black .5pt;
+  mso-border-top-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>V5, end<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>0<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>2<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>3<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>1<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>3<o:p></o:p></span></p>
+  </td>
+  <td width=72 valign=top style='width:54.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>6<o:p></o:p></span></p>
+  </td>
+  <td width=73 valign=top style='width:54.8pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'>5<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Here we see that prev(V5) = V6 at the end, meaning that the
+best way to get from V0 to V5 will be from V6 as the last step. Then we see
+that prev(V6) = V3, so the best way to get to V6 is from V3, so we can put
+these together and claim that the best path from V0 to V5 involves these two
+steps, and so on.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Example path, shorter form: Find shortest path from V0 to
+V5: work backwards from V5:</p>
+
+<p class=MsoNormal>Prev(V5) = V6, so V6-&gt;V5 at end of path,</p>
+
+<p class=MsoNormal>Prev(V6) = V3, so go V3-&gt;V6-&gt;V5</p>
+
+<p class=MsoNormal>Prev(V3) = V0, so shortest path is V0-&gt;V3-&gt;V6-&gt;V5,
+cost = 1 + 4 + 1 = 6, as promised by final D5 above.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Next time: implementing Dijkstra’s algorithm</p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Proof of Dijkstra’s
+algorithm (skipped in class and optional, hopefully covered in cs320)<o:p></o:p></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The algorithm can be thought of as a sequence of
+stages.<span style='mso-spacerun:yes'>  </span>Each stage has two parts:</p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo3;tab-stops:list .5in'>finding
+     the min D among unvisited nodes, to determine new eyeball node v, now
+     visited</li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo3;tab-stops:list .5in'>updating
+     D’s for unvisited nodes w adjacent to v: old Dw vs. Dv + v-w-cost.</li>
+</ul>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Proof that this works?<span style='mso-spacerun:yes'> 
+</span>Clearly a candidate for an inductive proof, but what is the inductive
+hypothesis?</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Weiss proof of Dijkstra’s algorithm, pg. 492.<span
+style='mso-spacerun:yes'>  </span>An eyeball-visit is a “stage”, i.e. the body
+of one pass of the outer loop.<span style='mso-spacerun:yes'>  </span>Nodes are
+either “visited” or “unvisited” at the end of a certain stage. A node is
+“visited” after it has been an “eyeball node”. In Figure 14.25, there is one
+panel for each stage. In a panel, the shaded nodes, light-shaded or
+dark-shaded, are the visited nodes. The light-shaded one has just been visited
+in this stage.<span style='mso-spacerun:yes'>  </span>Other (unvisited) nodes
+have been “seen” and marked with tentative D values.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Inductive hypothesis:</b><span
+style='mso-spacerun:yes'>  </span>After any stage, the values of D for vertices
+already visited are the final shortest distances and the values of D for the
+unvisited vertices represent the shortest distance using paths with visited
+nodes as intermediate path nodes.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Base case:</b> OK for
+first stage.</p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Induction step:</b>
+Assume true for stage k, prove for k+1, with eyeball node v.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:.3in'>Now v is newly an eyeball, so its D
+is only known to be (by stage k setup) the shortest path with other
+eyeball-visited nodes as intermediate nodes, but that’s a general setup for
+paths through the current eyeball-visited set (stage k+1).<span
+style='mso-spacerun:yes'>  </span>However, there might be another path to v
+that wanders outside the visited set and still gets to v with less total cost,
+in the stage k+1 setup.<span style='mso-spacerun:yes'>  </span></p>
+
+<p class=MsoNormal style='margin-left:.3in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:.3in'>Suppose it visits u outside the
+visited set.<span style='mso-spacerun:yes'>  </span>See Figure 14.24. Then Dv
+&gt;= Du along that path, since costs only rise as edges are added (positive
+weight requirement).<span style='mso-spacerun:yes'>  </span>But Dv was chosen
+by the algorithm to be the smallest D for unvisited nodes, a
+contradiction.<span style='mso-spacerun:yes'>  </span>Thus there is no such u.
+So the best path to v stays in the visited set in the stage k+1 setup, and the
+first part of the induction hypothesis is shown.</p>
+
+<p class=MsoNormal style='margin-left:.3in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:.3in'>For the second part of the
+induction hypothesis, consider an unvisited vertex i in the k+1 setup.<span
+style='mso-spacerun:yes'>  </span>We know that the old Di (at stage k) was the
+shortest path using the old visited nodes as intermediate nodes. Now we need to
+show the new Di = min (old Di, Dv + Cv,i) is the shortest using the new set of
+visited nodes, that is, with just the one additional node v.<span
+style='mso-spacerun:yes'>  </span>Clearly the formula takes into account all
+the new possibilities if we are sure that v is the last intermediate node of a
+possible new path.</p>
+
+<p class=MsoNormal style='margin-left:.3in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:.3in'>But what if the best new path has
+v, but not as the last intermediate node?<span style='mso-spacerun:yes'> 
+</span>We need to show this is impossible.<span style='mso-spacerun:yes'> 
+</span>Suppose it could happen, with last intermediate node u, a visited node
+other than v.<span style='mso-spacerun:yes'>  </span>Then S -&gt; v -&gt; u
+-&gt; i (last -&gt; a single edge) is best to get to i.<span
+style='mso-spacerun:yes'>  </span>That means it’s better than S -&gt; u -&gt; i
+(last -&gt; a single edge) or any other path.<span style='mso-spacerun:yes'> 
+</span>Since the last edge is the same, we can say that S -&gt; v -&gt; u is
+better than S -&gt; u, but that means that u did not have a final best cost at
+step k, a contradiction. Thus there is no such u.</p>
+
+<p class=MsoNormal style='margin-left:.3in'><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>

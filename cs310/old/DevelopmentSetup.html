@@ -1,0 +1,963 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 12">
+<meta name=Originator content="Microsoft Word 12">
+<link rel=File-List href="DevelopmentSetup_files/filelist.xml">
+<title>CS310 Development Setup</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>eoneil</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Betty O'Neil</o:LastAuthor>
+  <o:Revision>11</o:Revision>
+  <o:TotalTime>42</o:TotalTime>
+  <o:Created>2010-01-20T22:15:00Z</o:Created>
+  <o:LastSaved>2012-02-11T19:26:00Z</o:LastSaved>
+  <o:Pages>2</o:Pages>
+  <o:Words>1394</o:Words>
+  <o:Characters>7947</o:Characters>
+  <o:Lines>66</o:Lines>
+  <o:Paragraphs>18</o:Paragraphs>
+  <o:CharactersWithSpaces>9323</o:CharactersWithSpaces>
+  <o:Version>12.00</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<link rel=themeData href="DevelopmentSetup_files/themedata.thmx">
+<link rel=colorSchemeMapping
+href="DevelopmentSetup_files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:1;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:0 0 0 0 0 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+h2
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 2 Char";
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	font-size:18.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	font-weight:bold;}
+h3
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 3 Char";
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:13.5pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 2";
+	mso-ansi-font-size:13.0pt;
+	mso-bidi-font-size:13.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;
+	font-weight:bold;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 3";
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;
+	font-weight:bold;}
+span.file
+	{mso-style-name:file;
+	mso-style-unhide:no;}
+span.apple-converted-space
+	{mso-style-name:apple-converted-space;
+	mso-style-unhide:no;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:434516688;
+	mso-list-template-ids:248308866;}
+@list l1
+	{mso-list-id:880626987;
+	mso-list-template-ids:1739750716;}
+@list l1:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2
+	{mso-list-id:1927418308;
+	mso-list-template-ids:1524914308;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	margin-left:1.0in;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="4098"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=WordSection1>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>CS310 Java
+Development Setup: on UNIX and on your home PC, <span class=GramE>Spring</span>
+2012<o:p></o:p></span></h2>
+
+<p class=MsoNormal><span class=GramE><b><span style='mso-fareast-font-family:
+"Times New Roman"'>UNIX Java setup</span></b><span style='mso-fareast-font-family:
+"Times New Roman"'>.</span></span><span style='mso-fareast-font-family:"Times New Roman"'>
+Add module <b>java6<span class=GramE>&nbsp;<span style='font-weight:normal'> to</span></span></b>
+your .<span class=SpellE>cshrc</span> on UNIX. Note that it is important to
+edit .<span class=SpellE>cshrc</span> <i>before</i> the line &quot;if (! <span
+class=GramE>$?prompt</span>) exit&quot;, so that the edits are in effect even
+for the <span class=SpellE>subshells</span> that do the exit. &nbsp;Just add
+these new modules to the &quot;module load standard&quot; line, so it reads
+&quot;module load standard java6&quot;. To activate your new .<span
+class=SpellE>cshrc</span> settings, use &quot;source .<span class=SpellE>cshrc</span>&quot;,
+or log out and in again.<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='mso-fareast-font-family:"Times New Roman"'>Linux Java setup</span></b><span
+style='mso-fareast-font-family:"Times New Roman"'>: no setup is needed, but
+check the version by the test below.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><br>
+<b>UNIX/Linux editor:</b> Hopefully you know <span class=SpellE>emacs</span> or
+another editor on UNIX. &nbsp;We will do most of our software development on
+PCs, and then test the systems on UNIX as well as PC. &nbsp;This works well
+because of the robust portability of Java.&nbsp; Project deliveries are on
+UNIX.<br>
+<br>
+<b>UNIX/Linux java setup test:</b> &nbsp;<o:p></o:p></span></p>
+
+<div style='margin-left:20.0pt'>
+
+<p class=MsoNormal style='margin-bottom:12.0pt'><span class=GramE><span
+style='mso-fareast-font-family:"Times New Roman"'>java</span></span><span
+style='mso-fareast-font-family:"Times New Roman"'> -version &nbsp; should
+output<br>
+java version&nbsp;&quot;1.6.0_xx&quot;, where xx stands for 2 digits, plus two
+more lines of text.<br>
+The JAVA_HOME environment variable is needed by some ant tasks and other tools.
+&nbsp;To check it:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:12.0pt'><span style='mso-fareast-font-family:
+"Times New Roman"'><br>
+<span class=SpellE><span class=GramE>env|grep</span></span> JAVA &nbsp;&nbsp;
+should output&nbsp;on UNIX:<br>
+JAVA_HOME=/tools/jdk-1.6.0_xx/<span class=SpellE>usr</span>/<span class=SpellE>jdk</span>/jdk1.6.0_xx<span
+style='mso-spacerun:yes'>   </span>(or jdk-1.7)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:12.0pt'><span class=GramE><span
+style='mso-fareast-font-family:"Times New Roman"'>and</span></span><span
+style='mso-fareast-font-family:"Times New Roman"'> on Linux:<br>
+JAVA_HOME=/<span class=SpellE>usr</span><br>
+<br>
+<span class=SpellE>env|grep</span> CLASSPATH &nbsp; &nbsp;should output
+nothing. &nbsp;If it does give output, try to hunt down the source. &nbsp;If it
+has junit.jar, that's OK. &nbsp;If it does have other needed jars, it should
+also have &quot;</span><span style='font-family:"Courier New";mso-fareast-font-family:
+"Times New Roman"'>.</span><span style='mso-fareast-font-family:"Times New Roman"'>&quot;
+to include the current directory, with a colon separating it from the other
+jar(s), for example, </span><span style='font-family:"Courier New";mso-fareast-font-family:
+"Times New Roman"'>CLASSPATH=/tools/junit-3.8.1/junit.jar<span class=GramE>:.</span></span><span
+style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
+
+</div>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'>Home PC/Mac Setup<o:p></o:p></span></h3>
+
+<p class=MsoNormal style='margin-left:42.2pt;text-indent:-.25in'><b>Java</b> –
+We will be using Java 6 from Sun. &nbsp;Everything we need from Sun is in the
+Java SE (Java Standard Edition) download, that is, the&nbsp;JDK (Java
+Development Kit) for Java 6. &nbsp;Note that the JRE (Java runtime environment)
+is not enough. Download and install the latest (Update 18 as of Jan., '10)<span
+class=GramE>&nbsp; JDK</span> from <a
+href="http://java.sun.com/javase/downloads/index.jsp">http://java.sun.com/javase/downloads/index.jsp</a>.
+It takes about 160MB of disk space.<span style='font-size:10.0pt'> </span>Note
+that the Java SE installation will install a system JRE, i.e., possibly disrupt
+other Java development on the system if you need an older Java (Java 1.4
+say)&nbsp; for some reason, but fine if this system is used only for current
+Java development. Java 6 can be used as a maintenance release of Java 5 for
+normal Java programming.<span style='font-size:10.0pt'> </span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in'>&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;</p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.5in;text-indent:-9.0pt;mso-list:l2 level1 lfo2;tab-stops:list 1.0in'><![if !supportLists]><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'>You do <b>not</b> need to download <span
+class=SpellE>NetBeans</span>, an IDE that we will not be
+using.&nbsp;&nbsp;(unless you want to use it instead of eclipse)</span><span
+style='font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.5in;text-indent:-9.0pt;mso-list:l2 level1 lfo2;tab-stops:list 1.0in'><![if !supportLists]><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'>You do <b style='mso-bidi-font-weight:
+normal'>not</b> need to download <span class=SpellE>JavaFX</span>, a separate
+scripting language for web user interfaces</span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.5in;text-indent:-9.0pt;mso-list:l2 level1 lfo2;tab-stops:list 1.0in'><![if !supportLists]><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'>You do <b style='mso-bidi-font-weight:
+normal'>not</b> need to download Java EE, Java Enterprise Edition, a web
+application server and associated tools</span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.5in;text-indent:-9.0pt;mso-list:l2 level1 lfo2;tab-stops:list 1.0in'><![if !supportLists]><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'>You do <b>not</b> need to download
+the JRE, Java Runtime Environment.&nbsp; It is included in the JDK download.</span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.5in;text-indent:-9.0pt;mso-list:l2 level1 lfo2;tab-stops:list 1.0in'><![if !supportLists]><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman";color:black'>Note: Sun does not
+support Mac OS. Go to&nbsp;</span><span style='font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman";color:black'><a
+href="http://developer.apple.com/java/download/?">Mac OSX JDK <span
+class=SpellE>versions.</span></a></span><span class=SpellE><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman";color:black'>You</span></span><span style='font-size:10.0pt;
+font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman";
+color:black'> probably have some version of java already. Go to the UNIX prompt
+in Terminal and do &quot;<span class=SpellE>javac</span> -version&quot; as described
+above for UNIX at cs.umb.edu. If it shows 1.6.xx, for anything after the 6, you
+can skip the JDK download. Even 1.5xx will do. But 1.4xx is too old. </span><span
+style='font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman";
+color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><b>JAVA_HOME and
+Path</b>: &nbsp;Use System Control Panel&gt;Advanced&gt;Environment to define
+the JAVA_HOME user environment variable as c:\Program Files\Sun\jdk1.6.0_xx or <span
+class=SpellE>whereever</span> you put the JDK download. To enable command-line
+java development,&nbsp;edit your user Path environment variable to include your
+JDK's bin directory, using %JAVA_HOME%\bin as its value. Use a semicolon
+between entries in the value of Path. For example, my Path value has c:\Program
+Files\<span class=SpellE>emacs</span>\bin; %JAVA_HOME%\bin;&nbsp; &nbsp;&nbsp;</p>
+
+<p><b>&nbsp;&nbsp; &nbsp; &nbsp; Windows java setup test&nbsp;</b>(use a brand
+new command window if you just changed your environment variables) </p>
+
+<div style='margin-left:20.0pt'>
+
+<p><span class=GramE><span style='font-family:"Courier New"'>java</span></span><span
+style='font-family:"Courier New"'> -version </span>&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;should output&nbsp; </p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";mso-fareast-font-family:
+"Times New Roman"'>&nbsp; &nbsp; java version &quot;1.6.0_xx&quot; &nbsp; where
+xx is some update number<br>
+&nbsp;&nbsp;&nbsp; Java(TM) SE Runtime Environment (build 1.6.0_xx-xxx)<br>
+&nbsp;&nbsp;&nbsp; Java <span class=SpellE>HotSpot</span>(TM) Client VM (build
+1.6.0_xx-xxx, mixed mode, sharing)<br>
+</span><span style='mso-fareast-font-family:"Times New Roman"'><br>
+</span><span class=SpellE><span style='font-family:"Courier New";mso-fareast-font-family:
+"Times New Roman"'>javac</span></span><span style='font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'>&nbsp;-version</span><span
+style='mso-fareast-font-family:"Times New Roman"'>&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;should output<br>
+</span><span style='font-family:"Courier New";mso-fareast-font-family:"Times New Roman"'>&nbsp;
+<span class=SpellE>javac</span> 1.6.0</span><span style='font-size:10.0pt;
+mso-fareast-font-family:"Times New Roman"'>_xx</span><span style='mso-fareast-font-family:
+"Times New Roman"'><br>
+</span><span style='font-family:"Courier New";mso-fareast-font-family:"Times New Roman"'>&nbsp;</span><span
+style='mso-fareast-font-family:"Times New Roman"'><br>
+</span><span class=SpellE><span style='font-family:"Courier New";mso-fareast-font-family:
+"Times New Roman"'>set|find</span></span><span style='font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'> &quot;JAVA&quot;</span><span
+style='mso-fareast-font-family:"Times New Roman"'> &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; should output<br>
+</span><span style='font-family:"Courier New";mso-fareast-font-family:"Times New Roman"'>&nbsp;
+JAVA_HOME=c:\Sun\SDK\jdk &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;or whatever you
+specified as the JDK directory<br>
+<br>
+dir %JAVA_HOME% &nbsp; &nbsp; <br>
+should show directories bin, demo, include, <span class=SpellE>jre</span>, lib,
+and sample, as well as some files.<br>
+</span><span style='mso-fareast-font-family:"Times New Roman"'>&nbsp;&nbsp;
+&nbsp; &nbsp; <br>
+</span><span class=SpellE><span style='font-family:"Courier New";mso-fareast-font-family:
+"Times New Roman"'>set|<span class=GramE>find</span></span></span><span
+class=GramE><span style='font-family:"Courier New";mso-fareast-font-family:
+"Times New Roman"'> &nbsp;&quot;</span></span><span style='font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'>CLASSPATH&quot;</span><span
+style='mso-fareast-font-family:"Times New Roman"'> &nbsp; &nbsp;should output
+nothing. &nbsp;If it does give output, look for an old environment variable
+setting and delete it. (<span class=GramE>junit.jar</span> is OK to have in
+CLASSPATH, along with &quot;;.&quot; to include the current directory as well.)<br>
+<br>
+</span><span class=GramE><span style='font-family:"Courier New";mso-fareast-font-family:
+"Times New Roman"'>path</span></span><span style='mso-fareast-font-family:"Times New Roman"'>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp;&nbsp;outputs the operational Path value, which is the
+system Path value appended with the user Path value you set up in the control
+panel, so near the end of the displayed path, you should see&nbsp;c:\Program
+Files\Sun\jdk1.6.0_03\bin or </span><span style='font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'>c:\Sun\SDK\jdk\</span><span
+style='mso-fareast-font-family:"Times New Roman"'>bin.<br>
+<br>
+<b>Failure case: </b>&nbsp;All set up as above, but java -version shows java
+1.5.x (or some other wrong version. Look for a java.exe in Window's system32
+directory. &nbsp;Just rename it to java_hold.exe (you need <span class=GramE>a</span>
+Administrator privileges for this action).<br>
+<br>
+It's best to have Java working first, then install eclipse, so that eclipse can
+find the new JDK on its own. &nbsp;But if you install eclipse before Java, you
+can configure the new JDK in eclipse as shown in step 2. <span class=GramE>below</span>.<br>
+<br>
+You may use the IDE of your choice, but it's best to stick to ones known by
+many people locally, that is, <span class=SpellE>emacs</span>, Dr Java, or
+eclipse. &nbsp;I use <span class=SpellE>emacs</span> on UNIX and eclipse on my
+PC and also on my Mac laptop. Eclipse takes a little time to learn, but it
+saves time in the long run by giving you easy ways to rename variables,
+classes, etc., find all uses of variable, method, etc., display an inheritance
+hierarchy, generate getters and setters, extract interfaces, do global edits,
+do visual compares, and so on.<br>
+<br style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='mso-fareast-font-family:"Times New Roman"'>Eclipse
+3.7 (Indigo): Eclipse for Java IDE for&nbsp;JEE Developers&nbsp;</span></b><span
+style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l1 level1 lfo5;tab-stops:list .5in'><span style='mso-fareast-font-family:
+     "Times New Roman"'>Install the &quot;Eclipse IDE for JEE Developers&quot;
+     from <a href="http://www.eclipse.org/downloads/">www.eclipse.org</a>. This
+     also free. Put it in c:\eclipse-whatever.&nbsp; Try out eclipse as a Java
+     IDE if you don't already know&nbsp;it. <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l1 level1 lfo5;tab-stops:list .5in'><span style='mso-fareast-font-family:
+     "Times New Roman"'>Make sure eclipse sees your Java 6.0 or 7.0 JDK by
+     visiting Window&gt;Preferences&gt;Java&gt;Installed JREs, and looking for
+     the Java 6 or 7 JDK. If it's not there, click the Add button, and fill in:<br>
+     &nbsp; &nbsp;JRE name: jdk6 or jdk7<br>
+     &nbsp; &nbsp;JRE home directory: c:\Program Files\Sun\jdk1.6.0_0x or …<br>
+     and clicking OK. &nbsp;Then make sure it is checked as the default JRE in
+     the &quot;Installed JREs&quot; window you should return to.<o:p></o:p></span></li>
+</ol>
+
+</div>
+
+<div style='margin-left:20.0pt'>
+
+<p class=MsoNormal style='margin-bottom:12.0pt'><span style='mso-fareast-font-family:
+"Times New Roman"'><br>
+<b>Eclipse Notes tricks worth knowing<span class=GramE>:</span></b><br>
+1. To reinitialize a project, delete it, keeping files, in eclipse. Then go to
+the top-level project directory in the file system and remove all the dot files
+(.project, .<span class=SpellE>classpath</span>, and .settings, a directory).
+Then start up a new project, selecting the non-default location for the
+project.<br>
+2. Similarly, if you need to build a project from given files, delete any dot
+files first.<br>
+3. If a project seems to be ignoring an <span class=SpellE>edit or</span> other
+showing other weirdness, use Project&gt;Clean to clean out all the <span
+class=SpellE>derivitive</span> files, i.e., force a full rebuild. If this
+doesn't work, use trick 1.<br>
+<br>
+<span class=SpellE><b>Emacs</b></span> is installed on all our UNIX/Linux
+systems, and comes with Mac OSX.<br>
+<span class=GramE><b>Installing <span class=SpellE>Emacs</span> on PC:</b> get <span
+class=file><span lang=EN style='font-family:"Courier New";mso-fareast-font-family:
+"Times New Roman";mso-fareast-theme-font:minor-fareast;mso-ansi-language:EN'>emacs-22.3-bin-i386.zip</span></span><span
+lang=EN style='mso-fareast-font-family:"Times New Roman";mso-fareast-theme-font:
+minor-fareast;mso-ansi-language:EN'> from <a
+href="http://ftp.gnu.org/gnu/emacs/windows/">http://ftp.gnu.org/gnu/emacs/windows/</a>,
+unpack it, find emacs.exe in the unpacked directory, and put that directory in
+your Path using the System control panel.</span></span></span><span lang=EN
+style='mso-ansi-language:EN'> Then “<span class=SpellE>emacs</span>” at the
+command prompt will start it up.</span><span style='mso-fareast-font-family:
+"Times New Roman"'><br>
+<br>
+<b>Transferring Files</b> to our UNIX site: you need to use secure file
+transfer, SSH/SFTP. <span class=SpellE><span class=GramE>ssh</span></span> and <span
+class=SpellE>scp</span> are installed on all our UNIX systems, and come with
+Linux and Mac OSX. For&nbsp;a Windows PC, you can download <span class=SpellE>pscp</span>
+(a command line tool) from <a
+href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html</a>.
+Other tools are available with GUI capabilities to drag and drop files from one
+system to the other.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:12.0pt'><span style='mso-fareast-font-family:
+"Times New Roman"'>From Prof. Wilson’s cs210 home page:<o:p></o:p></span></p>
+
+<h2 style='background:white'><span style='color:black'>Access to our UNIX
+Systems<o:p></o:p></span></h2>
+
+<p style='background:white;orphans: 2;text-align:-webkit-auto;widows: 2;
+-webkit-text-size-adjust: auto;-webkit-text-stroke-width: 0px;word-spacing:
+0px'><span style='font-size:13.5pt;color:black'>To access our UNIX systems for
+either an interactive terminal or file transfer window, you must use a secure
+login process on your PC.<o:p></o:p></span></p>
+
+<p style='background:white;orphans: 2;text-align:-webkit-auto;widows: 2;
+-webkit-text-size-adjust: auto;-webkit-text-stroke-width: 0px;word-spacing:
+0px'><span style='font-size:13.5pt;color:black'>For a Windows system, you can
+download, install, and use this software:<span class=apple-converted-space>&nbsp;</span><a
+href="http://www.cs.umb.edu/~bobw/CS210/sshwinclient.exe">SSH Communications
+Software Download</a>. Once you get the program installed, open it and select
+either a terminal session or a file transfer session. In the initial popup
+dialog box, enter the UNIX host name &quot;users.cs.umb.edu&quot;, your UNIX
+account ID, and leave the rest of the field's default values. In the second
+popup dialog box, enter your password. Use the program's Help menu to get more
+detailed instructions for use.<o:p></o:p></span></p>
+
+<p style='background:white;orphans: 2;text-align:-webkit-auto;widows: 2;
+-webkit-text-size-adjust: auto;-webkit-text-stroke-width: 0px;word-spacing:
+0px'><span style='font-size:13.5pt;color:black'>If you have a <span
+class=SpellE>MacIntosh</span> OS/X, you do not need to download a program. To
+open a terminal window and use the command &quot;<span class=SpellE><span
+class=GramE>ssh</span></span> -2 -l <span class=SpellE>newname</span>
+users.cs.umb.edu&quot;, where <span class=SpellE>newname</span> is your UMB
+UNIX username, and &quot;-l&quot; uses a lowercase L. Another useful program is
+a FREE program to transfer files via secure ftp (SFTP) called <span
+class=SpellE>Fugu</span>, a Mac OS X compatible program, available for free
+download as a universal binary, which means it will work on the older
+IBM/PowerPC processors as well as the latest Intel processors found in Mac
+computers. The program is made available by the University of Michigan,
+Research Systems <span class=GramE>Unix</span> Group.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:12.0pt'><span style='mso-fareast-font-family:
+"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:12.0pt'><span style='mso-fareast-font-family:
+"Times New Roman"'><span style='mso-spacerun:yes'> </span><br>
+<br>
+<br style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]></span><span lang=EN style='mso-ansi-language:EN'><o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

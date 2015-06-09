@@ -1,0 +1,22 @@
+CS105 Homework 8
+
+Instructions: Please print or write your answers LEGIBLY, and turn in a hard copy of the assignment in class.
+
+1. Computability:
+
+  a. Explain the difference between a function and a program.
+  b. What is Church's thesis?
+  c. What is the halting problem?
+  d. What is Turing completeness?
+  e. Are the limits of computation different between Turing complete program models?
+
+2. Complexity:
+
+  a. What does complexity theory study?
+  b. In the context of complexity, what does polynomial and non-polynomial refer to?
+  c. What is the difference between P and NP?
+
+3. Representation:
+
+  a. Provided you can combine any number of these objects together, how many different objects do you need to represent ANY piece of data?
+  b. What abilities are needed to build a Turing-complete computer?

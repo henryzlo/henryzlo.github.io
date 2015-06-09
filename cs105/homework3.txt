@@ -1,0 +1,23 @@
+CS105 Homework 3
+
+Instructions: Please print or write your answers LEGIBLY, and turn in a hard copy of the assignment in class next Friday.
+
+1. Sorting:
+
+  a. In the best case, which is faster, mergesort or bubblesort?  What is this case?
+  b. In the worst case, which is faster, mergesort or bubblesort?  What is this case?
+  c. How many times will mergesort split an array with 43 elements? (hint: how many times can you divide 43 by 2 (rounding up) before you get to 1?)
+
+2. Big-O:
+
+  a. What is O(5n^3 + 3n + 8) =?
+  b. What is O(99999999999999999) =?
+  c. Suppose I have a O(n^2) algorithm.  Is this slower or faster than a O(n) algorithm?  Does it perform fewer or more computations?
+  d. Suppose I have a O(n*log(n)) algorithm.  Is this slower or faster than a O(n^2) algorithm?  Does it perform fewer or more computations?
+
+3. Data structures:
+
+  a. Provide an example of a stack that we did not go over in class.
+  b. Provide an example of a queue that we did not go over in class.  Please do not say a waiting line.
+  c. Provide an example of a graph that we did not go over in class.
+  d. Provide an example of a tree that we did not go over in class.

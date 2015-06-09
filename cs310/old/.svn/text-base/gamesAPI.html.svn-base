@@ -1,0 +1,521 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:m="http://schemas.microsoft.com/office/2004/12/omml" xmlns="http://www.w3.org/TR/REC-html40"><head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="ProgId" content="Word.Document">
+<meta name="Generator" content="Microsoft Word 12">
+<meta name="Originator" content="Microsoft Word 12">
+<link rel="File-List" href="http://www.cs.umb.edu/cs310/gamesAPI_files/filelist.xml">
+<title>1 // Game</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>eoneil</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>eoneil</o:LastAuthor>
+  <o:Revision>3</o:Revision>
+  <o:TotalTime>27</o:TotalTime>
+  <o:LastPrinted>2005-03-29T20:28:00Z</o:LastPrinted>
+  <o:Created>2009-03-30T20:01:00Z</o:Created>
+  <o:LastSaved>2009-03-30T20:16:00Z</o:LastSaved>
+  <o:Pages>4</o:Pages>
+  <o:Words>958</o:Words>
+  <o:Characters>5463</o:Characters>
+  <o:Company>University of Massachusetts Boston</o:Company>
+  <o:Lines>45</o:Lines>
+  <o:Paragraphs>12</o:Paragraphs>
+  <o:CharactersWithSpaces>6409</o:CharactersWithSpaces>
+  <o:Version>12.00</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<link rel="themeData" href="http://www.cs.umb.edu/cs310/gamesAPI_files/themedata.thmx">
+<link rel="colorSchemeMapping" href="http://www.cs.umb.edu/cs310/gamesAPI_files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Print</w:View>
+  <w:Zoom>150</w:Zoom>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:\5B8B\4F53;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:1 135135232 16 0 262144 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610611985 1107304683 0 0 159 0;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610611985 1073750091 0 0 159 0;}
+@font-face
+	{font-family:"\@SimSun";
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:SimSun;}
+h2
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 2 Char";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	font-weight:bold;
+	font-style:italic;}
+a:link, span.MsoHyperlink
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:SimSun;}
+pre
+	{mso-style-priority:99;
+	mso-style-link:"HTML Preformatted Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:SimSun;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 2";
+	mso-ansi-font-size:13.0pt;
+	mso-bidi-font-size:13.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;
+	font-weight:bold;}
+span.HTMLPreformattedChar
+	{mso-style-name:"HTML Preformatted Char";
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"HTML Preformatted";
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-fareast-font-family:SimSun;
+	mso-hansi-font-family:Consolas;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head><body style="" vlink="purple" lang="EN-US" link="blue">
+
+<div class="Section1">
+
+<h2 style="margin-left: 22.5pt;">CS310 Core Game API: Game, Move, <span class="SpellE">PlayerNumber</span></h2>
+
+<pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;">// Game.java<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;">//<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;">// Ethan <span class="SpellE">Bolker</span>, February 2003<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span class="GramE"><span style="font-size: 8pt;">package</span></span><span style="font-size: 8pt;"> <span class="SpellE">edu.umb.cs.game</span>;<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span class="GramE"><span style="font-size: 8pt;">import</span></span><span style="font-size: 8pt;"> <span class="SpellE">java.util.Observable</span>;<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span class="GramE"><span style="font-size: 8pt;">import</span></span><span style="font-size: 8pt;"> <span class="SpellE">java.util.Iterator</span>;<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;">/**<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"> * Abstract class Game models an abstract two person game with perfect<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"> * <span class="GramE">information</span> - each player knows everything the other does.<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"> * ... (history, etc., see file)<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;">*/<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span class="GramE"><span style="font-size: 8pt;">public</span></span><span style="font-size: 8pt;"> abstract class Game extends Observable {<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span class="GramE">public</span> final static <span class="SpellE">PlayerNumber</span> FIRST_PLAYER = <span class="SpellE">PlayerNumber.ONE</span>;<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span class="GramE">public</span> final static <span class="SpellE">PlayerNumber</span> SECOND_PLAYER = <span class="SpellE">PlayerNumber.TWO</span>;<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span class="GramE">public</span> final static <span class="SpellE">PlayerNumber</span> GAME_OVER = <span class="SpellE">PlayerNumber.GAME_OVER</span>;<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span class="GramE">public</span> final static <span class="SpellE">PlayerNumber</span> GAME_NOT_OVER = <span class="SpellE">PlayerNumber.GAME_NOT_OVER</span>;<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span class="GramE">public</span> final static <span class="SpellE">PlayerNumber</span> DRAW = <span class="SpellE">PlayerNumber.DRAW</span>;<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span>/**<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * What is the name of the Game? <span class="GramE">May be called before init/<span class="SpellE">initObservable</span>.</span><o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * <o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span style="">&nbsp;</span><span class="GramE">* @return the name of the Game.</span><o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> */<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span class="GramE">public</span> abstract String <span class="SpellE">getName</span>();<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span>/**<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * Who wrote this Game?<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * <o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span style="">&nbsp;</span><span class="GramE">* @return the name of the author.</span> <span class="GramE">May be called before init/<span class="SpellE">initObservable</span>.</span><o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> */<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span class="GramE">public</span> abstract String <span class="SpellE">getAuthor</span>();<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span>/**<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * Does this Game need information to set itself up before the first move is<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * made?<span style="">&nbsp; </span><span class="GramE">May be called before init/<span class="SpellE">initObservable</span>.</span><o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * <o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span style="">&nbsp;</span><span class="GramE">* @return true if so.</span><o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> */<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span class="GramE">public</span> abstract <span class="SpellE">boolean</span> <span class="SpellE">needSetup</span>();<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span>/**<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * Configure the game before it starts<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * Only needed if <span class="SpellE">needSetup</span> returns true<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * Must be called before init/<span class="SpellE">initObservable</span><o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * (or followed by call to init/<span class="SpellE">initObservable</span>)<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * <o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span style="">&nbsp;</span>* @<span class="SpellE">param</span> <span class="SpellE">params</span><o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * @throws <span class="SpellE">RuntimeException</span>, <span class="SpellE">GameException</span><o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> */<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span class="GramE">public</span> void setup(<span class="SpellE">int</span>[] <span class="SpellE">params</span>) throws <span class="SpellE">GameException</span> {<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">throw</span> new <span class="SpellE">RuntimeException</span>("bug: need setup for this game");<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span>/* init and <span class="SpellE">initObservable</span>: only the above methods, <span class="SpellE"><span class="GramE">gameStrings.help</span></span><span class="GramE">(</span>), and<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span>* <span class="SpellE"><span class="GramE">gameStrings.getSetupParamDefinitions</span></span><span class="GramE">(</span>) may be called before init or<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span>* <span class="SpellE"><span class="GramE">initObservable</span></span> is called, i.e., before game's <span class="SpellE">init</span> is called. <o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span>*/<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span>/**<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * Set up the position ready to play.<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * &lt;p&gt;<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * This should &lt;<span class="SpellE">i</span>&gt;not&lt;\<span class="SpellE">i</span>&gt; be done in the constructor.<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> */<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span class="GramE">public</span> abstract void <span class="SpellE">init</span>();<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span>/**<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * Set up the position ready to play.<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * &lt;p&gt;<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * This should &lt;<span class="SpellE">i</span>&gt;not&lt;\<span class="SpellE">i</span>&gt; be done in the constructor.<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> */<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span>/**<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * Set up the position ready to play and notify Observers.<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * Note that the first notification signals that the game<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * has just been <span class="SpellE">init'd</span>.<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> */<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span class="GramE">public</span> final void <span class="SpellE">initObservable</span>() {<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">init(</span>);<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">setChanged</span></span><span class="GramE">(</span>);<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">notifyObservers</span></span><span class="GramE">(</span>);<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span>/**<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * Inform this Game that it is over.<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> */<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span class="GramE">public</span> abstract void <span class="SpellE">gameOver</span>();<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span>/**<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * Create a copy of the current position of this Game.<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * <o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span style="">&nbsp;</span><span class="GramE">* @return the copy.</span><o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> */<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span class="GramE">public</span> abstract Game copy();<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span>/**<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * Is this game new?<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * <o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span style="">&nbsp;</span><span class="GramE">* @return true if yes.</span><o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> */<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span class="GramE">public</span> abstract <span class="SpellE">boolean</span> <span class="SpellE">isGameNew</span>();<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span>/**<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * Is this game over?<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * <o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span style="">&nbsp;</span><span class="GramE">* @return true if yes.</span><o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> */<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span class="GramE">public</span> abstract <span class="SpellE">boolean</span> <span class="SpellE">isGameOver</span>();<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span>/**<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * Since Players need not alternate making moves, you must be able to query<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * <span class="GramE">the</span> current position to find out whose turn it is.<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * <o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span style="">&nbsp;</span>* If the game is over, return <span class="SpellE">Game.GAME_OVER</span>.<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * <o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span style="">&nbsp;</span><span class="GramE">* @return the <span class="SpellE">PlayerNumber</span> who moves next.</span><o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> */<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span class="GramE">public</span> abstract <span class="SpellE">PlayerNumber</span> <span class="SpellE">whoseTurn</span>();<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span>/**<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * Who has won the game? Returns one of <span class="SpellE">Game.FIRST_PLAYER</span>,<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * <span class="SpellE">Game.SECOND_PLAYER</span>, <span class="SpellE">Game.DRAW</span>, <span class="SpellE">Game.GAME_NOT_OVER</span>.<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * <o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span style="">&nbsp;</span><span class="GramE">* @return the winner.</span><o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> */<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span class="GramE">public</span> abstract <span class="SpellE">PlayerNumber</span> winner();<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span>/**<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * Make a Move and notify this Game's Observers.<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * <o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span style="">&nbsp;</span>* @<span class="SpellE">param</span> m<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> *<span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">the</span> Move to be made.<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * @throws <span class="SpellE">IllegalMoveException</span><o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> *<span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">if</span> m is illegal.<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> */<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span class="GramE">public</span> final void <span class="SpellE">makeObservable</span>(Move m) throws <span class="SpellE">IllegalMoveException</span> {<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">make(</span>m);<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">setChanged</span></span><span class="GramE">(</span>);<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">notifyObservers</span></span><span class="GramE">(</span>m);<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span>/**<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * The rules of the game are encapsulated here: Change this position by<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * making Move m.<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * <o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span style="">&nbsp;</span>* @<span class="SpellE">param</span> m<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> *<span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">the</span> Move to be made.<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * @throws <span class="SpellE">IllegalMoveException</span><o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> *<span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">if</span> m is illegal.<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> */<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span class="GramE">public</span> abstract void make(Move m) throws <span class="SpellE">IllegalMoveException</span>;<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span>/**<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * The user can loop on the legal moves in any position.<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * <o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span style="">&nbsp;</span>* @return <span class="GramE">a</span> <span class="SpellE">Iterator</span> for the legal moves.<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> */<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span class="GramE">public</span> abstract <span class="SpellE">Iterator</span>&lt;Move&gt; <span class="SpellE">getMoves</span>();<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span>/**<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * The Game implementation must override <span class="SpellE">hashCode</span> from class Object. As<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * <span class="GramE">usual</span>, it must be consistent with equals: two objects for which equals<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * <span class="GramE">returns</span> true must have the same <span class="SpellE">hashCode</span>.<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> */<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span class="GramE">public</span> abstract <span class="SpellE">int</span> <span class="SpellE">hashCode</span>();<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span>/**<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * The Game implementation must override equals from class Object. Two <span class="GramE">Game</span><o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * <span class="GramE">objects</span> are equal if all the Game methods would return the same result,<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * including <span class="SpellE"><span class="GramE">whoseTurn</span></span><span class="GramE">(</span>), winner(), and the move list from <span class="SpellE">getMoves</span>. <o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span style="">&nbsp;</span>* The intention is that two not-over game states are equal if the<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * <span class="GramE">board</span> position is the same and the player to play next is the same.<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * Concluded game states may lump various board positions together,<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * <span class="GramE">but</span> must differ based on winner() values.<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> */<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span class="GramE">public</span> abstract <span class="SpellE">boolean</span> equals(Object <span class="SpellE">obj</span>);<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span>/**<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * View this Game using Strings. Required support for game.<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span> * <o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span style="">&nbsp;</span>*/<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span class="GramE">public</span> abstract <span class="SpellE">GameStrings</span> <span class="SpellE">getGameStrings</span>();<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;">}<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre>
+
+<h2 style="margin-left: 22.5pt;">Move.java</h2>
+
+<pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;">// Move.java<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;">//<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;">// Ethan <span class="SpellE">Bolker</span>, February 2003<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;">// <o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;">// More comments in file<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span class="GramE"><span style="font-size: 8pt;">package</span></span><span style="font-size: 8pt;"> <span class="SpellE">edu.umb.cs.game</span>;<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;">/**<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"> * A Move in an abstract Game.<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"> * The client must be able to copy a move.<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"> * <o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;</span>*/<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span class="GramE"><span style="font-size: 8pt;">public</span></span><span style="font-size: 8pt;"> abstract class Move<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;">{<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span style="">&nbsp; </span>/**<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp; </span>* A client must be able to copy a move.<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp; </span>*/<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span class="GramE">public</span> abstract Move copy();<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span>/** <o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>* The Move implementation must override equals<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp; </span>* <span class="GramE">from</span> class Object. <o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>*/<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span class="GramE">public</span> abstract <span class="SpellE">boolean</span> equals( Object <span class="SpellE">obj</span> );<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span>/** <o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>* The Move implementation must override <span class="SpellE">hashCode</span><o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp; </span>* <span class="GramE">from</span> class Object, and be consistent with equals. <o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>*/<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span class="GramE">public</span> abstract <span class="SpellE">int</span> <span class="SpellE">hashCode</span>();<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;">}<o:p></o:p></span></pre>
+
+<h2 style="margin-left: 22.5pt;">PlayerNumber.java</h2>
+
+<pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;">// PlayerNumber.java<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;">//<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;">// Ethan <span class="SpellE">Bolker</span>, February 2003<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;">// converted to <span class="SpellE">enum</span> by Betty O'Neil Jan 2009<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span class="GramE"><span style="font-size: 8pt;">package</span></span><span style="font-size: 8pt;"> <span class="SpellE">edu.umb.cs.game</span>;<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;">/**<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"> * This class provides five constant values, so that <span class="SpellE">PlayerNumber</span><o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"> * <span class="GramE">values</span> can be compared with ==.<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"> */<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span class="GramE"><span style="font-size: 8pt;">public</span></span><span style="font-size: 8pt;"> <span class="SpellE">enum</span> <span class="SpellE">PlayerNumber</span> {<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp; </span><span class="GramE">ONE(</span>"1", true), TWO("2", true), GAME_OVER("game is over", false), <o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span>GAME_NOT_<span class="GramE">OVER(</span>"game not over", false), DRAW("draw", false);<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp; </span><span class="GramE">private</span> String name;<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp; </span><span class="GramE">private</span> <span class="SpellE">boolean</span> <span class="SpellE">isRealPlayer</span>;<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp; </span><span class="GramE">private</span> <span class="SpellE">PlayerNumber</span>(String name, <span class="SpellE">boolean</span> <span class="SpellE">isRealPlayer</span>) {<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span>this.name = name;<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">this.isRealPlayer</span> = <span class="SpellE">isRealPlayer</span>;<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp; </span>}<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><o:p>&nbsp;</o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp; </span>/**<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp; </span> * Is this a Player in the Game, or some other identifier?<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp; </span> * <o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp; </span><span style="">&nbsp;</span><span class="GramE">* @return true if ONE or TWO.</span><o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp; </span> */<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp; </span><span class="GramE">public</span> <span class="SpellE">boolean</span> <span class="SpellE">isRealPlayer</span>() {<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp; </span><span style="">&nbsp;&nbsp; </span><span class="GramE">return</span> <span class="SpellE">isRealPlayer</span>;<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp; </span>}<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp; </span>// override default <span class="SpellE">toString</span> based on ONE, TWO, etc.<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp; </span><span class="GramE">public</span> String <span class="SpellE">toString</span>() {<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp;&nbsp;&nbsp; </span><span class="GramE">return</span> name;<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;"><span style="">&nbsp; </span>}<o:p></o:p></span></pre><pre style="margin-left: 22.5pt;"><span style="font-size: 8pt;">}<o:p></o:p></span></pre></div>
+
+</body></html>

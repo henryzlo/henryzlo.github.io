@@ -1,0 +1,96 @@
+<h1>Security</h1>
+
+We explore common ways of securing computers from known attacks.
+
+<h2>Firewalls</h2>
+<ul>
+  <li>Attacks over a network, many backdoors, port scanning, etc. often work using specific ports.</li>
+  <li>Firewalls block all traffic going to or from certain ports.
+    <ul>
+      <li>For example, even if a computer was running a web server, if a firewall was set up to block port 80, then no computer will be able to connect to that web server.</li>
+      <li>The idea is to block ports which are known to be related to vulnerabilities and backdoors.</li>
+      <li>They can also be configured to block IP addresses, protocols, etc.</li>
+  </ul></li>
+  <li>Firewalls can operate at the network level, or the computer level (often both).
+    <ul>
+      <li>Network level firewalls block a wide array of traffic coming in to a certain network.<br/><img src="http://www.filearray.com/wp-content/uploads/firewall.gif"/></li>
+      <li>Most IT departments have a network level firewall to block common attacks.</li>
+      <li>Each computer often has their own firewall to block more specific things.</li>
+      <li>Windows firewall, for example, blocks many incoming connections (it doesn't make sense for client machines to be listening for connections).</li>
+  </ul></li>
+  <li>Many firewall rules can be bypassed.
+    <ul><li>For example, if a hacker owns a machine, and wants to open a backdoor, then instead of opening it at a blocked port, it can just be opened at an unblocked port.</li>
+      <li>Most firewalls do not block commonly-used ports such as those for DNS and HTTP.</li>
+      <li>To bypass IP blocks, one can simply use another IP, or a proxy server.</li>
+      <li>To bypass protocol blocks, a hacker can wrap one protocol within another (called tunneling).</li>
+    </ul>
+  </li>
+  <li>Deep packet inspection allows for blocking specific threats, rather than simply blocking ports.
+    <ul>
+      <li>This is more difficult, because it requires some kind of intelligence in determining what kind of data a packet contains. </li>
+      <li>Requires more complicated rules.</li>
+      <li>Example: blocking access to certain websites (e.g. the great firewall).</li>
+      <li>Can be defeated by encryption, tunneling.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>User Permissions</h2>
+<ul>
+  <li>Every program runs as a "user".
+    <ul>
+      <li>Users actually represent a set of permissions, such as the ability to create a file, to read certain files, to create another user.</li>
+      <li>So programs can run as users which do not actually correspond to real people (in fact this is common).</li>
+    </ul>
+  </li>
+  <li>Users restrict power.
+    <ul>
+      <li>For example, most people cannot install programs - only the administrator user can do that.</li>
+      <li>For programs, this is OK, as long as they have enough power to do what they need to do (e.g. web server is able to listen to and handle HTTP requests, etc.).</li>
+      <li>When programs get hacked, hackers will often try to use programs to do something that program is not supposed to do.  Hence restrictions are needed to contain damage.</li>
+    </ul>
+  </li>
+  <li>The principle of least privilege means giving each program the most restrictive user possible, while still allowing it to do its job.
+    <ul>
+      <li>For example, a web server does not need to create new users for any reason.</li>
+      <li>The principle dictates that we should not give the web server this ability.</li>
+      <li>Now if someone hacks the web server, and tries to use it to create a username and password (e.g. for a backdoor), the damage is contained.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Worms / Viruses / Antiviruses</h2>
+<ul>
+  <li>Worms propagate from computer to computer.
+    <ul>
+      <li>Usually they exploit one or several known bugs, and are really specific.</li>
+      <li>Usually they constantly look for new targets, and try to infect them.</li>
+    </ul>
+  </li>
+  <li>Viruses spread within a computer.
+    <ul>
+      <li>The purpose of a virus is to maintain access.</li>
+      <li>First, the virus tries to gain access by infecting a program.</li>
+      <li>If successful, then it tries to infect other programs.  That way, just getting rid of the infected program won't get rid of the infection.</li>
+      <li>It may even attach itself to system processes, which make it very difficult to remove.</li>
+      <li>It may write itself to disk to maintain persistence.</li>
+    </ul>
+  </li>
+  <li>Viruses are programs, so they often have predictable behavior.
+    <ul>
+      <li>Usually, they infect other programs in exactly the same way.</li>
+      <li>Antiviruses detect viral infections by looking for viral signatures, which describe how known viruses affect programs.</li>
+      <li>Antiviruses do this by scanning all program memory.  This is why your computer is slow during a virus scan.</li>
+      <li>However, advanced viruses mutate themselves, so that they infect programs in different ways each time, making it very difficult to pinpoint a signature.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Encryption</h2>
+<ul>
+  <li>Encryption can be used to hide from eavesdroppers.</li>
+  <li>Encrypted messages look garbled, and can only be deciphered by someone with the right encryption key.</li>
+  <li>Every encrypted connection requires a unique encryption key - this key is used to specify how the message will be encrypted.</li>
+  <li>There could an encryption key sent unencrypted at the beginning - an attacker could theoretically grab this, and decipher all future messages.</li>
+  <li>Techniques like Diffie-Hellman key exchange fix this.</li>
+</ul>

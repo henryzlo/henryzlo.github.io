@@ -1,0 +1,330 @@
+Buildfile: build.xml
+
+compile:
+
+build:
+
+test1:
+     [echo] run Easy's main
+     [java] Start of game:
+     [java] 
+     [java] Player 1 owns: []
+     [java] Player 2 owns: []
+     [java] Player 1 moves next.
+     [java] Moves left: [0, 1, 2, 3]
+     [java] winner isgame not over
+     [java] Is game new? true
+     [java] 
+     [java] play with hard coded moves 1 3 2(observable) 4
+     [java] Is game new? false
+     [java] edu.umb.cs.game.NoSuchMoveException 4
+     [java] final position:
+     [java] winner is1
+     [java] 
+     [java] test hash and copy
+     [java] hash of finished Easy: 1
+     [java] view position before and after init():
+     [java] 
+     [java] Player 1 owns: [1, 2]
+     [java] Player 2 owns: [3]
+     [java] Game is over.
+     [java] 
+     [java] 
+     [java] Player 1 owns: []
+     [java] Player 2 owns: []
+     [java] Player 1 moves next.
+     [java] Moves left: [0, 1, 2, 3]
+     [java] hash of new Easy: 108
+     [java] hash of copy: 108
+     [java] g.equals(copyOfG)? true
+     [java] hash of new Easy after moves 1 and 3: 119
+     [java] hash of copy: 108
+     [java] 
+     [java] test parseMove error handling
+     [java] edu.umb.cs.game.IllegalMoveException illegal move 1
+     [java] edu.umb.cs.game.NoSuchMoveException foo
+     [java] 
+     [java] Player 1 owns: [1]
+     [java] Player 2 owns: [3]
+     [java] Player 1 moves next.
+     [java] Moves left: [0, 2]
+     [java] 
+     [java] test quit
+     [java] winner is2
+     [java] 
+     [java] test Move Iterator
+     [java] 0 1 2 3 4 ? 0 1 2 3 
+     [java] 0 1 3 4 ? 0 1 3 
+     [java] 0 1 3 ? 0 1 3 
+     [java] move beyond end of the list
+     [java] java.util.NoSuchElementException
+
+test2:
+     [echo] run CMN's main
+     [java] Start of game:
+     [java] 
+     [java] Player 1 owns: 
+     [java] Player 2 owns: 
+     [java] Player 1 moves next.
+     [java] 
+     [java] winner isgame not over
+     [java] Is game new? true
+     [java] 
+     [java] play with hard coded moves 5 9 4(observable) 8 3 7 2(observable) 1 6
+     [java] Is game new? false
+     [java] final position:
+     [java] winner is1
+     [java] 
+     [java] test hash and copy
+     [java] hash of finished CMN: 2
+     [java] view position before and after init():
+     [java] 
+     [java] Player 1 owns: 2 3 4 5 6 
+     [java] Player 2 owns: 1 7 8 9 
+     [java] Game is over.
+     [java] 
+     [java] 
+     [java] Player 1 owns: 
+     [java] Player 2 owns: 
+     [java] Player 1 moves next.
+     [java] 
+     [java] hash of new CMN: 78732
+     [java] hash of copy: 78732
+     [java] g.equals(copyOfG)? true
+     [java] hash of new CMN after moves 1 and 3: 86751
+     [java] hash of copy: 78732
+     [java] 
+     [java] test parseMove error handling
+     [java] edu.umb.cs.game.IllegalMoveException illegal move 1
+     [java] edu.umb.cs.game.NoSuchMoveException foo
+     [java] 
+     [java] Player 1 owns: 1 
+     [java] Player 2 owns: 3 
+     [java] Player 1 moves next.
+     [java] 
+     [java] 
+     [java] test quit
+     [java] winner is2
+     [java] 
+     [java] test Move Iterator
+     [java] 0 1 2 3 4 5 6 7 8 9 ? 0 1 2 3 4 5 6 7 8 9 
+     [java] 0 1 3 4 5 6 7 8 9? 0 1 3 4 5 6 7 8 9 
+     [java] 0 1 3 5 6 7 8 9? 0 1 3 5 6 7 8 9 
+     [java] move beyond end of the list
+     [java] java.util.NoSuchElementException
+
+test3:
+     [echo] run Putnam's main
+     [java] Start of game:
+     [java] 
+     [java] Current position:
+     [java] 
+     [java] Player 1 holds: [1, 2, 6, 9, 10]
+     [java] Player 2 holds: [3, 4, 5, 7, 8]
+     [java] 
+     [java] discards: []
+     [java] sum:
+     [java] Player 1 moves next.
+     [java] 
+     [java] winner isgame not over
+     [java] Is game new? true
+     [java] 
+     [java] play with hard coded moves 1 3 2 4 6 5 9 7 10 8
+     [java] Is game new? false
+     [java] final position:
+     [java] winner is2
+     [java] 
+     [java] test hash and copy
+     [java] hash of finished Putnam: 3
+     [java] view position before and after init():
+     [java] 
+     [java] Current position:
+     [java] 
+     [java] Player 1 holds: []
+     [java] Player 2 holds: []
+     [java] 
+     [java] discards: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+     [java] sum:         55
+     [java] Game is over.
+     [java] 
+     [java] 
+     [java] Current position:
+     [java] 
+     [java] Player 1 holds: [1, 2, 6, 9, 10]
+     [java] Player 2 holds: [3, 4, 5, 7, 8]
+     [java] 
+     [java] discards: []
+     [java] sum:
+     [java] Player 1 moves next.
+     [java] 
+     [java] hash of new Putnam: 32723
+     [java] hash of copy: 32723
+     [java] g.equals(copyOfG)? true
+     [java] edu.umb.cs.game.IllegalMoveException illegal move 9
+     [java] hash of new Putnam after moves 1 and 3: 26162
+     [java] hash of copy: 32723
+     [java] 
+     [java] test parseMove error handling
+     [java] edu.umb.cs.game.IllegalMoveException illegal move 1
+     [java] edu.umb.cs.game.NoSuchMoveException foo
+     [java] 
+     [java] Current position:
+     [java] 
+     [java] Player 1 holds: [1, 6, 9, 10]
+     [java] Player 2 holds: [3, 4, 5, 7, 8]
+     [java] 
+     [java] discards: [2]
+     [java] sum:         2
+     [java] Player 2 moves next.
+     [java] 
+     [java] 
+     [java] test quit
+     [java] winner is1
+     [java] 
+     [java] test Move Iterator
+     [java] 0 1 2 3 4 5 6 7 8 9 10? 1 2 6 9 10 
+     [java] 0 2 3 4 5 6 7 8 9 10? 3 4 5 7 8 
+     [java] 0 2 4 5 6 7 8 9 10? 2 6 9 10 
+     [java] 0 4 5 6 7 8 9 10? 4 5 7 8 
+     [java] 0 5 6 7 8 9 10? 6 9 10 
+     [java] 0 5 7 8 9 10? 5 7 8 
+     [java] 0 7 8 9 10? 9 10 
+     [java] 0 7 8 10? 7 8 
+     [java] 0 8 10? 10 
+     [java] 0 8? 8 
+     [java] 0? 
+     [java] move beyond end of the list
+     [java] java.util.NoSuchElementException
+
+test4:
+     [echo] run Fifteen's main
+     [java] Start of game:
+     [java] 
+     [java] Player 1 owns: []
+     [java] Player 2 owns: []
+     [java] Player 1 moves next.
+     [java] Moves left: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+     [java] winner isgame not over
+     [java] Is game new? true
+     [java] 
+     [java] play with hard coded moves 9 7 4 5 2
+     [java] Is game new? false
+     [java] final position:
+     [java] 
+     [java] Player 1 owns: [2, 4, 9]
+     [java] Player 2 owns: [5, 7]
+     [java] Game is over.
+     [java] 
+     [java] winner is1
+     [java] 
+     [java] test hash and copy
+     [java] hash of finished Fifteen: 1
+     [java] view position before and after init():
+     [java] 
+     [java] Player 1 owns: [2, 4, 9]
+     [java] Player 2 owns: [5, 7]
+     [java] Game is over.
+     [java] 
+     [java] 
+     [java] Player 1 owns: []
+     [java] Player 2 owns: []
+     [java] Player 1 moves next.
+     [java] Moves left: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+     [java] hash of new Fifteen: 78732
+     [java] hash of copy: 78732
+     [java] g.equals(copyOfG)? true
+     [java] hash of new Fifteen after moves 1 and 3: 86751
+     [java] hash of copy: 78732
+     [java] 
+     [java] test parseMove error handling
+     [java] edu.umb.cs.game.IllegalMoveException illegal move 1
+     [java] edu.umb.cs.game.NoSuchMoveException foo
+     [java] 
+     [java] Player 1 owns: [1]
+     [java] Player 2 owns: [3]
+     [java] Player 1 moves next.
+     [java] Moves left: [0, 2, 4, 5, 6, 7, 8, 9]
+     [java] 
+     [java] test quit
+     [java] winner is2
+     [java] 
+     [java] test Move Iterator
+     [java] 0 1 2 3 4 5 6 7 8 9 ? 0 1 2 3 4 5 6 7 8 9 
+     [java] 0 1 2 3 5 6 7 8 9  ? 0 1 2 3 5 6 7 8 9 
+     [java] 0 1 3 5 6 7 8 ? 0 1 2 3 5 6 7 8 
+     [java] move beyond end of the list
+     [java] java.util.NoSuchElementException
+     [java] [0, 1, 2, 3, 5, 6, 7, 8]
+
+test5:
+     [echo] run TestSticks
+     [java] Start of game: |  |  |  |  |  |  | 
+     [java] There are 7 sticks left: Possible moves: [0, 1, 2]
+     [java] name of game:Sticks7
+     [java] author of game:Qian Huang and Omofolakunmi Ogunlesi
+     [java] help of game:
+     [java] 
+     [java] Help For Sticks7 .....
+     [java] At first, there are 7 sticks in a pile.
+     [java] Each player removes either one or two sticks during a turn.
+     [java] Each move should be an integer number. 
+     [java] 0 is for quit, 1 or 2 is for removing 1 or 2 sticks at a time.
+     [java] The player removing the last stick wins.
+     [java] 
+     [java] Start sticks : 7
+     [java]  |  |  |  |  |  |  | 
+     [java] There are 7 sticks left: Possible moves: [0, 1, 2]
+     [java] g.winner(): game not over
+     [java] 
+     [java]  after making move 1, 2, 1( print position)
+     [java] Is game new? false
+     [java] final position:
+     [java] winner isgame not over
+     [java] 
+     [java] test hash and copy
+     [java] hash of finished Sticks: 19
+     [java] view position before and after init():
+     [java]  |  |  | 
+     [java] There are 3 sticks left: Possible moves: [0, 1, 2]
+     [java]  |  |  |  |  |  |  | 
+     [java] There are 7 sticks left: Possible moves: [0, 1, 2]
+     [java] hash of new Sticks7: 11
+     [java] hash of copy: 11
+     [java] g.equals(copyOfG)? true
+     [java] 
+     [java] make move 1 then makeObservable move 1
+     [java] 
+     [java] hash of new Sticks7 after make move 1 and makeObservable move 1: 9
+     [java] hash of copy: 11
+     [java] 
+     [java] test parseMove error handling
+     [java] only parse move 1, didn't make move
+     [java] sticksLeft is 5
+     [java] parse move foo
+     [java] edu.umb.cs.game.NoSuchMoveException foo
+     [java] make move 4
+     [java] should catch parsing move 4
+     [java] edu.umb.cs.game.NoSuchMoveException 4
+     [java]  |  |  |  |  | 
+     [java] There are 5 sticks left: Possible moves: [0, 1, 2]
+     [java] 
+     [java] test quit
+     [java] player 1 makeObservable move 0
+     [java] winner is2
+     [java] 
+     [java] test Move Iterator after init()
+     [java]  |  |  |  |  |  |  | 
+     [java] There are 7 sticks left: Possible moves: [0, 1, 2]
+     [java] 0 1 2 ? 0 1 2 
+     [java] makeObservable move 2 and 2
+     [java] 0 1 2 ? 0 1 2 
+     [java] after parsing one more move 2
+     [java] 0 1 ? 0 1 
+     [java] in exception. OOPs! only one stick left
+     [java] take the last one
+     [java] ? no possible move in the iterator
+
+test:
+
+BUILD SUCCESSFUL
+Total time: 3 seconds

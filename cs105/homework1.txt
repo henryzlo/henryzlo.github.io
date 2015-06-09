@@ -1,0 +1,18 @@
+CS105 Homework 1
+
+Instructions: Please print or write your answers LEGIBLY, and turn in a hard copy of the assignment in class next Thursday.
+
+1. Binary arithmetic:
+  a. 5 in decimal = what in binary?
+  b. 100 + 1100 = what in binary?  What does this translate to in decimal?
+2. ASCII:
+  a. Which numbers (for example 12, 44, 32) represent "hello"?
+  b. Convert "CS" to hexadecimal, then convert the hexadecimal to binary.
+  c. Convert the hex values 46756E21 to text using ASCII.
+3. Programs:
+  a. What types of languages are programs written in?
+  b. Programs in what type of language can be run directly on the CPU?
+  c. Explain what is meant by a compiled language vs. an interpreted language.
+4. Operating system:
+  a. How do operating systems run multiple programs at the same time?
+  b. Name three responsibilities that operating systems have.

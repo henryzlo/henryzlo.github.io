@@ -1,0 +1,226 @@
+Study Guide
+
+Theory
+- Computability
+  - Deals with determining what problems (functions) are solvable by computers (computable)
+  - Functions are definitions of inputs and outputs (the what)
+  - Programs give us a way of actually arriving at the output given the input (the how)
+  - A function is computable if we can write a program that maps that function's inputs to its outputs
+  - Church's thesis states that all algorithms are computable
+    - This means we can write a program for every algorithm
+    - An algorithm is an abstract idea of how to do something step by step - it is independent of language
+    - A program is concrete - it is written in some language, and actually works
+    - In other words, Church's thesis says that everything we can think of step by step, we can write in a program
+  - The halting function is not computable
+    - The halting function takes two inputs: a program and that program's inputs
+    - The output is whether or not that program stops running on that input
+    - Don't just tell me that it is the first function which was found not to be computable
+    - Bonus points if you can prove that HALT is not computable (must be a precise proof)
+  - Computational models are methods of computing
+    - We use a program as a computing model
+    - Turing machines (not the same thing as Turing completeness) are another computing model
+    - There are many
+    - If a computational model can simulate a Turing machine, then it is Turing complete
+    - All Turing complete computational models have the same power - what can be solved in one can be solved in another
+    - All suffer from the halting problem, and other limitations
+- Complexity
+  - Deals with how fast computable functions can be solved
+  - Complexity is studied as a property of problems, not of the algorithm
+  - The complexity of a problem provides a limit for how fast an algorithm can solve it
+  - Complexity theory divides up problems into complexity classes
+    - There are "hard" problems in a complexity class
+    - If you can solve a "hard" problem quickly, then you can solve every problem in the complexity class quickly
+  - P and NP are complexity classes
+    - P contains problems solvable in polynomial time (fast)
+    - Examples of P problems: Finding an element in an array, calculating your grade
+    - NP contains problems for which solutions are checkable in polynomial time (fast)
+    - NP contains all of P
+    - Examples of NP problems: Finding your password with no prior knowledge
+    - Password can be checked quickly, finding it is not
+  - P = NP is a big problem
+    - P = NP has not been proven
+    - P not equals NP has not been proven, even though many think this is the case
+    - If P = NP, then all problems which can be checked quickly can be solved quickly
+    - All encryption can be broken quickly using the hypothetical proof to the P = NP problem
+    - You would be able to solve really hard problems really fast
+    - It's a big deal if P = NP, which is why many think P does not equal NP
+- Other
+  - Two things (any thing), and many copies of them, can represent anything
+  - We used 0's and 1's, could have been blue things and red things, or a's and b's, for example:
+             a = 0
+             b = 1
+            aa = 2
+            ab = 3
+            bb = 4
+             etc.
+  - Building a theoretical computer requires writeable memory, following instructions sequentially, with an instruction set allow you to modify memory, jump to other instructions, and loop.
+  
+Artificial Intelligence
+- Knowledge representation
+  - Four ways of representing knowledge
+  - Understand what these are for, and be ready to model a problem using one
+  - Game trees represent decision sequences when we know the outcomes (e.g. playing games)
+    - It's a tree
+    - Nodes represent game states
+    - Root node is beginning of game, leaf nodes are the end
+    - Edges represent going from one game state to another
+    - Must connect nodes using edges
+    - No cycles (it's a tree)
+    - Example: tic-tac-toe
+      - What is on the board is the game state
+      - Root node (beginning state) is an empty board
+      - Children of root are those states with one move on them
+      - Leaf nodes represent end of game - states with either a full board, three in a row, or both
+      
+                some game state
+                      |
+                      V
+                  o | x | x
+                 ---+---+---
+                  o | x | x
+                 ---+---+---
+                    | o | 
+                  /       \
+                 V         V
+           o | x | x     o | x | x
+          ---+---+---   ---+---+---
+           o | x | x     o | x | x
+          ---+---+---   ---+---+---
+           o | o |         | o | o
+                             |
+                             V
+                         o | x | x
+                        ---+---+---
+                         o | x | x
+                        ---+---+---
+                         x | o | o                              
+             
+             
+  - Graph problems represent complex relationships (e.g. songs and their likelihood of being listened together)
+    - It's a graph
+    - Nodes represent some entity
+    - Edges represent some relationship
+    - Example: political news sources
+      - Nodes in this example is a news source
+      - Edges represent similar stories between news sources
+      - In this network, conservative websites tend to link to each other, and liberal websites link to each other, but there is little intersection between the two
+      - Example problem might be to follow how a news story spreads on different sites through time
+      
+              Townhall    ---  Fox News --- Washington Times          Huffington Post --- Move On
+                 |                |                |                        |               |
+                 |                |                |                        |               |
+            Drudge Report  --- Politico     Wall Street Journal  ---  New York Times --- Daily Kos
+      
+      
+  - Decision trees represent a decision making process
+    - It's a tree 
+    - Nodes represent questions, or decisions that need to be made
+    - Leaf nodes (those at the bottom) are not questions, but conclusions
+    - Edges represent answers to the decisions
+    - A path from root to leaf represents a series of decisions leading to a conclusion
+    - No cycles (it's a tree)
+    - Example: Going to bed
+    
+                             Past 11?
+                              /    \
+                            Yes    No
+                            /        \
+                       Weekend?   Go to sleep
+                         /  \
+                       Yes  No
+                       /      \
+                  Stay up   Go to sleep
+                       
+      - Note that there should be circles around the questions and conclusions, but not around the answers (yes / no)
+  - Bayesian networks represent causality
+    - It's a graph
+    - Nodes represent variables, which can be causes, effects, or both
+    - Edges are arrows - the beginning of the arrow is connected to a cause, and end of the arrow (the pointy end) is connected to an effect
+    - There can be multiple causes to an effect, multiple effects to a cause, etc.
+    - Example: Itchy mosquito bites
+    
+                              Mosquito Bite
+                                   |
+                                   V 
+            Itchiness  <---   Inflammation     
+               |                   ^
+               V                   |
+           Scratching  --->    Irritation
+              
+- Machine Learning
+  - Classification can be applied to most problems
+    - Classification is the problem of deciding whether something is in one class, or another
+    - Class can be anything (e.g. gender, age group, etc.), but you have to define it beforehand
+    - Usually there are two classes, but there can be more
+    - A classifier takes in some input information, then spits out a class
+    - Be ready to formulate problems as classification problems
+    - You must state what the inputs are, and what the classes are
+    - Example:   Will I like this drink?
+    - Input:     Alcohol content, mixed or not, type of alcohol (beer, whiskey, etc.), age, rating
+    - Classes:   I'll like it, I won't like it, I'll like it but it will make me sick
+  - Regression can be used to predict values
+    - Regression is the problem of predicting a value given some input
+    - Value is numerical (not a class)
+    - Be ready to formulate a problems as regression problems
+    - You must state what the inputs are, and what the output value is
+    - Example:   How many home runs will this guy hit?
+    - Input:     Muscle mass, age, years of experience, home runs last year, amount of steroids used
+    - Output:    Predicted number of home runs
+  - Neural networks
+    - They solve both regression and classification problems
+    - Consists of neurons (nodes) and connections between neurons
+    - Usually three layers - input, hidden, and output
+    - Every neuron in a layer feeds into every neuron in the next
+    - "Learning" is done by adjusting weights between neurons, only if the network made some error
+    - This is the idea behind connectionism (all knowledge is contained in connections between neurons, not in neurons themselves)
+  - Support vector machines
+    - Solve classification problems
+    - Finds the best linear separating hyperplane between classes
+    - Hyperplane is a fancy name for a line in two dimensions, a plane in three dimensions, etc.
+    - For example, consider the problem of classifying someone as short or tall:
+      - We are given these people's heights and classes, and we need to learn this:
+          4'9  - short
+          4'10 - short
+          5'3  - tall
+          4'9  - short
+          4'11 - short
+          5'11 - tall
+          6'7  - tall
+      - A line at 5 feet will solve this classification problem (separates the classes)
+      - A line at 5'2 will also do the same
+      - SVM will draw the line at 5'1, because it is right between 4'11 and 5'3
+      - This line gives the same amount of "room" on both sides (2 inches), so it avoids misclassifying future examples
+      - This example is linearly separable, because we can draw a line to separate the classes
+    - Another example, classifying someone's gender based on height:
+      - We are given these people's heights and classes, and we need to learn this:
+          4'4  - female
+          4'9  - female
+          5'5  - female
+          5'10 - female
+          5'4  - male
+          5'11 - male
+      - These classes cannot be separated using a line, so we call it not linearly separable
+      - A kernel function will turn this problem into a linearly separable one
+    
+- Other
+  - Computer vision
+    - Not much here, just know the general workflow of object detection
+    - Image ---> Preprocessing (including cropping, scaling, rotation, etc.) ---> Classifier ---> Detected or not
+  - Natural language processing
+    - Doing NLP right requires understanding - current methods usually avoid understanding, but work just well enough
+    - Know the difference between shallow and deep approaches (and relation to weak AI vs. strong AI)
+    - Word sense disambiguation
+      - The problem is to find the correct meaning of a word given its usage
+      - Shallow approach - just consider probabilities of surrounding words, or use magical machine learning
+      - Deep approach - using a common sense knowledge base, maybe use sentence structure and other things
+    - Machine translation
+      - For large documents
+      - Shallow approach - Translate words one by one, then select write sentence structure based on learned examples (machine learning)
+      - Deep approach - Translate words one by one, then combine them using mapped grammatical structure, etc.
+  - Deep vs. shallow
+    - Deep is more understanding, shallow is just enough to do task
+    - Neural networks, SVMs are shallow
+    - Shallow approach predominant in machine learning research
+    - Shallow is faster to develop, faster to try out, and works well enough
+    - Deep methods harder to develop and test
+    - Deep methods may work better for really hard problems (understanding speech, etc.)

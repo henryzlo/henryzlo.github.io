@@ -1,0 +1,36 @@
+1a.
+Let s be array of length n. 
+
+for i=0; i<n; i++
+  store s[i] in hash set
+for i=0; i<n; i++
+  for j=0; j<n; j++
+    if -(s[i]+s[j]) in hash set
+      return s[i], s[j], -(s[i]+s[j])
+return false
+
+1b. 
+Let s be array of length n. 
+
+for i=0; i<n/2; i++
+  s[i] += s[n-i]
+  s[n-1] = s[i]-s[n-i]
+  s[i] -= s[n-1]
+
+2a. 
+Let m be the length of x, and n be the length of y.
+
+j=0
+for i=0; i<m; i++
+  if x[i]==y[j]
+    if j++==n
+      return true
+return false
+
+2b. 
+2c. 
+3a. 
+3b. 
+4a. 
+4b. 
+4c. 

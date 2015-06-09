@@ -1,0 +1,115 @@
+\documentclass{article}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+\newtheorem{problem}{Problem}
+
+\begin{document}
+\title{Game Package}
+\author{Henry Z. Lo}
+\maketitle
+
+\section{Game Usage}
+This document refers to the game package.  Be sure to reference the code as you read the document.
+
+\subsection{Game class}
+Central to the game package is the \texttt{Game} abstract class, from which all other games are derived.  The \texttt{Game} must contain the following information:
+\begin{itemize}
+\item Whose turn it is (\texttt{whoseTurn()} method)
+\item The current valid moves (\texttt{getMoves()})
+\item What results after a move is made (\texttt{make(Move m)})
+\item Whether the game is over (\texttt{isGameOver()})
+\end{itemize}
+Using a game first consists of initializing it.  Then, until the game is over, we find out whose turn it is, present that player with all possible moves, and make one of those moves.
+
+As an example, see \texttt{cs310.TestGame.java}.  This program:
+\begin{enumerate}
+\item Starts a game of Nim, which consists of three piles, from which a player can take sticks.
+\item Calls \texttt{getMoves()} to display all possible moves.
+\item Makes each of those moves, displaying the results.
+\end{enumerate}
+\texttt{TestGame} does not really play a game, but shows the effect of each move at the beginning.  In order to play a game, we must repeatedly call get and make moves.
+
+\subsection{Move class}
+Each \texttt{Game} must define a \texttt{Move}.  \texttt{Move} is an abstract class, and is conceptually attached to an implementation of \texttt{Game}.  Moves are the only way to change the game state.
+
+\texttt{Move} is an intentionally barebone abstract class.  Subclasses to \texttt{Move} generally contain some information, so that when the \texttt{Move} is made, the \texttt{Game} knows what to do with it.  For example, a \texttt{TictacMove} for the tic-tac-toe game consists of a \texttt{spot}; when the move is made, the corresponding spot is made on the board.
+
+\subsection{Player class}
+Notice that the notion of a player is completely separate from the game.  The \texttt{Player} abstract class exists when we want separate entities to make their own moves.  Players do the following:
+\begin{enumerate}
+\item Takes in a \texttt{Game} object, which has the current state of a game being played.
+\item Returns a \texttt{Move} object, using its \texttt{findBest} function.
+\end{enumerate}
+The \texttt{PlayOneGame} shows an example of how \texttt{Player}s can be used with a \texttt{Game}.  The game is simply initialized; then, depending on whose turn it is, the appropriate player makes its best move until the game is over.  This is all done in the \texttt{go} function.
+
+Note that the only way to evaluate moves is to make them.  Thus, a player can hypothesize about future moves by copying the current game, and making moves based on that.  This allows the player to see outcomes without actually changing the game, and allows the player to backtrack after evaluating ways the game can end up.
+
+\subsection{How to actually play a game}
+We can play games using the \texttt{PlayGame} class as follows:
+\begin{verbatim}
+java PlayGame Easy
+java PlayGame Nim human human                    
+java PlayGame Tictactoe human cs310.Backtrack
+\end{verbatim}
+The third argument is the game type.  The fourth and fifth arguments are the players we want to play the game; if not specified, they will default to human and backtrack, which you will need to implement in an assignment.
+
+\section{Factories}
+\subsection{Game factory}
+Once we have a type of \texttt{Game} instantiated, we can playing it using just the methods in the \texttt{Game} abstract class.  Polymorphism calls the appropriate method implementation based on the actual class.
+
+But notice that we give a string \texttt{gameName}, and need to use that to instantiate \texttt{Game} that we want.  There are many games in the package.  One possible way is to use a large switch case or if/else block to instantiate the correct \texttt{Game} in the \texttt{PlayGame} class.  For example:
+\begin{verbatim}
+Game game;
+if (gameName.equals("Nim"))
+  game = new Nim();
+else if (gameName.equals("Tictactoe"))
+  game = new Tictactoe();
+else if (gameName.equals("Easy"))
+  game = new Easy();
+...  
+\end{verbatim}
+
+This can get large fast.  Alternatively, we can use the \texttt{Class} library to obtain the class from \texttt{className}, then instantiate it.
+\begin{verbatim}
+Class c = Class.forName(className);
+Game game = c.newInstance();
+\end{verbatim}
+This is cleaner and more elegant.  Of course, one should take care to only instantiate classes which are games.  
+
+In the \texttt{playGame} method of the \texttt{PlayGame} class, we can see that class instantiation is handled by the \texttt{GameFactory} class:
+\begin{verbatim}
+GameFactory.create(gameName);
+\end{verbatim}
+
+Looking in the \texttt{GameFactory} class, we can see that all it does is make sure that \texttt{gameName} refers to a valid game, find the correct game, and instantiate it.  We call \texttt{GameFactory} a \textit{factory} because its sole purpose is to instantiate \textit{other} classes (contrast this with a constructor).
+
+\subsection{Player factory}
+Just as we turn command line arguments into \texttt{Game} objects using the \texttt{GameFactory}, we can instantiate the correct type of \texttt{Player} with the \texttt{PlayerFactory}.  We can see this happen in the \texttt{playGame} again, though it only uses \texttt{PlayerFactory} to instantiate the computer player.
+
+This may seem like overkill since we only have one type of computer player (\texttt{Backtrack}, which you will implement).  But it would be nice for future work; if you create other computer players in the future, they will work in \texttt{PlayGame} with no modification to any code.  The user just needs to pass in the \texttt{playerString} for your new computer player class.
+
+We could probably have had the \texttt{PlayerFactory} also create human players.
+
+\section{Observer Pattern}
+When we play a game, we can see a textual representation of it (try \texttt{java PlayGame Easy}).  Note that in the actual game class, there is no reference to a GUI, e.g. no print line statements in the \texttt{make} method.  There is a clean separation between the \texttt{Game} and its text representation.
+
+This separation is achieved by using observers.  Note this line in \texttt{playGame.java}:
+\begin{verbatim}
+GameView view = ViewFactory.createView(game, useGUI);
+\end{verbatim}
+This creates a \texttt{GameView} object, which implements the \texttt{Observer} interface.  \texttt{GameView} also wraps around the game itself.  When the \texttt{GameView} is notified that the \texttt{Game} has changed, it updates the 
+GUI accordingly using \texttt{displayNewPosition}.
+
+The sequence of events occurs like this:
+\begin{enumerate}
+\item \texttt{makeObservable} is called on the \texttt{Game}, updating the game state and notifying observers.
+\item The observing \texttt{GameView}'s \texttt{update} (which it gets from implementing \texttt{Observer}) method is called.
+\item This calls the \texttt{displayNewPosition}, which is abstract in \texttt{GameView}.
+\end{enumerate}
+The idea is that different types of \texttt{GameView}, e.g. \texttt{ConsoleView}, can draw events in different ways.  Using \texttt{GameView}, we have cleanly separated the implementation of the game from its user interface.
+
+Most games only support \texttt{ConsoleView}, which merely prints out the position (with \texttt{position()}) of the appropriate \texttt{GameStrings} class.
+
+\end{document}

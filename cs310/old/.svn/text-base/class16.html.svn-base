@@ -1,0 +1,1629 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 12">
+<meta name=Originator content="Microsoft Word 12">
+<link rel=File-List href="class18_files/filelist.xml">
+<title>Class 16 Games, Greedy Algorithms</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Elizabeth O'Neil</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Betty O'Neil</o:LastAuthor>
+  <o:Revision>24</o:Revision>
+  <o:TotalTime>4689</o:TotalTime>
+  <o:LastPrinted>2012-04-03T13:58:00Z</o:LastPrinted>
+  <o:Created>2009-04-06T19:30:00Z</o:Created>
+  <o:LastSaved>2012-04-04T16:20:00Z</o:LastSaved>
+  <o:Pages>6</o:Pages>
+  <o:Words>2674</o:Words>
+  <o:Characters>15244</o:Characters>
+  <o:Company>University of Massachusetts, Boston</o:Company>
+  <o:Lines>127</o:Lines>
+  <o:Paragraphs>35</o:Paragraphs>
+  <o:CharactersWithSpaces>17883</o:CharactersWithSpaces>
+  <o:Version>12.00</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<link rel=themeData href="class18_files/themedata.thmx">
+<link rel=colorSchemeMapping href="class18_files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Print</w:View>
+  <w:Zoom>140</w:Zoom>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"New York";
+	panose-1:2 4 5 3 6 5 6 2 3 4;
+	mso-font-alt:"Times New Roman";
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:3 0 0 0 1 0;}
+@font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-alt:"\FF2D\FF33 \660E\671D";
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1107305727 0 0 415 0;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1073743103 0 0 415 0;}
+@font-face
+	{font-family:"\@MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-520092929 1073806591 9 0 415 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"New York","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"New York";}
+h1
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 1 Char";
+	mso-style-next:Normal;
+	margin-top:24.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	text-autospace:none;
+	font-size:14.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#365F91;
+	mso-themecolor:accent1;
+	mso-themeshade:191;
+	mso-font-kerning:0pt;}
+a:link, span.MsoHyperlink
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+pre
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"HTML Preformatted Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"MS Mincho";}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"New York","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"New York";}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"New York","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"New York";}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"New York","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"New York";}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"New York","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"New York";}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 1";
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#365F91;
+	mso-themecolor:accent1;
+	mso-themeshade:191;
+	font-weight:bold;}
+span.HTMLPreformattedChar
+	{mso-style-name:"HTML Preformatted Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"HTML Preformatted";
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	mso-bidi-font-family:"New York";}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:513226548;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-300669076 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l0:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1
+	{mso-list-id:927813532;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-2079713954 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2
+	{mso-list-id:967128756;
+	mso-list-type:hybrid;
+	mso-list-template-ids:684496154 -159452934 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l2:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:12.0pt;
+	font-family:"New York","serif";
+	mso-bidi-font-family:"New York";}
+@list l2:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="8194"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span class=Heading1Char><span
+style='font-size:14.0pt'>Class 16 Observer pattern in Games, first findbest
+algorithm <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt;
+font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'>Handouts UML for Games (linked
+from class web page), 3 pages on the Observer Pattern from <a
+href="http://safari.oreilly.com/0596007124"><i>Head First Design Patterns</i></a>,
+<span style='font-size:10.0pt;font-family:"Times New Roman","serif"'>by Eric
+Freeman and Elizabeth Freeman, O'Reilly, 2004, ISBN&nbsp;0-596-00712-4, (handout
+on paper only) where this is covered in Chap. 2, i.e., the first individual
+pattern in the book.<span style='mso-spacerun:yes'>  </span>If interested, read
+the excellent reviews at Amazon.We’ll refer to this as F&amp;F.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt;
+font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt;
+font-family:"Times New Roman","serif"'>Recall from last week the core Game
+ADT:<span style='mso-spacerun:yes'>  </span>Game, Move, MoveIterator,
+PlayerNumber—enough to go through the motions of a game, given a Game
+implementation like Easy or Tictactoe.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt;
+font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-size:11.0pt;mso-bidi-font-size:10.0pt;font-family:
+"Times New Roman","serif"'>Player objects<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt;
+font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt;
+font-family:"Times New Roman","serif"'>A player decides on moves for a
+game.<span style='mso-spacerun:yes'>  </span>We already have PlayerNumber, but
+that is a lightweight ID for the player, to follow it though a certain
+game.<span style='mso-spacerun:yes'>  </span>A full-fledged “player” object
+decides on moves.<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt;
+font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt;
+font-family:"Times New Roman","serif"'>In our case, we have human players who
+think up moves, and computer players who search mechanically for moves.<span
+style='mso-spacerun:yes'>  </span>Here is the basic inheritance structure as
+follows.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt;
+font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:9.0pt;
+font-family:"Courier New"'><span style='mso-spacerun:yes'>              
+</span>Player: findbest is abstract<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:9.0pt;
+font-family:"Courier New"'><span style='mso-spacerun:yes'>             
+</span>/<span style='mso-spacerun:yes'>         </span>\<span
+style='mso-spacerun:yes'>                 </span>(IS-A relationships)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:9.0pt;
+font-family:"Courier New"'><span style='mso-spacerun:yes'>      
+</span>HumanPlayer<span style='mso-spacerun:yes'>    </span>ComputerPlayer:
+uses search for findbest <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:9.0pt;
+font-family:"Courier New"'><span style='mso-spacerun:yes'> </span>uses brain
+for findbest,<span style='mso-spacerun:yes'>           </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:9.0pt;
+font-family:"Courier New"'><span style='mso-spacerun:yes'> </span>accessed via
+i/o with user<span style='mso-spacerun:yes'>   </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt;
+font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt'>sort-of
+UML class diagram: the \ and / marks should be up arrows with hollow triangle
+heads<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt'>See
+the handout UML diagram.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt;
+font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt;
+font-family:"Times New Roman","serif"'>Further, we want to be able to try different
+computer algorithms for findbest, so we keep ComputerPlayer generic and plug in
+various subclasses.<span style='mso-spacerun:yes'>  </span>Perhaps BackTrack
+should be called BackTrackingComputerPlayer, but that’s a really long name.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt'>Inheritance
+hierarchy:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:9.0pt;
+font-family:"Courier New"'><span style='mso-spacerun:yes'>              
+</span>Player: findbest is abstract<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:9.0pt;
+font-family:"Courier New"'><span style='mso-spacerun:yes'>             
+</span>/<span style='mso-spacerun:yes'>         </span>\<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:9.0pt;
+font-family:"Courier New"'><span style='mso-spacerun:yes'>      
+</span>HumanPlayer<span style='mso-spacerun:yes'>    </span>ComputerPlayer:
+uses search: findbest is still abstract<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:9.0pt;
+font-family:"Courier New"'><span style='mso-spacerun:yes'> </span>uses brain
+for findbest,<span style='mso-spacerun:yes'>           </span>\<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:9.0pt;
+font-family:"Courier New"'><span style='mso-spacerun:yes'> </span>accessed via
+i/o with user<span style='mso-spacerun:yes'>   </span>Backtrack: specific
+algorithm for findbest<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:9.0pt;
+font-family:"Courier New"'><span style='mso-spacerun:yes'> </span>(in gamesui
+package)<span style='mso-spacerun:yes'>   </span><span
+style='mso-spacerun:yes'>       </span>uses minimax search for findbest action <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:9.0pt;
+font-family:"Courier New"'><span
+style='mso-spacerun:yes'>                                   </span>(you
+implement this)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:9.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Here the
+concrete classes are HumanPlayer and Backtrack, the backtracking
+ComputerPlayer.<span style='mso-spacerun:yes'>  </span>So Backtrack ISA
+ComputerPlayer ISA Player, and also HumanPlayer ISA Player. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>In pa4, you are
+going to fill out Backtrack.java to make it do the minimax search. More on that
+later today.<span style='mso-spacerun:yes'>   </span>Player.java,
+HumanPlayer.java and ComputerPlayer.java are in the games package.<span
+style='mso-spacerun:yes'>  </span>Backtrack is not, since it is not fully implemented.<span
+style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Note that the
+Game class only knows PlayerNumbers, not<span style='mso-spacerun:yes'> 
+</span>Players.<span style='mso-spacerun:yes'>  </span>Players and Games come
+together at game-playing time, and then Players are known by their
+PlayerNumbers in a particular Game instance.<span style='mso-spacerun:yes'> 
+</span>Recall that PlayerNumbers are really simple, just 5 particular
+values.<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>An analogy for
+PlayerNumbers are tickets at the deli counter.<span style='mso-spacerun:yes'> 
+</span>You, a complicated object, are reduced to #57 while you wait for your
+turn and then interact with an equally complicated agent on the other side of
+the counter.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:11.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Times New Roman","serif"'>Running a game: PlayOneGame<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Games and
+Players come together in PlayOneGame objects.<span style='mso-spacerun:yes'> 
+</span>Each PlayOneGame object HASA Game and 2 Players, one of which ISA
+HumanPlayer and the other ISA a ComputerPlayer in the normal way we use it (but
+it can be 2 ComputerPlayers or 2 HumanPlayers). We see that the Player that
+goes with Game.FIRST_PLAYER is Player “one” of PlayOneGame, the player that
+takes the first turn, and the other is “two”.<span style='mso-spacerun:yes'>  
+</span>The Player “one” can be human or computer, depending on our answer to
+the question about going first.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Thus the
+correspondence between PlayerNumbers and Players is held in the PlayOneGame
+object. It was decided on in PlayGame.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Naturally, we
+need code to run a game.<span style='mso-spacerun:yes'>  </span>All this needs
+is a loop of calls to findbest of Player and make of Game.<span
+style='mso-spacerun:yes'>  </span>This is in PlayOneGame.java, in the games
+package. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>We made a
+picture of the objects: PlayOneGame has refs to a Game/Easy (say), meaning a
+Game that is actually an Easy Game, and refs named one and two to Players,
+specifically, say, Player/HumanPlayer and Player/ComputerPlayer/Backtrack. The
+HumanPlayer subclass has a ref to an object that knows how to do UI, but
+PlayOneGame only sees types Game and Player, so it has no knowledge of the UI
+object or the specific game being played.<span style='mso-spacerun:yes'> 
+</span>This shows the power of abstraction: PlayOneGame can play the game
+without knowing much about it: what it needs is provided by the Game API, and
+similarly with the Players.<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'>Object diagram</span></b><span style='font-size:
+10.0pt;font-family:"Times New Roman","serif"'>: (sort-of UML object diagram. The
+/ and \ should be plain down arrows) This is the case that the human goes
+first, so field “one”, of type Player, is occupied by a HumanPlayer
+object.<span style='mso-spacerun:yes'>  </span>This object graph is set up in
+PlayGame.java, followed by calling go() in PlayOneGame to init and play the
+game.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:9.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+3'>        </span><span style='mso-spacerun:yes'>              
+</span>&lt;PlayOneGame&gt;<span style='mso-spacerun:yes'>  </span>--&gt;
+&lt;Game&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:9.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>                       </span>/<span
+style='mso-spacerun:yes'>          </span>\<span
+style='mso-spacerun:yes'>             </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:9.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>                     </span>one<span
+style='mso-spacerun:yes'>           </span>two<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:9.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'> </span>&lt;UI object&gt; &lt;--
+&lt;HumanPlayer&gt;<span style='mso-spacerun:yes'>   </span>&lt;BackTrack&gt; <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:9.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:9.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+6'>               </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Note: in an
+object diagram, we don’t show inheritance, since the superclasses don’t have
+their own objects, but instead just are part of the core of the full object.
+Here:<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-right:10.5pt;mso-add-space:
+auto;text-indent:-.25in;mso-list:l1 level1 lfo2;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>PlayOneGame HASA
+Game and HAS 2 Players (“one” and “two”)<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-right:10.5pt;mso-add-space:
+auto;text-indent:-.25in;mso-list:l1 level1 lfo2;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>HumanPlayer ISA
+Player<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-right:10.5pt;mso-add-space:
+auto;text-indent:-.25in;mso-list:l1 level1 lfo2;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Backtrack ISA
+ComputerPlayer ISA Player<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-right:10.5pt;mso-add-space:
+auto;text-indent:-.25in;mso-list:l1 level1 lfo2;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>PlayOneGame ISA
+AbstractPlayOneGame (the GUI has another subclass of this)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'>Playing the game</span></b><span style='font-size:
+10.0pt;font-family:"Times New Roman","serif"'>. PlayOneGame has a loop which
+calls findbest of Player to get the next move and then makes the move via the
+Game API.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Well, it’s not
+quite that simple. In PlayOneGame.java, we see calls to makeObservable rather
+than to make, so the basic play-game loop has calls to findbest and
+makeObservable.<span style='mso-spacerun:yes'>  </span>What is this all about?<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>In Game.java, we
+can read makeObservable and see that it calls make and then
+notifyObservers().<span style='mso-spacerun:yes'>  </span>Who are these observers
+we’re notifying?<span style='mso-spacerun:yes'>  </span>They are the timing
+module and the UI.<span style='mso-spacerun:yes'>  </span>Both of these modules
+are interested in the event of a move happening.<span
+style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-right:10.5pt;mso-add-space:
+auto;text-indent:-.25in;mso-list:l0 level1 lfo4;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>The timing
+package wants to separately time each player, so wants to know about moves. <o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-right:10.5pt;mso-add-space:
+auto;text-indent:-.25in;mso-list:l0 level1 lfo4;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>The UI wants to update
+or redraw the board after each move, so is also interested in moves.<span
+style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'>The Observer Pattern<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>See pg. 51 of
+the handed-out excerpt from F&amp;F for the general picture.<span
+style='mso-spacerun:yes'>  </span>One object holds state and notifies others
+about changes in that state. In our case, the Game object holds the game state,
+and moves change that state, so each move triggers notifications to the
+“dependent objects” or Observers. In our case, there are two observers, the
+timing package and the UI object.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>The F&amp;F
+coverage goes on to show how to implement the Observer pattern from scratch in
+Java. Then they start covering the JDK support. The excerpt has pages 64-65 on
+that coverage.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>The Observer
+interface and the Observable class are in the standard JDK. Together they give
+us the “observer pattern”.<span style='mso-spacerun:yes'>  </span>See pg. 64 of
+F&amp;F for a UML class diagram.<span style='mso-spacerun:yes'>  </span>For us,
+replace WeatherData with Game, GeneralDisplay with GameTimer, and
+StatisticsDisplay with UI (GameView). <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>In this pattern,
+the Observable object sends out “notifications” when it changes to registered
+observer objects, by calling notifyObservers(). The observer objects then can
+check further by calling various methods of the observable. The Observable
+doesn’t know anything about the observers, so you can imagine that the
+observers are (roughly) spying on the observable, interested in when it
+changes.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>The observer
+pattern is important to proper software engineering of GUI apps, so you will
+find it discussed in that context in many places.<span
+style='mso-spacerun:yes'>  </span>Here we are using it even for a line-oriented
+app.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Here the Game
+ISA Observable, as you can see from the start of Game.java. The game state
+changes occur because of moves, so the method makeObservable<span
+style='mso-spacerun:yes'>  </span>calls setChanged() and notifyObservers().
+Objects interested in tracking the moves of a Game can register themselves as
+Observers by calling game.addObserver().<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>The Game itself
+does not need to know about these specific needs once it has become an
+Observable—any interested object can sign up for notifications. This keeps the
+Game code simpler than if it had to know explicitly about the UI object and the
+GameTimer object, i.e., have refs to these objects in its own fields. Instead,
+class Game just extends Observable, and the JDK code of Observable manages a
+registry of observers for it.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>When the timing
+package is notified about a move, it stops timing one player and switches over
+to timing the other player.<span style='mso-spacerun:yes'>  </span>When the UI
+is notified, it repaints the representation of the game for the user, because
+the move has changed things.<span style='mso-spacerun:yes'>  </span>Let’s not
+worry about implementation details of this mechanism now, just appreciate the
+results.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>For the
+interested, here are some more details:<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-.25in;mso-list:l2 level1 lfo6'><![if !supportLists]><span
+style='mso-bidi-font-size:10.0pt;mso-fareast-font-family:"New York"'><span
+style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Setup:
+Game extends Observable, itself a concrete class, bringing to Game the
+implementation of the notification-registration system and the
+notification-sending system:<span style='mso-spacerun:yes'>  </span>The calls
+used in game classes are addObserver(Observer o), setChanged(),
+notifyObservers(),<span style='mso-spacerun:yes'>  </span>notifyObservers(Object
+arg);<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in;mso-list:l2 level1 lfo6'><![if !supportLists]><span
+style='mso-bidi-font-size:10.0pt;mso-fareast-font-family:"New York"'><span
+style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Setup:
+the Observers are the timing package and the UI. They each need a class that
+implements Observer in order to receive notifications (via calls to method
+“update” in the Observer). The UI base class GameView itself implements
+Observer, and in its own initialization, calls g.addObserver(this), adding itself
+to the registered Observers of Game. The top-level timing class GameTimer also
+implements Observer, and also adds itself by g.addObserver(this). Each of these
+Observer classes have a method called update that is ready to handle a
+notification.<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in;mso-list:l2 level1 lfo6'><![if !supportLists]><span
+style='mso-bidi-font-size:10.0pt;mso-fareast-font-family:"New York"'><span
+style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Operation:
+when a move is made via makeObservable in Game, Game code there calls
+setChanged() and notifyObservers(m), passing the move as the arg.<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in;mso-list:l2 level1 lfo6'><![if !supportLists]><span
+style='mso-bidi-font-size:10.0pt;mso-fareast-font-family:"New York"'><span
+style='mso-list:Ignore'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Operation:
+Each Observer gets a call to its update method, with the move object as an
+argument. It does the action desired: In GameTimer, it checks about switching
+which player to charge time to.<span style='mso-spacerun:yes'>  </span>In the
+UI, it shows the user the new board.<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in;mso-list:l2 level1 lfo6'><![if !supportLists]><span
+style='mso-bidi-font-size:10.0pt;mso-fareast-font-family:"New York"'><span
+style='mso-list:Ignore'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Operation,
+case 0: when the game is started, Game.initObservable calls notifyObservers(),
+no arg.<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpLast style='text-indent:-.25in;mso-list:l2 level1 lfo6'><![if !supportLists]><span
+style='mso-bidi-font-size:10.0pt;mso-fareast-font-family:"New York"'><span
+style='mso-list:Ignore'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Operation,
+case 0: Each Observer gets a call to its update method, with move=null, and
+does any appropriate action for the start of the game.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'>Summary on PlayOneGame:</span></b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><span
+style='mso-spacerun:yes'>  </span>PlayOneGame loops through the moves of a game
+and, by making moves in the Game, indirectly notifies appropriate parties about
+the moves.<span style='mso-spacerun:yes'>  </span>Again note that it knows the
+Game only as Game, players only as Players, yet still can play the game.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'>Running the whole show: PlayGame, factories for game
+and player objects<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Finally, we need
+a main program to create objects and call PlayOneGame.<span
+style='mso-spacerun:yes'>  </span>PlayGame.java has this main program, and is
+in package cs310 as the app of interest for our project. You don’t need to
+change it.<span style='mso-spacerun:yes'>  </span>The creation of Game objects
+uses the capability of Java to take a string name of a class and load that
+class for execution, covered in the last lecture.<span
+style='mso-spacerun:yes'>  </span>This way, we have <i style='mso-bidi-font-style:
+normal'>extendibility</i> in games, that is, we can add a game to the system
+after all the game-playing software is written.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'>Summary of important classes<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>PlayGame—static
+method playGame creates view, game, players, and PlayOneGame object from them,
+calls PlayOneGame.go()<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>AbstractPlayOneGame,
+PlayOneGame—consists of two Players and one Game.<span
+style='mso-spacerun:yes'>  </span>Loops over moves of one game: figures out
+which player has the turn and calls that player’s version of findbest to get a
+move, use makeObservable to make the move.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Player,
+ComputerPlayer, Backtrack or Dynamic—computer player, you write Backtrack and
+Dynamic for pa4<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>HumanPlayer—human
+player who inputs moves from keyboard. In package gamesui.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Game, subclasses
+Easy or Tictactoe or Sticks—game class; Move; Move Iterator; PlayerNumber<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Other classes in
+use:<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>factories:
+AbstractFactory, subclasses GameFactory, PlayerFactory<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>UI: Terminal,
+GameView, subclass ConsoleView, <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Exceptions:
+GameException, NoSuchMoveException, IllegalMoveException<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><span
+style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:13.0pt;margin-bottom:.0001pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'>[optional coverage on GUIs]</span></b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'> We’re not
+officially worrying about a graphical user interface (GUI), but here’s a note
+about it for your general information.<span style='mso-spacerun:yes'> 
+</span>This idea of notifying the view module about changes to the “model” is part
+of the <b style='mso-bidi-font-weight:normal'>MVC architecture, for
+model-view-controller</b>, an architecture originally developed for pre-web
+(everything on one computer) GUI treatments. The model is the “business logic”
+or whatever we are actually trying to accomplish, here the game-playing software.<span
+style='mso-spacerun:yes'>  </span>The view is the display to the user, and
+multiple views of the same model are supported in general. The controller
+interprets user input and issues appropriate calls to the model or the view.<span
+style='mso-spacerun:yes'>  </span>The model (an Observable or equivalent)
+notifies the view about updates to the data of the model, via the observer
+notifications.<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:13.0pt;margin-bottom:.0001pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:13.0pt;margin-bottom:.0001pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>In web
+terminology, following the above architecture would mean that the back-end (the
+model) notifies changes to the view (the browser.)<span
+style='mso-spacerun:yes'>  </span>But browsers are basically pull-based (user
+requests each action), so this doesn’t work so well.<span
+style='mso-spacerun:yes'>  </span>The MVC architecture has been flattened for
+browser-based web UIs to a linear arrangement of model connected to controller
+connected to browser (by HTML/HTTP.)<span style='mso-spacerun:yes'> 
+</span>This is also called “<b style='mso-bidi-font-weight:normal'>Model 2</b>.”
+See <a href="http://www.billsgames.com/tic-tac-web/">http://www.billsgames.com/tic-tac-web/</a>
+for an example of a browser-based (no Java applet) Tic-tac-toe game.<span
+style='mso-spacerun:yes'>  </span>Note how the whole board is repainted to show
+one move, and how you have to push a button to get a new picture.<span
+style='mso-spacerun:yes'>  </span>That’s because the browser (using only
+HTML/HTTP) has to request something to get a new web page.<span
+style='mso-spacerun:yes'>  </span>If you download a Java applet, of course it
+would be able to push new data to the screen whenever it wants to. Similarly
+with other programming methodologies that run Javascript or specialized
+programs, not just the browser, on the client computer.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:13.0pt;margin-bottom:.0001pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:13.0pt;margin-bottom:.0001pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Tictactoe has a
+Swing full-MVC GUI in gamesui. The controller is in GameController, and it
+looks very much like PlayOneGame, and replaces PlayOneGame for the GUI case.
+The difference is that a GUI code can’t<i style='mso-bidi-font-style:normal'>
+call</i> for user input. Instead, it must react to the user-input event when it
+happens. To bridge this gap, findbest is given another way to return: it can
+return null, and that means that the GUI will submit the move later on in time.
+The GUI controller accepts the new move in a separate call, and does the
+makeObservable call into the Game.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:13.0pt;margin-bottom:.0001pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'><span style='mso-spacerun:yes'> </span>[end of
+optional coverage on GUIs]<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Backtracking
+Algorithm<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt;
+font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Pseudocode
+for minimax search for best move (a backtracking algorithm.)</span></b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><span
+style='mso-spacerun:yes'>  </span>Weiss uses low values for positions good for
+humans, high for computer.<span style='mso-spacerun:yes'>  </span>It’s easier
+for us to use a high value (1) for game states good for player 1, low value
+(-1) for player 2, since the Game doesn’t know human from computer players (it
+has no need to.)<span style='mso-spacerun:yes'>  </span>A draw is 0 in this
+system.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt;
+font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt;
+font-family:"Times New Roman","serif"'>The minimax search we need for
+getValue(Game g) is as follows, working from the code in Weiss, pg. 337(295).<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt;
+font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.3in;margin-bottom:.0001pt'><span style='font-size:8.0pt;
+font-family:"Courier New"'>If the base game state is a done game, <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.3in;margin-bottom:.0001pt;text-indent:.3in'><span
+style='font-size:8.0pt;font-family:"Courier New"'>return the appropriate value
+immediately<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.3in;margin-bottom:.0001pt'><span style='font-size:8.0pt;
+font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.3in;margin-bottom:.0001pt'><span style='font-size:8.0pt;
+font-family:"Courier New"'>Determine the current player# from the base game
+state<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.3in;margin-bottom:.0001pt'><span style='font-size:8.0pt;
+font-family:"Courier New"'>Initialize a running min/max, to worst possible
+outcome for player#<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.3in;margin-bottom:.0001pt'><span style='font-size:8.0pt;
+font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.3in;margin-bottom:.0001pt'><span style='font-size:8.0pt;
+font-family:"Courier New"'>Loop through moves from this base game position. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.3in;margin-bottom:.0001pt'><span style='font-size:8.0pt;
+font-family:"Courier New"'>For a certain possible move:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.3in;margin-bottom:.0001pt'><span style='font-size:8.0pt;
+font-family:"Courier New"'><span style='mso-tab-count:1'>   </span>Make the
+move on a copy of the game state<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;text-indent:.3in'><span
+style='font-size:8.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>   </span>Get the value for this new game position by
+calling getValue<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.3in;margin-bottom:.0001pt'><span style='font-size:8.0pt;
+font-family:"Courier New"'><span style='mso-tab-count:1'>   </span>Use the
+value to update the running max or min, depending on player#<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.3in;margin-bottom:.0001pt'><span style='font-size:8.0pt;
+font-family:"Courier New"'>Return the min/max value<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:10.5pt;margin-bottom:
+0in;margin-left:.3in;margin-bottom:.0001pt'><span style='font-size:8.0pt;
+font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt'><span
+style='mso-tab-count:1'>                </span>* you can also return the move that
+goes with the best value, as Weiss does, but see more discussion below<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt'>Example
+of execution: getValue(Game g) where g is a state where Player1 is next.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>player# is 1<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>Since 1 wants high values, we need a running
+max, initialized at -1, the worst possible value for player 1<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>   </span>loop through moves from this g position<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>      </span>make the move on a copy of the game state<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>      </span>call getValue to get its value<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>      </span>Update the running max<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>   </span>return running max<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt'>Suppose
+that getValue returns 0, -1, 1, and 0 from the various recursive calls. Then
+the running max will end up at 1, and 1 will be returned from this call. It
+means that even with Player2 playing perfectly, there is a win for Player 1
+from g, by taking the #2 move. However, in this simple getValue, we don’t
+report the move, just the value.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt'>But
+at top level we do need to find a move. We can use getValue as a helper method
+to the top-level findbest. In findbest, we also loop through the moves, in this
+case calling getValue, not findbest, so it’s not itself recursive. The move
+that has the best value is the one to return from findbest.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt;
+font-family:"Times New Roman","serif"'>What about the </span><span
+style='font-size:10.0pt;font-family:"Courier New"'>side</span><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'> parameter in
+Weiss’s method?<span style='mso-spacerun:yes'>  </span>It's not really needed
+with our Game ADT because the game state knows whose turn it is and that can
+determine whether to do the max or min.<span style='mso-spacerun:yes'> 
+</span>We do need a Game parameter, however, because this code is outside the
+Game class.<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt;
+font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt;
+font-family:"Times New Roman","serif"'>You can see there are two ways to
+implement findbest.<span style='mso-spacerun:yes'>  </span>If the helper
+returns only the value, not the move for it, the top-level findbest code can do
+its own min/max to figure out the best one.<span style='mso-spacerun:yes'> 
+</span>The advantage with this approach is a simpler getValue, since it simply
+finds a value for a certain Game state.<span style='mso-spacerun:yes'> 
+</span>The disadvantage of this approach is the distribution of the min/max
+code—it’s nicer to have it all in one method.<span style='mso-spacerun:yes'> 
+</span>The simpler getValue is easier to upgrade to dynamic programming. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt;
+font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Times New Roman","serif"'>Dynamic Programming for findbest,
+also in pa4<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Now
+we add a map of values for various game positions, so we avoid recomputations.
+This is a map of Game to Integer. Since Game is required to have equals and
+hashCode, we know we can use a HashMap.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt;
+font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt;
+font-family:"Times New Roman","serif"'>Be careful about <b style='mso-bidi-font-weight:
+normal'>object sharing</b> <b style='mso-bidi-font-weight:normal'>of mutable
+objects</b> used as keys when working with the Map of Game to Integer
+here.<span style='mso-spacerun:yes'>  </span>We need the Game objects to keep
+the same value once inside the Map.<span style='mso-spacerun:yes'> 
+</span>That’s required (in the fine print) to keep the Map lookups working
+properly, with HashMap or TreeMap.<span style='mso-spacerun:yes'>  </span>So
+make copies of Game objects as needed.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt;
+font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt'><span style='font-size:10.0pt;
+font-family:"Times New Roman","serif"'>More on dynamic programming next time.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>

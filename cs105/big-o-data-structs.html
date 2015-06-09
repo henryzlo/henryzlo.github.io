@@ -1,0 +1,136 @@
+<h1>Big-O and Data Structures</h1>
+
+We introduce the idea of Big-O, which simplifies analysis, and some data structures commonly used in computing.
+
+<h2>Big-O</h2>
+<ul>
+  <li>Big-O of a function f(n) is O(f(n)).</li>
+  <li>Using the Big-O on a function throws away everything but the largest power of n.</li>
+    <ul>
+      <li>The idea behind this is to make analysis simpler.</li>
+      <li>For example, O(n^2 + n) = O(n^2).</li>
+      <li>O(2n) = O(n).</li>
+      <li>O(19) = O(1).</li>
+    </ul>
+  <li>We use Big-O to classify the runtime growth rate of algorithms (how fast an algorithm is depending on the size of its input).</li>
+    <ul>
+      <li>In the worst case, bubblesort has n^2 computations.</li>
+      <li>Hence, we can say bubblesort is O(n^2).</li>
+      <li>Mergesort has 2n*log_2 (n) computations.</li>
+      <li>Hence, mergesort is O(2n*log_2 (n)) = O(n*log_2(n)).</li>
+    </ul>
+  <li>Hierarchy of runtimes (lower is faster / more scalable and better).</li>
+      <table>
+        <tr><th>Big-O</th><th>Name</th><th>Speed</th><th>Computations</th></tr>
+        <tr><td>O(1)</td><td>Constant runtime</td><td>Very fast, does not depend on size of input.</td><td>Very few, does not depend on size of input</td></tr>
+        <tr><td>O(log(n))</td><td>Logarithmic runtime</td><td>Very fast.</td><td>Few, depends only a little bit on size of input</td></tr>
+        <tr><td>O(n)</td><td>Linear runtime</td><td>Fast.</td><td>Some, depending linearly on size of input</td></tr>
+        <tr><td>O(n*log(n))</td><td>n*log(n) runtime</td><td>Acceptable.</td><td>Depends more on size of input</td></tr>
+        <tr><td>O(n^2)</td><td>Quadratic runtime</td><td>Slow.</td><td>A lot, depending on size of input.  If n doubles, runtime quadruples.</td></tr>
+        <tr><td>O(n^3), O(n^4), ...</td><td>Polynomial runtime</td><td>Very slow.</td><td>Way too many computations, not very scalable.</td></tr>
+        <tr><td>O(2^n)</td><td>Exponential runtime</td><td>Intractable (worst).</td><td>Ridiculous amount of computations, cannot scale.</td></tr>
+      </table>
+  <li>From http://bigocheatsheet.com/img/big-o-complexity.png.</li>
+  <img width=750px src="http://bigocheatsheet.com/img/big-o-complexity.png"/>
+</ul>
+
+<h2>Array-based Data Structures</h2>
+<ul>
+  <li>Stacks and queues support two operations: push and pop.</li>
+    <ul>
+      <li>A push inserts an element into the stack / queue.</li>
+      <li>A pop removes an element from the stack / queue.</li>
+    </ul>
+  <li>
+    A stack is a Last-In-First-Out (LIFO) data structure.
+    <ul> 
+      <li>Example: PEZ dispenser, or printer paper.</li>
+      <li>You stack on the paper in a printer.  The last piece of paper you put in is the first one that comes out.</li>
+      <li>You can only push a new element onto the top of the stack.</li>
+      <li>You can only pop an element from the top of the stack.</li>
+      <li>So in order to get the first element you pushed into the stack, you have to pop everything.</li>
+      <li>From http://www.algolist.net/img/stack-sketchy.png: <br/>
+        <img src="http://www.algolist.net/img/stack-sketchy.png"/>
+      </li>
+    </ul>
+  </li>
+  <li>
+    A queue is a First-In-First-Out (FIFO) data structure.
+    <ul>
+      <li>Example: a waiting line.</li>
+      <li>The first person in the waiting line is the first person to get served.</li>
+      <li>You can only push a new element into the back of the queue.</li>
+      <li>You can only pop an element from the front of the queue.</li>
+      <li>So in order to get the first element you pushed into the queue, you just have to pop that element.</li>
+      <li>Here, push is called dequeue and pop is called enqueue.  From http://upload.wikimedia.org/wikipedia/commons/5/52/Data_Queue.svg: <br/>
+        <img src="http://upload.wikimedia.org/wikipedia/commons/5/52/Data_Queue.svg"/>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Graph-based Data Structures</h2>
+<ul>
+  <li>Graphs and trees have nodes and edges between nodes.</li>
+  <li>
+    A graph is any collection of nodes and edges that connect them.
+    <ul> 
+      <li>Each edge must connect two nodes.</li>
+      <li>Nodes can have any number of edges connecting to them (including none).</li>
+    </ul>
+  </li>
+  <li>A graph can model any set of points with relationships between them.
+    <ul>
+      <li>For example, friendships.</li>
+      <li>From http://tctechcrunch2011.files.wordpress.com/2013/01/facebook-social-graph1.jpg: <br/>
+        <img src="http://tctechcrunch2011.files.wordpress.com/2013/01/facebook-social-graph1.jpg"/>
+      </li>
+      <li>Each node represents a person, each edge represents a friendship.</li>
+      <li>Another example is the internet.</li>
+      <li>From http://farm1.static.flickr.com/174/407874864_67ef846483.jpg: <br/>
+        <img src="http://farm1.static.flickr.com/174/407874864_67ef846483.jpg"/>
+      </li>
+     <li>Each node represents a website, each edge represents a link.</li>
+    </ul>
+  </li>
+  <li>
+    A path from one node to another is a sequence of edges between the two nodes.
+    <ul>
+      <li>In the friendship example, the path from sunglasses to black-and-white woman goes through Zuckerburg</li>
+      <li>Paths cannot have repeating edges.</li>
+      <li>A path from one node to itself is a cycle.</li>
+    </ul>
+  <li>
+    A tree is a graph without cycles.
+    <ul>
+      <li>From http://i.stack.imgur.com/HDVtw.png: <br/>
+        <img src="http://i.stack.imgur.com/HDVtw.png"/>
+      </li>
+      <li>The top element is designated the root (in this case, it's 2).</li>
+      <li>The elements directly below the root (7 and 5) are its children.</li>
+      <li>Children are siblings of each other.</li>
+      <li>Descendants and ancestors are defined similarly.</li>
+      <li>The last descendants are called leaves, the greatest ancestor is the root.</li>
+    </ul>
+  </li>
+  <li>
+    A tree can model ancestor / descendant relationships.
+    <ul>
+      <li>For example, recall in the OS discussion, there is a tree of operating systems rooted at UNIX.</li>
+      <li>Another example are the provinces and countries of the world.</li>
+      <li>From http://www.eecs.berkeley.edu/~bh/ss-pics/world.jpg
+        <img src="http://www.eecs.berkeley.edu/~bh/ss-pics/world.jpg"/>
+      </li>
+      <li>All siblings at each level are at the same conceptual level with each other (e.g. United States, Honduras, Australia are all countries).</li>
+      <li>Children, in this example, represent pieces of a larger parent entity (e.g. California is a smaller part of the U.S.).</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Suggested readings</h2>
+<ul>
+  <li>An article about Big-O with code examples: <a href="http://rob-bell.net/2009/06/a-beginners-guide-to-big-o-notation/">http://rob-bell.net/2009/06/a-beginners-guide-to-big-o-notation/</a>.</li>
+  <li>An article about stacks and queues: <a href="http://www.cs.cmu.edu/~adamchik/15-121/lectures/Stacks%20and%20Queues/Stacks%20and%20Queues.html">http://www.cs.cmu.edu/~adamchik/15-121/lectures/Stacks%20and%20Queues/Stacks%20and%20Queues.html</a>.</li>
+  <li>An article about trees (ignore code): <a href="http://www.eecs.berkeley.edu/~bh/ssch18/trees.html">http://www.eecs.berkeley.edu/~bh/ssch18/trees.html</a>.</li>
+  <li>A more in depth discussion about graphs (ignore code): <a href="http://interactivepython.org/courselib/static/pythonds/Graphs/graphintro.html">http://interactivepython.org/courselib/static/pythonds/Graphs/graphintro.html</a>.</li>
+</ul>

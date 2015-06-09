@@ -1,0 +1,99 @@
+CS310 Homework 1
+
+1. Apply for cs310 account.  Create a hw1 directory, and leave a Java hello world program (Hello.java) in there.
+2. Give the big O for each of the following:
+ a.
+	sum = 0;
+	for (int i=0; i<n; i++)
+	{
+	  for (int j=0; j<i; j++)
+	  {
+	    sum += 1;
+	  }
+	}
+
+ b.
+	sum = 0;
+	for (int i=0; i<n*n; i++)
+	{
+	  for (int j=0; j<n*n; j++)
+	  {
+	    sum += 1;
+	  }
+	}
+
+ c.
+	sum = 0;
+	for (int i=0; i<n*n; i++)
+	{
+	  for (int j=0; j<i; j++)
+	  {
+	    sum += 1;
+	  }
+	}
+
+3a. Does O(log n) = O(log_2 n)?  Why? (hint: recall the rules of logarithms)
+ b. Does O(log n) = O(log n^2)?  Why? 
+
+4a. Does O(2^n) = O(3^n)?  Why?
+ b. Does O(2^n) = O(2^(n/2))?  Why?
+
+5a. Order the following functions by growth rate: 
+    N, square root of N, N^1.5 , N^2, N log N, N log log N, N log_2 N, N log(N^2), 2⁄N , 2^N , 2^(N/2), 37, N^3, and N^2 log N . 
+ b. Indicate which functions grow at the same rate.
+
+6a. Actual interview question.  What is the output?  Give a detailed explanation for each println statement.
+
+public class O
+{
+    static int x = 1;
+
+    public static void main(String args[]){
+        O o = new O();
+        o.call(3);
+    }
+
+    public void call(int x){
+        O o = new O();
+        this.x = 5;
+
+        System.out.println("Output: " + x);
+        System.out.println("Output: " + O.x);
+        System.out.println("Output: " + o.x);
+    }
+}
+
+7a. What are the implementation differences between abstract classes vs interfaces?
+ b. Difference between implements and extends?  Can you implement multiple interfaces or extend multiple classes?
+ c. Describe a use case for each.
+
+8. public static void main(String args[]):
+ a. Why must main be public?  Why not private?
+ b. Why must main be static?  Why not a normal method?
+ c. What's the void for, and what are the args?
+
+9. Show the results of the following sequence: 
+	add(4)
+	add(8)
+	add(1)
+	add(6)
+	remove()
+	remove()
+  for the following data structures:
+ a. Stack
+ b. Queue
+ c. Priority queue (1 is top priority)
+
+10. What would the output of the following code be if S was a:
+ a. Stack
+ b. Queue
+ c. List
+
+S.add("First");
+S.add("Second");
+S.add("Third");
+for (String i : S) {
+   System.out.println(i);
+}
+
+11. We can use stacks to keep track of HTML tags.  Show the stack for the following first table in the course website (http://www.cs.umb.edu/~henryzlo/cs310).

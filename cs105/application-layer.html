@@ -1,0 +1,140 @@
+<h1>Application Layer</h1>
+
+We discuss several application layer protocols, and basics of internet applications.
+
+<h2>Networking Architecture</h2>
+<ul>
+  <li>Most internet applications use the client / server models.</li>
+    <ul>
+      <li>Clients request information or a service.</li>
+      <li>Servers provide it back to clients.</li>
+      <li>Web browsers are clients, and web servers are servers.</li>
+      <li>From http://www.its.hku.hk/news/ccnews125/client_server.jpg:<br/>
+	<img src="http://www.its.hku.hk/news/ccnews125/client_server.jpg"/>
+      </li>
+      <li>Other examples: print server handles all print requests in a department.</li>
+      <li>There are usually many more clients than there are servers.</li>
+      <li>The distinction is not always: in some situations a client can become a server, and vice versa.</li>
+    </ul>
+  </li>
+  <li>Some applications use peer-to-peer (P2P) networking.</li>
+    <ul>
+      <li>In these applications, computers both consume and send information.</li>
+      <li>Example: bittorrent.</li>
+      <li>Computers both download pieces of a file and send other pieces.</li>
+      <li>Contrast this with a file server, which only sends back files requested.</li>
+      <li>Compared to client-server models, P2P is decentralized, which makes it more scalable.</li>
+      <li>This makes P2P more robust; client-server architectures suffer from single points of failure.</li>
+      <li>From http://sourceforge.net/apps/mediawiki/shareaza/nfs/project/s/sh/shareaza/1/1a/Networks.png: <br/>
+	<img src="http://sourceforge.net/apps/mediawiki/shareaza/nfs/project/s/sh/shareaza/1/1a/Networks.png"/>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Domain Name System</h2>
+<ul>
+  <li>The domain name system (DNS) is a client-server type, application level protocol.</li>
+  <li>It runs on a server's port 53, and can be used either over UDP or TCP.</li>
+  <li>The purpose of DNS is to translate domain names into IP addresses.
+    <ul>
+      <li>Domain names are part of a uniform resource locator (URL).</li>
+      <li>Examples of domains: www.google.com, www.cs.umb.edu, wikipedia.org.</li>
+    </ul>
+  </li>
+  <li>The purpose of DNS is to translate domain names into IP addresses.
+    <ul>
+      <li>Domain names are part of a uniform resource locator (URL).</li>
+      <li>Examples of domains: www.google.com, www.cs.umb.edu, wikipedia.org.</li>
+      <li>These need to be turned into IPs so we can connect to them.</li>
+    </ul>
+  </li>
+  <li>DNS servers on the internet contain a table of domain names to IP addresses.
+    <ul>
+      <li>Domains are resolved from right to left.</li>
+      <li>Each "piece" of the domain that gets resolved points the client closer and closer to the appropriate DNS server.</li>
+      <li>For example: www.cs.umb.edu</li>
+      <li>The .edu gets resolved first, and points the client to the umb.edu server.</li>
+      <li>The umb.edu points the client to the cs.umb.edu server.</li>
+      <li>The cs.umb.edu DNS server points the client to the IP for www.cs.umb.edu</li>
+      <li>From http://upload.wikimedia.org/wikipedia/commons/7/77/An_example_of_theoretical_DNS_recursion.svg:<br/>
+	<img src="http://upload.wikimedia.org/wikipedia/commons/7/77/An_example_of_theoretical_DNS_recursion.svg"/>
+      </li>
+    </ul>
+  </li>
+  <li>Computers come pre-configured to query the root nameservers.
+    <ul>
+      <li>The root nameservers know where the top-level domains (TLD) are (.gov, .edu, .com, etc.).</li>
+      <li>The top level domain nameservers know the lower level domain nameservers, etc.</li>
+      <li>The DNS servers form a kind tree.</li>
+      <li>From http://bio3d.colorado.edu/tor/sadocs/dns/dns-1.png<br/>
+	<img src="http://bio3d.colorado.edu/tor/sadocs/dns/dns-1.png"/>
+      </li>
+    </ul>
+  </li>
+  <li>There are name servers between the client and TLD servers which save (cache) DNS responses for clients.</li>
+</ul>
+
+<h2>Hyper-text Transfer Protocol</h2>
+<ul>
+  <li>Hyper-text transfer protocol (HTTP) is how information is retrieved from the world wide web.<br/>
+    <ul>
+      <li>The WWW is a subset of the internet, which is the set of all computers addressable using IP.</li>
+      <li>The WWW is the set of all content which can be retrieved using HTTP (and HTTPS, its encrypted variant).</li>
+      <li>HTTP transfers HTML, but also images, video, CSS, javascript, etc.</li>
+    </ul>
+  </li>
+  <li>HTTP is a client-server TCP protocol that runs over port 80.</li>
+  <li>GET requests are the simplest and most common way to request information from a web page.
+    <ul>
+      <li>The GET request contains information about the file or page you want to get.</li>
+      <li>The other information in the HTTP request are called headers.</li>
+      <li>A GET request, from http://www.studytonight.com/servlet/images/get-request-method.jpg:</br>
+	<img src="http://www.studytonight.com/servlet/images/get-request-method.jpg"/>
+      </li>
+      <li>Information can be passed via GET parameters.</li>
+      <li>These are after a ? in the URL: for example, www.google.com/?q=henry</li>
+      <li>The q is the variable name, and its value is henry.</li>
+      <li>This googles henry.</li>
+    </ul>
+  </li>
+  <li>POST requests are the standard way to send lots of information.
+    <ul>
+      <li>POST requests are used in web forms, for example, registration or login forms.</li>
+      <li>POST requests embed variables in the request, rather than in the URL.</li>
+      <li>POST requests also allow data such as images and files to be uploaded.</li>
+      <li>From http://www.studytonight.com/servlet/images/post-request-method.jpg:<br/>
+	<img src="http://www.studytonight.com/servlet/images/post-request-method.jpg"/>
+      </li>
+    </ul>
+  </li>
+  <li>
+    The server that receives the GET or POST request sends back an HTTP response.
+    <ul>
+      <li>The web server sends back the web page requested.</li>
+      <li>In the page are elements such as images and other elements.  The browser requests these through GET also.</li>
+      <li>Thus, visiting a single page can trigger multiple GET requests.</li>
+      <li>An HTTP response, from http://orm-chimera-prod.s3.amazonaws.com/1234000001708/images/http_response.png:<br/>
+	<img width=600px src="http://orm-chimera-prod.s3.amazonaws.com/1234000001708/images/http_response.png"/>
+      </li>
+    </ul>
+  </li>
+  <li>HTTP is a stateless protocol, which means that data is not stored between requests.
+    <ul>
+      <li>This means that the server doesn't store extra information about each connection, and each new request is treated independently.</li>
+      <li>This simplifies server design.</li>
+      <li>Data storage for sessions (e.g. user logins, shopping carts) have to be passed back and forth each time.</li>
+      <li>Information like shopping carts, and some user preferences are stored in cookies, files on the client machine.</li>
+      <li>Other information, such as login information, is stored as an HTTP session variable.</li>
+    </ul>
+  </li>
+  <li>HTTP is not secure, and its packets can be read by anyone on the same network.
+    <ul>
+      <li>This can't be done behind wired switches, but works on wireless networks.</li>
+      <li>HTTPS is the encrypted variant of HTTP, which runs on port 443.</li>
+      <li>HTTPS is used for secure communication.</li>
+      <li>HTTPS is also TCP, and has a larger overhead than HTTP.</li>
+    </ul>
+  </li>
+</ul>
+

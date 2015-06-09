@@ -1,0 +1,51 @@
+\documentclass{article}
+\usepackage{amsthm}
+\usepackage{amsmath}
+
+\newtheorem{problem}{Problem}
+
+\begin{document}
+\title{Homework 3}
+\author{Henry Z. Lo}
+\date{Due: Monday, July 21 in class}
+\maketitle
+
+This homework assignment will review some graph algorithms that we've studied.  For these problems, write pseudo-code; your algorithms should contain enough detail to implement.  Assume that the following can be done in constant time:
+\begin{itemize}
+\item For a node \texttt{n}, find which nodes have edges going into it.
+\item For a node \texttt{n}, find which nodes \texttt{n} has edges going to.
+\item Getting or checking if a specific edge exists.
+\end{itemize}
+
+When writing pseudocode, do not write anything high-level like "topological sort" or "depth-first traversal".  I want detailed line-by-line pseudocode of how these procedures are actually done.
+
+\begin{enumerate}
+\item Recall that Dijkstra's algorithm for finding the shortest path between nodes can be done in $O(V+E\log V)$ time.
+\begin{enumerate}
+\item In a directed acyclic graph, we can find the shortest path even faster.  Describe this faster algorithm.
+\item How fast is it?  Explain line by line.
+\end{enumerate}
+
+\item Suppose you want to find the shortest path from the corner of one city block to another.  Each corner is connected to adjacent corners, with a distance of one city block width.
+\begin{enumerate}
+\item Describe an algorithm to find the length of this shortest path.
+\item What heuristic can you use to speed up finding this path?
+\item Modify your algorithm to use this heuristic.
+\end{enumerate}
+
+\item The delivery boy notices that there are $V$ locations he commonly brings pizza to, and wants to calculate the total driving time between every pair of these locations.  These locations form a graph, where edge weights represent driving time.
+\begin{enumerate}
+\item Use transitive closure to calculate the least driving time from every location to every location.
+\item This algorithm uses what (non-graph) technique that we have studied?
+\end{enumerate}
+
+\item Introverts, Inc. wishes to make every employee feel as least awkward as possible.  Every communication between employees $i$ and $j$ incurs an awkwardness cost $c_{ij}$ to the receiving employee.  When the CEO sends out a memo, it must reach every employee, but in a way that the total awkwardness felt by all employees is as low as possible.
+\begin{enumerate}
+\item What type of structure should the network take to minimize total awkwardness?  Consider that not everyone feels comfortable talking to the CEO.
+\item Give the pseudocode for this algorithm.
+\item Employee $a$ and employee $b$ were dating, but have broken up, and now refuse to talk with each other.  Give an algorithm which makes sure that every employee can still get their memos.
+\item How fast is this algorithm?
+\end{enumerate}
+\end{enumerate}
+
+\end{document}

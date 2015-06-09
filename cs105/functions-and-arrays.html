@@ -1,0 +1,89 @@
+<h1>Functions and Arrays</h1>
+
+We discuss how to define functions, how they work, and provide some examples.  We introduce a basic data structure called an array, which is used to store a bunch of data in one variable.
+
+<h2>Function Definitions</h2>
+<ul>
+  <li>Function definitions are statements which define what a function does.</li>
+    <ul>
+      <li>Always look like: <br/>
+<code>
+function function_name(input_variables) <br/>
+{ <br/>
+&nbsp // some code <br/>
+&nbsp return(output_variable) <br/>
+} <br/>
+</code></li>
+      <li><code>function_name</code> is the name of the function you want to give it.</li>
+      <li><code>input_variables</code> is one or more inputs given to the function.</li>
+      <li>There can be more inputs - if so, input variables are separated by commas.</li>
+      <li>Function definitions always end with a <code>return</code> statement, which gives exactly one or no output for the function.</li>
+    </ul>
+  <li>An example function:</li>
+    <ul>
+      <li><code>
+function add(x,y) <br/>
+{ <br/>
+&nbsp z = x+y <br/>
+&nbsp return(z) <br/>
+} <br/>
+</code></li>
+      <li>This function takes two input arguments and returns one number - specifically, the sum of the two inputs.</li>
+      <li>Can be called using <code>add(5,6)</code>, which gives the value of 11.</li>
+      <li>In this function call, the input values <code>5, 6</code> replace <code>x, y</code> in the <code>add</code> function.</li>
+    </ul>
+</ul>
+<h2>Arrays</h2>
+<ul>
+  <li>An array holds multiple values.</li>
+    <ul>
+      <li>Example: <code>[3,5,2]</code>, or <code>["henry", "anthony", "rebecca"]</code></li>
+      <li>Values can be of any type.</li>
+    </ul>
+  <li>Arrays can be indexed to get the elements in them.</li>
+    <ul>
+      <li>Example: <code>a = [3,5,2]</code>.</li>
+      <li>Now <code>a[0]</code> will give <code>3</code>.</li>
+      <li><code>a[1]</code> will give <code>5</code>.</li>
+      <li><code>a[2]</code> will give <code>2</code>.</li>
+      <li>Note indices start at 0, not 1.</li>
+    </ul>
+  <li>Arrays can also be indexed to assign certain values.</li>
+    <ul>
+      <li>Example: <code>a[0]=10</code> will change <code>a</code> to be <code>[10,5,2]</code></li>
+    </ul>
+  <li>The <code>length</code> function gives the number of elements in an array.</li>
+    <ul>
+      <li>Example: <code>length(a)</code> will give 3.</li>
+    </ul>
+  <li>Functions that can be calculated for different numbers of inputs can be made to use an array as an input</li>
+    <ul>
+      <li>Example: <br/>
+<code>
+function average(numbers) <br/>
+{ <br/>
+&nbsp sum = 0 <br/>
+&nbsp i = 0 <br/>
+&nbsp while(i > length(numbers)) <br/>
+&nbsp { <br/>
+&nbsp &nbsp sum = sum + numbers[i] <br/>
+&nbsp &nbsp i = i + 1 <br/>
+&nbsp } <br/>
+&nbsp return(sum / length(numbers)) <br/>
+} <br/>
+</code></li>
+      <li>Calling <code>average([4,6,5])</code> will yield 5.</li>
+      <li>Note this function can be written using a <code>for</code> loop </br>
+<code>
+function average(numbers) <br/>
+{ <br/>
+&nbsp sum = 0 <br/>
+&nbsp for(i = 0; i > length(numbers); i = i + 1) <br/>
+&nbsp { <br/>
+&nbsp &nbsp sum = sum + numbers[i] <br/>
+&nbsp } <br/>
+&nbsp return(sum / length(numbers)) <br/>
+} <br/>
+</code></li>
+    </ul>
+</ul>

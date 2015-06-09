@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage{amsthm}
+\usepackage{amsmath}
+
+\newtheorem{problem}{Problem}
+
+\begin{document}
+\title{Programming Assignment 2}
+\author{Henry Z. Lo}
+\date{Due: Tuesday, June 17 at midnight}
+\maketitle
+
+\section{Goals}
+This assignment will help you with the following:
+
+\begin{enumerate}
+\item Review priority queues.
+\item Review event-driven simulations.
+\item Work with inner classes.
+\end{enumerate}
+
+\section{Overview}
+You will simulate an infinite game of pong.  The simulation involves one ball and two paddles, one on the left and one of the right.  The ball bounces off the horizontal walls, and off the paddles on either side.
+
+The simulation is already written in the time-driven style.  You will need to convert it to the event-driven style.  To do so, you need to do add the following event classes, which will be inner classes in \verb|Simulation|:
+
+\begin{enumerate}
+\item \verb|WallBounceEvent|, to simulate bouncing off a wall.
+\item \verb|PaddleBounceEvent|, to simulate bouncing off a paddle.
+\end{enumerate}
+
+These should subclass \verb|Event|; see \verb|RedrawEvent| as an example.  Every \verb|Event| must do the following:
+\begin{itemize}
+\item Take a time $t$ as an argument.  $t$ must be an absolute time, not relative; e.g. 100th second of the simulation, not 100 seconds from now.
+\item Have a \verb|process| method, which adds future event(s) to the priority queue \verb|pq|, and updates the simulation as needed.
+\end{itemize}
+
+All other changes should happen in the \verb|simulate()| function.  The goal is to remove all the checks, redraws, etc. with events and \verb|Event.process()| calls.
+
+The resulting priority-queue based simulation should behave exactly as the original time-based simulation.  Moving the elements should still happen at every event occurrence, and there should be \verb|RedrawEvent|s scheduled to animate the screen.
+
+\section{Instructions}
+\begin{enumerate}
+\item Initialize the priority queue and add a \verb|RedrawEvent| to it.
+\item Replace the \verb|while(true)| loop with one that continuously polls from the priority queue.  
+\item Replace the drawing code with a call to \verb|e.process()|.
+\item Change the time $t$ to be the event time.
+\item If you did this right, the simulation should still animate.
+\item The \verb|move()| calls should stay in the loop, but items should move depending on how much time has elapsed.  Everything else should be replaced with calls to \verb|e.process()|
+\item Now create a \verb|WallBounceEvent| class.  Its \verb|process| method should do the following:
+\begin{enumerate}
+\item Bounce the ball off the wall.
+\item Make the correct paddle follow the ball.
+\item Calculate when the next \verb|WallBounceEvent| will be, and schedule it.
+\end{enumerate}
+\item Create a \verb|PaddleBounceEvent| class and do the same for it.  You may want to \verb|stop()| the paddle that the ball just bounced from.
+\item Classes must compile.
+\item Put all deliverables in your cs310/pa2 folder.  Deliverables include:
+\begin{itemize}
+\item Paddle.java (do not modify)
+\item Ball.java (do not modify)
+\item StdDraw.java (do not modify)
+\item Simulation.java
+\item memo.txt
+\end{itemize}
+\item Answer the questions in section 4, put answers in memo.txt.
+\end{enumerate}
+
+\section{Questions}
+\begin{enumerate}
+\item In this assignment, we don't need to worry about events becoming invalidated.  If we had two balls, we would.  How would this complicate your code? 
+\item Because each event only spawns off one other event, we don't have to worry about the priority queue growing infinitely.  If we did, how could you prevent the priority queue from eating up all your memory?
+\item Why was Event an inner class of Simulation?  Can you think of a better way to organize this code?
+\end{enumerate}
+\end{document}

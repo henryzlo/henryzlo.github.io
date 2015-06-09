@@ -1,0 +1,164 @@
+<h1>Networking</h1>
+
+We learn how computers communicate with one another.  Specifically, we talk about the protocol stack, packets, and ports.
+
+<h2>Ports and Packets</h2>
+<ul>
+  <li>When computers want to communicate, they must refer to each other using their internet protocol (IP) addresses.</li>
+  <li>A connection is made between the ports of the two computers.
+    <ul>
+      <li>Each computer has 65535 ports.</li>
+      <li>A connection takes up a port on each computer.</li>
+      <li>In a client / server connection (e.g. your web browser is a client, the web server is a server), the port is chosen randomly on the client.</li>
+      <li>Servers must have standardized ports depending on the type of communication.</li>
+      <li>For example, web servers use ports 80 and 43, and email servers use port 25.</li>
+      <li>These port numbers are conventions and can be changed.</li>
+      <li>Example: UMB IT blocks port 22 for SSH.  The CS department runs SSH on port 80.</li>
+    </ul>
+  </li>
+  <li>Messages sent between the computers are fragmented into packets.
+    <ul>
+      <li>Packets contain layers of information, which help it navigate through the local area network, the internet, etc.</li>
+      <li>As seen in the diagram below, the outermost layer surrounds all other layers with some information.</li>
+      <li>The next layer lies in the outermost layer, and surrounds all other layers (except the outermost) with some more information.</li>
+      <li>The innermost layer (application layer) contains the actual application data.</li>
+      <li>A diagram of a packet, from http://tournasdimitrios1.files.wordpress.com/2011/01/networkpacket.jpg:<br/>
+        <img width=450px src="http://tournasdimitrios1.files.wordpress.com/2011/01/networkpacket.jpg"/>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Local Area Networks</h2>
+<ul>
+  <li>A typical LAN, from http://ryaandavis.files.wordpress.com/2012/08/lan-local-area-network.gif:<br/>
+    <img src="http://ryaandavis.files.wordpress.com/2012/08/lan-local-area-network.gif"/>
+  </li>
+  <li>A computer connects to the internet through a local area network (LAN).
+    <ul>
+      <li>A LAN can have multiple computers, and is controlled by a switch.</li>
+      <li>A switch has multiple IP addresses (slots) for computers to connect to.</li>
+      <li>The switch sends information from its computers to the internet.</li>
+      <li>It also receives data from the internet to send to the computers in the LAN.</li>
+    </ul>
+  </li>
+  <li>Every computer has a unique MAC (or hardware) address (kind of like a computer's name).
+    <ul>
+      <li>A computer joining the network must tell the switch its MAC, and is given an IP address.</li>
+      <li>This information is kept by the switch in a table.</li>
+      <li>MAC information is in the link layer (outermost) of the packet, and is not passed to the rest of the internet.</li>
+    </ul>
+  </li>
+  <li>The process of updating the ARP table, and thereby routing the correct information to the correct computer, is called the Address Resolution Protocol (ARP).
+    <ul>
+      <li>Each computer contains an ARP table too, usually just containing the switch's information.</li>
+      <li>An ARP table, from http://oss.org.cn/man/linux/efw-admin-guide-html-chunk/images/efw_status_network_arp.png:<br/>
+	<img src="http://oss.org.cn/man/linux/efw-admin-guide-html-chunk/images/efw_status_network_arp.png"/>
+      </li>
+    </ul>
+  </li>
+  <li>Replacing ARP entries can result in data being sent to the wrong place.
+    <ul>
+      <li>This is an inherent weakness of ARP.</li>
+      <li>Usually request/responses are too fast for this to be a problem.</li>
+      <li>However, a computer A can pretend to be the switch, thus receiving packets from another computer B.</li>
+      <li>To the switch, it can pretend to be the computer B.</li>
+      <li>This places A between B and the switch, thus allowing it to intercept all communication.</li>
+      <li>This is called ARP spoofing, and is a type of man-in-the-middle attack.</li>
+      <li>Diagram from http://www.irongeek.com/images/mim.png:<br/>
+	<img width=350px src="http://www.irongeek.com/images/mim.png"/>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2>How Packets Route</h2>
+<ul>
+  <li>All computers on the internet are located by their IP addresses.
+    <ul>
+      <li>An IP address consists of 4 numbers, each between 0 and 255.</li>
+      <li>For example, 158.121.95.75 and 24.61.190.228.</li>
+      <li>Some IP addresses are reserved and have special meaning.</li>
+      <li>For example, 127.0.0.1 always refers to this computer (called localhost).</li>
+    </ul>
+  </li>
+  <li>The IP layer contains information that routs packets to and from their intended destinations.
+    <ul>
+      <li>Includes the source IP and the destination IP.</li>
+      <li>Routers use this information to send the packet to the right place.</li>
+      <li>The IP layer is the second layer in a packet.</li>
+    </ul>
+  </li>
+  <li>Networks can discriminate based on IPs.
+    <ul>
+      <li>For example, www.umb.edu (the Umass Boston network) doesn't allow certain connections from foreign countries.</li>
+      <li>Basically it just drops (doesn't send) any packets received from these IPs.</li>
+      <li>This can be circumvented using a proxy server.</li>
+      <li>A computer in China (the client), for example, can connect to the proxy server, and asks it to connect to umb.edu, instead of the client.</li>
+      <li>If the proxy server is in the US, then the client can connect to umb.edu through the proxy.</li>
+      <li>Diagram of a proxy server, from http://www.cs.cornell.edu/courses/cs519/2003sp/homework/webproxy/webproxy.jpg:<br/>
+	<img src="http://www.cs.cornell.edu/courses/cs519/2003sp/homework/webproxy/webproxy.jpg"/>
+      </li>
+    </ul>
+  </li>
+  <li>
+    Like MAC addresses, IPs can be faked (spoofed).
+    <ul>
+      <li>If the source address is spoofed, then the returning packet will go to a different destination.</li>
+      <li>This might be done to mask the identity of the client.</li>
+      <li>If for example, we want to "flood" a certain network, we can send many packets with different source IPs.</li>
+      <li>In this case, we don't care about getting something in return (in fact we don't want to, or else we would flood ourselves).</li>
+      <li>This attack can slow down or stop completely any legitimate connections to the target network.  This is called a denial-of-service (DOS) attack..</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Connections</h2>
+<ul>
+  <li>
+    Between IPs, two computers can have a connection.
+    <ul>
+      <li>Transmission control protocol (TCP) specifies how two computers can share a stableconnection over IP.
+	<ul>
+	  <li>A connection between A and B means that A passes information to B, and vice versa.</li>
+	  <li>Potential issues: losing some sent packets, and receiving packets out of order.</li>
+	  <li>TCP solves the first problem by requiring that B acknowledge packet reception by sending back an ACK packet.</li>
+	  <li>Illustration of ACK packets during data transmission, from http://www.potaroo.net/ispcol/2004-07/fig4.jpg:<br/>
+            <img src="http://www.potaroo.net/ispcol/2004-07/fig4.jpg"/>
+	  </li>
+	  <li>TCP solves the second problem by requiring that both A and B keep a sequence number, which is synchronized between the two.</li>
+	  <li>If a packet is received by one or the other out of sequence, it is discarded.</li>
+	</ul>
+      </li>
+      <li>Examples of TCP protocols: remote desktop, browsing the web, Skype video chat.</li>
+      <li>TCP is used whenever we need a persistent connection, or sending lots of data with error checking.</li>
+    </ul>
+  </li>
+  <li>
+    If the computers do not require error checking or a persistent connection, they can avoid the overhead of TCP.
+    <ul>
+      <li>User datagram protocol (UDP) specifies how a computer can simply send information to another.</li>
+      <li>Does not set up a stable connection, usually used for one way communication of little data.</li>
+      <li>Potential of losing packets still exists, but usually this is not an issue.</li>
+      <li>UDP is much "leaner", as it doesn't require the overhead of TCP (such as ACKs and sequence numbers).</li>
+      <li>Example of UDP: DNS requests.</li>
+    </ul>
+  </li>
+  <li>A summary of TCP / UDP differences, from http://www.it20.info/misc/pictures/TCP-clouds-UDP-clouds-design-for-fail-and-AWS1.jpg:<br/>
+    <img width=400px src="http://www.it20.info/misc/pictures/TCP-clouds-UDP-clouds-design-for-fail-and-AWS1.jpg"/>
+  </li>
+  <li>The TCP / UDP layer is called the transport layer, and is the third one in.</li>
+</ul>
+
+<h2>Application Layer</h2>
+<ul>
+  <li>The application layer is the final layer (innermost) in the packet.</li>
+  <li>There are many different protocols, each with their own ports, depending on the application.
+    <ul>
+      <li>HTTP is an application layer protocol which transmits web site information.  It runs on port 80.</li>
+      <li>SSH is an application layer protocol for remote command line login, running on port 22.</li>
+    </ul>
+  </li>
+  <li>This layer contains application data.</li>
+  <li>Some protocols are encrypted, some are not..</li>
+</ul>

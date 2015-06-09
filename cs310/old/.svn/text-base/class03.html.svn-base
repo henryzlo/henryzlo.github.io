@@ -1,0 +1,1310 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+xmlns:oa="urn:schemas-microsoft-com:office:activation"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 12">
+<meta name=Originator content="Microsoft Word 12">
+<link rel=File-List href="class03_files/filelist.xml">
+<link rel=Edit-Time-Data href="class03_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Class 3</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Elizabeth O'Neil</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Betty O'Neil</o:LastAuthor>
+  <o:Revision>14</o:Revision>
+  <o:TotalTime>3671</o:TotalTime>
+  <o:LastPrinted>2010-01-28T13:01:00Z</o:LastPrinted>
+  <o:Created>2009-02-04T19:26:00Z</o:Created>
+  <o:LastSaved>2012-02-01T19:45:00Z</o:LastSaved>
+  <o:Pages>2</o:Pages>
+  <o:Words>818</o:Words>
+  <o:Characters>4667</o:Characters>
+  <o:Company>University of Massachusetts, Boston</o:Company>
+  <o:Lines>38</o:Lines>
+  <o:Paragraphs>10</o:Paragraphs>
+  <o:CharactersWithSpaces>5475</o:CharactersWithSpaces>
+  <o:Version>12.00</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<link rel=themeData href="class03_files/themedata.thmx">
+<link rel=colorSchemeMapping href="class03_files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>150</w:Zoom>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"New York";
+	panose-1:2 4 5 3 6 5 6 2 3 4;
+	mso-font-alt:"Times New Roman";
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:3 0 0 0 1 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610611985 1107304683 0 0 159 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:1627400839 -2147483648 8 0 66047 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"New York","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"New York";}
+h2
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 2 Char";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	font-style:italic;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"Balloon Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";
+	mso-fareast-font-family:"Times New Roman";}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 2";
+	mso-ansi-font-size:13.0pt;
+	mso-bidi-font-size:13.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;
+	font-weight:bold;}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Balloon Text";
+	mso-ansi-font-size:8.0pt;
+	mso-bidi-font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";
+	mso-ascii-font-family:Tahoma;
+	mso-hansi-font-family:Tahoma;
+	mso-bidi-font-family:Tahoma;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="6146"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US style='tab-interval:.5in'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><H2>
+CS310 Class 3</H2>
+<p>Summary written by Prof. Betty O'Neil</p>
+<!--
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Qual—will put a
+solution online—see link from class web page under handouts.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Went over
+terminology related to qual classes—solution coming, but many ways to do it, of
+course. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Idea of POJO, Java
+bean, getters, setters, UML for simple class (reference: Wikipedia
+Class_diagram)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-no-proof:
+yes'><!--[if gte vml 1]><v:shapetype id="_x0000_t75" coordsize="21600,21600"
+ o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f"
+ stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="Picture_x0020_1" o:spid="_x0000_i1026" type="#_x0000_t75"
+ style='width:93pt;height:133.5pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="class03_files/image001.emz" o:title=""/>
+</v:shape><![endif]<![if !vml]><img width=124 height=178
+src="class03_files/image002.gif" v:shapes="Picture_x0020_1"><![endif]></span><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p></o:p></span></p>
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>LineUsageData as
+wrapper for SinglyLinkedList, UML for it.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-no-proof:
+yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_2" o:spid="_x0000_i1025"
+ type="#_x0000_t75" style='width:153pt;height:100.5pt;visibility:visible;
+ mso-wrap-style:square'>
+ <v:imagedata src="class03_files/image003.emz" o:title=""/>
+</v:shape><![endif]<![if !vml]><img width=204 height=134
+src="class03_files/image004.gif" v:shapes="Picture_x0020_2"><![endif]></span><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Note: these UML
+diagrams were generated by JDeveloper 11g, free download from Oracle.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Ignore the
+dotted rectangles. They don’t show on the original graphics, just after copy
+and paste.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b><u><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Working on
+Algorithm Analysis<o:p></o:p></span></u></b></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b><u><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p><span
+ style='text-decoration:none'>&nbsp;</span></o:p></span></u></b></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'>Logarithms<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>It turns out
+that log functions are involved in many important big-oh results:<span
+style='mso-spacerun:yes'>  </span>binary search, sorting, etc.<span
+style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Log(N) grows
+very slowly, slower than any power of N, but of course more than O(1).<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Def, pg. 165:
+log<sub>B</sub>N = K if B<sup>K</sup> = N.<span style='mso-spacerun:yes'> 
+</span>B is the base.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Ex: log<sub>2</sub>
+8 = 3 since 2<sup>3</sup> = 8.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><span
+style='mso-tab-count:1'>      </span>log<sub>10</sub>100 = 2 since 10<sup>2</sup>
+= 100<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><span
+style='mso-spacerun:yes'>     </span>2<sup>10</sup> = 1024 = 1K, so log<sub>2</sub>
+(1K) =<span style='mso-spacerun:yes'>  </span>log<sub>2</sub> 1024 = 10<span
+style='mso-spacerun:yes'>             </span>also 1000 = 10<sup>3</sup>, so log<sub>10</sub>
+1000 = 3<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><span
+style='mso-tab-count:1'>      </span>2<sup>20 </sup>= (1024)<sup>2</sup> = 1M,
+so log<sub>2</sub> (1M) = log<sub>2</sub> (2<sup>20</sup>) = 20<span
+style='mso-spacerun:yes'>         </span>also 1000,000 = 10<sup>6</sup>, so log<sub>10</sub>
+1000000 = 6<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><span
+style='mso-tab-count:1'>      </span>2<sup>30 </sup>= (1024)<sup>3</sup> = 1G,
+so log<sub>2</sub> (1G) = log<sub>2</sub> (2<sup>30</sup>) = 30<span
+style='mso-spacerun:yes'>         </span>also 1000,000,000 = 10<sup>9</sup>, so
+log<sub>10</sub> 1000,000,000 = 9<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>We see the two
+logarithms are tracking each other, and in fact all logs are constant multiples
+of each other, as you will show in hw1.<span style='mso-spacerun:yes'> 
+</span>In calculus, you use base-e, the natural log, and that might show up if
+we use integration to help sum up a series.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>16-bit numbers
+can hole 2<sup>16</sup> different numbers, = 2<sup>10 + 6</sup> = 2<sup>10</sup>*2<sup>6</sup>
+= 64K.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>32-bit numbers
+can hold 2<sup>32</sup> different numbers, = 2<sup>30 + 2</sup> = 2<sup>30</sup>*2<sup>2</sup>
+= 4G, about 4 billion.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>64-bit?<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>It takes O(log(N))
+bits to hold N different numbers.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>It takes log(N)
+doublings of 1 to get to N.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>It takes log(N)
+halvings of N to get down to 1.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Binary search
+works by halving the search space in a sorted array, yielding T(N) =
+O(log(N)).<span style='mso-spacerun:yes'>  </span>Great performance, compare to
+sequential search O(N).<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>-->
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>List, Stacks,
+Queues, Sets, and Mappings:<span style='mso-spacerun:yes'>  </span>Collections
+in Java<o:p></o:p></span></h2>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>We are now
+starting through Chapter 6 of Weiss and covering the Java Collections: Lists,
+Stacks, Queues, Sets, and Maps.<span style='mso-spacerun:yes'>  </span>The plan
+is to cover Java Lists, then simple Sets and Java Maps.<span
+style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>While we’re
+studying Ch 6, we are viewing these collection objects <b style='mso-bidi-font-weight:
+normal'>from the client perspective</b>: <b style='mso-bidi-font-weight:normal'>how
+to use collection objects</b> to get our work done.<span
+style='mso-spacerun:yes'>  </span>Later on, we’ll look at the implementation of
+collection classes.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Look at UML
+diagram, missing arrows for IS-A relationships because of <span class=SpellE>JDeveloper</span>
+11g incomplete support of Java generics.<span style='mso-spacerun:yes'> 
+<br><span>Add the arrows with open triangular heads, denoting “extends”
+relationships, between the interfaces.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Also, add the
+major concrete classes below their interfaces, connected by dashed arrows with
+hollow triangle points:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>The Java<b
+style='mso-bidi-font-weight:normal'> Collection Interface</b> lays down the
+foundation— see pg. 239(211) for the important subset.<span
+style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>You can see how
+to modify a collection easily enough, but how do you scan it?<span
+style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Answer: the
+Iterator that you can spin off any collection.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Also, because
+Collection implements Iterable, we can use the enhanced for loop for going
+through a Collection. See Fig. 6.11 for an example.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>One mystery is
+why contains and remove have Object parameters, not the expected AnyType
+parameter. The book says it’s for backwards compatibility, but then why not
+add(Object) as well?<span style='mso-spacerun:yes'><br>Note that it’s
+Object.equals() (or its override) that determines a match in these cases. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Suppose apples
+and oranges have different types, so neither apple ISA orange or orange ISA
+apple is true.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>It’s OK to ask
+if an orange is in a collection of apples: the answer is simply no, for
+HashSets, and causes a ClassCastException for TreeSets.<br>(A TreeSet needs to
+compare elements to find an element, and can’t if they aren’t the same type.) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Because add has
+AnyType as a parameter, an attempt to add an orange to a Collection of apples
+is caught at compile time. This is a big help to the programmer, since it shows
+up immediately in a good IDE.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Note how all the
+elements for a Collection are Objects, since a type parameter can only take on
+Object types.<span style='mso-spacerun:yes'>  </span>The only non-Object types
+are int, double, char, etc., the primitive types (pg. 7).<span
+style='mso-spacerun:yes'>  </span>However, each of these has a corresponding
+“wrapper” Object type: Integer, Double, etc., and autoboxing makes it easy to
+use these collections. (pg. 144-145)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Look on pg.
+241(213) for the <b style='mso-bidi-font-weight:normal'>Iterator interface</b>—can
+next through a collection using a class that implements this interface.<span
+style='mso-spacerun:yes'>  </span>Also can remove objects.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Look at pg.
+44(44) for a <b style='mso-bidi-font-weight:normal'>simple client program</b>
+that uses a collection.<span style='mso-spacerun:yes'>  </span>First you create
+a container/collection, add to it, and if it’s a List, you can loop through
+get(i)s.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'>Encapsulation:</span></b><span style='font-size:
+10.0pt;font-family:"Times New Roman","serif"'> In Java, the collection object
+is fully encapsulated.<span style='mso-spacerun:yes'>  </span>We can’t see the
+workings of the collection itself.<span style='mso-spacerun:yes'>  </span>We
+are allowed to get references to the objects in the collection.<span
+style='mso-spacerun:yes'>  </span>Each of them should be individually
+encapsulated.<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Picture of
+wrapped up collection holding wrapped-up objects, hanging on by their Object
+references.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Add movable bump
+to collection object for iterator object.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Add an object to
+the collection: this is done by handing over the reference to the element
+object. The caller can still have a ref to it, so the object has 2 refs to it,
+the caller’s and the collection’s. <br>This is a case of “aliasing”. Can cause
+problems if the external ref is used to change the object in the collection. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>The collection
+and iterator should be fully encapsulated.<span style='mso-spacerun:yes'> 
+</span>The coverage on “basic iterators” in Weiss, Ch 6, pp 232-236(204-208),
+doesn’t get to full encapsulation.<br>To
+see the real story on how to do this, see Ch. 15.<span
+style='mso-spacerun:yes'>  </span>The secret is in using an inner class for the
+iterator.<span style='mso-spacerun:yes'>  </span>But you don’t need to pursue
+this yet, if you believe it can be done, since it’s part of implementation.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'>More Specific Collection Types: the List Interface<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>As you know, a <i>List</i>
+is an ordered sequence of elements: a<sub>0</sub>, a<sub>1</sub>, a<sub>2</sub><span
+class=GramE>, . . .,</span> a<sub>n-1</sub>.<span style='mso-spacerun:yes'> 
+</span>See <b style='mso-bidi-font-weight:normal'>List interface</b> on pg. 248
+(220), <b style='mso-bidi-font-weight:normal'>extending the Collection
+interface</b> on pg. 239 (211).<br>We see a
+get and set by position (0, 1<span class=GramE>, ...,</span> n-1), something
+like an array.<span style='mso-spacerun:yes'>  </span>Also its objects can spin
+off a <span class=SpellE>ListIterator</span>, a more powerful <span
+class=SpellE>iterator</span> that can back up along the list—see pg. 249 (221).<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>The two most
+important classes that <b style='mso-bidi-font-weight:normal'>implement the
+List interface are <span class=SpellE>LinkedList</span> and <span class=SpellE>ArrayList</span></b>.<span
+style='mso-spacerun:yes'>  </span>They have different performance for large
+lists.<span style='mso-spacerun:yes'><br>Also they both have extra methods
+over and above the List interface, but we’re not as concerned with them at the
+moment (for <span class=SpellE>LinkedList</span>: see pg. 252 (224)).<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>A Stack is a
+specialized List where can only insert (push), retrieve (top), and delete (pop)
+elements at one end.<span style='mso-spacerun:yes'>  </span>A Queue is a
+specialized list where insert at one end, retrieve and delete at the
+other.<span style='mso-spacerun:yes'>  <br>We’ll assume you know all about
+these from cs210. The JDK has a Queue interface that extends Collection, but
+its Stack does not.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+class=GramE><b style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;
+font-family:"Times New Roman","serif"'>Mental Model of a List.</span></b></span><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'><span style='mso-spacerun:yes'>  </span></span></b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>First see the
+picture on pg. 251 (223).<span style='mso-spacerun:yes'>  </span>(Actually a <span
+class=SpellE>LinkedList</span> is a doubly-linked list.)<span
+style='mso-spacerun:yes'>  </span>Add position numbers 0, 1, 2, and 3.<span
+style='mso-spacerun:yes'>  </span>This is a list of size 4.<span
+style='mso-spacerun:yes'>  </span>A0, etc. is an object reference.<span
+style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>We can <span
+class=GramE>get(</span>0), ..., get(3) and access any particular object
+ref.<span style='mso-spacerun:yes'>  </span>We can <span class=GramE>set(</span>0,
+b) and replace the object at 0 with b.<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>What happens if
+we <span class=GramE>set(</span>4, b)? Should be a full definition in comments,
+but isn’t there.<span style='mso-spacerun:yes'>  </span>Next we go to the real
+docs at, for example, </span><span style='font-size:10.0pt'><a
+href="http://docs.oracle.com/javase/7/docs/api/">http://docs.oracle.com/javase/7/docs/api/</a></span><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'> and find out
+that it throws </span><code><span style='font-size:10.0pt'><a
+href="http://java.sun.com/j2se/1.4.1/docs/api/java/lang/IndexOutOfBoundsException.html"><span
+class=SpellE>IndexOutOfBoundsException</span></a></span></code> - <span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Times New Roman","serif";
+mso-bidi-font-family:"New York"'>if the index is out of range (index &lt; 0 ||
+index &gt;= size()).<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+class=GramE><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:
+"Times New Roman","serif";mso-bidi-font-family:"New York"'>--same as setting an
+array entry beyond its end.</span></span><span style='font-size:10.0pt;
+font-family:"Times New Roman","serif"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>OK, so to grow the
+list we need to use add(x), but where does it go??<span
+style='mso-spacerun:yes'>  </span>Again the real docs tell us that it appends
+at the end. This is fast because the <span class=SpellE>LinkedList</span>
+tracks the end-of-list.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+class=GramE><b style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;
+font-family:"Times New Roman","serif"'>Mental Model of an <span class=SpellE>Iterator</span>
+or <span class=SpellE>ListIterator</span>.</span></b></span><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>An <span
+class=SpellE>iterator</span> (or <span class=SpellE>ListIterator</span>
+starting from 0), has a next method that returns element 0 on first call,
+element 1 on second, etc.<span style='mso-spacerun:yes'>  </span>We’re supposed
+to test with <span class=SpellE>hasNext</span> before doing a next, as we saw
+in the code on pg. 190.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>If <span
+class=SpellE>hasNext</span> returns false, the <span class=SpellE>iterator</span>
+is at end of list (EOL).<span style='mso-spacerun:yes'>  </span>We see that it
+starts at beginning of list, so there are 5 different <span class=SpellE>iterator</span>
+states for 4 elements:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'><span
+style='mso-spacerun:yes'>    </span>&lt; A0 &gt;<span
+style='mso-spacerun:yes'>   </span>&lt; A1 &gt;<span
+style='mso-spacerun:yes'>   </span>&lt; A2 &gt;<span
+style='mso-spacerun:yes'>   </span>&lt; A3 &gt;<span style='mso-spacerun:yes'> 
+</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'><span
+style='mso-spacerun:yes'>  </span>^<span style='mso-spacerun:yes'>   </span><span
+class=GramE>original</span> <span class=SpellE>iterator</span>, before element
+0<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'><span
+style='mso-spacerun:yes'>           </span>^ <span class=GramE>after</span>
+first next, returning A0 (now just before element 1)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'><span
+style='mso-spacerun:yes'>                     </span>^ <span class=GramE>after</span>
+2<sup>nd</sup> next, returning A1<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'><span
+style='mso-spacerun:yes'>                              </span>^ <span
+class=GramE>after</span> 3<sup>rd</sup> next, returning A2<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'><span
+style='mso-spacerun:yes'>                                         </span>^after
+last element<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>We see that the <span
+class=SpellE>iterator</span> is positioned just before the element to be
+returned by next. A <span class=SpellE>ListIterator</span> can go both ways, so
+this model is even more important.<span style='mso-spacerun:yes'>  <br>At
+each point in time, an <span class=SpellE>iterator</span> is positioned just
+after the element that would be returned by <span class=GramE>previous(</span>),
+and just before the element that would be returned by next().<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>When we talk
+about numerical position in a list, it’s normally about the position of an <i
+style='mso-bidi-font-style:normal'>element</i>, not directly the <span
+class=SpellE>iterator</span>.<span style='mso-spacerun:yes'>  </span>We can
+talk about the <span class=SpellE>iterator</span> as being between certain
+numbered elements.<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>How do you
+remove the #1 element (&lt;A1&gt; above) starting from a brand new <span
+class=SpellE>iterator</span> <span class=SpellE>itr</span>?<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:-.5in;margin-bottom:0in;
+margin-left:13.0pt;margin-bottom:.0001pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+class=SpellE><span class=GramE><span style='font-size:9.0pt;font-family:"Courier New"'>itr.next</span></span></span><span
+class=GramE><span style='font-size:9.0pt;font-family:"Courier New"'>(</span></span><span
+style='font-size:9.0pt;font-family:"Courier New"'>);<span
+style='mso-spacerun:yes'>  </span>// past A0<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:-.5in;margin-bottom:0in;
+margin-left:13.0pt;margin-bottom:.0001pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+class=SpellE><span class=GramE><span style='font-size:9.0pt;font-family:"Courier New"'>itr.next</span></span></span><span
+class=GramE><span style='font-size:9.0pt;font-family:"Courier New"'>(</span></span><span
+style='font-size:9.0pt;font-family:"Courier New"'>);<span
+style='mso-spacerun:yes'>  </span>// past A1, returns ref to A1<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:-.5in;margin-bottom:0in;
+margin-left:13.0pt;margin-bottom:.0001pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+class=SpellE><span class=GramE><span style='font-size:9.0pt;font-family:"Courier New"'>itr.remove</span></span></span><span
+class=GramE><span style='font-size:9.0pt;font-family:"Courier New"'>(</span></span><span
+style='font-size:9.0pt;font-family:"Courier New"'>);<span
+style='mso-spacerun:yes'>  </span>// removes the element that was just returned<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>With the <span
+class=SpellE><span class=GramE>listIterator</span></span><span class=GramE>(</span><span
+class=SpellE>int</span> pos) method, the pos determines an element position and
+the method returns an <span class=SpellE>iterator</span> positioned prior to
+that element, or at EOL if pos == size of list.<span style='mso-spacerun:yes'> 
+</span><br>So <span class=SpellE><span class=GramE>listIterator</span></span><span
+class=GramE>(</span>0) gives an <span class=SpellE>iterator</span> positioned
+before the very first element, etc.<span style='mso-spacerun:yes'>  </span>A
+special case is that extra position after all the elements: this is attained by
+using N as an <span class=SpellE>arg</span>, the number of elements in the
+list.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Remember: an <span
+class=SpellE>iterator</span> has <span class=GramE>N+1 possible positions</span>
+for N elements.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Here’s a
+teaser:<span style='mso-spacerun:yes'>  </span>What happens if next returns A1,
+then another next returns A2, and then a previous is done—is A1 returned?<span
+style='mso-spacerun:yes'>  </span>No!<span style='mso-spacerun:yes'> <br>We’ve
+just gone past A2 one way, and now we go back across it again, so A2 gets
+returned again.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>See the <b
+style='mso-bidi-font-weight:normal'>list client code on pg. 250 (222)</b>.<span
+style='mso-spacerun:yes'>  </span>Here the <span class=SpellE>ListIterator</span>&lt;Integer&gt;
+goes all the way down the list to EOL, then back along the list, so the turn-around
+occurs at EOL.<span style='mso-spacerun:yes'>  <br>Another <span
+class=SpellE>ListIterator</span>&lt;Integer<span class=GramE>&gt;<span
+style='mso-spacerun:yes'>  </span>starts</span> from “<span class=SpellE>lst.size</span>()”,
+which would be 4 for our list.<span style='mso-spacerun:yes'>  </span>This is
+an artificial element number denoting the EOL position of the <span
+class=SpellE>iterator</span>.<span style='mso-spacerun:yes'>  <br>Again,
+there are n+1 different <span class=SpellE>iterator</span> states for n elements,
+and these are numbered from 0 to n.<span style='mso-spacerun:yes'>  </span>Note
+that itr1 and itr2 are not an objects of exact type <span class=SpellE>ListIterator</span>&lt;Integer&gt;,<br>
+because that’s impossible, but an objects of a class that <i style='mso-bidi-font-style:
+normal'>implements</i> <span class=SpellE>ListIterator</span>&lt;T&gt;,
+instantiated with T=<span class=GramE>Integer .</span><span
+style='mso-spacerun:yes'>  </span>They are obtained from the collection object <span
+class=SpellE>lst</span> using the <span class=SpellE><span class=GramE>listIterator</span></span><span
+class=GramE>(</span>) “factory” method.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+class=SpellE><span class=GramE><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Iterator</span></b></span></span><span
+class=GramE><b style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;
+font-family:"Times New Roman","serif"'> remove</span></b></span><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Now that we see
+that an <span class=SpellE>iterator</span> sits between elements, we need to
+tackle remove (done via an <span class=SpellE>iterator</span>.)<span
+style='mso-spacerun:yes'>  </span>Which nearby element gets removed?<span
+style='mso-spacerun:yes'>  <br>Luckily this is made clear by the comments in
+Weiss: the object removed is the <b style='mso-bidi-font-weight:normal'>last
+one returned by next or previous</b>, and only one remove per movement-action
+is allowed.<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>What happens if
+you next, remove, and then next again? You access the element just after the
+removed element.<span style='mso-spacerun:yes'>  </span>Because we’ve moved
+past the deleted element already, the <span class=SpellE>iterator</span>
+position is clear.<span style='mso-spacerun:yes'>  <br>If you next, remove,
+previous, you should get the old previous-to-removed.<span
+style='mso-spacerun:yes'>  </span><span class=GramE>And so on, using the model
+above.</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Using remove—<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Example: remove
+all objects from list of Order equal to given object x—<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Two ways:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:-.5in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:13.0pt 27.0pt list .5in left 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><span
+style='mso-list:Ignore'>a.<span style='font:7.0pt "Times New Roman"'> </span></span></span><![endif]><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Use
+remove(x);--this removes one, so loop on these calls until returns false<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:-.5in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:13.0pt 27.0pt list .5in left 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><span
+style='mso-list:Ignore'>b.<span style='font:7.0pt "Times New Roman"'> </span></span></span><![endif]><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Use iteration
+down list and call <span class=GramE>remove(</span>) of the <span class=SpellE>Iterator</span>.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Note a. is <span
+class=GramE>O(</span>n^2) if lots of equal objects, but b. is O(n).<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span><span class=SpellE>Iterator</span>&lt;Order&gt;
+<span class=SpellE>itr</span> = <span class=SpellE><span class=GramE>list.iterator</span></span><span
+class=GramE>(</span>);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span><span class=GramE>while</span> (<span
+class=SpellE>itr.hasNext</span>()) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>         </span><span class=SpellE>EOrder</span> o1 = <span
+class=SpellE><span class=GramE>itr.next</span></span><span class=GramE>(</span>);<span
+style='mso-spacerun:yes'>  </span>// note: no cast needed: next delivers <span
+class=SpellE>EOrder</span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>         </span><span class=SpellE><span class=GramE>System.out.println</span></span><span
+class=GramE>(</span>&quot;working on &quot; + o1);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>         </span><span class=SpellE><span class=GramE>itr.remove</span></span><span
+class=GramE>(</span>);<span style='mso-spacerun:yes'>   </span>// remove the
+element that <span class=SpellE>itr</span> just stepped over<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>The above code
+using one <span class=SpellE>iterator</span> works fine.<span
+style='mso-spacerun:yes'>  </span>We can use multiple <span class=SpellE>iterators</span>
+for one list:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+class=SpellE><span style='font-size:9.0pt;font-family:"Courier New"'>Iterator</span></span><span
+style='font-size:9.0pt;font-family:"Courier New"'>&lt;Order&gt; itr1 = <span
+class=SpellE><span class=GramE>list.iterator</span></span><span class=GramE>(</span>);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+class=SpellE><span style='font-size:9.0pt;font-family:"Courier New"'>Iterator</span></span><span
+style='font-size:9.0pt;font-family:"Courier New"'>&lt;Order&gt; itr2 = <span
+class=SpellE><span class=GramE>list.iterator</span></span><span class=GramE>(</span>);</span><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>This works fine
+as long as they both are only reading the list contents.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>However, if we
+have two <span class=SpellE>iterators</span> going at once on one list, with at
+least one using remove, we can get in trouble: to be covered next time.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>

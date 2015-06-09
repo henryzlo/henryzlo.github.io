@@ -1,0 +1,175 @@
+<h1>Computability</h1>
+
+What problems can computers solve?  This is a core problem in computer science, and one that has been debated before computers were invented.
+
+<h2>Computability</h2>
+<ul>
+  <li>We study what problems can be solved by computers.</li>
+  <li>We define problems in terms of functions.
+    <ul>
+      <li>A function is a definition of input and output.</li>
+      <li>For example: input can be any number, and output is double that number.  This defines a function.</li>
+      <li>Another example: input is image, and output is whether it contains a face.</li>
+      <li>Another example: input is sound, output is a string containing what was said.</li>
+    </ul>
+  </li>
+  <li>We define "can be solved by computers" if we can write a program for it.
+    <ul>
+      <li>A program is a list of instructions.</li>
+      <li>Some functions are obviously computable, like double:
+	<code>
+	  DOUBLE(n) <br/>
+	  { <br/>
+	  &nbsp	return(2*n); <br/>
+	  } <br/>
+	</code>
+      </li>
+      <li>Another computable function: whether something is divisible by three:
+	<code>
+	  DIVISIBLE_BY_THREE(n) <br/>
+	  { <br/>
+	  &nbsp	while (n > 0) <br/>
+	  &nbsp	{ <br/>
+	  &nbsp	&nbsp	n = n - 3; <br/>
+	  &nbsp } <br/>
+	  &nbsp if (n == 0) <br/>
+	  &nbsp { <br/>
+	  &nbsp &nbsp return(TRUE); <br/>
+	  &nbsp } <br/>
+	  &nbsp else <br/>
+	  &nbsp { <br/>
+	  &nbsp &nbsp return(FALSE); <br/>
+	  &nbsp } <br/>
+	  } <br/>
+	</code>
+      </li>
+      <li>Whether a face contains an image is not obviously computable.</li>
+    </ul>
+  </li>
+  <li>We want to know what functions are computable.  Are there some functions (problems) which are not computable (cannot be solved by computers?)</li>
+</ul>
+
+<h2>Computable and Non-Computable Functions</h2>
+<ul>
+  <li>
+    Church's thesis states that all algorithms are computable.
+    <ul>
+      <li>An "algorithm" is any procedure that can be defined in a list of well-defined instructions.</li>
+      <li>In other words, Church's thesis states that anything that can be specified in a list of instructions can be written as a program.</li>
+      <li>Hence, most things we can think of are computable.</li>
+      <li>However, some functions are not.</li>
+    </ul>
+  </li>
+  <li>
+		The halting function <code>HALT(x,y)</code> detects whether or not a program ends.
+    <ul>
+	    <li>This function returns TRUE if program <code>x</code> finishes running at some point given the input <code>y</code>, and FALSE if it doesn't.</li>
+	    <li>Consider the program (not function!) <code>FINISH_IF_ONE</code>.<br/>
+      <code>
+			FINISH_IF_ONE(n) <br/>
+      { <br/>
+			&nbsp	if(n==1) <br/>
+			&nbsp	{ <br/>
+			&nbsp &nbsp return(1); <br/>
+			&nbsp	} <br/>
+			&nbsp	else <br/>
+			&nbsp	{ <br/>
+			&nbsp &nbsp while(true) <br/>
+			&nbsp	} <br/>
+		  } <br/>
+		  </code>
+		  </li>
+      <li><code>HALT(FINISH_IF_ONE, 1)</code> is TRUE, because <code>FINISH_IF_ONE(1)</code> ends at some point.</li>
+      <li>Similarly, <code>HALT(FINISH_IF_ONE, 2)</code> is FALSE, because <code>FINISH_IF_ONE(2)</code> never ends.</li>
+    </ul>
+  </li>
+  <li>
+		The function <code>HALT(x,y)</code> is not computable.
+    <ul>
+	    <li>This means that there is not program that can be written for this function <code>HALT</code>.</li>
+	    <li>The proof requires that we have some way of converting a program into an input (for example, a number).  This can be done trivially, but is rather complicated.</li>
+    </ul>
+  </li>
+  <li>
+		Proof:
+    <ul>
+	    <li>We start by assuming that <code>HALT(x,y)</code> is computable.</li>
+	    <li>If we reach a contradiction, then our initial assumption - that <code>HALT</code> is computable - is wrong.  This is called proof by contradiction.</li>
+	    <li>Recall that we can combine programs into each other.  So, if <code>HALT</code> is computable, then so is the following program: <br/>
+      <code>
+			REVERSE_HALT(x) <br/>
+      { <br/>
+			&nbsp	if(HALT(x,x)) <br/>
+			&nbsp	{ <br/>
+			&nbsp &nbsp while(true); <br/>
+			&nbsp	} <br/>
+			&nbsp	else <br/>
+			&nbsp	{ <br/>
+			&nbsp &nbsp return(1); <br/>
+			&nbsp	} <br/>
+		  } <br/>
+		  </code>
+	    </li>
+	    <li><code>REVERSE_HALT</code> never ends if the program <code>x</code> finishes running at some point on the input <code>x</code>.</li>
+	    <li><code>REVERSE_HALT</code> ends if the program <code>x</code> running on the input <code>x</code> never finishes.</li>
+	    <li>Now consider the program call <code>REVERSE_HALT(REVERSE_HALT)</code>.  Think about what will happen here.</li>
+	    <li>There are two possible cases - <code>REVERSE_HALT</code> ends on the input <code>REVERSE_HALT</code>, or it doesn't.</li>
+	    <li>In other words, <code>HALT(REVERSE_HALT)</code> can be TRUE or FALSE.</li>
+	    <li>If <code>HALT(REVERSE_HALT)</code> is TRUE, then <code>REVERSE_HALT</code> never ends.  But if <code>REVERSE_HALT</code> never ends, then <code>HALT(REVERSE_HALT)</code> should be false.</li>
+	    <li>If <code>HALT(REVERSE_HALT)</code> is FALSE, then <code>REVERSE_HALT</code> ends.  But if <code>REVERSE_HALT</code> ends, then <code>HALT(REVERSE_HALT)</code> should be true.</li>
+	    <li>Every situation leads to a contradiction.  Therefore, our initial assumption - that <code>HALT</code> is computable - must be false.  Therefore, <code>HALT</code> is not computable.</li>
+    </ul>
+  </li>
+  <li>The halting problem is the first problem that was shown to be non-computable.
+    <ul>
+			<li>This is significant because it showed that there are limits to what can be done with any model of computation, regardless of hardware, algorithm, etc.</li>
+      <li>It is difficult to come up with non-computable problems.</li>
+      <li>However, in general, any problem involving deciding the long term behavior of other programs in general is non-computable.</li>
+      <li>For example, determining whether, given some input, a program's variable ever reaches a certain number, is in general non-computable.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Computational Models</h2>
+<ul>
+  <li>
+    We have discussed what can and can't be done with one computational model, but what about others?
+    <ul>
+      <li>The computational model we used is a list of instructions, executed sequentially, i.e. an imperative program.</li>
+      <li>However, there are many many more computational models.</li>
+      <li>By computational model, we mean methods of step by step processing which produces some result from an input.</li>
+    </ul>
+  </li>
+  <li>
+    The Turing machine is one of the original computational models.
+    <ul>
+      <li>The machine has a tape, which contains input, and on which it can write memory.</li>
+      <li>It also has an internal state.</li>
+      <li>At each step, the machine reads its current location on the tape as input.</li>
+      <li>Then, using its input and internal state, it determines its next possible action.</li>
+      <li>The possible action always involves writing to the current tape location, and then moving one step to the left or right of the tape.</li>
+      <li>The problem of determining whether a Turing machine halts on some input is the Turing machine version of the halting problem.</li>
+      <li>Visualization of the properties of a Turing machine: <br/><img src="http://mathworld.wolfram.com/images/eps-gif/TuringMachineRules_1000.gif"/></li>
+      <li>Visualization of a Turing machine run: <br/><img src="http://mathworld.wolfram.com/images/eps-gif/TuringMachine_1000.gif"/></li>
+    </ul>
+  </li>
+  <li>
+    The Turing machine is equivalent to the program model we used earlier.
+    <ul>
+      <li>Specifically, the Turing machine can simulate a list of instructions, and vice versa.</li>
+      <li>Programs can be translated from one computational model to the other, so they are equivalent in power.</li>
+    </ul>
+  </li>
+  <li>
+    There is no computational model more powerful than the Turing machine.
+    <ul>
+      <li>Since this is equivalent to the program model, no computational model is more powerful than the program model either.</li>
+      <li>Many very different computational models have been proposed, but all are weaker or shown to be as powerful as the Turing machine.</li>
+      <li>A model that has this level of power is called Turing complete.</li>
+      <li>All true programming languages are Turing complete.</li>
+      <li>All Turing complete models have the same functionality.</li>
+      <li>Though they are the most powerful, Turing complete models all suffer from halting problems, and share the same non-computable problems.</li>
+    </ul>
+  </li>
+  <li>The take-away is that there are limits to what can be done by following instructions sequentially - there are things that we can conjecture, which can not actually be done through systematic calculations.</li>
+</ul>

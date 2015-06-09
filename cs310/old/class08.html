@@ -1,0 +1,1552 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 12">
+<meta name=Originator content="Microsoft Word 12">
+<link rel=File-List href="class09_files/filelist.xml">
+<title>CS310, Class 8</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Elizabeth O'Neil</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Betty O'Neil</o:LastAuthor>
+  <o:Revision>54</o:Revision>
+  <o:TotalTime>1903</o:TotalTime>
+  <o:LastPrinted>2010-02-22T22:48:00Z</o:LastPrinted>
+  <o:Created>2009-02-20T16:13:00Z</o:Created>
+  <o:LastSaved>2012-02-22T18:52:00Z</o:LastSaved>
+  <o:Pages>2</o:Pages>
+  <o:Words>1699</o:Words>
+  <o:Characters>9686</o:Characters>
+  <o:Company>University of Massachusetts, Boston</o:Company>
+  <o:Lines>80</o:Lines>
+  <o:Paragraphs>22</o:Paragraphs>
+  <o:CharactersWithSpaces>11363</o:CharactersWithSpaces>
+  <o:Version>12.00</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<link rel=themeData href="class09_files/themedata.thmx">
+<link rel=colorSchemeMapping href="class09_files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>150</w:Zoom>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"New York";
+	panose-1:2 4 5 3 6 5 6 2 3 4;
+	mso-font-alt:"Times New Roman";
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:3 0 0 0 1 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1107305727 0 0 415 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"New York","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"New York";}
+h2
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 2 Char";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	font-style:italic;}
+a:link, span.MsoHyperlink
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoNoSpacing, li.MsoNoSpacing, div.MsoNoSpacing
+	{mso-style-priority:1;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"New York","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"New York";}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"New York","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"New York";}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"New York","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"New York";}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"New York","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"New York";}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"New York","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"New York";}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 2";
+	mso-ansi-font-size:13.0pt;
+	mso-bidi-font-size:13.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;
+	font-weight:bold;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:1062367084;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-259353444 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l0:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+table.MsoTableGrid
+	{mso-style-name:"Table Grid";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-priority:59;
+	mso-style-unhide:no;
+	border:solid black 1.0pt;
+	mso-border-themecolor:text1;
+	mso-border-alt:solid black .5pt;
+	mso-border-themecolor:text1;
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-border-insideh:.5pt solid black;
+	mso-border-insideh-themecolor:text1;
+	mso-border-insidev:.5pt solid black;
+	mso-border-insidev-themecolor:text1;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="10242"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><b><span
+style='font-size:12.0pt;font-family:"Times New Roman","serif"'>CS310, Class 8 <o:p></o:p></span></b></p>
+
+
+<p class=MsoNoSpacing>From WikiBooks <a
+href="http://en.wikibooks.org/wiki/Java_Programming/Collection_Classes">Java
+Programming/Collection Classes</a></p>
+
+<p class=MsoNoSpacing>Handout: <a href="UMLSetsMaps.html">UML for JDK Sets and
+Maps</a></p>
+
+<p class=MsoNoSpacing><b><span style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Back
+to HashSet implementation<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'>The HashSet constructor calls allocateArray, implemented on lines 40-41
+on pg. 789(728).<span style='mso-spacerun:yes'>    </span>Then it calls
+clear(), which loops through the array making everything null. Note that this
+is where the alternative idea of using HashEntry&lt;T&gt; breaks down, because
+it would mean the hash table is an array of parametric type objects, disallowed
+in Java for a technical reason discussed just before Sec. 4.8. Arrays and
+parametric types have a difficult time working together because an array takes
+responsibility of knowing its element type.<o:p></o:p></span></p>
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Performance of
+Separate Chaining</span></b><span style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Assuming a good
+hashing function, the analysis is simple, yet not trivial.<span
+style='mso-spacerun:yes'>   </span>For N keys and M buckets, we see that each
+collision list has N/M elements on it on the average.<span
+style='mso-spacerun:yes'>  </span>So the look-up should take O(N/M) time.<span
+style='mso-spacerun:yes'>   </span>We can keep the hash table less than half
+full, so that N &lt;= M/2, and N/M &lt;= 1/2.<span style='mso-spacerun:yes'>  
+</span>Thus the look-up (get()) is O(1).<span style='mso-spacerun:yes'> 
+</span>Similarly for put(), add() and remove().<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Performance with
+Rehashing:<span style='mso-spacerun:yes'>  </span>the expansion doesn't ruin
+the performance, on average<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Suppose we are inserting
+entries to a hash table beyond its original half-full state.<span
+style='mso-spacerun:yes'>  </span>Typically, we rehash every time the number of
+entries exceeds 2<sup>n</sup>, starting at the original half-full point.<span
+style='mso-spacerun:yes'>  </span>Consider doing a sequence of inserts to an
+empty hash table of size 64+, prime (M = first prime over 64):<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>insert 1, 2,
+3,<span style='mso-spacerun:yes'>  </span>..., 31 –still less than half full. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>insert 32—first
+rehash, to M=128+, prime <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>insert 33, 34,
+35, ..., 63 –still less than half full (32 = 2^5 ops)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>insert 64:
+second rehash, to M=256+, prime<span style='mso-spacerun:yes'>  </span>(64 =
+2^6ops)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>...<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>In general,
+during inserts 2<sup>n</sup> to 2<sup>n+1</sup>, we do 2<sup>n</sup> simple
+inserts, each O(1), plus 2<sup>n+1</sup> relocations into a new hash table,
+each also O(1).<span style='mso-spacerun:yes'>   </span>This totals (3)2<sup>n</sup>
+O(1).<span style='mso-spacerun:yes'>  </span>If we amortize this over 2<sup>n</sup>
+inserts, that is, average the total time over the total number of inserts
+between rehashes, 2<sup>n</sup>, we get O(1) per insert.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Naturally
+there's a &quot;hiccup&quot; when the expansion happens, and this can be
+unacceptable if it exceeds some threshold time such as human-perceivable time
+in interactive programs.<span style='mso-spacerun:yes'>  </span>There are more
+sophisticated extensible hashing methods that don't hiccup so badly. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Hashing in
+memory and on disk.</span></b><span style='font-size:10.0pt;font-family:"Times New Roman","serif"'><span
+style='mso-spacerun:yes'>  </span>The hash table may be located in memory,
+supporting fast lookup to records on disk, or even on disk, supporting fast
+access to further disk.<span style='mso-spacerun:yes'>  </span>(In fact, a disk-resident
+hash table that is in frequent use ends up being in memory because of the
+memory &quot;caching&quot; of disk pages in the file system.)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-16.5pt;tab-stops:1.0in 153.0pt 3.25in 4.8in 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>keys </span><span
+style='font-size:10.0pt;font-family:Wingdings;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+mso-char-type:symbol;mso-symbol-font-family:Wingdings;mso-no-proof:yes'><span
+style='mso-char-type:symbol;mso-symbol-font-family:Wingdings'>à</span></span><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><span
+style='mso-spacerun:yes'>  </span><span style='mso-tab-count:1'>                </span>hash
+table<span style='mso-spacerun:yes'>  </span></span><span style='font-size:
+10.0pt;font-family:Wingdings;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+mso-char-type:symbol;mso-symbol-font-family:Wingdings;mso-no-proof:yes'><span
+style='mso-char-type:symbol;mso-symbol-font-family:Wingdings'>à</span></span><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'> <span
+style='mso-tab-count:1'>          </span>Data records<span style='mso-tab-count:
+1'>             </span>Example<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-16.5pt;tab-stops:1.0in 153.0pt 3.25in 4.8in 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>memory<span
+style='mso-tab-count:1'>                 </span>memory<span
+style='mso-spacerun:yes'>         </span><span style='mso-tab-count:1'>            </span>memory<span
+style='mso-spacerun:yes'>     </span><span style='mso-tab-count:1'>                </span>typical
+HashMap apps, hw3 program<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-16.5pt;tab-stops:1.0in 153.0pt 3.25in 4.8in 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>memory<span
+style='mso-spacerun:yes'>  </span><span style='mso-tab-count:1'>               </span>memory<span
+style='mso-spacerun:yes'>         </span><span style='mso-tab-count:1'>            </span>disk<span
+style='mso-spacerun:yes'>            </span><span style='mso-tab-count:1'>                 </span>use
+HashMap to hold disk record locations as values<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-16.5pt;tab-stops:1.0in 153.0pt 3.25in 4.8in 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>memory <span
+style='mso-tab-count:1'>                </span>disk<span
+style='mso-spacerun:yes'>                </span><span style='mso-tab-count:
+1'>             </span>disk<span style='mso-tab-count:1'>                             </span>hashed
+files, some database tables<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:1.2in 2.4in 3.6in 4.8in 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:1.2in 2.4in 3.6in 4.8in 477.0pt'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>FYI: Hashing
+packages in programming language libraries.</span></b><span style='font-size:
+10.0pt;font-family:"Times New Roman","serif"'><span style='mso-spacerun:yes'> 
+</span>The C library sticks to basics and has no collection support.<span
+style='mso-spacerun:yes'>  </span>We’ve looked at the Java Collections HashMap
+and HashSet.<span style='mso-spacerun:yes'>  </span>The STL<span
+style='mso-spacerun:yes'>  </span>(Standard Template Library) of C++ provides
+Maps, but their performance (HP implementation) is logarithmic, and thus
+indicates they are implemented with trees, not hash tables.<span
+style='mso-spacerun:yes'>  </span>Microsoft's .NET/C# provides collection
+classes: see <a
+href="http://msdn.microsoft.com/en-us/library/0ytkdh4s(VS.100).asp">http://msdn.microsoft.com/en-us/library/0ytkdh4s(VS.100).asp</a><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:1.2in 2.4in 3.6in 4.8in 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Next: The full
+Set interface has “bulk” operations, as explained in <a
+href="http://java.sun.com/docs/books/tutorial/collections/interfaces/set.html">http://java.sun.com/docs/books/tutorial/collections/interfaces/set.html</a><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>that quite
+easily are turned into union, intersection, etc.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>The start of
+this article is on the back of the UML Sets and Maps handout.<o:p></o:p></span></p>
+
+<p class=MsoNoSpacing><o:p>&nbsp;</o:p></p>
+
+<h2 style='margin-right:10.5pt;tab-stops:477.0pt'><span style='mso-fareast-font-family:
+"Times New Roman"'>More Set operations: the “bulk” operations like UNION </span><span
+style='font-size:10.0pt;mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></h2>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>As intro’d
+before, consider set of integers:<span style='mso-spacerun:yes'>  </span>A =
+{1, 5, 3, 96}, or B = {17, 5, 1, 96}.<span style='mso-spacerun:yes'> 
+</span>Set of strings, {&quot;Mary&quot;, &quot;contrary&quot;,
+&quot;quite&quot;}.<span style='mso-spacerun:yes'>  </span>Remember that sets have
+no duplicates and order doesn't count.<span style='mso-spacerun:yes'> 
+</span>(List allows duplicates and order does count.)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Look at the
+Chap. 6 Set interface, pg. 262(229), which is the same as Collection interface,
+pg. 239(211). These are just the basic set/collection operations. <span
+style='mso-spacerun:yes'> </span>The full Set interface is the same as the full
+Collection interface, which contains additional “bulk” methods that we now look
+at. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>We would like to
+use Union, Intersection, and Difference of Sets, and in fact these are in the
+full Collection API, under different names because they need to work with any
+Collection.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>For example, A
+UNION B = B UNION A = { 1, 3, 5, 96 },<span style='mso-spacerun:yes'>  </span>A
+INTERSECT B = B INTERSECT A = {1, 5, 96 }<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>A – B = { 3 }, B
+– A = {17 }<span style='mso-spacerun:yes'>  </span>Not commutative!<span
+style='mso-spacerun:yes'>  </span>Also C = {3, 96} is a subset of A but not of
+B.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Go over these
+quickly with Venn diagrams. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>The full Set=Collection
+interface has “bulk” operations, as explained in <a
+href="http://java.sun.com/docs/books/tutorial/collections/interfaces/set.html">http://java.sun.com/docs/books/tutorial/collections/interfaces/set.html</a><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>that quite
+easily are turned into union, intersection, etc.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Consider Sets
+made with HashSet:<span style='mso-spacerun:yes'>  </span>Set&lt;T&gt; a = new
+HashSet&lt;T&gt;(); ... for some type T<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Union of Set a
+and Set b:<span style='mso-spacerun:yes'>  </span>we can “addAll”<span
+style='mso-spacerun:yes'>  </span>of b to a or vice versa, to form the union
+set:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+1'>  </span>a.addAll(b)<span style='mso-spacerun:yes'>  </span>// turns a into
+the union of a and b<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+1'>  </span>b.addAll(a)<span style='mso-spacerun:yes'>  </span>// turns b into
+the union<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>But what if we
+don’t want to change a or b?<span style='mso-spacerun:yes'>  </span>Make a new
+set from one of them first:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+1'>  </span>Set&lt;T&gt; union = new HashSet&lt;T&gt;(a);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+1'>  </span>union.addAll(b);<span style='mso-spacerun:yes'>  </span>// form a
+UNION b in own set<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Similarly, for
+intersection:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+1'>  </span>a.retainAll(b);<span style='mso-spacerun:yes'>  </span><span
+style='mso-spacerun:yes'> </span>//<span style='mso-spacerun:yes'> 
+</span>turns a into intersection of a and b<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+1'>  </span>b.retainAll(a);<span style='mso-spacerun:yes'>   </span>// turns b
+into intersection<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+1'>  </span>Set&lt;T&gt; intersection = new HashSet&lt;T&gt;(a);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+1'>  </span>intersection.retainAll(b);<span style='mso-spacerun:yes'> 
+</span>// form a INTERSECT b in own set<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>For difference,
+A – B and B – A are different.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+1'>  </span>a.removeAll(b);<span style='mso-spacerun:yes'>   </span>//<span
+style='mso-spacerun:yes'>  </span>turns a into a - b<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+1'>  </span>b.removeAll(a);<span style='mso-spacerun:yes'>   </span>// turns b
+into b - a<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+1'>  </span>Set&lt;T&gt; diffAB = new HashSet&lt;T&gt;(a);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+1'>  </span>diffAB.removeAll(b);<span style='mso-spacerun:yes'>    </span>//
+form a – b in own set<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+1'>  </span>Set&lt;T&gt; diffBA = new HashSet&lt;T&gt;(b);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+1'>  </span>diffBA.removeAll(a);<span style='mso-spacerun:yes'>    </span>//
+form b – a in own set<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>For subset containment,
+we just use containsAll:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><span
+style='mso-tab-count:1'>      </span></span><span style='font-size:10.0pt;
+font-family:"Courier New"'>a.containsAll(b)</span><span style='font-size:10.0pt;
+font-family:"Times New Roman","serif"'> returns true if b is a subset of a<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>How does it look
+with the element objects?<span style='mso-spacerun:yes'>  </span>In Java, we
+allow many ref’s to one object, and when we call “new Hashset&lt;T&gt;(a)” we
+are not copying the element objects but just their refs, a “shallow” copy.<span
+style='mso-spacerun:yes'>   </span>Then the addAll copies more element refs to
+the new set.<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>&lt; Picture of
+A and B sets of all-different elements, their union a.addAll(b) with shared
+elements&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>&lt;Picture of A
+and B with already-shared elements, their union&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>&lt;Picture of A
+and B with equal but not shared elements, their union&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>How is element
+matching done?<span style='mso-spacerun:yes'>   </span>element.equals().<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>And if we’re
+using HashSet, we need a consistent hashCode for the elements as well.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'>Implementation of union, etc. for HashSet:<span
+style='mso-spacerun:yes'>  </span><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><st1:place
+w:st="on"><span style='font-size:10.0pt;font-family:"Times New Roman","serif"'>UNION</span></st1:place><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'> via
+a.addAll(b):<span style='mso-spacerun:yes'>  </span>Iterate through b, checking
+elements for membership “contains()” in a, an O(1) op.<span
+style='mso-spacerun:yes'>  </span>Any that aren’t there, add (by ref copy, as
+usual) to result set, also O(1).<span style='mso-spacerun:yes'>   </span>For N
+elements of B, O(N) operation.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>INTERSECTION via
+a.retainAll(b):<span style='mso-spacerun:yes'>  </span>Iterate through a,
+checking elements for membership in b.<span style='mso-spacerun:yes'> 
+</span>If not in b, remove it (O(1)). For N elements of A, an O(N) operation.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>For
+a.removeAll(b) it is possible to be a little smarter.<span
+style='mso-spacerun:yes'>  </span>See AbstractSet.removeAll doc.<span
+style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:4.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>if (a.size()
+&lt; b.size())<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:4.5pt;text-indent:4.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>iterate through
+a, removing (from a) those that are in b<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:4.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>else<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:4.5pt;text-indent:4.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>iterate through
+b, removing those from a<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>This way, only
+the smaller set is scanned.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'>Set Thinking<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>To get the most
+use out of sets, you need to train your mind to think in these bulk operations—it’s
+my job to show you good examples to get started.<span
+style='mso-spacerun:yes'>  </span>More on this next time.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'><span style='mso-spacerun:yes'> </span>Handout:
+Example of a private inner class providing an <span class=SpellE>iterator</span><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'>Set Thinking<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>To get the most
+use out of sets, you need to train your mind to think in these bulk operations—it’s
+my job to show you good examples to get started.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'>Toy example: <span class=GramE>vowels,</span> now
+think of as set<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Recall the
+example of counting vowels in class 5 (in the notes, not covered in
+class).<span style='mso-spacerun:yes'>  </span>The original <span class=SpellE>pseudocode</span>
+said<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+1'>  </span><span class=GramE>if</span> (c is a vowel)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+1'>  </span><span style='mso-spacerun:yes'>    </span><span class=GramE>count</span>
+it<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>How did we code
+the condition here?<span style='mso-spacerun:yes'>   </span>Not a loop of 5
+tests!<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Answer: We
+created a <span class=SpellE>HashSet</span>&lt;Character&gt; vowels, loaded
+with the 5 vowel Characters, and then:</span><span style='font-size:10.0pt;
+font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+1'>  </span><span style='mso-spacerun:yes'> </span><span class=GramE>if</span>
+(<span class=SpellE>vowels.contains</span>(c))<span style='mso-spacerun:yes'>  
+</span>// c a char: O(1) lookup <o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+2'>     </span><span class=GramE>count</span>++;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Of course for 5
+items this is not important, but for large sets, it really matters.<span
+style='mso-spacerun:yes'>  </span>We have gone from an <span class=GramE>O(</span>N)
+search to an O(1) lookup, a big savings.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>So when you see
+a loop of tests, think “could I use a Set here?”<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>We just saw how
+set-thinking allowed us to replace an <span class=GramE>O(</span>N) search with
+an O(1) lookup when we needed to classify something.<span
+style='mso-spacerun:yes'>  </span>But to see the full pay-off of set-thinking
+we need to use the set-crunching operations of union, intersection, etc. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'>Example: Sets of users from <span class=SpellE>qual</span>
+scenario of 500 terminal lines <o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Each terminal
+line has a Set of usernames seen on the line, so this defines 500 Sets of
+username.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>For example, the
+set of users seen on line 1, set of users seen on line 2, etc.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>We could hold
+this all in an <span class=SpellE>ArrayList</span>&lt;Set&lt;String&gt;&gt; if
+we wanted. <span class=GramE>But not directly in an array of Set&lt;String&gt;,
+unfortunately, by an annoying rule of generics.</span><span
+style='mso-spacerun:yes'>  </span>Note that <span class=SpellE>ArrayList</span>
+uses an array, so all we’re giving up is that neat [<span class=SpellE>i</span>]
+syntax of real arrays. <span class=SpellE>ArrayList</span> gives us the same <span
+class=GramE>O(</span>1) access to the <span class=SpellE>ith</span> element.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>How do you find all
+users ever seen on any line?<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Answer: take the
+union of all the sets.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>How do you find
+if anyone (or several users) logged in on all lines?<span
+style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Answer: take
+intersection of all sets, or all non-empty sets, if you want to ignore idle
+lines.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Suppose one line
+is for a public terminal suspected of break-in attempts.<span
+style='mso-spacerun:yes'>  </span>The set of users who logged in on that line
+are considered suspicious.<span style='mso-spacerun:yes'>  </span>How do you
+find all the lines that any of these users logged in on?<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Answer:<span
+style='mso-spacerun:yes'>  </span>take intersection of each set with the set of
+the public terminal line.<span style='mso-spacerun:yes'>  </span>Non-empty
+result sets mean someone suspicious logged in on that line.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>We’ll come back
+to more Set examples, but first, more on inner classes.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+
+<p class=MsoNormal style='tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'>Private Inner Classes: Handout “Example of a private
+inner class providing an <span class=SpellE>iterator</span>”<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'>(<span class=GramE>linked</span> from class web
+page)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>For hw3, you
+tried out some uses of nested classes. Now let’s tackle the harder case of
+private inner classes (we never need public inner classes.)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Why do we need
+private inner classes? <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Answer: We could
+live without them, but they provide convenience features for the case that the
+detail they represent has a close relationship to the outer class, and is
+suited to share the outer class type <span class=SpellE>parametrization</span>.
+For an <span class=SpellE>iterator</span> over <span class=SpellE>HashSet</span>&lt;T&gt;
+for example, we need an <span class=SpellE>Iterator</span>&lt;T&gt; object to
+return to the client, so we set up the private inner class <span class=SpellE>HashSetIterator</span>.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>But we need to
+return this <span class=SpellE>Iterator</span> object to the caller outside <span
+class=SpellE>HashSet</span>, so how can we restrict ourselves to a <i
+style='mso-bidi-font-style:normal'>private</i> inner class?<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Answer: With the
+power of Java interfaces. The <span class=SpellE>Iterator</span>&lt;T&gt;
+interface is public. We cook up a private object of type that ISA <span
+class=SpellE>Iterator</span>&lt;T&gt;, and return it to the caller as an <span
+class=SpellE>Iterator</span>&lt;T&gt;. The caller never knows the real type of
+the object, and doesn’t care either. It works fine as an <span class=SpellE>iterator</span>.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Look at <span
+class=SpellE>MyContainer</span>, pg. 578(522). Not <span class=SpellE>parametrized</span>,
+but we can fairly easily fix it. See the handout. Add &lt;T&gt; to lines 3, 10,
+end of 14, and on next page, end of line 2. Change Object to T on lines 21 and
+9 on the next page, and a cast to T, (T), on lines 22 and 10 on the next page.
+Note that <span class=SpellE>LocalIterator</span> is written two ways, the
+second one using the special relation an inner class has to the outer class
+fields. It needs a “remove” method to implement the JDK <span class=SpellE>Iterator</span>&lt;T&gt;
+interface. See the handout.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>We added
+&lt;T&gt; to <span class=SpellE>MyContainer’s</span> declaration, but not to <span
+class=SpellE>LocalIterator</span>. <span class=SpellE>LocalIterator</span> gets
+the parameter automatically because it’s non-static. In fact, adding &lt;T&gt;
+to <span class=SpellE>LocalIterator</span> causes an unwanted <span
+class=SpellE>parametrization</span> shadowing the original one. <span
+class=GramE>Nasty bug.</span> Need a good IDE to show warning right away.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Now understand
+line 6, pg. 789(728) <span class=SpellE>HashSetIterator</span>: an inner class
+of <span class=SpellE>HashSet</span>&lt;<span class=SpellE>AnyType</span>&gt;,
+so itself <span class=SpellE>parametrized</span> by &lt;<span class=SpellE>AnyType</span>&gt;.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Note that inner
+class code can use outer class fields as easily as its own fields. Look at the
+line of code in <span class=SpellE>LocalIterator’s</span> <span class=SpellE><span
+class=GramE>hasNext</span></span><span class=GramE>(</span>):<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:9.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+1'>  </span><span class=GramE>current</span> &lt; size<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Here current is
+a field of the inner class and size is a field of the outer class. It’s that
+easy.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>This is
+implemented by the inner class having a “secret” reference to the outer class
+object that it must have. See pg. 577.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Question: What
+about nested classes—can we refer to the outer object’s fields?<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Answer: Yes, if
+we have a ref to the outer object, but that requires some programming on our
+part.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>For Book of <span
+class=SpellE>SimpleStudent</span>, we could add a field <span class=SpellE>outerRef</span>
+and invent a constructor for Book that set it.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:9.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+1'>  </span><span class=GramE>public</span> Book (<span class=SpellE>SimpleStudent</span>
+<span class=SpellE>ss</span>) { <span class=SpellE>outerRef</span> = <span
+class=SpellE>ss</span>; }<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Then the <span
+class=SpellE>SimpleStudent</span> object code that created a Book could use <span
+class=GramE>Book(</span>this) and get it set up.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>The Book code could
+then use outerRef.name to access the student’s name. (Probably should call the
+outer ref “student” here.)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Don’t forget
+that static inner classes don’t get outer class type parameters--<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+class=SpellE><span style='font-size:10.0pt;font-family:"Times New Roman","serif"'>HashEntry</span></span><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'> is a static
+inner class, so lack of &lt;&gt; after <span class=SpellE>HashEntry</span>
+means no it has no type <span class=SpellE>parametrization</span>. The code in <span
+class=SpellE>HashEntry</span> can use no outer-class parametric types, and has
+none of its own.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Back to inner
+classes... in general, take union of parameters of the inner class and its
+outer class:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+class=GramE><span style='font-size:10.0pt;font-family:"Times New Roman","serif"'>public</span></span><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'> class <span
+class=SpellE>Foo</span>&lt;X,Y&gt; ...<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>private</span> class
+Bar&lt;Z&gt; ...<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>This means types
+X<span class=GramE>,Y</span>, and Z are usable in Bar’s code.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Bar can
+implement or extend Mumble&lt;X&gt;--that just means that Mumble&lt;X&gt;’s API
+is followed—some types show up in the API, others are involved in
+implementation of <span class=SpellE>Foo</span>, or both.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>More challenging
+case…in <span class=SpellE>TreeMap</span> code, but useful for 5b, the
+challenge option of pa2.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Cases involving
+multiple parametric types:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>pg. 753 (695) <span
+class=SpellE>ViewClass</span>&lt;<span class=SpellE>AnyType</span>&gt;, inner
+class of <span class=SpellE>MapImpl</span>&lt;<span class=SpellE>KeyType</span>,
+<span class=SpellE>ValueType</span>&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>This class is <span
+class=SpellE>parametrized</span> 3 ways! That means the code in this class is
+allowed to use these 3 types.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:10.5pt;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in left 477.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+
+</div>
+
+</body>
+
+</html>

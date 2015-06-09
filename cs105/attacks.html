@@ -1,0 +1,113 @@
+<h1>Attack Vectors</h1>
+
+We study common ways hackers attack certain services.
+
+<h2>Input Validation Errors</h2>
+<ul>
+  <li>SQL injections can reveal sensitive information, allow unauthorized entry, etc.
+		<ul>
+			<li>Can be done on web forms.</li>
+			<li>Recall that web applications store and retrieve data from a database.  Most databases use a language called SQL.</li>
+			<li>Idea is to find some place where user input is translated to SQL, then inject SQL into it to do some unintended behavior.</li>
+			<li>Example: logging in to a website, from http://1.bp.blogspot.com/_N9kpbq3FL74/SUZJposWpeI/AAAAAAAAAsg/gf35YuUEAOQ/s400/9lessons-injection.png<br/>
+			  <img src="http://1.bp.blogspot.com/_N9kpbq3FL74/SUZJposWpeI/AAAAAAAAAsg/gf35YuUEAOQ/s400/9lessons-injection.png"/>
+			</li>
+			<li>The username and password entered are checked in a database using SQL.</li>
+			<li>The SQL statement can be modified and ended prematurely by using special SQL characters, like quotes.</li>
+			<li>This particular example allows the user to log in without entering valid credentials.</li>
+			<li>Can also be used to retrieve information you should not be able to see, etc.</li>
+		</ul>
+  </li>
+  <li>Cross-site scripting (XSS) allows attackers to inject code onto a web page, which then runs in other user's browsers.
+    <ul>
+      <li>Idea is similar to SQL injection: put javascript into a form field.</li>
+      <li>The javascript executes in a victim's browser.</li>
+      <li>Commonly, injected javascript is not persistent.
+				<ul>
+					<li>For example, a search engine may display its input verbatim back to the user.</li>
+					<li>In such a search engine, we can enter into the search field some javascript.</li>
+					<li>The web server responds with a web page with the same javascript.</li>
+					<li>In order to attack others with it, we need to send the URL for this new site to victims.</li>
+					<li>We can do this, for example, by sending an email or making a Facebook post of a funny cat video (but actually links to this site).</li>
+				</ul>
+			</li>
+			<li>Javascript could also be stored in the server's database, and given to other users in the future.
+				<ul>
+					<li>Example: you are able to save the name of artists that you like on some site.</li>
+					<li>You put the bad javascript into this site through the artists entry form.</li>
+					<li>Other people who view the page with artists that you like get affected by the XSS.</li>
+					<li>Now their browser may run the code, which makes them friend you, and post this same XSS on their account, or something.</li>
+				</ul>
+			</li>
+			<li>Diagram of XSS attack: http://www.digitalnewsasia.com/sites/default/files/images/digital%20economy/HP%20XSS.jpg:<br/>
+			  <img width=600px src="http://www.digitalnewsasia.com/sites/default/files/images/digital%20economy/HP%20XSS.jpg"/>
+			</li>
+    </ul>
+  </li>
+  <li>Directory traversal attacks force the web server to give out information it was not supposed to.
+		<ul>
+			<li>Idea is to request a file somewhere else in the server than intended.</li>
+			<li>For example, suppose there is an input field where we can type in a file name, and the web server retrieves it (e.g. name of page you want).</li>
+			<li>Instead of looking in the predetermined folder, you type in "../../../../../" in front of a file name you want.</li>
+			<li>Each "../" means you look in the folder above.</li>
+			<li>With enough "../", you look in the root of the filesystem.</li>
+			<li>Now you can go back down to /etc/passwd or something, which displays usernames and passwords.</li>
+			<li>So by requesting the file "../../../../etc/passwd", instead of getting the file where you were supposed to, you can get the passwd file.</li>
+		</ul>
+  </li>
+  <li>All of these attacks can be mitigated by validating user input - making sure that they cannot enter certain information into forms.</li>
+</ul>
+
+<h2>Buffer Overflows</h2>
+<ul>
+	<li>Many exploits actually address the same underlying weaknesses of some programs.
+	  <ul>
+			<li>For example, most programs are written to or are compiled into C.</li>
+			<li>Weaknesses in C will manifest in these programs unless precautions are made.</li>
+	  </ul>
+	</li>
+	<li>A very common vulnerability is the inability of a program to handle the amount of information sent to it.
+	  <ul>
+			<li>Variables in C (or any other language) hold memory.</li>
+			<li>In C, you have to specify how much memory it is to take up.</li>
+			<li>If you assign user input to a variable, and it takes up too much memory, bad things result.</li>
+			<li>Specifically, somewhere in program memory is the return address, which specifies what code the program will run next.</li>
+			<li>Suppose your input is written to a variable.</li>
+			<li>Instead of what you are supposed to write, you can write machine code.</li>
+			<li>You can keep writing until you overwrite the return address, making it point to your machine code.</li>
+			<li>Now, what runs next is your machine code (and it can do almost anything).</li>
+			<li>This is called a buffer overflow.</li>
+			<li>Diagram of buffer overflow, from http://cis1.towson.edu/~cssecinj/wp-content/uploads/cs2/buffer-overflow.jpg:<br/>
+			  <img src="http://cis1.towson.edu/~cssecinj/wp-content/uploads/cs2/buffer-overflow.jpg"/>
+			</li>
+	  </ul>
+	</li>
+	<li>There are many ways to prevent buffer overflows, and equally many ways to overcome obstacles to buffer overflows
+	  <ul>
+			<li>The most obvious solution is not allowing input which is larger than the memory you allocated to the variable.</li>
+			<li>This however relies on the skill and care of the programmer.</li>
+			<li>Another method is including a "stack canary" before the return address.</li>
+			<li>If the stack canary is modified, then the program stops, preventing the malicious code from being run.</li>
+			<li>Another method is to simply prevent code in the memory part of the stack from being executed.  Normally, only code in the code section of the stack is run.</li>
+	  </ul>
+	</li>
+</ul>
+
+<h2>Confused Deputy Problem</h2>
+<ul>
+	<li>A confused deputy is a computer program that is innocently fooled by some other party into misusing its authority.</li>
+	<li>Cross-site request forgery is a common type of confused deputy attack that works on the web.
+	  <ul>
+			<li>Suppose you are logged in to your bank, and the fact that you are logged in is stored in a cookie.</li>
+			<li>Since your cookie is active, requests made from your web browser to the bank's site will work, because you are logged in.</li>
+			<li>Now suppose while you are logged in, you are chatting with me.</li>
+			<li>I send you a link of an awesome cat video, but actually it links to your bank's web site, with GET parameters specifying I want to transfer all your money to me.</li>
+			<li>If you click the link, the GET request is sent.</li>
+			<li>From the point of view of the browser, it is doing something perfectly legitimate, because it thinks the request came from you.</li>
+			<li>But it is really fooled into doing something for me.  The web browser is the confused deputy.</li>
+	  </ul>
+	</li>
+	<li>Diagram of a CSRF attack, from http://www.linuxforu.com/wp-content/uploads/2010/11/Figure-1-CSRF-attack-on-GET.png:<br/>
+	  <img width=700px src="http://www.linuxforu.com/wp-content/uploads/2010/11/Figure-1-CSRF-attack-on-GET.png"/>
+	</li>
+</ul>

@@ -1,0 +1,165 @@
+<h1>Bits to Words</h1>
+
+Computers, being made of electrical circuitry, only understand bits.  In this lecture, we build up ways to represent things other than bits on a computer.  We begin by representing numbers, then use numbers to represent characters (such as letters in the alphabet, etc.).
+
+<h2>Bits</h2>
+<ul>
+  <li>A bit represents whether something is on or off.
+    <ul>
+      <li>On is represented by a 1.</li>
+      <li>Off is represented by a 0.</li>
+    </ul>
+  </li>
+  <li>1 byte = 8 bits
+    <ul>
+      <li>1 nibble = 4 bits = 1/2 byte</li>
+      <li>1 kilobyte = 1024 bytes</li>
+      <li>1 megabyte = 1024 kilobytes</li>
+      <li>1 gigabyte = 1024 megabytes</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Binary Arithmetic</h2>
+<ul>
+  <li>
+    Bit = binary digit.
+    <ul>
+      <li>Only 0 and 1 exist in the binary number system.</li>
+      <li>In the decimal number system, we have 0-9.</li>
+        <table>
+          <tr>
+            <th>In decimal</th>
+            <th>In binary</th>
+          </tr>
+          <tr>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>11</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>100</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>101</td>
+          </tr>
+        </table>
+    </ul>
+  </li>
+  <li>Addition works the same as decimal, but you "carry over 1" when you sum up to a number greater than 1.
+    <ul>
+      <li>0 + 0 = 0</li>
+      <li>1 + 0 = 1</li>
+      <li>0 + 1 = 1</li>
+      <li>1 + 1 = 10 because we have to carry over 1 to the next digit.</li>
+      <li>Taken from http://chortle.ccsu.edu/AssemblyTutorial/Chapter-08/ass08_3.html: </li>
+      <img src="http://chortle.ccsu.edu/AssemblyTutorial/Chapter-08/binaryAdditionExample.gif"/>
+      <li>Exercise: verify that 2 in binary + 3 in binary = 5 in binary.</li>
+    </ul>
+  </li>
+  <li>
+    Multiplication is exactly the same as in decimal.
+    <ul>
+      <li>Taken from http://www.eeweb.com/blog/andrew_carter/number-systems-2:</li>
+      <img src="http://s.eeweb.com/members/andrew_carter/blog/2012/06/30/Number-Systems-2-1-1341075866.gif"/>
+    </ul>
+  </li>
+  <li>Digits in binary represent powers of 2.
+    <ul>
+      <li>Digits in decimal represent powers of 10.</li>
+      <ul>
+        <li>Ones place - multiples of 10^0.</li>
+        <li>Tens place - multiples of 10^1.</li>
+        <li>Hundreds place - multiples of 10^2.</li>
+      </ul>
+      <li>In binary, digits represent powers of 2.</li>
+      <ul>
+        <li>1st digit - multiples of 1=2^0.</li>
+        <li>2nd digit - multiples of 2=2^1.</li>
+        <li>3rd digit - multiples of 4=2^2.</li>
+        <li>4th digit - multiples of 8=2^3.</li>
+      </ul>
+      <li>Verify this: what is 2, 4, 8, 16, in binary?</li>
+    </ul>
+  </li>
+  <li>
+    Octal and hexadecimal are also used frequently in computing.
+    <ul>
+      <li>Octal has 8 numbers: 0,1,2,3,4,5,6,7.</li>
+      <li>8 in decimal is represented with 10 in octal.</li>
+      <li>Hexadecimal has 16 numbers: 0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F.</li>
+      <li>16 in decimal is represented with 10 in hexadecimal.</li>
+      <li>10 in decimal is represented with A in hexadecimal.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Words</h2>
+<ul>
+  <li>A character is a single unit of text.
+    <ul>
+      <li>An alphabetical character (a-z, A-Z) is a character.</li>
+      <li>A single-digit (0-9) is also a character.</li>
+      <li>There are also special characters (!@#$%^&*, etc.).</li>
+    </ul>
+  </li>
+  <li>A character is represented by a byte (8 bits) in ASCII.
+    <ul>
+      <li>This means that a maximum of 2^8 = 256 characters can be represented.</li>
+      <li>ASCII maps numbers between 0 and 127 to characters.</li>
+      <li>Maps from 128-255 to characters vary.</li>
+      <li>Taken from http://benborowiec.com/2011/07/23/better-ascii-table/:</li>
+      <img height="500px" width="500px" src="http://benborowiec.com/wp-content/uploads/2011/07/better_ascii_table.jpg"/>
+      <li>Many characters, such as 0, are control characters, and don't actually show anything.</li>
+    </ul>
+  </li>
+  <li>
+    Converting between characters and binary can be done using hexadecimal.
+    <ul>
+      <li>
+        One character = one byte = two hexadecimal digits = 8 bits.
+      </li>
+      <li>
+        First, convert character to two hex characters using ASCII chart.
+      </li>
+      <li>
+	Second, convert each hexadecimal digit to a nibble.
+      </li>
+     <li>Alternatively, convert character to a decimal number, then convert to a 16-bit integer.</li>
+    </ul>
+  </li>
+  <li>Unicode can represent all characters.
+    <ul>
+      <li>Often used on internet, where we need characters for other languages (Chinese, Arabic, etc.) and other symbols (not equals, etc.)</li>
+      <li>UTF-8 is a backwards-compatible implementation of Unicode which uses at least 1 bytes per character.  Used in Linux and on the Internet.</li>
+      <li>UTF-16 uses at least 2 bytes per character.  Used in Windows and Mac.
+    </ul>
+  </li>
+</ul>
+
+<h2>Suggested readings</h2>
+<ul>
+  <li>Wikipedia article on binary arithmetic: <a href="http://en.wikipedia.org/wiki/Binary_arithmetic">http://en.wikipedia.org/wiki/Binary_arithmetic</a>
+  <ul>
+    <li>Section 3: "Counting in binary"</li>
+    <li>Section 5.1: "Addition"</li>
+    <li>Section 5.3: "Multiplication"</li>
+    <li>Section 7: "Conversion to and from other numeral systems"</li>
+    <li>Ignore sections on fractions and negative numbers.</li>
+  </ul>
+  </li>
+  <li>Article on ASCII: <a href="http://www.telacommunications.com/nutshell/ascii.htm">http://www.telacommunications.com/nutshell/ascii.htm</a></li>
+</ul>

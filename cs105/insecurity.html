@@ -1,0 +1,100 @@
+<h1>Hacking</h1>
+
+A client hacking a server, which is the typical hack, follows three steps: gathering information, gaining access, and maintaining access.  We also discuss other types of attacks which do not fit into this paradigm.
+
+<h2>Gathering Information</h2>
+<ul>
+  <li>For a typical client hacking a server, there are three steps: gathering information, gaining access, and maintaining access.
+  <li>Gathering information:
+    <ul>
+      <li>First is finding out IP, or IP ranges to target.  This can be done using DNS lookups, and other methods</li>
+      <li>Second is finding out what ports are listening.  You can only hack a target by sending bad input to something accepting input.</li>
+      <li>Third is finding out what software is running, and maybe even version numbers.  Hacks are specific to software and outdated versions may have known vulnerabilities.</li>
+     </ul>
+   </li>
+<li>Example of gathering information: sending an HTTP request.
+   <ul>
+       <li>As we can see in this HTTP response, the server is IIS, version 8.  This server is running on a Windows computer: <br/>
+        <img width=400px src="http://orm-chimera-prod.s3.amazonaws.com/1234000001708/images/http_response.png"/>
+      </li>
+     </ul>
+   </li>
+  <li>Port scanning can reveal listening ports and services.
+    <ul>
+      <li>Recall that services on the internet can be connected to on certain ports.</li>
+      <li>Port scanners try to connect to well-known ports on a server to gather info, such as what services are running, software, version.</li>
+      <li>Example scanner output, from http://s0.cyberciti.org/uploads/faq/2012/11/nmap-scan-multiple-ip-addressess-output.png:<br/>
+        <img src="http://s0.cyberciti.org/uploads/faq/2012/11/nmap-scan-multiple-ip-addressess-output.png"/>
+      </li>
+    </ul>
+</ul>
+
+<h2>Gaining Access</h2>
+<ul>
+  <li>How much access can be gained depends on the target software.</li>
+  <li>Example of a weak vulnerability: directory traversal.
+    <ul>
+      <li>Filepaths are strings which refer to a file.</li>
+      <li>For example "abc/def/gh" refers to a file "gh" inside "def", which is inside the folder "abc", which is in the current path.</li>
+      <li>"../" refers to a parent, e.g. the folder containing the folder you are in now.</li>
+      <li>Say you are in "My Documents" and you want to get to "My Music", and they are both in the same folder.  Then you can get to "My Music" by using the path "../My Music"</li>
+      <li>In an unsecure file (FTP) server, you can chain "../"'s until you get to the root directory, then from there, access every file on the filesystem.</li>
+      <li>You can also do this on insecure file download forms and web sites, allowing you to get data you aren't supposed to.</li>
+      <li>This is an example of a limited vulnerability - there's not much else you can do.</li>
+    </ul>
+  </li>
+  <li>Most powerful hacks rely on memory corruption bugs, the most common being buffer overflows.
+    <ul>
+      <li>A program that is running (e.g. a web server) exists in memory.</li>
+      <li>Remember that a program consists of function calls.</li>
+      <li>After each function call, the program has to remember where to return (this is why all function calls end with a return statement).</li>
+      <li>Where to return is stored in a "return address".  See figure below.</li>
+      <li>Incidentally, this return address is close to variable memory.</li>
+      <li>Suppose there is some user input which is stored in a variable (common).</li>
+      <li>If the programmer didn't allocate enough space for the variable (e.g. expected 12 characters, got 13), then the data starts overwriting things it's not supposed to.</li>
+      <li>Keep going, and it eventually overwrites the return address.</li>
+      <li>So the hacker can tell the program where to go.</li>
+      <li>If he overwrites other parts of memory with code, then the hacker can force the program to go to the code and run it.</li>
+      <li>This allows the hacker to run anything on your computer.<br/>
+      <img width="300px" src="http://upload.wikimedia.org/wikipedia/commons/9/93/Stack_Overflow_3.png"/></li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Maintaining Access</h2>
+<ul>
+  <li>After a serious attack, like a buffer overflow, an attacker may make it easier to get back in.</li>
+  <li>Example: get back in legitimately through username and password.
+    <ul>
+      <li>Can make new username / password.</li>
+      <li>Can change existing user's password, etc.</li>
+    </ul>
+  </li>
+  <li>More advanced: install vulnerable program.
+    <ul>
+      <li>Can be old version of existing software, i.e. a downgrade, with known vulnerabilities.</li>
+      <li>Can be other vulnerable software.</li>
+      <li>Can be software explicitly designed for hackers to get back in (Trojans).</li>
+    </ul>
+  </li>
+  <li>Can also punch holes in firewalls.</li>
+</ul>
+</li>
+</ul>
+
+<h2>Other Attacks</h2>
+<ul>
+  <li>Man-in-the-middle attacks rely on being able to intercept, modify, and send communication information between two computers.</li>
+  <li>ARP spoofing is an example.</li>
+  <li>Another example: session hijacking.</li>
+    <ul>
+      <li>After a client logs in to a web server, the client gets "session key", which they can use instead of logging in over and over.</li>
+      <li>These session keys are sent over with every HTTP request.</li>
+      <li>Sent unencrypted - someone listening in can read and copy these session keys.</li>
+      <li>This allows them to be you without ever typing in username or password.</li>
+      <li>Diagram of session hijacking, from https://www.owasp.org/images/c/cb/Session_Hijacking_3.JPG:<br/>
+				<img src="https://www.owasp.org/images/c/cb/Session_Hijacking_3.JPG"/>
+      </li>
+    </ul>
+  </li>
+</ul>

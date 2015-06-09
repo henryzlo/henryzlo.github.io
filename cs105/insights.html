@@ -1,0 +1,81 @@
+<h1>Other Insights from Theory</h1>
+
+Apart from computability, theoretical computer science has shed light on representations of data; what can be calculated in effective time, etc.
+
+<h2>Complexity</h2>
+<ul>
+  <li>
+    The theory of complexity deals with how fast certain problems can be solved.
+    <ul>
+			<li>Complexity only deals with computable problems.</li>
+      <li>We have already discussed complexity to some extent, by analyzing the runtime of algorithms.</li>
+      <li>Complexity analyzes the runtime of problems.</li>
+      <li>Some problems are inherently slow, so any algorithm that solve them cannot be any faster without sacrificing correctness.</li>
+      <li>For example, it is known that sorting is inherently an O(nlogn) problem.</li>
+      <li>So in the worst case, no correct algorithm can possibly be faster than O(nlogn).</li>
+    </ul>
+  </li>
+  <li>
+    Complexity theory divides up problems into various classes in a hierarchy of difficulty.
+    <ul>
+			<li>A complexity class describes how "hard" the problems in the class are.</li>
+			<li>The harder a problem is, the slower.</li>
+			<li>In general, if an fast algorithm can be found for some problem, it also applies to many or all other problems in that complexity class.</li>
+      <li>Visualization of the entire complexity hierarchy: <br/><img src="http://upload.wikimedia.org/wikipedia/commons/6/6e/Complexity_subsets_pspace.svg"/></li>
+    </ul>
+  </li>
+  <li>
+    The most well known complexity-classes are P, and NP.
+    <ul>
+      <li>P problems can be solved in polynomial time or faster, for example, there might be an O(n^3), O(n), etc. algorithm that solves the problem.</li>
+      <li>NP (nonpolynomial) problems contain the P problems and some harder ones too, that is, there are no known algorithms which polynomial time algorithms which solve strictly NP problems.</li>
+      <li>One definition states that P problems are those which are quickly solvable, and NP problems, those which are quickly checkable.</li>
+      <li>For example, sorting, searching, finding things are P problems.</li>
+      <li>Brute-forcing encryption keys are NP problems.</li>
+    </ul>
+  </li>
+  <li>
+    Proving the complexity classes of algorithms is very important for real world use.
+    <ul>
+      <li>In general we can only really solve P problems.</li>
+      <li>NP problems do not scale and take literally forever to solve given large enough input.</li>
+      <li>Thus, algorithm writers may focus on only getting approximate answers if a problem is shown to be in NP.</li>
+    </ul>
+  </li>
+  <li>
+		Whether P is the same as NP or not, is one of the largest unsolved problems in computer science.
+		<ul>
+			<li>There is a 1 million dollar prize for solving this problem, so good luck.</li>
+			<li>All that is needed to show that they are the same, is to find one polynomial time method to solve an NP problem.</li>
+			<li>This method can then be used to solve all problems in NP.</li>
+			<li>This can have drastic consequences - with this, all encryption schemes can be broken quickly - problems which take clusters and farms of supercomputers to solve will then be solvable with a cell phone.</li>
+			<li>These amazing consequences of showing P=NP suggest to many that in fact they are not equivalent.</li>
+		</ul>
+  </li>
+</ul>
+
+<h2>Other Insights</h2>
+<ul>
+  <li>One of the greatest insights of computer science is that we only need two different things (and many copies of them) to represent everything.
+    <ul>
+      <li>We used ons and offs to represent 0s and 1s.</li>
+      <li>From 0s and 1s we learned to represent other numbers.</li>
+      <li>From numbers we represent text.</li>
+      <li>From numbers, text, etc. we can also represent music, images, videos, arbitrary data.</li>
+      <li>In the computer example, we have electricity and no electricity, but in essence this can be any two objects.</li>
+      <li>By everything we mean all forms of data can be represented using bits.</li>
+      <li>The philosophy of digital physics supposes that the universe is actually a binary computer, and that the fundamental building block of the universe is some sort of cosmic bit.</li>
+    </ul>
+  </li>
+  <li>
+    Building a theoretical computer is simple.
+    <ul>
+      <li>We need some form of memory that the computer can write to.</li>
+      <li>The computer must be able to read instructions in sequence.</li>
+      <li>These instructions must include modifying memory, and jumping through the instruction sequence.</li>
+      <li>We also need to be able to loop indefinitely.</li>
+      <li>This is all it takes to build a Turing complete machine.</li>
+      <li>Note that this is completely abstracted from actual physical computers.</li>
+    </ul>
+  </li>
+</ul>

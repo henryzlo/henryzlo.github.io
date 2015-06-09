@@ -1,0 +1,83 @@
+<project name="games" default="compile" basedir=".">
+	<!--  CS310 games ant build file -->
+	<!-- Global properties for this build -->
+	<property environment="env" />
+	<property name="src.dir" value="src" />
+	<property name="classes.dir" value="classes" />
+
+	<!-- Classpath declaration -->
+	<path id="project.classpath">
+		<pathelement location="${classes.dir}" />
+	</path>
+
+	<!-- Clean up -->
+	<target name="clean" description="Clean up the derived files">
+		<delete dir="${classes.dir}" />
+		<delete dir="docs" />
+	</target>
+
+	<!-- Compile Java source, requesting extra info on deprecated methods -->
+	<target name="compile">
+		<mkdir dir="${classes.dir}" />
+		<javac srcdir="${src.dir}" debug="on" destdir="${classes.dir}" classpathref="project.classpath">
+			<compilerarg value="-Xlint:deprecation" />
+		</javac>
+	</target>
+	<target name="build" depends="compile" />
+	
+	<!-- run various tests. Can't run interactive programs from here -->
+	<target name="run" depends="build">
+		<echo message="run TestGame" />
+		<java fork="yes" classname="cs310.TestGame" failonerror="true">
+			<classpath refid="project.classpath" />
+		</java>
+	</target>
+	<target name="test" depends="test1, test2, test3, test4, test5" />
+
+	<target name="test1" depends="build">
+		<echo message="run Easy's main" />
+		<java fork="yes" classname="edu.umb.cs.game.Easy" failonerror="true">
+			<classpath refid="project.classpath" />
+		</java>
+	</target>
+	<target name="test2" depends="build">
+			<echo message="run CMN's main" />
+			<java fork="yes" classname="edu.umb.cs.game.CMN" failonerror="true">
+				<classpath refid="project.classpath" />
+			</java>
+		</target>
+	<target name="test3" depends="build">
+			<echo message="run Putnam's main" />
+			<java fork="yes" classname="edu.umb.cs.game.Putnam" failonerror="true">
+				<classpath refid="project.classpath" />
+			</java>
+		</target>
+	<target name="test4" depends="build">
+			<echo message="run Fifteen's main" />
+			<java fork="yes" classname="edu.umb.cs.game.Fifteen" failonerror="true">
+				<classpath refid="project.classpath" />
+			</java>
+		</target>
+	<target name="test5" depends="build">
+			<echo message="run TestSticks" />
+			<java fork="yes" classname="edu.umb.cs.game.TestSticks" failonerror="true">
+				<classpath refid="project.classpath" />
+			</java>
+		</target>
+	<target name="javadoc">
+		<javadoc destdir="docs/api" author="true" version="true" windowtitle="CS310 Games Project">
+
+			<fileset dir="src" defaultexcludes="yes">
+				<include name="cs310/**.java" />
+				<include name="edu/umb/cs/*/**.java" />
+			</fileset>
+
+			<doctitle>
+				<![CDATA[CS310 Games Project]]>
+			</doctitle>
+			<bottom>
+				<![CDATA[<i>CS310 Games Project</i>]]></bottom>
+		<link offline="true" href="http://java.sun.com/javase/6/docs/api/" packagelistLoc="." />
+	</javadoc>
+</target>
+</project>

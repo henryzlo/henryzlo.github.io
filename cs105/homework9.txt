@@ -1,0 +1,20 @@
+CS105 Homework 9
+
+Instructions: Please print or write your answers LEGIBLY, and turn in a hard copy of the assignment in class.
+
+1. Artificial Intelligence:
+
+  a. Imagine a 2x2 tic tac toe game.  The first player X, has marked the top left square.  Draw the game tree starting from this state.  You should end up with 10 states in total.
+  b. Draw a decision tree for some real life decision.
+  c. What is the Turing test?
+  d. Draw a Bayesian network for some real life variables which depend on one another.
+  e. What are the four approaches to defining intelligence?
+
+2. Machine Learning:
+
+  a. Describe a task (not used in notes or class) which can be modeled as a classification problem.  What are the inputs, and what are the classes?
+  b. Describe a task that can be modeled as a regression problem.
+  c. Describe a task that can be modeled as a clustering problem.
+  d. What does the "deep" in deep learning refer to?\
+  e. Suppose I want to detect stop signs for my robotic car.  How is this a classification problem?  What are the classes?
+

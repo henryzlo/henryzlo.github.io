@@ -1,0 +1,181 @@
+<h1>Artificial Intelligence</h1>
+
+Artificial intelligence is an ancient goal (yet it always seems novel) to construct human-level intelligence.
+
+<h2>Can Computers Think?</h2>
+<ul>
+  <li>
+    If we can specify any procedure in enough detail, then we can program it.
+    <ul>
+      <li>This is the Church-Turing thesis.</li>
+      <li>If we consider intelligence to be a procedure, then the thesis says that yes, computers can think.</li>
+      <li>Are there limitations to using code?  Yes, but they are very theoretical.  Mostly everything can be programmed.</li>
+    </ul>
+  </li>
+  <li>
+    The problem is how to define intelligence.
+    <ul>
+      <li>We discuss various ways of posing the problem of intelligence, and respective solutions.</li>
+      <li>These different formulations have led to very different methods of simulating intelligence.</li>
+      <li>Therefore AI has become a fairly fragmented field (maybe intelligence itself is a lot of things, rather than one concept).</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Turing Test</h2>
+<ul>
+  <li>The idea: It's intelligent enough if it can fool someone into thinking it is.</li>
+  <li>
+    Alan Turing, famous computer scientist, proposed the Turing test to determine whether a program is intelligent or not.
+    <ul>
+      <li>The test is this: put a person in a room with a door.  This person interacts with something behind the door using a keyboard.</li>
+      <li>If a computer behind the door can fool the person into thinking it is in fact human, then the computer has passed the Turing test.</li>
+        <img src="http://t3.gstatic.com/images?q=tbn:ANd9GcQbJ1wYAHx-Z4sXW4faAd83RBzOGV3CMT-W1_F_gtWtw51K-pFl" />
+    </ul>
+  </li>
+  <li>
+    This has led to the development of chatting programs, which were designed to fool humans.
+    <ul>
+      <li>Examples: Chatterbot, Cleverbot, Siri (kind of).</li>
+      <li>Modern programs are very good, able to fool people for at least for a few minutes.</li>
+      <li>Most do not actually learn - use tricks such as asking questions, using common answers.</li>
+      <li>Some applications: customer service.</li>
+      <li>Otherwise not that useful.</li>
+    </ul>    
+  </li>
+</ul>
+
+<h2>Machine Learning</h2>
+<ul>
+  <li>The idea: intelligence learns.</li>
+  <li>
+    The field of machine learning studies different methods to solve common problems.
+    <ul>
+      <li>Common problem: given some data, and some labels for this data, apply the correct labels to future data.</li>
+      <li>For example, show a program a bunch of pictures, and tell it which ones are faces and not.</li>
+      <li>It should be able to tell if future images are faces by itself.</li>
+      <li>This is called classification; other problems will be discussed next time.</li>
+    </ul>
+  </li>
+  <li>
+    Many different models exist, with different concepts of "intelligence".
+    <ul>
+      <li>Statistical methods are very popular: easy for mathematicians to understand and use, but whether it is truly "intelligent" is debatable.</li>
+      <li>Margin-based methods also work very well; they try to separate data of different labels, and put data in similar labels together.</li>
+      <li>Neural network methods try to emulate how brains work; brains store knowledge in connections, and neural nets do the same.</li>
+      <li>Decision trees conceptually are similar to how people make decisions (sometimes).</li>
+    </ul>
+  </li>
+  <li>
+    Machine learning is the most useful and active field in AI research.
+    <ul>
+      <li>Studied methods are very general, and can be applied to many problems.</li>
+      <li>Recent successes: computer vision, speech recognition, stock market prediction, e-Harmony, etc.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Decision Making</h2>
+<ul>
+  <li>
+    The idea: intelligence is making rational decisions given some input.
+  </li>
+  <li>
+    In the right environment, computers can be much better than humans in making decisions.
+  </li>
+  <li>
+    For example, game playing (some games).
+    <ul>
+      <li>Games can be represented in game states.
+	<ul>
+	  <li>In the beginning, the state of the game is that there are no marks on the board.</li>
+	  <li>The end states (there are multiple) consist of three marks of the same kind in a row, or all nine marks on the board.</li>
+	  <li>At the beginning, there is one possible state.</li>
+	  <li>We then progress to one of many states, and continue until we get to an end state.</li>
+	</ul>
+      </li>
+      <li>Game states can be connected in a tree.
+	<ul>
+	  <li>The root is the beginning of the game.</li>
+	  <li>The leaves of the tree are the end of the game.</li>
+	  <li>A single game is represented as a path from the root to a leaf.</li>
+	  <li>The game of tic-tac-toe can be represented in a tree.</li>
+	</ul>
+      </li>
+      <li>Example (ignore the numbers): <br>
+	<img src="http://www.ocf.berkeley.edu/~yosenl/extras/alphabeta/alphabeta.jpg">
+      </li>
+      <li>
+	Given this game tree, a simple algorithm can be used to make the best decisions.
+      </li>
+    </ul>
+  </li>
+  <li>
+    Programs can also prove mathematical theorems, something very difficult for humans to do.
+    <ul>
+      <li>In math (e.g. geometry), we have a very limited set of basic rules called axioms.</li>
+      <li>All theorems are derived from the axioms.</li>
+      <li>In this limited environment, automated theorem provers can easily come up and prove new mathematical theorems.</li>
+    </ul>
+  </li>
+  <li>
+    Programs can also deal with some uncertain situations well, e.g. playing cards.
+    <ul>
+      <li>We can know the probabilities associated with different cards and outcomes.</li>
+      <li>Programs can use this to make optimal decisions.</li>
+    </ul>
+  </li>
+  <li>
+    In general, programs can make optimal decisions, but only under very restricted conditions.
+    <ul>
+      <li>Knowledge of outcomes (e.g. chess, checkers) helps.</li>
+      <li>Programs cannot deal with unmeasurable uncertainty; for example, the millions of different things that can happen in every day life.</li>
+      <li>In our environment, outcomes are uncertain, rules are not well-specified, and there are many unknowable variables; current algorithms can't make good decisions in these environments.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Knowledge Representation</h2>
+<ul>
+  <li>Idea: intelligence is being able to remember, recall, and connect pieces of information.</li>
+  <li>Example: Game trees store knowledge about a game, and can be used to make intelligent decisions.</li>
+  <li>Example: Graphs can be used to represent states in general, and this can be used to solve certain problems.
+    <ul>
+      <li>Nodes can represent concepts, relationships between concepts can be represented as edges (concept map). 
+	<img src="http://cmap.ihmc.us/publications/researchpapers/theorycmaps/Fig16ExploringMars-large.png"/>
+      </li>
+      <li>Another example: songs are nodes, songs played next by people are edges.</li>
+      <li>Using this, a program can solve problems by searching - e.g. What songs are related to one another?  What playlist might you like?.</li>
+    </ul>
+  </li>
+  <li>Another graphical example: Bayesian networks, which model causal relationships.
+    <ul>
+      <li>Nodes represent causes, and an edge between nodes indicate potential causal effect.<br/>
+        <img src="http://ai.ato.ms/MITECS/Images/pearl1.gif"/>
+      </li>
+      <li>In this example, the season may influence rain, and whether or not we use sprinklers.</li>
+      <li>Both rain and sprinklers can cause the ground to get wet.</li>
+      <li>Wetness can subsequently cause the ground to be slippery.</li>
+    </ul>
+  </li>
+  <li>Example: decision trees.<br>
+    <img src="http://media.tumblr.com/tumblr_l5hzli0czl1qznyy8.png"/>
+  </li>
+  <li>Decision trees can be built for expert systems, which are computerized decision making machines.
+    <ul>
+      <li>For example, programs which automatically diagnose based on user input can use decision trees.</li>
+      <li>Another example, automated telephone systems are a form of expert system.</li>
+      <li>These types of systems are not very flexible because they can only handle what they have been scripted for.</li>
+      <li>However, by essentially not thinking, these types of systems are very fast.</li>
+    </ul>
+  </li>
+  <li>Knowledge representation based approaches usually require a knowledge base.
+    <ul>
+      <li>Sometimes, this is just enough knowledge for the task at hand; some try to instill a "commmon sense" knowledge base.</li>
+      <li>This can be learned, or taught by people.</li>
+      <li>Problem with learning: computers do not have the same drives / motivations / experience as humans; may learn very different concepts.</li>
+    </ul>
+  </li>
+</ul>
+</body>
+</html>

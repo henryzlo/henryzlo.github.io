@@ -1,0 +1,22 @@
+CS105 Homework 5
+
+Instructions: Please print or write your answers LEGIBLY, and turn in a hard copy of the assignment in class.
+
+1. Ports and packets:
+
+  a. What's a port?
+  b. What's a packet?
+  c. Explain in your own words what is meant by a "layer", and how it is represented in a packet.
+
+2. LAN:
+
+  a. What's a MAC address?
+  b. How does a switch translate IPs to MAC addresses, and vice versa?
+  c. Explain in your own words ARP spoofing, and what you can potentially use it to do.
+
+3. IP, TCP, and UDP:
+
+  a. What's an IP?
+  b. What are two difficulties of maintaining a reliable connection?
+  c. Explain the difference between UDP and TCP.
+  d. List all the layers discussed in the notes, in the order of outermost to innermost.

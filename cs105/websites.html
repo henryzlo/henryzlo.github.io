@@ -1,0 +1,100 @@
+<h1>Websites</h1>
+
+We discuss how websites work.
+
+<h2>Web Page</h2>
+<ul>
+  <li>Web pages contain multiple pieces of information, which are put together by a web browser.
+    <ul>
+      <li>Pieces include HTML, CSS, images, javascript, etc.</li>
+      <li>The act of putting together a web page for presentation is called rendering.</li>
+      <li>As mentioned, this may involve multiple HTTP requests.</li>
+      <li>The main pieces of a web page, from http://www.tedroche.com/Present/2010/css/HTML-CSS-JS-Layers-half.png:<br/>
+	<img src="http://www.tedroche.com/Present/2010/css/HTML-CSS-JS-Layers-half.png"/>
+      </li>
+    </ul>
+  </li>
+  <li>HTML (hypertext markup language) controls the elements and content of a web page.
+    <ul>
+      <li>All text, links, including links to the images displayed on a web page, are in the HTML.</li>
+      <li>HTML is a markup language, not a programming language.</li>
+      <li>It's for describing what is shown, not writing programs.</li>
+      <li>HTML consists of tags, which can be nested within each other.</li>
+      <li>Each tag describes an element of the web page.</li>
+      <li>Example HTML, from http://upload.wikimedia.org/wikipedia/commons/8/84/HTML.svg:<br/>
+	<img src="http://upload.wikimedia.org/wikipedia/commons/8/84/HTML.svg"/>
+      </li>
+      <li>This web page is an example of raw HTML - its not pretty.</li>
+    </ul>
+  </li>
+  <li>CSS (cascading stylesheets) controls how things look on a web page.
+    <ul>
+      <li>For example, background colors, font sizes, colors, borders, etc.</li>
+      <li>Almost all purely stylistic and visual elements are due to CSS.</li>
+      <li>CSS is a set of descriptors, not a programming language.</li>
+      <li>Example CSS, from http://en.support.files.wordpress.com/2011/09/css-selectors-lrg.png<br/>
+	<img src="http://en.support.files.wordpress.com/2011/09/css-selectors-lrg.png"/>
+      </li>
+      <li>Style specifications used to be part of HTML, but this makes reading HTML very difficult so it is separated into style sheets.</li>
+    </ul>  
+  </li>
+  <li>Javascript controls advanced behaviors of a web page.
+    <ul>
+      <li>Anything from animations, instant chat, google maps, is all due to Javascript.</li>
+      <li>Javascript is a programming language.</li>
+      <li>Much of javascript is used to manipulate the web page.</li>
+      <li>The web page is represented as a tree called the DOM (document object model).</li>
+    </ul>  
+  </li>
+</ul>
+
+<h2>Web Applications</h2>
+<ul>
+  <li>Static web sites serve up web pages directly from the file system.
+    <ul>
+      <li>This is an example of a static site.</li>
+      <li>The HTML on this page is saved as a file on the server, and the server presents this to the client.</li>
+    </ul>  
+  </li>
+  <li>Dynamic web sites create parts of the web site on demand from the client request.
+    <ul>
+      <li>Almost all complex web sites are dynamic.</li>
+      <li>For example, Facebook information differs depending on who's logged in.</li>
+      <li>Thus, Facebook creates web pages dynamically, based on who's logged in, among other things.</li>
+    </ul>  
+  </li>
+  <li>Dynamic web sites create parts of the web page using essentially a program.
+    <ul>
+      <li>Programming languages such as PHP or Python are used to code advanced behaviors of the web server.</li>
+      <li>These programs are run every time the request for the page is given.</li>
+      <li>The output of the program is an HTML web page.</li>
+      <li>Thus, HTML is generated on the fly, rather than merely retrieved.</li>
+      <li>Examples: your friends list cannot be saved as HTML because it changes all the time.</li>
+      <li>This information has to be updated every time.</li>
+      <li>The code on this page retrieves your user login information (session info) and generates your friends list based on this.</li>
+    </ul>
+  </li>
+  <li>Dynamic web sites often store and retrieve information.
+    <ul>
+      <li>This information could be, for example, items on an online store.</li>
+      <li>Each item could have a description, pictures, reviews, etc.</li>
+      <li>This is complicated, yet structured, information.</li>
+      <li>This is stored in one or multiple databases.</li>
+      <li>The web application programs retrieve and store information on these databases as necessary.</li>
+      <li>Example: every time you go to an online store, the program to generate the page runs.</li>
+      <li>This program will need to look in the database for the current items to display.</li>
+    </ul>
+  </li>
+  <li>Web application architecture diagram, from http://www.agileload.com/images/image/web-client-server-db283134E9F23C.gif?sfvrsn=2<br/>
+    <img src="http://www.agileload.com/images/image/web-client-server-db283134E9F23C.gif?sfvrsn=2"/>
+  </li>
+  <li>Web servers handle the requests from clients and sends responses.
+    <ul>
+      <li>Web servers run continuously, listening for requests.</li>
+      <li>On receiving a connection, web servers parse this information to learn what clients want.</li>
+      <li>Web servers run the web application (program).</li>
+      <li>Web servers retrieve static files (for static web sites, or saved images, etc.) as necessary.</li>
+      <li>Web servers also manage system load, security, and other things for web sites.</li>
+    </ul>
+  </li>
+</ul>

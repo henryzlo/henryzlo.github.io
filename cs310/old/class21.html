@@ -1,0 +1,2215 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 12">
+<meta name=Originator content="Microsoft Word 12">
+<link rel=File-List href="class23_files/filelist.xml">
+<title>Class 21 Topological Sort, DFS, BFS </title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Elizabeth O'Neil</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Betty O'Neil</o:LastAuthor>
+  <o:Revision>24</o:Revision>
+  <o:TotalTime>2790</o:TotalTime>
+  <o:LastPrinted>2012-04-19T15:39:00Z</o:LastPrinted>
+  <o:Created>2009-04-20T16:37:00Z</o:Created>
+  <o:LastSaved>2012-04-20T14:50:00Z</o:LastSaved>
+  <o:Pages>3</o:Pages>
+  <o:Words>1530</o:Words>
+  <o:Characters>8726</o:Characters>
+  <o:Company>University of Massachusetts, Boston</o:Company>
+  <o:Lines>72</o:Lines>
+  <o:Paragraphs>20</o:Paragraphs>
+  <o:CharactersWithSpaces>10236</o:CharactersWithSpaces>
+  <o:Version>12.00</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<link rel=themeData href="class23_files/themedata.thmx">
+<link rel=colorSchemeMapping href="class23_files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1107305727 0 0 415 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+h2
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 2 Char";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	font-style:italic;}
+a:link, span.MsoHyperlink
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 2";
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:"Arial","sans-serif";
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:JA;
+	mso-bidi-language:AR-SA;
+	font-weight:bold;
+	font-style:italic;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="10242"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Class <span
+class=GramE>21<span style='mso-spacerun:yes'>  </span>Topological</span> Sort,
+DFS<span style='mso-spacerun:yes'>   </span>Acyclic <span class=SpellE>Directed Graphs</span>,
+or DAGs: Weiss Sec. 14.5<o:p></o:p></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Reading in Weiss:
+Chap 14 to pg. 531 where he starts talking about his Graph class—we are using
+another Graph implementation.<o:p></o:p></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Then skip to Sec.
+14.5, <span class=GramE>Acyclic</span> graphs through Fig. 14.31 for this class<o:p></o:p></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Next time: Sec. 14.2 <span
+class=SpellE>Unweighted</span> Single-source shortest path algorithm<o:p></o:p></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>A cycle in a digraph is simply a path that returns to its starting
+vertex, defined a little after Fig. 14.1.<span style='mso-spacerun:yes'> 
+</span>An acyclic digraph is also called a DAG, short for directed acyclic
+graph. These graphs show up in lots of apps.<span style='mso-spacerun:yes'> 
+</span>For example, the graph of course prerequisites </p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>CS110 -&gt; CS210
+-&gt; CS310<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span>-&gt; CS240 -&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE>is</span> a DAG.<span
+style='mso-spacerun:yes'>  </span>A cycle in <span class=SpellE>prereq’s</span>
+would be ridiculous.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Another way of thinking of a DAG is as a partial order.<span
+style='mso-spacerun:yes'>  </span>Not all element pairs have an order, but some
+do, and the ones that do must be consistent.<span style='mso-spacerun:yes'> 
+</span>So CS110 &lt; CS210 &lt; CS310, and so CS110 &lt; CS310, but CS210 and
+CS240 have no order between them.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Suppose a student took only one course per term in CS.<span
+style='mso-spacerun:yes'>  </span>Then they would be finding a sequence that
+satisfies the partial order requirements, for example CS110, CS210, CS240, <span
+class=GramE>CS310</span>.<span style='mso-spacerun:yes'>   </span>Another
+possible sequence is CS110, CS240, CS210, <span class=GramE>CS310</span>.<span
+style='mso-spacerun:yes'>  </span>One of these fully ordered sequences that
+satisfy a partial order or DAG is called a <b style='mso-bidi-font-weight:normal'>topological
+sort</b> of the DAG.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>In Section 14.5.1, Weiss presents a nice non-recursive
+algorithm for finding a topological sort of a DAG, and on the way, checking
+that it really is a DAG, or, instead, has a cycle.<span
+style='mso-spacerun:yes'>  </span>The first step of this algorithm is to
+determine the in-degree of all vertices in the graph.<span
+style='mso-spacerun:yes'>  </span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The <b style='mso-bidi-font-weight:normal'>in-degree</b> of
+a vertex is the number of edges in the graph with this vertex as the to-vertex.
+</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Once we have all the in-degree numbers for the vertices, we
+look for a vertex with in-degree 0.<span style='mso-spacerun:yes'>  </span>It
+has no incoming edges, and so can be the vertex at the start of a topological
+sort, like CS110.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>How can we be sure there is a vertex with in-degree 0??<span
+style='mso-spacerun:yes'>  </span>Because if there wasn’t, then we could start
+a path from anywhere, extend backwards along some in-edge from another vertex
+and from there to another, etc. Eventually we would have to start repeating
+vertices.<span style='mso-spacerun:yes'>  </span>For example, if we have
+managed to avoid repeating vertices and have visited all the vertices, then the
+last vertex still has an in-edge not yet used, and it goes to another vertex,
+completing a cycle.<span style='mso-spacerun:yes'>  </span>Thus the lack of an
+in-degree-0 vertex is a sure sign of a cycle.<span style='mso-spacerun:yes'> 
+</span>The DAG shouldn’t have any cycles, of course.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>OK, we have the very first vertex, but what about the
+rest?<span style='mso-spacerun:yes'>  </span>Think recursively!</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>We remove the first vertex from the graph and find the new
+first vertex for the rest, and so on.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>But wait, our graph is disappearing.<span
+style='mso-spacerun:yes'>  </span>Let’s be kinder to the graph.<span
+style='mso-spacerun:yes'>  </span>What we can do is remove the in-degree counts
+for the edge, not the edge itself, and have the same effect.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Consider the graph of Figure 14.30.<span
+style='mso-spacerun:yes'>  </span>It has 6 vertices arranged in a hexagon, plus
+one more in the center.<span style='mso-spacerun:yes'>  </span>The vertices
+each have a number: V0, V1<span class=GramE>, ....</span><span
+style='mso-spacerun:yes'>  </span>We can use an array of in-degree values that
+changes over time as follows:</p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><span style='font-family:
+"Courier New"'>indegree</span></span></span><span style='font-family:"Courier New"'>
+counts during topological sort algorithm, for Fig. 14.30<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>V0<span
+style='mso-spacerun:yes'>   </span>V1<span style='mso-spacerun:yes'>  
+</span>V2<span style='mso-spacerun:yes'>   </span>V3<span
+style='mso-spacerun:yes'>   </span>V4<span style='mso-spacerun:yes'>  
+</span>V5<span style='mso-spacerun:yes'>   </span><span class=GramE>V6<span
+style='mso-spacerun:yes'>  </span>out</span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>1<span
+style='mso-spacerun:yes'>    </span><span class=SpellE>1</span><span
+style='mso-spacerun:yes'>    </span>0<span style='mso-spacerun:yes'>   
+</span>3<span style='mso-spacerun:yes'>    </span>2<span
+style='mso-spacerun:yes'>    </span>3<span style='mso-spacerun:yes'>   
+</span>2<span style='mso-spacerun:yes'>    </span><span class=GramE>V2<span
+style='mso-spacerun:yes'>  </span>&lt;</span>--original in-degrees<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>0<span
+style='mso-spacerun:yes'>    </span>1<span style='mso-spacerun:yes'>   
+</span>0<span style='mso-spacerun:yes'>    </span>2<span
+style='mso-spacerun:yes'>    </span><span class=SpellE>2</span><span
+style='mso-spacerun:yes'>    </span><span class=SpellE>2</span><span
+style='mso-spacerun:yes'>    </span><span class=SpellE>2</span><span
+style='mso-spacerun:yes'>    </span><span class=GramE>V0<span
+style='mso-spacerun:yes'>  </span>&lt;</span>--deduct V2’s contributions<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>0<span
+style='mso-spacerun:yes'>    </span><span class=SpellE>0</span><span
+style='mso-spacerun:yes'>    </span><span class=SpellE>0</span><span
+style='mso-spacerun:yes'>    </span>1<span style='mso-spacerun:yes'>   
+</span>2<span style='mso-spacerun:yes'>    </span><span class=SpellE>2</span><span
+style='mso-spacerun:yes'>    </span><span class=SpellE>2</span><span
+style='mso-spacerun:yes'>    </span>V1<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>0<span
+style='mso-spacerun:yes'>    </span><span class=SpellE>0</span><span
+style='mso-spacerun:yes'>    </span><span class=SpellE>0</span><span
+style='mso-spacerun:yes'>    </span><span class=SpellE>0</span><span
+style='mso-spacerun:yes'>    </span>1<span style='mso-spacerun:yes'>   
+</span>2<span style='mso-spacerun:yes'>    </span><span class=SpellE>2</span><span
+style='mso-spacerun:yes'>    </span>V3<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>0<span
+style='mso-spacerun:yes'>    </span><span class=SpellE>0</span><span
+style='mso-spacerun:yes'>    </span><span class=SpellE>0</span><span
+style='mso-spacerun:yes'>    </span><span class=SpellE>0</span><span
+style='mso-spacerun:yes'>    </span><span class=SpellE>0</span><span
+style='mso-spacerun:yes'>    </span>1<span style='mso-spacerun:yes'>    </span><span
+class=SpellE>1</span><span style='mso-spacerun:yes'>    </span>V4<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>0<span
+style='mso-spacerun:yes'>    </span><span class=SpellE>0</span><span
+style='mso-spacerun:yes'>    </span><span class=SpellE>0</span><span
+style='mso-spacerun:yes'>    </span><span class=SpellE>0</span><span
+style='mso-spacerun:yes'>    </span><span class=SpellE>0</span><span
+style='mso-spacerun:yes'>    </span>1<span style='mso-spacerun:yes'>   
+</span>0<span style='mso-spacerun:yes'>    </span>V6<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>0<span
+style='mso-spacerun:yes'>    </span><span class=SpellE>0</span><span
+style='mso-spacerun:yes'>    </span><span class=SpellE>0</span><span
+style='mso-spacerun:yes'>   </span><span style='mso-spacerun:yes'> </span><span
+class=SpellE>0</span><span style='mso-spacerun:yes'>    </span><span
+class=SpellE>0</span><span style='mso-spacerun:yes'>    </span><span
+class=SpellE>0</span><span style='mso-spacerun:yes'>    </span><span
+class=SpellE>0</span><span style='mso-spacerun:yes'>    </span>V5<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><span
+style='mso-spacerun:yes'>                                    </span>^<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><span
+style='mso-spacerun:yes'>                                     </span><span
+class=GramE>topological</span> sort order of vertices<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal>Redraw graph with vertices in topological sort order.<span
+style='mso-spacerun:yes'>  </span>See how it’s been “combed” out to show the
+partial order better.<span style='mso-spacerun:yes'>  </span>Actually it’s hard
+to see that the original graph is acyclic.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=GramE><b style='mso-bidi-font-weight:normal'>Calculating
+in-degrees for all vertices (first step of topological sort algorithm) as a
+Graph app example.</b></span><b style='mso-bidi-font-weight:normal'><o:p></o:p></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>First of all, how can we deliver these results to the
+caller?<span style='mso-spacerun:yes'>  </span>We know each vertex has V-value
+to identify it.<span style='mso-spacerun:yes'>  </span>So for each V value, we
+have a count of in-edges, an integer.<span style='mso-spacerun:yes'>  </span>A
+Map of V to Integer will do the trick.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>With <span class=SpellE>JGraphT</span>, all we really have
+to do is use the type <span class=SpellE>DirectedGraph</span>, and bingo, it
+has an <span class=SpellE><span class=GramE>inDegreeOf</span></span><span
+class=GramE>(</span>V) method to give these numbers. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='text-indent:.3in'><span class=SpellE><b
+style='mso-bidi-font-weight:normal'>Pseudocode</b></span><b style='mso-bidi-font-weight:
+normal'> for Topological Sort by in-degrees, assuming graph is a DAG<o:p></o:p></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:.3in'><span style='font-family:"Courier New"'>Calculate
+in-degrees for vertices and put them in a Map m from vertex to Integer.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.3in'><span style='font-family:"Courier New"'>Create
+a queue q and <span class=SpellE>enqueue</span> all vertices of in-degree 0.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.3in'><span style='font-family:"Courier New"'>Create
+an empty list t for top-sorted vertices.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.3in'><span style='font-family:"Courier New"'>Loop
+while q is not empty<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.3in'><span style='font-family:"Courier New"'><span
+style='mso-tab-count:1'>  </span><span class=SpellE>Dequeue</span> from q a
+vertex v and append it to list t<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.3in'><span style='font-family:"Courier New"'><span
+style='mso-tab-count:1'>  </span>Loop over vertices w adjacent to v<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.3in'><span style='font-family:"Courier New"'><span
+style='mso-tab-count:2'>        </span>Decrement <span class=SpellE>w’s</span> <span
+class=SpellE>indegree</span> (i.e. decrement value in Map m)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.3in'><span style='font-family:"Courier New"'><span
+style='mso-tab-count:2'>        </span>If <span class=SpellE>w’s</span> <span
+class=SpellE>indegree</span> is 0, <span class=SpellE>enqueue</span> w in q<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.3in'><span style='font-family:"Courier New"'>Return
+top-sorted list t<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal>That’s pretty straightforward, and is one way to do the
+topological sort problem on pa5.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>What happen is there is a cycle?<span
+style='mso-spacerun:yes'>  </span>Does this go into an infinite loop, or
+what?<span style='mso-spacerun:yes'>  </span>The presence of a loop means
+in-degree contributions of one for all members of the cycle, so the cycle
+protects the whole group from being put on the queue.<span
+style='mso-spacerun:yes'>  </span>For example, consider A -&gt; B -&gt; C -&gt;
+A and see in-degree = 1 for all vertices.<span style='mso-spacerun:yes'> 
+</span>Each pass of the loop <span class=SpellE><span class=GramE>dequeues</span></span>
+an element from the queue, so all that can happen is that the queue goes empty
+with the cycle members still un-<span class=SpellE>enqueued</span>.<span
+style='mso-spacerun:yes'>  </span>Thus a counting trick will be sufficient to
+add cycle-detection to this algorithm: simply test if the size of t, the
+delivered list, is less than the number of vertices in the graph.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Cycle detection is sometimes all we want.<span
+style='mso-spacerun:yes'>  </span>This algorithm is <span class=GramE>O(</span>|E|),
+which is as good as it can be, so this is a good cycle-detection
+algorithm.<span style='mso-spacerun:yes'>  </span>Just drop the list of
+top-sorted vertices if you don’t want the <span class=SpellE>topsorted</span>
+result.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Weiss has related code in Fig. 14.32, method “acyclic” of
+his Graph class, using direct access to private data of his Graph class.<span
+style='mso-spacerun:yes'>  </span>Note that our algorithm is a client of our
+(more powerful) Graph class.<span style='mso-spacerun:yes'>  </span>We don’t
+need access to private data of Graph to loop through vertices or loop through
+vertices adjacent to a given vertex.<span style='mso-spacerun:yes'>  </span>His
+code doesn’t need the Map to hold in-degrees, because he has put an extra field
+in his vertex class called “scratch” for extra numbers for various algorithms.<span
+style='mso-spacerun:yes'>  </span>However, this is not clean programming. Our
+use of Map from V to Integer is fast and appropriate.<span
+style='mso-spacerun:yes'>  </span>It allows us to associate more information
+with a vertex whenever we need to.<span style='mso-spacerun:yes'>  </span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=Heading2Char><span style='font-size:14.0pt'>Graph
+<span class=GramE>Traversals <span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-language:EN-US;mso-bidi-font-weight:normal;font-style:normal'><span
+style='mso-spacerun:yes'> </span>(</span></span></span></span><b
+style='mso-bidi-font-weight:normal'>not in Weiss, but should be)<o:p></o:p></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Recall tree traversals from CS210.<span
+style='mso-spacerun:yes'>  </span>For a quick review, look at Fig. 18.23.<span
+style='mso-spacerun:yes'>  </span>In the preorder traversal, we start at the
+root, and plunge down the <span class=SpellE>leftmost</span> side, then back
+and down the next child of root, down, down, back up, back up, next child,
+down, down, back up 3x, no more children of root, done.<span
+style='mso-spacerun:yes'>  </span>You should also know the <span class=SpellE>postorder</span>
+and <span class=SpellE>inorder</span>, but the preorder is the most important
+and the one that generalizes to “depth first search” of a digraph.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>DFS—depth first
+search<o:p></o:p></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal>DFS can be done for an undirected graph as well as a
+directed graph, but we are most interested in the directed case for pa5.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>DFS of Figure 14.30, starting from V0, etc. where we use the
+lower numbered adjacent vertex first. (We need some way of deciding which edge
+to visit first.<span style='mso-spacerun:yes'>  </span>In implementations, we
+simply follow the order of elements on the adjacency list or edge-set <span
+class=SpellE>iterator</span> for the vertex.)</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>See how we can follow out-edges down and down:</p>
+
+<p class=MsoNormal>V0 -&gt; V1 -&gt; V3 -&gt; V4 -&gt; V6 -&gt; V5</p>
+
+<p class=MsoNormal>We’re finally stuck with no place to go at V5.<span
+style='mso-spacerun:yes'>  </span>We can backtrack back to V6, back to V4, back
+to V3, see another adjacent vertex, V6, but already visited, back to V1, see
+another <span class=SpellE>adj</span> vertex, V4, but already visited, back to
+V0, see another <span class=SpellE>adj</span> vertex, V3, but already visited,
+done.</p>
+
+<p class=MsoNormal>We see one unvisited vertex left in the graph, V2, so start
+again: V2, all adjacent vertices already visited, done.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Final DFS visitation order: V0, V1, V3, V4, V6, V5, V2</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>DFS can be used to find a topological sort, but clearly not
+directly from the DFS visitation order, since V0 -&gt; V5 is OK for forwards
+top-sort order but V2-&gt;V5 is backwards.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The trick is to “output vertices on the way back”, that is,
+after the visitation of the outbound edges. This first outputs V5, then back to
+V6, output V6, back to V4, output V4, back to V3, output V3, back to V1, output
+V1, back to V0, output V0. Start another tree: Output V2.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Got output of: V5, V6, V4, V3, V1, V0, <span class=GramE>V2</span>:
+backwards top-sort order!</p>
+
+<p class=MsoNormal>Resulting top sort order: V2, V0, V1, V3, V4, V6, V5. <span
+class=GramE>Same as before (although this is not required of course, since
+there can be multiple different topological sort orders for a graph).</span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-top:12.0pt'><span class=SpellE>Pseudocode</span>
+for DFS.java:</p>
+
+<p class=MsoNormal style='margin-top:12.0pt'><span class=GramE>top-level</span>
+code:</p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>   </span>Set up Set of “unvisited” vertices,
+initially containing all the vertices.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>   </span><span class=GramE>for</span> each vertex v<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>       </span><span class=GramE>notify</span> DFS tree
+is starting (send null vertex with notification)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>       </span><span class=GramE>if</span> (v is in
+unvisited)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:9.0pt;
+font-family:"Courier New"'><span style='mso-spacerun:yes'>   </span><span
+class=SpellE><span class=GramE>dfs</span></span><span class=GramE>(</span>v)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><o:p>&nbsp;</o:p></p>
+
+<span style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA'><br clear=all style='mso-special-character:line-break;
+page-break-before:always'>
+</span>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE>dfs</span></span>
+itself (“traverse” in DFS.java)<br style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>   </span><span class=SpellE><span class=GramE>dfs</span></span><span
+class=GramE>(</span>vertex v)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span><span class=GramE>notify</span> DFS
+visitation of v (send v with notification)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span><span class=GramE>remove</span> v from
+unvisited set<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span><span class=GramE>for</span> each vertex
+n adjacent to v<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>         </span><span class=GramE>if</span> (n is in
+unvisited)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>            </span><span class=SpellE><span
+class=GramE>dfs</span></span><span class=GramE>(</span>n)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>     </span>// instead, notify here for top sort,
+*after* the recursive calls<o:p></o:p></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-top:12.0pt'>For those who want to use this
+idea for pa5: look at the provided DFS.java, and add a bit of code “on the way
+back” to notify in reverse top-sort order, as shown in the <span class=SpellE>pseudocode</span>
+below.</p>
+
+<p class=MsoNormal style='margin-top:12.0pt'>DFS.java: Using
+Observer-Observable, DFS (as an Observable) notifies visits of vertices. So an
+Observer can receive the notifications and output the vertices in DFS
+visitation order. Works for both directed and undirected graphs and uses <span
+class=SpellE>instanceof</span> in the one place it needs to know which the
+graph is.</p>
+
+<p class=MsoNormal style='margin-top:12.0pt'>Do we need to use Observer-Observable
+here? </p>
+
+<p class=MsoNormal style='margin-top:12.0pt'>No. We could simply output nodes
+to the user at the points in DFS.java that we now are doing notifications.</p>
+
+<p class=MsoNormal style='margin-top:12.0pt'>Why use Observer-Observable here
+then?</p>
+
+<p class=MsoNormal style='margin-top:12.0pt'>It makes the DFS code reusable for
+more different apps. One app wants the nodes printed out, the other wants them
+displayed in a GUI. No problem. Instead of editing DFS.java to do one output
+format for one and another for another, DFS just does <span class=GramE>notifications,</span>
+and the two apps receive the notifications and do the output however they
+want.<span style='mso-spacerun:yes'>  </span>In fact, the two apps are
+cs310.DFSTest.java (simple output) and cs310.DFSDemo.java (GUI output).</p>
+
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body><p class=MsoNormal>Java:<span style='mso-spacerun:yes'>  </span>see DFS.java on
+handout.<span style='mso-spacerun:yes'>  </span>This is generic &lt;V,E&gt;
+code, and uses Observable-to-Observer notifications.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>End of handout: how to get the visualization support up and
+running:</p>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-.25in;mso-list:l2 level1 lfo2'><![if !supportLists]><span
+style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Create a VGraphWindow from g, your JGraphT graph. This
+sets up the Swing window and the adapter support from JGraph</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in;mso-list:l2 level1 lfo2'><![if !supportLists]><span
+style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Get the VisualGraph from the VGraphWindow—it’s the
+object with the API to change the graph (vertex positions and colors)</p>
+
+<p class=MsoListParagraphCxSpLast style='text-indent:-.25in;mso-list:l2 level1 lfo2'><![if !supportLists]><span
+style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Use the API to change positions, colors for your graph</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>For a simpler graph, consider</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>    </span>A<span
+style='mso-spacerun:yes'>     </span>D</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>   </span>/<span
+style='mso-spacerun:yes'>  </span>\<span style='mso-spacerun:yes'>   </span>/</p>
+
+<p class=MsoNormal>B<span style='mso-spacerun:yes'>   </span>C<span
+style='mso-spacerun:yes'>  </span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>where all the edges point downward. The DFS starting from A
+visits A, then B, then backtracks and visits C, backtracks back to A and is
+done for one tree.<span style='mso-spacerun:yes'>  </span>It starts over on D,
+but finds no unvisited vertices, so D is alone as the second tree. So the DFS
+visitation order is A, B, C, D.</p>
+
+<p class=MsoNormal>DFSTest input would be</p>
+
+<p class=MsoNormal>A B 0</p>
+
+<p class=MsoNormal>A C 0</p>
+
+<p class=MsoNormal>DC 0</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>DFSTest directed graph output would be: A B C | D</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Showing recursion by indentation:</p>
+
+<p class=MsoNormal>Visit A</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>Visit B</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>Visit C</p>
+
+<p class=MsoNormal>---</p>
+
+<p class=MsoNormal>Visit D</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>We can do dfs on an undirected graph too. In the above
+example, it works the same until C is visited. Then the dfs can go on to D, so
+we end up with only one tree in this case.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>So DFSTest undirected grap output would be: A B C D</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Top Sort by DFS<o:p></o:p></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>We can use DFS to do topological sort of an acyclic directed
+graph, by changing when we do the vertex notification.</p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>   </span>dfs(vertex v)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span>notify DFS visitation of v (send v with
+notification)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span>remove v from unvisited set<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span>for each vertex n adjacent to v<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>         </span>if (n is in unvisited)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>            </span>dfs(n)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>         </span>// instead, notify here for top sort,
+*after* the recursive calls<o:p></o:p></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>For a topological sort of this graph, we need A and D before
+C, so the DFS order isn’t good with D at the end. It turns out we need to
+notify the points of <i style='mso-bidi-font-style:normal'>last seeing</i> each
+node, i.e, on the way back from the recursion:</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Visit A</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>Visit B, output B
+after finding no out-edges</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>Visit C, output C
+after finding no out-edges</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>   </span>Back to A, output A
+after finding no more out-edges</p>
+
+<p class=MsoNormal>---</p>
+
+<p class=MsoNormal>Visit D, output D after finding no out-edges</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>B, C, A, D</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>We can mark the edges A<span style='font-family:Wingdings;
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";
+mso-char-type:symbol;mso-symbol-font-family:Wingdings'><span style='mso-char-type:
+symbol;mso-symbol-font-family:Wingdings'>à</span></span>B, A<span
+style='font-family:Wingdings;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman";mso-char-type:symbol;mso-symbol-font-family:
+Wingdings'><span style='mso-char-type:symbol;mso-symbol-font-family:Wingdings'>à</span></span>C,
+D<span style='font-family:Wingdings;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman";mso-char-type:symbol;mso-symbol-font-family:
+Wingdings'><span style='mso-char-type:symbol;mso-symbol-font-family:Wingdings'>à</span></span>C
+on this list and see that they all go right to left, so this is a reverse top
+sort order.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Then the reverse of this is a topological sort.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>We can do a DFS of any directed (or undirected) graph, and
+if it’s acyclic, the DFS yields a topological sort. If there is a cycle in the
+graph, it doesn’t cause an infinite loop because a DFS doesn’t revisit a
+vertex.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Detecting Cycles
+using DFS<o:p></o:p></b></p>
+
+<p class=MsoNormal>It is possible to enhance DFS to detect cycles.<span
+style='mso-spacerun:yes'>  </span>Color all the nodes white to start, change to
+gray when visited and black when seen on the way back. Then if you ever try to
+visit a gray node, it’s part of a cycle, because you are both going inbound to
+it and are involved in recursion from it, so there’s a path down to you from
+it.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>In general a DFS works in phases, finding trees, so the
+whole thing finds a forest.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The first tree is a tree being traversed in preorder.<span
+style='mso-spacerun:yes'>  </span>Once this traversal returns to a vertex, it
+has classified all vertices it has visited as “downwind” from it, i.e.
+belonging to the right of it in top sort. (And no edge can be inbound from
+those, because of the acyclic requirement.) The extreme is V0, the last
+reencountered after edges in the first tree, and it should be first in the top
+sort order for that tree.<span style='mso-spacerun:yes'>  </span>The
+second-to-last vertex re-visited should be second, and so on.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Then the following trees in the forest have only inter-group
+edges back to previous groups, so they need to be ordered last-first in
+top-sort order.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The ability of the DFS to turn a graph into a forest of
+trees is useful in many algorithms.<span style='mso-spacerun:yes'> 
+</span>Trees are a lot easier to work with than general graphs.<span
+style='mso-spacerun:yes'>  </span>Note that a graph does not have to be acyclic
+to do a DFS.<span style='mso-spacerun:yes'>  </span>It’s just that you can only
+get a top sort out of it if it’s acyclic.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Tree Edges<o:p></o:p></b></p>
+
+<p class=MsoNormal>The trees generated by a DFS are using a subset of the edges
+for the trees. These are known as tree edges.</p>
+
+<p class=MsoNormal>When we see an outbound edge in DFS, and use it to visit
+another vertex, that’s a tree edge. If the vertex is already visitied, it’s a
+non-tree edge.</p>
+
+<p class=MsoNormal>So the ABCD graph has two tree, two tree edges for first
+tree, none for second.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>CS110-210… example: get one tree using 3 edges, leaving one
+non-tree edge. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The graph sources have cs310.DFS.java to do DFS traversals,
+and DFSTest.java as a sample app (no Swing).<span style='mso-spacerun:yes'> 
+</span>DFSDemo creates random graphs and shows them using Swing. The handout
+shows the code needed to set up for a simple screen display of the final graph.</p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>BFS Breadth-First
+Search/Traversal<o:p></o:p></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Sometimes we want to visit <i style='mso-bidi-font-style:
+normal'>all</i> the adjacent nodes of a node before going on to look at the
+further nodes.<span style='mso-spacerun:yes'>  </span>This is called a
+breadth-first search.<span style='mso-spacerun:yes'>  </span>We visit direct
+neighbors of the start node, then neighbors of neighbors, then neighbors of
+neighbors of neighbors, etc. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>For Figure 14.30, an acyclic graph :</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>visit V0: we see that V0 has two outbound edges, to V1 and
+V3</p>
+
+<p class=MsoNormal>consider edge V0-V1 (tree edge, since V1 unseen. Consider V1
+seen now, but not yet processed) </p>
+
+<p class=MsoNormal>consider edge V0-V3 (tree edge, V3 now seen)</p>
+
+<p class=MsoNormal>visit V1: we see that V1 has two outbound edges, to V3 and
+V4</p>
+
+<p class=MsoNormal>consider edge V1-V3 (non-tree edge, since V3 seen before)</p>
+
+<p class=MsoNormal>consider edge V1-V4 (tree edge)</p>
+
+<p class=MsoNormal>visit V3: we see that V3 has 3 outbound edges, to V4, V5,
+and V6 </p>
+
+<p class=MsoNormal>consider edge V3-V4 (non-tree edge, since V4 seen before)</p>
+
+<p class=MsoNormal>consider edge V3-V5 (tree edge)</p>
+
+<p class=MsoNormal>consider edge V3-V6 (tree edge)</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>(now finished with
+neighbors of V0, start looking at neighbors-of-neighbors, all previously seen)</p>
+
+<p class=MsoNormal>visit V4 (...)</p>
+
+<p class=MsoNormal>...</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>We end up with a BFS with 3 levels, V0 on the top level, V1
+and V3 on the second level, and V4, V5, and V6 on the third level.<span
+style='mso-spacerun:yes'>  </span>V2 was never visited.<span
+style='mso-spacerun:yes'>  </span>As in DFS, we have a tree defined by the BFS
+using a subset of edges from the graph.<span style='mso-spacerun:yes'>  </span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The nodes at the second level are all one hop away from the
+source node, V0.<span style='mso-spacerun:yes'>  </span>The nodes on the third
+level are all 2 hops away from V0.<span style='mso-spacerun:yes'>  </span>Thus
+we are finding how far, in hops, the various nodes are from V0.<span
+style='mso-spacerun:yes'>  </span>V2 is an infinite distance from V0, since we
+can’t get there. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>In Weiss, see BFS mentioned on pg. 542(486), in Sec. 14.2,
+unweighted shortest-path problem.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Programming a BFS<o:p></o:p></b></p>
+
+<p class=MsoNormal>As we are doing a BFS (or DFS) we are defining a tree, and
+we can think of the “lower” nodes as children of their parent node in the
+tree.<span style='mso-spacerun:yes'>  </span>For the BFS, we find the children
+of a node, and then <i style='mso-bidi-font-style:normal'>go back over them</i>
+to find their children.<span style='mso-spacerun:yes'>  </span>We can put them
+on a queue as we find them, and when we run out of children, go back and
+dequeue them and work on their children.<span style='mso-spacerun:yes'> 
+</span>We’ll see this algorithm soon.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Note that Figure 14.16 in Sec. 14.2 is the same as Figure
+14.1, but differs by one edge from 14.30, the acyclic one we were just
+using.<span style='mso-spacerun:yes'>  </span>The one edge difference (V3 to V2
+instead of V2 to V3) causes cycles in Figure 14.16, V2 -&gt; V0 -&gt; V3 -&gt;
+V2 and a longer one V2 -&gt; V0 -&gt; V1 -&gt; V3 -&gt; V2.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Do BFS and DFS from V2 on graph of Fig. 14.16:</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>BFS:<span style='mso-spacerun:yes'>  </span>arrows go down
+unless shown by arrow-heads otherwise--</p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>    </span>V2 &lt;--<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>   </span>/<span style='mso-spacerun:yes'>  
+</span>\<span style='mso-spacerun:yes'>   </span>\<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:10.5pt'><span style='font-size:9.0pt;
+font-family:"Courier New"'>V0<span style='mso-spacerun:yes'>   </span>V5<span
+style='mso-spacerun:yes'>  </span>|<span style='mso-spacerun:yes'>    </span>--one
+hop away from V2<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:10.5pt'><span style='font-size:9.0pt;
+font-family:"Courier New"'>/\<span style='mso-spacerun:yes'>   </span>^<span
+style='mso-spacerun:yes'>   </span>/<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'> </span>/<span style='mso-spacerun:yes'>  </span>\
+/<span style='mso-spacerun:yes'>   </span>/<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New"'>V1-&gt;V3
+--<span style='mso-spacerun:yes'>     </span>--two hops away from V2<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New"'>|<span
+style='mso-spacerun:yes'>    </span>\<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New"'>V4<span
+style='mso-spacerun:yes'>   </span>V6<span style='mso-spacerun:yes'>      
+</span>--three hops away from V3<o:p></o:p></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>We also did a BFS of an undirected graph. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Also do DFS from V2—another way to do cycle detection, by
+finding an edge back to an ancestor.<span style='mso-spacerun:yes'>  </span>(A
+BFS can have a cycle in more ways, so not as good at cycle detection.)</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>DFS vs BFS:<o:p></o:p></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list .5in'>DFS is
+     like preorder tree traversal, plunging further and further from the source
+     node until we can’t go any further, then back.<span
+     style='mso-spacerun:yes'>   </span>Can do cycle detection, also top sort
+     for acyclic graph.</li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list .5in'>BFS is
+     the opposite: explore nodes adjacent to the source node, then nodes
+     adjacent to those (that haven’t been visited yet), and so on.<span
+     style='mso-spacerun:yes'>  </span>Good for finding all neighbors, all
+     neighbors of neighbors, etc.—hop counts. (Can be used for cycle detection,
+     easy in undirected case, harder in directed case. We’ll stick to DFS for
+     cycle detection.)</li>
+</ul>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Back to Weiss Sec.
+14.2: Unweighted Single-Source Shortest-path Algorithm<o:p></o:p></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal>Looking for paths with fewest edges from source node to destination
+node, in some digraph, not necessarily acyclic.<span style='mso-spacerun:yes'> 
+</span>Fix the source node and consider all possible destination nodes.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Fig. 14.16 shows the starting point, 14.17 the 1-edge paths
+are found, and in 14.18, the 2-edge paths, and finally in 14.19, the 3-edge
+paths.<span style='mso-spacerun:yes'>  </span>Looks pretty easy.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Note this is using a BFS.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>But we don’t want to search the whole graph looking for the
+next nodes to work on.<span style='mso-spacerun:yes'>  </span>It’s clear that
+the nodes marked for the first time are the ones that soon should be reexamined
+for the next hop. <span style='mso-spacerun:yes'> </span>So to be efficient, we
+can save them on a queue, and then pull them off the queue for the next hop.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>At one point, the queue will have all the neighbors of the
+start node. Sometime later, it will have all the neighbors of neighbors.<span
+style='mso-spacerun:yes'>  </span>But in between these times, it will have some
+neighbors and some neighbors of neighbors, all behind the neighbors in order,
+so they won’t be handled until all the direct neighbors are processed.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='background:yellow;mso-highlight:yellow'>Needed fix</span> to Weiss, new
+edition, Fig. 14.21<o:p></o:p></b></p>
+
+<p class=MsoNormal>That’s what is shown in Fig. 14.21. <span
+style='mso-spacerun:yes'> </span>The “eyeball” nodes are the lightly-shaded
+ones in 3<sup>rd</sup> edition, unmarked in 4<sup>th</sup> edition, that is, V2
+in panel 2, V0 in 3, V5 in 4, V1 in 5, V3 in 6, V4 in 7, and V6 in 8.<span
+style='mso-spacerun:yes'>  </span>We see these are just the nodes in BFS
+visitation order.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Now we consider how to turn this into an effective
+algorithm.<span style='mso-spacerun:yes'>  </span>After we’ve marked all the 1s
+for one-hop nodes, we need to revisit the one-hop nodes to find the two-hop
+nodes.<span style='mso-spacerun:yes'>  </span>That is, we need to save them and
+later access them.<span style='mso-spacerun:yes'>  </span>We can use a simple
+queue of nodes for this.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>The pseudocode for
+Unweighted Single-Source Shortest-path Algorithm, is:<o:p></o:p></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>Given a digraph G
+and source node S.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>Set up storage for a
+distance for each node, D<sub>n</sub>:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><span
+style='mso-spacerun:yes'>   </span>For each node n, make D<sub>n</sub> be
+INFINITY.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>Set D<sub>S</sub> =
+0<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>Create queue q.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>Enqueue source node
+S on q.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>while the q is not
+empty<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><span
+style='mso-spacerun:yes'>    </span>Dequeue a node from q and call it v (the
+eyeball node)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><span
+style='mso-spacerun:yes'>    </span>Loop though nodes w adjacent to v<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><span
+style='mso-spacerun:yes'>          </span>if D<sub>w</sub> is INFINITY (not yet
+marked)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><span
+style='mso-spacerun:yes'>                </span>set D<sub>w</sub> to D<sub>v </sub>plus
+1<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><span
+style='mso-spacerun:yes'>                </span>enqueue w on q<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Here we trace the algorithm and correlate it with Figure
+14.21.</p>
+
+<p class=MsoNormal>Using the queue:</p>
+
+<p class=MsoNormal>In panel 1 of Fig. 14.21, the eyeball node v is not yet set,
+and q = (V2) from initialization.</p>
+
+<p class=MsoNormal>Also D0 = infinity, D1 = infinity, D2 = 0, D3 = infinity, D4
+= infinity, D5 = infinity, D6 = infinity,</p>
+
+<p class=MsoNormal>In panel 2, V2 is dequeued and becomes the eyeball node v,
+and V0 and V5 are enqueued, so q = (V0, V5)</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>    </span>When V0 was
+enqueued,<span style='mso-spacerun:yes'>  </span>Dw = D0 and Dv = D2 = 0, so D0
+= 0 + 1 = 1</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>    </span>When V5 was
+enqueued, Dw = D5 and Dv = D2 = 0, so D5 = 0 + 1 = 1</p>
+
+<p class=MsoNormal>In panel 3, V0 is dequeued and becomes the eyeball node, and
+V1 and V3 are enqueued, so q = (V5, V1, V3)</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>   </span>When V1 was
+enqueued,<span style='mso-spacerun:yes'>  </span>Dw = D1 and Dv = D0 = 1, so D1
+= 1 + 1 = 2</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>   </span>When V3 was
+enqueued,<span style='mso-spacerun:yes'>  </span>Dw = D3 and Dv = D0 = 1, so D3
+= 1 + 1 = 2</p>
+
+<p class=MsoNormal>In 4, V5 is dequeued and becomes the eyeball node, and
+nothing is enqueued, so q = (V1, V3)</p>
+
+<p class=MsoNormal>and so on.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>We can tabulate all the data structures outside the graph
+itself:</p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid black .5pt;
+ mso-border-themecolor:text1;mso-yfti-tbllook:1184;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=41 valign=top style='width:31.1pt;border:solid black 1.0pt;
+  mso-border-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>v</p>
+  </td>
+  <td width=54 valign=top style='width:40.5pt;border:solid black 1.0pt;
+  mso-border-themecolor:text1;border-left:none;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>D0</p>
+  </td>
+  <td width=54 valign=top style='width:40.5pt;border:solid black 1.0pt;
+  mso-border-themecolor:text1;border-left:none;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>D1</p>
+  </td>
+  <td width=48 valign=top style='width:.5in;border:solid black 1.0pt;
+  mso-border-themecolor:text1;border-left:none;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>D2</p>
+  </td>
+  <td width=48 valign=top style='width:.5in;border:solid black 1.0pt;
+  mso-border-themecolor:text1;border-left:none;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>D3</p>
+  </td>
+  <td width=60 valign=top style='width:45.0pt;border:solid black 1.0pt;
+  mso-border-themecolor:text1;border-left:none;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>D4</p>
+  </td>
+  <td width=60 valign=top style='width:45.0pt;border:solid black 1.0pt;
+  mso-border-themecolor:text1;border-left:none;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>D5</p>
+  </td>
+  <td width=54 valign=top style='width:40.5pt;border:solid black 1.0pt;
+  mso-border-themecolor:text1;border-left:none;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>D6</p>
+  </td>
+  <td width=102 valign=top style='width:76.5pt;border:solid black 1.0pt;
+  mso-border-themecolor:text1;border-left:none;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>q</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=41 valign=top style='width:31.1pt;border:solid black 1.0pt;
+  mso-border-themecolor:text1;border-top:none;mso-border-top-alt:solid black .5pt;
+  mso-border-top-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><o:p>&nbsp;</o:p></p>
+  </td>
+  <td width=54 valign=top style='width:40.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>inf</p>
+  </td>
+  <td width=54 valign=top style='width:40.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>inf</p>
+  </td>
+  <td width=48 valign=top style='width:.5in;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>0</p>
+  </td>
+  <td width=48 valign=top style='width:.5in;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>inf</p>
+  </td>
+  <td width=60 valign=top style='width:45.0pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>inf</p>
+  </td>
+  <td width=60 valign=top style='width:45.0pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>inf</p>
+  </td>
+  <td width=54 valign=top style='width:40.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>inf</p>
+  </td>
+  <td width=102 valign=top style='width:76.5pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>[V2]</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=41 valign=top style='width:31.1pt;border:solid black 1.0pt;
+  mso-border-themecolor:text1;border-top:none;mso-border-top-alt:solid black .5pt;
+  mso-border-top-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>V2</p>
+  </td>
+  <td width=54 valign=top style='width:40.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>1</p>
+  </td>
+  <td width=54 valign=top style='width:40.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>inf</p>
+  </td>
+  <td width=48 valign=top style='width:.5in;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>0</p>
+  </td>
+  <td width=48 valign=top style='width:.5in;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>inf</p>
+  </td>
+  <td width=60 valign=top style='width:45.0pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>inf</p>
+  </td>
+  <td width=60 valign=top style='width:45.0pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>1</p>
+  </td>
+  <td width=54 valign=top style='width:40.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>inf</p>
+  </td>
+  <td width=102 valign=top style='width:76.5pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>[V0, V5]</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=41 valign=top style='width:31.1pt;border:solid black 1.0pt;
+  mso-border-themecolor:text1;border-top:none;mso-border-top-alt:solid black .5pt;
+  mso-border-top-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>V0</p>
+  </td>
+  <td width=54 valign=top style='width:40.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>1</p>
+  </td>
+  <td width=54 valign=top style='width:40.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>2</p>
+  </td>
+  <td width=48 valign=top style='width:.5in;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>0</p>
+  </td>
+  <td width=48 valign=top style='width:.5in;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>2</p>
+  </td>
+  <td width=60 valign=top style='width:45.0pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>inf</p>
+  </td>
+  <td width=60 valign=top style='width:45.0pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>1</p>
+  </td>
+  <td width=54 valign=top style='width:40.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>inf</p>
+  </td>
+  <td width=102 valign=top style='width:76.5pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>[V5, V1, V3]</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width=41 valign=top style='width:31.1pt;border:solid black 1.0pt;
+  mso-border-themecolor:text1;border-top:none;mso-border-top-alt:solid black .5pt;
+  mso-border-top-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>V5</p>
+  </td>
+  <td width=54 valign=top style='width:40.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>1</p>
+  </td>
+  <td width=54 valign=top style='width:40.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>2</p>
+  </td>
+  <td width=48 valign=top style='width:.5in;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>0</p>
+  </td>
+  <td width=48 valign=top style='width:.5in;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>2</p>
+  </td>
+  <td width=60 valign=top style='width:45.0pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>inf</p>
+  </td>
+  <td width=60 valign=top style='width:45.0pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>1</p>
+  </td>
+  <td width=54 valign=top style='width:40.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>inf</p>
+  </td>
+  <td width=102 valign=top style='width:76.5pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>[V1, V3]</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td width=41 valign=top style='width:31.1pt;border:solid black 1.0pt;
+  mso-border-themecolor:text1;border-top:none;mso-border-top-alt:solid black .5pt;
+  mso-border-top-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>V1</p>
+  </td>
+  <td width=54 valign=top style='width:40.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>1</p>
+  </td>
+  <td width=54 valign=top style='width:40.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>2</p>
+  </td>
+  <td width=48 valign=top style='width:.5in;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>0</p>
+  </td>
+  <td width=48 valign=top style='width:.5in;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>2</p>
+  </td>
+  <td width=60 valign=top style='width:45.0pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>3</p>
+  </td>
+  <td width=60 valign=top style='width:45.0pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>1</p>
+  </td>
+  <td width=54 valign=top style='width:40.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>inf</p>
+  </td>
+  <td width=102 valign=top style='width:76.5pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>[V3, V4]</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td width=41 valign=top style='width:31.1pt;border:solid black 1.0pt;
+  mso-border-themecolor:text1;border-top:none;mso-border-top-alt:solid black .5pt;
+  mso-border-top-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>V3</p>
+  </td>
+  <td width=54 valign=top style='width:40.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>1</p>
+  </td>
+  <td width=54 valign=top style='width:40.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>2</p>
+  </td>
+  <td width=48 valign=top style='width:.5in;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>0</p>
+  </td>
+  <td width=48 valign=top style='width:.5in;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>2</p>
+  </td>
+  <td width=60 valign=top style='width:45.0pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>3</p>
+  </td>
+  <td width=60 valign=top style='width:45.0pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>1</p>
+  </td>
+  <td width=54 valign=top style='width:40.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>3</p>
+  </td>
+  <td width=102 valign=top style='width:76.5pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>[V4,V6]</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td width=41 valign=top style='width:31.1pt;border:solid black 1.0pt;
+  mso-border-themecolor:text1;border-top:none;mso-border-top-alt:solid black .5pt;
+  mso-border-top-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>V4</p>
+  </td>
+  <td width=54 valign=top style='width:40.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>1</p>
+  </td>
+  <td width=54 valign=top style='width:40.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>2</p>
+  </td>
+  <td width=48 valign=top style='width:.5in;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>0</p>
+  </td>
+  <td width=48 valign=top style='width:.5in;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>2</p>
+  </td>
+  <td width=60 valign=top style='width:45.0pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>3</p>
+  </td>
+  <td width=60 valign=top style='width:45.0pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>1</p>
+  </td>
+  <td width=54 valign=top style='width:40.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>3</p>
+  </td>
+  <td width=102 valign=top style='width:76.5pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>[V6]</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8;mso-yfti-lastrow:yes'>
+  <td width=41 valign=top style='width:31.1pt;border:solid black 1.0pt;
+  mso-border-themecolor:text1;border-top:none;mso-border-top-alt:solid black .5pt;
+  mso-border-top-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>V6</p>
+  </td>
+  <td width=54 valign=top style='width:40.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>1</p>
+  </td>
+  <td width=54 valign=top style='width:40.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>2</p>
+  </td>
+  <td width=48 valign=top style='width:.5in;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>0</p>
+  </td>
+  <td width=48 valign=top style='width:.5in;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>2</p>
+  </td>
+  <td width=60 valign=top style='width:45.0pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>3</p>
+  </td>
+  <td width=60 valign=top style='width:45.0pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>1</p>
+  </td>
+  <td width=54 valign=top style='width:40.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>4</p>
+  </td>
+  <td width=102 valign=top style='width:76.5pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-border-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:solid black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-themecolor:
+  text1;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>[]</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>We see that V0 and V5 end up with distances 1 from V2, as we
+can see from a BFS.<span style='mso-spacerun:yes'>  </span>Similarly,<span
+style='mso-spacerun:yes'>  </span>V1 and V3 end up with distances 2 from V2. In
+this algorithm, the distance jumps from infinity to the final distance as soon
+as it gets found.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</html>

@@ -1,0 +1,22 @@
+CS105 Homework 4
+
+Instructions: Please print or write your answers LEGIBLY, and turn in a hard copy of the assignment in class.
+
+1. Searching in arrays:
+
+  a. If we just want to search an unsorted array once, what is more efficient, binary search or linear search, and why?
+  b. In the worst case, how many steps will a linear search on an array of 36 elements take?
+  c. In the worst case, how many steps will a binary search on an array of 36 elements take?
+
+2. Searching in trees/graphs:
+
+  a. If you know the element is near the root, which would you use, DFS or BFS?
+  b. What is better about DFS than BFS?  What is better about DFS than BFS?
+  c. Assume that while depth-first searching a graph, we traverse cycles.  That is, we ignore whether or not we have already visited a node.  What will happen?
+
+3. Graph traversal:
+
+  a. Using Dijkstra's algorithm, you have visited all the neighbors of node a.  You have not yet visited node b, which is 4 meters away, node c, which is 3 meters away, and node d, which is 8 meters away.  Which node do you visit after a?
+  b. The current path to node d is 10 meters, but you have found another path leads to d in 7 meters.  How do you update the distance table?
+  c. Assume in Dijkstra's algorithm, you encounter an edge with a very large negative weight.  What would happen?
+  d. Is the brute force algorithm slower or faster than an O(n^4) algorithm?

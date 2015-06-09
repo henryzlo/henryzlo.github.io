@@ -1,0 +1,22 @@
+CS105 Homework 6
+
+Instructions: Please print or write your answers LEGIBLY, and turn in a hard copy of the assignment in class.
+
+1. Application layer and DNS:
+
+  a. What is the purpose of DNS?
+  b. What's the difference between a client and a server?  Give an example.
+  c. What's the difference between the World Wide Web and the internet?
+
+2. HTTP:
+
+  a. What is HTTP?
+  b. What's the difference between GET and POST?
+  c. Why is HTTPS necessary?
+
+3. Web applications:
+
+  a. What's a database for?
+  b. List two things a web server does.
+  c. What's the difference between a static and dynamic web page?
+  d. What's the role of HTML?  CSS?  Javascript?

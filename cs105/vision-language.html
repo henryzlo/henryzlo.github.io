@@ -1,0 +1,126 @@
+<html>
+<h1>Vision, Language, and the Big Problems in AI</h1>
+We discuss some advances in computer vision, language processing, and the big problems facing AI.
+
+<h2>Computer Vision</h2>
+<ul>
+  <li>Computer vision deals with processing images, and sometimes movies, to perform intelligent tasks.</li>
+  <li>Often, images need to be preprocessed before handled.
+    <ul>
+      <li>For example, recognizing building outlines requires that we first perform edge detection.
+      <ul>
+        <li>
+          Example of edge detection:
+          <br/><img width=600 src="http://upload.wikimedia.org/wikipedia/en/8/8e/EdgeDetectionMathematica.png"/>
+        </li>
+        <li>Idea: find those points on the image where the color changes sharply.</li>
+        <li>Also useful for identifying things based only on their outlines or shapes.</li>
+      </ul>
+      <li>In optical character recognition, we often have to center the image, scale, rotate, and despeckle it first. <br/>
+        <img src="http://www.imagekit.com/i/new_img5e.png"/>
+      </li>
+    </ul>
+  </li>
+  <li>Now images are preprocessed, we can do "intelligent" things related to images.</li>
+  <li>Object detection / recognition is a classification problem.
+    <ul>
+      <li>Features need to be extracted first (e.g. color, shape, size, angle).</li>
+      <li>These features are fed into a trained classifier, which then tells us what kind of object it is.</li>
+      <li>For example, for face detection, we may want features which are characteristic of faces, and when we give it to a classifier of faces, it will tell us whether we have a face or not.</li>
+    </ul>
+  </li>
+  <li>Object tracking is the problem of tracking an object in an image over time.
+    <ul>
+      <li>This first requires object recognition - we have to recognize an object before we track it.</li>
+      <li>Then we have to solve the problem of determining whether the object in one frame of video is the same as the object in another frame of video.<br/><img src="http://www.blogcdn.com/www.engadget.com/media/2011/03/eye-object-tracking.jpg"/></li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Natural Language Processing</h2>
+<ul>
+  <li>Actual language understanding is difficult to achieve, because language is complex.
+    <ul>
+      <li>Grammar can be complicated.</li>
+      <li>Rules are not always followed.</li>
+      <li>Words, sentences, and phrases can be ambiguous or have multiple meanings.</li>
+    </ul>
+  </li>
+  <li>Because of this, tasks which require actual understanding are much more difficult.</li>
+  <li>An example task: find documents which are related to each other.
+    <ul>
+      <li>This does not require actual understanding, and can be done quite well with only statistical techniques.</li>
+      <li>Suppose we have a set of documents.  From each document, we might want to extract keywords.</li>
+      <li>Obviously we want to avoid common words such as "the", "is", etc.</li>
+      <li>We can then "measure" how closely related documents are based on how many keywords they share.</li>
+      <li>We may even be able to group together keywords into topics.</li>
+    </ul>
+  </li>
+  <li>Some other, more difficult problems in natural language processing:
+    <ul>
+      <li>Word sense disambiguation:
+        <ul>
+          <li>This is the problem of determining which "sense" of a word we mean to use.</li>
+          <li>For example, consider the two sentences:<br/>
+            The bass is too loud.<br/>
+            We caught a bass today.
+          </li>
+          <li>We know that the first sentence probably referred to bass as in bass and treble, because bass (the fish) are usually pretty quiet.</li>
+          <li>We know that the second sentence refers to the fish because you can't catch bass (the audio concept).</li>
+          <li>Some techniques:
+            <ul>
+              <li>Using pre-programmed "common sense", like we did in the example above.</li>
+              <li>Using a trained classifier (doesn't work very well).</li>
+              <li>Using the presence of commonly associated words nearby (e.g. caught).</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Machine translation:
+        <ul>
+          <li>True machine translation of large amounts of text requires actual understanding of language.  Current methods are only approximations of this.</li>
+          <li>Some techniques:
+            <ul>
+              <li>Rule-based systems, which contain mappings between the two language words, and their grammatical structures.</li>
+              <li>Translating each word one-by-one, then stringing them together into a somewhat cohesive sentence.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>      
+    </ul>
+  </li>
+  <li>For most NLP problems, there are "deep" solutions and "shallow" solutions.
+    <ul>
+      <li>"Deep" solutions seek actual understanding of language, while "shallow" solutions use less than a full understanding (e.g. statistical techniques).</li>
+      <li>Currently, shallow techniques predominate - they are easier to code, easier to train, faster, and therefore more applicable to real life situations.</li>
+      <li>Arguably, shallow techniques are not actually "intelligent", whereas deep techniques are.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Strong AI vs. Weak AI</h2>
+<ul>
+  <li>Weak AI refers to systems which are smart enough to perform a specific intelligent task, but may not truly understand.
+    <ul>
+      <li>Most techniques discussed - machine learning, problem solving, decision making, etc. - are weak AI techniques.</li>
+      <li>The current state of AI focuses on weak techniques.</li>
+      <li>For most cases - image recognition, etc. - weak techniques are good enough to be commercially viable.</li>
+    </ul>
+  </li>
+  <li>Strong AI refers to creating a truly intelligent system, like a human mind.
+    <ul>
+      <li>Some problems, like large-scale machine translation, may only be solvable by strong AI systems.</li>
+      <li>Creating strong AI systems, however, take much more work than weak AI, and are slower.</li>
+    </ul>
+  </li>
+  <li>Many researchers (I think) go into AI hoping to build strong systems, but end up working on weak ones.
+    <ul>
+      <li>It's easier to get funding for weak AI projects.</li>
+      <li>Projects often don't pan out - strong AI projects often take much more time than weak ones.</li>
+      <li>The subgoals of weak AI are much easier to define than the lofty goals of strong AI.</li>
+      <li>For many proposed strong AI systems, there is enormous effort involved (e.g. brain studies, simulating neural structures, etc.)</li>
+    </ul>
+  </li>
+</ul>
+
+</html>

@@ -1,0 +1,179 @@
+<h1>Graph Traversal</h1>
+
+Last section we discussed how searching for an item in a graph relates to finding a path.  We elaborate on path finding in graphs, by adding "distances" to edges, and introducing some concepts and algorithms.
+
+<h2>Pathfinding Problem</h2>
+<ul>
+  <li>We can represent places using nodes, and routes between them using edges.
+    <ul>
+      <li>Example from http://courses.cs.washington.edu/courses/cse140/13wi/homework/hw4/northeast-roads.gif:
+        <br/>
+        <img width=600px src="http://courses.cs.washington.edu/courses/cse140/13wi/homework/hw4/northeast-roads.gif"/>
+      </li>
+      <li>We often have weights (numbers) assigned to these edges.</li>
+      <li>In this example, edge weights represent minutes of driving.</li>
+      <li>Weights can also represent distance, gas consumed, etc.</li>
+    </ul>
+  </li>
+  <li>
+    Given two nodes x and y, we want to find the shortest path between them.
+    <ul>
+      <li>The shortest path is the path with the shortest total weight.</li>
+      <li>Recall that BFS obtains the shortest path in which all edges have the same weight.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Dijkstra's Algorithm</h2>
+<ul>
+  <li>Dijkstra's algorithm finds the shortest path from node x to node y.
+    <ul>
+      <li>The algorithm begins at the starting point, and stores a table of distances from the starting point to all other nodes.</li>
+      <li>First, we visit all neighbors of the current node.</li>
+      <li>For each neighbor, we update their distances in the table, if the new distance is shorter than the current distance.</li>
+      <li>Once we have searched all neighbors of the current node, we search the neighbors of the unprocessed node closest to x.</li>
+      <li>We continue even after we find a path to y, but stop when we find all paths are longer than the path from x to y.</li>
+    </ul>
+  </li>
+  <li>Consider the example shown in the following figure (from http://www.eoinbailey.com/content/dijkstras-algorithm-illustrated-explanation)
+    <ul>
+      <li>We want the shortest path from a to i.<br/>
+      <img src="http://www.eoinbailey.com/eb/?q=sites/default/files/styles/large/public/field/image/Dijkstra1.jpg&itok=gS3_88lY"/></li>
+      <li>At the beginning, the distance from a to all nodes is not known (infinite).
+      <table>
+        <tr><th>Distance from a to:</th><th>Shortest distance:</th></tr>
+        <tr><td>b</td><td>infinite</td></tr>
+        <tr><td>c</td><td>infinite</td></tr>
+        <tr><td>d</td><td>infinite</td></tr>
+        <tr><td>e</td><td>infinite</td></tr>
+        <tr><td>f</td><td>infinite</td></tr>
+        <tr><td>g</td><td>infinite</td></tr>
+        <tr><td>h</td><td>infinite</td></tr>
+        <tr><td>i</td><td>infinite</td></tr>
+      </table>
+      </li>
+      <li>We then visit the nodes connected to a, and record their distances.<br/>
+      <img style="top:-20px" src="http://www.eoinbailey.com/eb/?q=sites/default/files/styles/large/public/field/image/Dikstra4.jpg&itok=IXCzRJSc"/>
+      <table>
+        <tr><th>Distance from a to:</th><th>Shortest distance:</th></tr>
+        <tr><td>b</td><td>7</td></tr>
+        <tr><td>c</td><td>4</td></tr>
+        <tr><td>d</td><td>5</td></tr>
+        <tr><td>e</td><td>infinite</td></tr>
+        <tr><td>f</td><td>infinite</td></tr>
+        <tr><td>g</td><td>infinite</td></tr>
+        <tr><td>h</td><td>infinite</td></tr>
+        <tr><td>i</td><td>infinite</td></tr>
+      </table>
+      </li>
+      <li>After this, we are done with node a.  We go to the node with the shortest distance (c), and explore from there.<br/>
+      <img src="http://www.eoinbailey.com/eb/?q=sites/default/files/styles/large/public/field/image/Dikstra5.jpg&itok=5VtEBdCM"/>
+      </li>
+      <li>From c, we record the cumulative path to each of its neighboring nodes.  We update the distance to b, because the new path is shorter<br/>
+      <img src="http://www.eoinbailey.com/eb/?q=sites/default/files/styles/large/public/field/image/Dikstra7.jpg&itok=pNQjELIh"/>
+      <table>
+        <tr><th>Distance from a to:</th><th>Shortest distance:</th></tr>
+        <tr><td>b</td><td>6</td></tr>
+        <tr><td>c</td><td>4</td></tr>
+        <tr><td>d</td><td>5</td></tr>
+        <tr><td>e</td><td>infinite</td></tr>
+        <tr><td>f</td><td>infinite</td></tr>
+        <tr><td>g</td><td>infinite</td></tr>
+        <tr><td>h</td><td>13</td></tr>
+        <tr><td>i</td><td>infinite</td></tr>
+      </table>
+      </li>
+      <li>We are done with d, and move on to the next node with the shortest distance (d).<br/>
+      <img src="http://www.eoinbailey.com/eb/?q=sites/default/files/styles/large/public/field/image/Dikstra8.jpg&itok=vTea_Dp2"
+      </li>
+      <li>We check the distance from d to f, and add it to the table.<br/>
+        <img src="http://www.eoinbailey.com/eb/?q=sites/default/files/styles/large/public/field/image/Dikstra11.jpg&itok=V2Qhtd1z"/>
+        <table>
+        <tr><th>Distance from a to:</th><th>Shortest distance:</th></tr>
+        <tr><td>b</td><td>6</td></tr>
+        <tr><td>c</td><td>4</td></tr>
+        <tr><td>d</td><td>5</td></tr>
+        <tr><td>e</td><td>infinite</td></tr>
+        <tr><td>f</td><td>14</td></tr>
+        <tr><td>g</td><td>infinite</td></tr>
+        <tr><td>h</td><td>13</td></tr>
+        <tr><td>i</td><td>infinite</td></tr>
+      </table>
+      </li>
+      <li>Done with d.  Go to b, check e.<br/>
+        <img src="http://www.eoinbailey.com/eb/?q=sites/default/files/styles/large/public/field/image/Dikstra11.jpg&itok=V2Qhtd1z"/>
+        <table>
+        <tr><th>Distance from a to:</th><th>Shortest distance:</th></tr>
+        <tr><td>b</td><td>6</td></tr>
+        <tr><td>c</td><td>4</td></tr>
+        <tr><td>d</td><td>5</td></tr>
+        <tr><td>e</td><td>31</td></tr>
+        <tr><td>f</td><td>14</td></tr>
+        <tr><td>g</td><td>infinite</td></tr>
+        <tr><td>h</td><td>13</td></tr>
+        <tr><td>i</td><td>infinite</td></tr>
+      </table>
+      </li>
+      <li>Go to h, and check its neighbors.<br/>
+        <img src="http://www.eoinbailey.com/eb/?q=sites/default/files/styles/large/public/field/image/Dikstra15.jpg&itok=SJiND6fK"/>
+        <table>
+        <tr><th>Distance from a to:</th><th>Shortest distance:</th></tr>
+        <tr><td>b</td><td>6</td></tr>
+        <tr><td>c</td><td>4</td></tr>
+        <tr><td>d</td><td>5</td></tr>
+        <tr><td>e</td><td>25</td></tr>
+        <tr><td>f</td><td>14</td></tr>
+        <tr><td>g</td><td>infinite</td></tr>
+        <tr><td>h</td><td>13</td></tr>
+        <tr><td>i</td><td>16</td></tr>
+      </table>
+      </li>
+      <li>At this point, we are done with f and h, and we have found i, the destination.
+      </li>
+      <li>The only remaining node, e, is further away from a than i, so we do not need to check it.
+      </li>
+    </ul>
+  </li>
+  <li>Best case of Dijkstra's algorithm is when y is next to x, and we find it immediately (O(1)).</li>
+  <li>Worst case of Dijkstra's algorithm: we have to search all edges from all nodes.</li>
+    <ul>
+      <li>We have to search all nodes.  If n is the number of nodes, this is O(n).</li>
+      <li>After each node, we have to get the closest element out of n nodes.  Using linear search, this is O(n).</li>
+      <li>Thus processing every node is O(n)*O(n) = O(n^2).</li>
+      <li>We also have to process every edge.  If e is the number of edges, O(e).</li>
+      <li>In total, Dijkstra's algorithm is O(e + n^2).  Note we have to consider two input variables, e and n.</li>
+      <li>However, n^2 grows much faster than e.  Thus O(e + n^2) = O(n^2).</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Traveling Salesman Problem</h2>
+<ul>
+  <li>The traveling salesman problem is the problem of visiting every node once (and only once), using the shortest path.<br/>
+    <ul>
+      <li>Taken from http://mlbreports.files.wordpress.com/2012/05/may-21-1.jpg:</br>
+        <img src="http://mlbreports.files.wordpress.com/2012/05/may-21-1.jpg"/></li>
+      <li>For example, traveling to 30 baseball stadiums across the country in the shortest route possible.</li>
+    </ul>
+  <li>This problem has been shown to be NP, which means impossible to solve efficiently in the general case.
+    <ul>
+      <li>NP means the solution is non-polynomial time, e.g. slower than O(n^2), O(n^3), etc.</li>
+    </ul>
+  </li>
+  <li>One method of solving the TSP is using brute force.
+    <ul>
+      <li>Consider 30 cities.  Starting from one city, you can visit 29.  Choose one.  From that, you can visit 28.  etc.</li>
+      <li>There are 30 choices in the first step, 29 choices in the second, etc.</li>
+      <li>30 * 29 * 28 ... = 30!</li>
+      <li>In general, O(n!), where n is the number of cities.</li>
+    </ul>
+  </li>
+  <li>Brute force solves most problems in the least efficient way possible.</li>
+  <li>Useful in many contexts where efficient solutions are not possible (e.g. security)
+  <br/><img src="http://imgs.xkcd.com/comics/travelling_salesman_problem.png"/></li>
+</ul>
+
+<h2>Suggested readings</h2>
+<ul>
+  <li>Another explanation of the example of Dijkstra's algorithm: <a href="http://www.eoinbailey.com/content/dijkstras-algorithm-illustrated-explanation">http://www.eoinbailey.com/content/dijkstras-algorithm-illustrated-explanation</a></li>
+</ul>

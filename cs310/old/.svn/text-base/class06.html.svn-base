@@ -1,0 +1,1604 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+xmlns:oa="urn:schemas-microsoft-com:office:activation"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 12">
+<meta name=Originator content="Microsoft Word 12">
+<link rel=File-List href="class07_files/filelist.xml">
+<title>CS310, Class 6</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Elizabeth O'Neil</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Betty O'Neil</o:LastAuthor>
+  <o:Revision>39</o:Revision>
+  <o:TotalTime>1588</o:TotalTime>
+  <o:LastPrinted>2012-02-13T19:56:00Z</o:LastPrinted>
+  <o:Created>2009-02-11T18:16:00Z</o:Created>
+  <o:LastSaved>2012-02-17T15:59:00Z</o:LastSaved>
+  <o:Pages>5</o:Pages>
+  <o:Words>1586</o:Words>
+  <o:Characters>9044</o:Characters>
+  <o:Company>University of Massachusetts, Boston</o:Company>
+  <o:Lines>75</o:Lines>
+  <o:Paragraphs>21</o:Paragraphs>
+  <o:CharactersWithSpaces>10609</o:CharactersWithSpaces>
+  <o:Version>12.00</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<link rel=themeData href="class07_files/themedata.thmx">
+<link rel=colorSchemeMapping href="class07_files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Print</w:View>
+  <w:Zoom>150</w:Zoom>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"New York";
+	panose-1:2 4 5 3 6 5 6 2 3 4;
+	mso-font-alt:"Times New Roman";
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:3 0 0 0 1 0;}
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1107305727 0 0 415 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"New York","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"New York";}
+code
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="8194"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US style='tab-interval:.5in'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>CS310, Class 6<o:p></o:p></span></b></p>
+
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Note that Chap.
+6 studies Collection classes from the outside only, not worrying about their
+implementation.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Now we start
+studying the <i style='mso-bidi-font-style:normal'>implementation</i> of
+Collection classes. Hashing is one important technique to provide fast Maps and
+Sets, and underlies <span class=SpellE>HashMap</span> and <span class=SpellE>HashSet</span>.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Hashing</span></b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>: Weiss Chap. 20<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Lookup by key
+can benefit greatly from a technique known as hashing.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>The idea is an
+extension of keeping an array with a subscript for every possible value we
+might want to look up.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Say we have a
+Map with 2000 <span class=SpellE>int</span> elements in the domain, with values
+<span class=GramE>0 .</span> . 1999. Then we create a 2000 ele­ment array <span
+class=GramE>a[</span> ] and look up the range entry for value <span
+class=SpellE>i</span> in a single reference to the array, a[<span class=SpellE>i</span>],
+itself a pointer or reference.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>This is a lookup
+in <span class=GramE>O(</span>1) time!<span style='mso-spacerun:yes'> 
+</span>You can't get better than that!<span style='mso-spacerun:yes'>  </span><span
+class=GramE>put</span> is also in time O(1), as is remove (set a[<span
+class=SpellE>i</span>] to NULL or<span style='mso-spacerun:yes'>  </span>null).<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>With a larger
+domain, like 1<span class=GramE>..1000000</span>, we can still set up an
+array.<span style='mso-spacerun:yes'>  </span>This wastes memory but gives us <span
+class=GramE>O(</span>1) lookup, Insert, and Delete.<span
+style='mso-spacerun:yes'>  </span>For large enough domains, this plain-array
+approach is impractical.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>The secret of
+array lookup is the computed address:<span style='mso-spacerun:yes'>  </span><span
+class=SpellE>addr</span> = start-address + size-of-entry*index<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>In hashing, we
+compute addresses with a more complicated function called the hash
+function.<span style='mso-spacerun:yes'>  </span>Actually the hash function
+computes the “bucket number”, itself an array index, and then the above
+function finds the actual address.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Hashing
+terminology, for hashing <span class=SpellE>keytype</span></span></b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Keys:</span></b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'> each value of <span
+class=SpellE>keytype</span> can be called a key.<span
+style='mso-spacerun:yes'>  </span>It just means that we're going to do <i>a
+look-up</i> using this value.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Hash table:</span></b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'> the array in
+use, of some size M or <span class=SpellE>arraySize</span> in Weiss.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Hash bucket or
+hash slot:</span></b><span style='font-size:10.0pt;font-family:"Times New Roman","serif"'>
+a subscript in the hash table array, these are numbered from 0 to M-1.<span
+style='mso-spacerun:yes'>  </span>M is the number of buckets.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Hash function:</span></b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'> a function from
+the <span class=SpellE>keytype</span> to a bucket-number:<span
+style='mso-spacerun:yes'>  </span>b = h(x), where x is of type <span
+class=SpellE>keytype</span> and 0&lt;=b&lt;M is the bucket number.<span
+style='mso-tab-count:1'>         </span>We say &quot;x hashes to b&quot;.<span
+style='mso-spacerun:yes'>  </span><span class=GramE>h(</span>x) is a <span
+class=SpellE>computed</span> mapping and is expected to take O(1) computation
+time.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Collision:</span></b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'> when two keys x
+and y hash to the same bucket: b <span class=GramE>=<span
+style='mso-spacerun:yes'>  </span>h</span>(x) = h(y).<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:8.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b><span
+style='font-family:"Times New Roman","serif"'>Maps using hashing<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Example done
+with Map based on hashing:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Toy Example:
+Counting the 5 English vowels, using map from chars to <span class=SpellE>ints</span>:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>‘<span
+class=GramE>a</span>’ -&gt; count of <span class=SpellE>a’s</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>‘<span
+class=GramE>e</span>’ -&gt; count of <span class=SpellE>e’s</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>...<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>‘<span
+class=GramE>u</span>’ -&gt; count of <span class=SpellE>u’s</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Idea: use a map
+(<span class=SpellE>HashMap</span>, so we’re using hashing) from char to <span
+class=SpellE>int</span> count.<span style='mso-spacerun:yes'>  </span>Start
+with ‘a’</span><span style='font-size:10.0pt;font-family:Wingdings;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+"Times New Roman";mso-char-type:symbol;mso-symbol-font-family:Wingdings'><span
+style='mso-char-type:symbol;mso-symbol-font-family:Wingdings'>à</span></span><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>0, ‘e’</span><span
+style='font-size:10.0pt;font-family:Wingdings;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+mso-char-type:symbol;mso-symbol-font-family:Wingdings'><span style='mso-char-type:
+symbol;mso-symbol-font-family:Wingdings'>à</span></span><span style='font-size:
+10.0pt;font-family:"Times New Roman","serif"'>0, etc.<span
+style='mso-spacerun:yes'>  </span>When we see a vowel, increment its count: get
+the old count from the map and increment it.<span style='mso-spacerun:yes'> 
+</span>With <span class=SpellE>HashMap</span>, we need to use Characters and
+Integers in the domain and range here. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'>Terminology<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'>A mutable object </span></b><span style='font-size:
+10.0pt;font-family:"Times New Roman","serif"'>has changeable state because it
+has <span class=SpellE>mutator</span> methods (see pg. 76). An <b
+style='mso-bidi-font-weight:normal'>immutable object</b> has unchanging state,
+because it has no <span class=SpellE>mutators</span>, only <span class=SpellE>accessors</span>.
+As usual, we are assuming that objects are properly encapsulated here (private
+fields), so no object state can be changed through direct assignment to fields.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'>Mutability of range elements in Maps<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Integers are
+immutable, so we will have to get the old count, increment it, and put back the
+new count (a different Integer object replacing the old one.) Recall our
+previous example of List&lt;Integer&gt; range elements. Those were mutable, so
+we just used get to obtain a reference to a List, added a new element to it
+(changing it), and then the new element was in the range List, no “put” needed.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:9.0pt;font-family:"Courier New"'>String s = “this is a test,
+this is only a test”<span class=GramE>;<span style='mso-spacerun:yes'> 
+</span>/</span>/ to count vowels in<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:9.0pt;font-family:"Courier New"'>//set up <span class=SpellE>HashMap</span>
+stats<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:9.0pt;font-family:"Courier New"'>Map&lt;<span class=SpellE>Character<span
+class=GramE>,Integer</span></span>&gt; stats = new <span class=SpellE>HashMap</span>&lt;<span
+class=SpellE>Character,Integer</span>&gt;();<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:9.0pt;font-family:"Courier New"'>//with 5 put’s, add (‘a’<span
+class=GramE>,0</span>) (‘e’, 0), (‘<span class=SpellE>i</span>’, 0), (‘o’, 0),
+and (‘u’, 0) to stats<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+class=GramE><span style='font-size:9.0pt;font-family:"Courier New"'>for</span></span><span
+style='font-size:9.0pt;font-family:"Courier New"'> (<span class=SpellE>int</span>
+<span class=SpellE>i</span>=0; <span class=SpellE>i</span> &lt; <span
+class=SpellE>s.length</span>(); <span class=SpellE>i</span>++) {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:9.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>     </span><span class=GramE>char</span> c = <span
+class=SpellE>s.charAt</span>(<span class=SpellE>i</span>);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:9.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+2'>     </span>Integer count = <span class=SpellE>stats.get</span>(c); // get
+Object, so can test if null <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:9.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+2'>     </span><span class=GramE>if</span> (count != null)<span
+style='mso-spacerun:yes'>  </span>// if vowel<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:9.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+3'>        </span><span class=SpellE>stats.put</span>(c, count + 1); // replace
+old immutable Integer with new one<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:9.0pt;font-family:"Courier New"'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span class=GramE><span
+style='font-size:9.0pt;font-family:"Courier New";mso-bidi-font-weight:bold'>for</span></span><span
+style='font-size:9.0pt;font-family:"Courier New"'> (<span style='mso-bidi-font-weight:
+bold'>char</span> x: <span class=SpellE>stats.keySet</span>())<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+9.0pt;font-family:"Courier New"'><span style='mso-spacerun:yes'>    </span><span
+class=SpellE>System.<i>out</i>.println</span>(x +&quot;’s: &quot; + <span
+class=SpellE>stats.get</span>(x));<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:"Courier New";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:"Courier New";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:"Courier New";color:black'>Output: <span class=SpellE>HashMap</span>—see
+“random” order of domain elements--<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span class=SpellE><span
+class=GramE><span style='font-size:10.0pt;font-family:"Courier New";color:black'>u’s</span></span></span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>: 0</span><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span class=SpellE><span
+class=GramE><span style='font-size:10.0pt;font-family:"Courier New";color:black'>e’s</span></span></span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>: 2</span><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span class=SpellE><span
+class=GramE><span style='font-size:10.0pt;font-family:"Courier New";color:black'>a’s</span></span></span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>: 2</span><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span class=SpellE><span
+class=GramE><span style='font-size:10.0pt;font-family:"Courier New";color:black'>o’s</span></span></span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>: 1</span><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span class=SpellE><span
+class=GramE><span style='font-size:10.0pt;font-family:"Courier New";color:black'>i’s</span></span></span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>: 4<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:"Courier New";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:"Courier New";color:black'>Output: <span class=SpellE>TreeMap</span>—see
+ordered domain elements--<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span class=SpellE><span
+class=GramE><span style='font-size:10.0pt;font-family:"Courier New";color:black'>a’s</span></span></span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>: 2</span><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span class=SpellE><span
+class=GramE><span style='font-size:10.0pt;font-family:"Courier New";color:black'>e’s</span></span></span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>: 2</span><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span class=SpellE><span
+class=GramE><span style='font-size:10.0pt;font-family:"Courier New";color:black'>i’s</span></span></span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>: 4</span><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span class=SpellE><span
+class=GramE><span style='font-size:10.0pt;font-family:"Courier New";color:black'>o’s</span></span></span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>: 1</span><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span class=SpellE><span
+class=GramE><span style='font-size:10.0pt;font-family:"Courier New";color:black'>u’s</span></span></span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>: 0</span><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Note that we
+don’t see the hashing here—it’s hidden inside the <span class=SpellE>HashMap</span>
+implementation. We can say that <span class=SpellE><span class=GramE>Integer.hashCode</span></span><span
+class=GramE>(</span>) is the hashing function.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Note: there
+might be collisions in the <span class=SpellE>HashMap</span> case.<span
+style='mso-spacerun:yes'>  </span>It’s OK, though, because <span class=SpellE>HashMap</span>
+takes appropriate action.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>What’s going on
+inside <span class=SpellE>HashMap</span>?<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+class=SpellE><span style='font-size:10.0pt;font-family:"Times New Roman","serif"'>HashMap</span></span><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'> is using a hash
+function, here from chars to integers from 0 up to some limit M-1.<span
+style='mso-spacerun:yes'>  </span>It uses the ASCII <span class=GramE>codes<span
+style='mso-spacerun:yes'>  </span>(</span>which are also the Unicode values, in
+use in Java) of the chars:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>'<span
+class=GramE>a</span>'= 97, 'e' = 101, '<span class=SpellE>i</span>' = 105, 'o'
+= 111, 'u' = 117<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Let’s assume
+it’s h(x) = <span class=SpellE>x%<span class=GramE>M</span></span><span
+class=GramE> ,</span> where x is the ASCII code.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Simplest M to
+figure with is M=10.<span style='mso-spacerun:yes'>  </span><span class=GramE>Then
+<span class=SpellE>x%M</span> is just the last decimal digit of x.</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Then h('a') = 7,
+h('e') = 1, h('<span class=SpellE>i</span>') = 5, h('o') = 1, h('u') = 7.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Here ‘a’ and ‘u’
+both hash to 7, and ‘e’ and ‘o’ both hash to 1. These are “hash collisions”,
+and are not welcome because they mean extra work for the code—more on this
+later.<span style='mso-spacerun:yes'>  </span>We end up having only 3 unique
+hash values for our 5 keys, leaving 7 hash buckets (0, 2, 3, 4, 6, 8, <span
+class=GramE>9</span>) empty.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>What bad luck to
+be using only 3 slots out of the 10 we have here.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Or is it
+luck?<span style='mso-spacerun:yes'>  </span>What's wrong with M=10?<span
+style='mso-spacerun:yes'>  </span>It's not a <i>prime</i>.<span
+style='mso-spacerun:yes'>  </span>10 = 2*5.<span style='mso-spacerun:yes'> 
+</span>For reasons that mathematicians might be able to explain in a few weeks,
+the factors of M cause a sort of beat phenomenon with the numbers that show up
+in real life and cause a lot of collisions.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Try M=11.<span
+style='mso-spacerun:yes'>  </span><span class=GramE>h(</span>x) = x % 11.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Then h('a') = 9,
+h('e') = 2, h('<span class=SpellE>i</span>') = 6, h('o') = 1, h('u') = 7,
+h('y') = 0.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>No
+collisions!<span style='mso-spacerun:yes'>  </span><span class=GramE>A <i>perfect</i>
+hash.</span><span style='mso-spacerun:yes'>  </span>Of course a prime does not
+guarantee this perfection, but tends to give better results than a number with
+factors, esp. lots of different factors, and factors of 2 or 5, used in our
+number base.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>So with this
+hash function, we can imagine what <span class=SpellE>HashMap</span> is doing:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+class=GramE><span style='font-size:10.0pt;font-family:"Times New Roman","serif"'>use</span></span><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'> array a = new
+Integer[10];<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>For <span
+class=SpellE><span class=GramE>map.put</span></span><span class=GramE>(</span>‘a’,
+0): <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+class=GramE><span style='font-size:10.0pt;font-family:"Times New Roman","serif"'>hash</span></span><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'> ‘a’:<span
+style='mso-spacerun:yes'>  </span>h(‘a’) = 9, then put a[9] = 0;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>For <span
+class=SpellE><span class=GramE>map.get</span></span><span class=GramE>(</span>‘a’)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Hash ‘a’: <span
+class=GramE>h(</span>‘a’) = 9, then lookup a[9] value and return it.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>OK, this works
+properly on vowels because of the perfect hash, though it’s not good enough for
+our previous <span class=SpellE>HashMap</span> code because it wouldn’t return
+null for all non-vowels.<span style='mso-spacerun:yes'>  </span>Ex: <span
+class=SpellE><span class=GramE>map.get</span></span><span class=GramE>(</span>‘t’):<span
+style='mso-spacerun:yes'>  </span>h(‘t) = 6, returns a[6], non-null.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Clearly we need
+more machinery to handle collisions.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>With a
+collision, we get the same bucket number for two different <span class=SpellE><span
+class=GramE>x’s</span></span>, so we’re trying to put two values in one spot in
+the array.<span style='mso-spacerun:yes'>  </span>A common fix is to replace
+the single value in the array with a List of (key, value) entries, all the keys
+that hash to that bucket number.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+class=GramE><span style='font-size:10.0pt;font-family:"Times New Roman","serif"'>use</span></span><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'> array a = new
+List[10];<span style='mso-spacerun:yes'>  </span>//actually not so easy to do,
+just conceptual for now (see pg. 155)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>For <span
+class=SpellE><span class=GramE>map.put</span></span><span class=GramE>(</span>‘a’,
+0): <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>hash ‘a’:<span
+style='mso-spacerun:yes'>  </span>h(‘a’) = 9, then look in list at a[9], see if
+‘a’ is there, if so, change its value to 0, and if not, add an entry(‘a’,0)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>For <span
+class=SpellE><span class=GramE>map.get</span></span><span class=GramE>(</span>‘a’)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Hash ‘a’: <span
+class=GramE>h(</span>‘a’) = 9, then lookup a[9] list and, in that list, find
+‘a’, and return its value, or return null if not there.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Hashing Strings</span></b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Very short ones,
+less than 5 chars, can be assembled into an <span class=SpellE>int</span> x by
+left-shifting the chars of s by 0, 7, 14, and 21 bits and combining.<span
+style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Longer
+strings:<span style='mso-spacerun:yes'>  </span>it's very important to let <i>all
+parts of the string contribute to the result</i>.<span
+style='mso-spacerun:yes'>  </span>Think of hashing URLs, for ex.,
+&quot;http://www….&quot;<span style='mso-spacerun:yes'>  </span>Better not be
+using just the first 12 chars!<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Book's “bad hash
+function” of Figure 20.3, pg. 777(717) add up all the ASCII codes of the chars
+in the string.<span style='mso-spacerun:yes'>  </span>That does satisfy the
+all-contributing rule, but has another defect:<span style='mso-spacerun:yes'> 
+</span>&quot;bat&quot; and &quot;tab&quot; collide, because addition is
+commutative.<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Hashing
+terminology, for hashing <span class=SpellE>keytype</span></span></b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Keys:</span></b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'> each value of <span
+class=SpellE>keytype</span> can be called a key.<span
+style='mso-spacerun:yes'>  </span>It just means that we're going to do <i>a
+look-up</i> using this value.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Hash table:</span></b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'> the array in
+use, of some size M or <span class=SpellE>arraySize</span> in Weiss Chap. 20.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Hash bucket or
+hash slot:</span></b><span style='font-size:10.0pt;font-family:"Times New Roman","serif"'>
+a subscript in the hash table array, these are numbered from 0 to M-1.<span
+style='mso-spacerun:yes'>  </span>M is the number of buckets.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Hash function:</span></b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'> a function from
+the <span class=SpellE>keytype</span> to a bucket-number:<span
+style='mso-spacerun:yes'>  </span>b = h(x), where x is of type <span
+class=SpellE>keytype</span> and 0&lt;=b&lt;M is the bucket number.<span
+style='mso-tab-count:1'>         </span>We say &quot;x hashes to b&quot;.<span
+style='mso-spacerun:yes'>  </span><span class=GramE>h(</span>x) is a <span
+class=SpellE>computed</span> mapping and is expected to take O(1) computation
+time.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Collision:</span></b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'> when two keys x
+and y hash to the same bucket: b <span class=GramE>=<span
+style='mso-spacerun:yes'>  </span>h</span>(x) = h(y).<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'>Perfect hash function</span></b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>: a hash
+function with no collisions between keys (keys in the permitted domain of
+keys).<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Note: when
+working in Java, we usually don’t worry about finding a perfect hash function,
+since the non-perfect ones work so well, and we have <span class=SpellE>HashSet</span>
+and <span class=SpellE>HashMap</span> to do all the collision handling for us.
+Only if we need extremely high performance: nothing beats a simple array based
+on a perfect hash of keys to smallish <span class=SpellE>ints</span>.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'>Hashing numbers<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>As we saw last
+time, h(x) = x % M is a simple way to hash numbers into [0, M-1], and works
+pretty well if M is prime. There are more complicated formulas in use.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'>Hashing Strings<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Book's “bad hash
+function” of Figure 20.3, pg. 777(717) add up all the ASCII codes of the chars
+in the string.<span style='mso-spacerun:yes'>  </span>That does satisfy the
+all-contributing rule, but has another defect:<span style='mso-spacerun:yes'> 
+</span>&quot;bat&quot; and &quot;tab&quot; collide, because addition is
+commutative.<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>It’s better to slide
+the contributions of characters over by multiplications by a prime, as in
+Figure 20.2, pg. 776(716).<span style='mso-spacerun:yes'>  </span>Some powers
+of 37 exceed the top end of an <span class=SpellE>int</span>:<span
+style='mso-spacerun:yes'>  </span>37^7 &gt; 2G = maximum <span class=SpellE>int</span>
+value (Here ^ stands for power). However the contribution of the term with 37^7
+in it still affects the lower digits of the result because 37 not a power of 2,
+so that (37^7<span class=GramE>)%</span><span class=SpellE>tablesize</span> is
+non-0.<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>You could
+replace the 37 with another prime, but not another number with factors of 2 or
+other small primes in it (ones that might show up in <span class=SpellE>tablesize</span>).<span
+style='mso-spacerun:yes'>  </span>Similarly, avoid 37 as a <span class=SpellE>tablesize</span>!<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Note that numeric
+overflow is expected in this computation, and is the reason the final result of
+the loop may be negative. <span class=GramE>Not that numeric overflow does not
+cause an exception in Java, so we programmers need to check for it if it’s
+important.</span> But here we only are trying to get a hashed-up string of
+bits, so we just take care of the possible negative result.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Hashing more
+complex or larger objects<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Graphics bitmaps
+are sometimes hashed to identify and classify them—think of them as strings
+with binary codes.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Complex objects
+often have an identifier in them, and then <i>that</i> is what is hashed.<span
+style='mso-spacerun:yes'>  </span>After all, hashing is a part of fast look-up,
+so we only want to hash the things we want to look up by.<span
+style='mso-spacerun:yes'>   </span>(Note that graphics bitmaps often don't have
+a natural identifier, so we use their contents to id them for want of a better
+method.)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Example:
+employee record containing <span class=SpellE>fname</span>, <span class=SpellE>lname</span>,
+<span class=SpellE>ssno</span>, address, <span class=GramE>dept, …</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Here we probably
+want to look up by <span class=SpellE>ssno</span>, so we hash those
+numbers.<span style='mso-spacerun:yes'>  </span>Note that <span class=SpellE>ssno’s</span>,
+being 9-digit numbers, have max 999-99-9999 = 999,999,999 &lt; 1G, so they fit
+nicely in 32-bit numbers.<span style='mso-spacerun:yes'>  </span>For <span
+class=SpellE><span class=GramE>hashCode</span></span><span class=GramE>(</span>),
+just return Integer(<span class=SpellE>ssno</span>).<span class=SpellE>hashCode</span>(),
+and similarly base equals on Integer(<span class=SpellE>ssno</span>).equals.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>On pg. 269
+(235), we see an object (<span class=SpellE>SimpleStudent</span>) with a String
+id—just use <span class=SpellE><span class=GramE>String.hashCode</span></span><span
+class=GramE>(</span>) and <span class=SpellE>String.equals</span>.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>We are assuming
+these <span class=SpellE>ids</span> are unique ids. Another source of unique
+ids, if the data is coming from a database, <span class=GramE>are</span> the
+primary key values, since they are guaranteed unique by the database.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'>Composite keys: (<span class=SpellE>lname</span>, <span
+class=SpellE>fname</span>) for example<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>If using <span
+class=SpellE>firstname</span>, <span class=SpellE>lastname</span> as id, with
+equals requiring both to match, we could concatenate the two Strings and then
+do <span class=SpellE><span class=GramE>hashCode</span></span><span
+class=GramE>(</span>), or add up the two <span class=SpellE>hashCodes</span> or
+XOR them (XOR operator is ^ in Java).<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+class=SpellE><span class=GramE><span style='font-size:10.0pt;font-family:"Times New Roman","serif"'>hashVal</span></span></span><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'> = <span
+class=SpellE>fname.hashCode</span>()^<span class=SpellE>fname.hashCode</span>(),
+equals based on equals of both strings, after null and class checking.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Rule of Thumb:</span></b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'> Try for only
+half-full (or less) hash tables.<span style='mso-spacerun:yes'>  </span>Figure
+out the maximum # keys you could have, double it, and make that the hash table
+size.<span style='mso-spacerun:yes'>  </span>Leave room for growth, and get
+better performance. Never worry about a few megabytes of memory—serious systems
+have gigabytes today.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>&lt;<span
+class=GramE>pictures</span> of half-full hash table, slightly overfull hash
+table, vastly overfull hash table&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>We can see that
+an overfull hash table can cause performance problems.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+class=SpellE><span style='font-size:10.0pt;font-family:"Times New Roman","serif"'>HashSet</span></span><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'> and <span
+class=SpellE>HashMap</span> never let this happen.<span
+style='mso-spacerun:yes'>  </span>When the hash table becomes somewhat
+overfull, it is replaced by a larger hash table and all the elements are moved
+over.<span style='mso-spacerun:yes'>  </span>The caller never notices unless
+this causes a hiccup in performance.<span style='mso-spacerun:yes'>  </span>But
+on the average over many calls, it doesn’t cause a performance problem. We
+should come back to this.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Collisions:<span
+style='mso-spacerun:yes'>  </span>Various solutions<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'>Recall that a collision happens when two keys hash to the same bucket,
+i.e., the same hash-value. One of them gets there first and then a later insertion
+delivers another key with the same <span class=SpellE>hashvalue</span>—what to
+do?<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:-.5in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;mso-list:l2 level1 lfo2;
+tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><span
+style='mso-list:Ignore'>1. <span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Separate
+chaining.<span style='mso-spacerun:yes'>  </span>Make the hash table an array
+of linked lists.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:-.5in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;mso-list:l2 level1 lfo2;
+tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><span
+style='mso-list:Ignore'>2. <span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Closed
+hashing.<span style='mso-spacerun:yes'>  </span>If the first spot is full, use
+another spot in the hash table<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:-.5in;margin-bottom:0in;
+margin-left:31.0pt;margin-bottom:.0001pt;text-indent:-.25in;mso-list:l0 level1 lfo4;
+tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><span
+style='mso-list:Ignore'>a. <span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=GramE><span style='font-size:10.0pt;
+font-family:"Times New Roman","serif"'>linear</span></span><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'> probing: look
+in the next spot down/wrapped in the array, etc.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:-.5in;margin-bottom:0in;
+margin-left:31.0pt;margin-bottom:.0001pt;text-indent:-.25in;mso-list:l0 level1 lfo4;
+tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><span
+style='mso-list:Ignore'>b. <span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=GramE><span style='font-size:10.0pt;
+font-family:"Times New Roman","serif"'>quadratic</span></span><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'> probing: look
+in <span class=SpellE>quadratically</span>-determined places in the array.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:-.5in;margin-bottom:0in;
+margin-left:31.0pt;margin-bottom:.0001pt;text-indent:-.25in;mso-list:l0 level1 lfo4;
+tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><span
+style='mso-list:Ignore'>c. <span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=GramE><span style='font-size:10.0pt;
+font-family:"Times New Roman","serif"'>there</span></span><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'> are other ways
+we won’t cover.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>General rules of
+thumb: keep hash tables no more than half full, for good performance.<span
+style='mso-spacerun:yes'>  </span>Use a prime for the hash table size.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Idea of
+rehashing: every time the data doubles in size, double the hash table size to
+keep under the half-full rule.<span style='mso-spacerun:yes'>  </span>Turns out
+you can still maintain <span class=GramE>O(</span>1) lookup.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Separate
+Chaining<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'>In separate chaining, each hash array element is a linked list holding
+all the keys that hash to that bucket, that is, all the collision
+participants.<span style='mso-spacerun:yes'>  </span>No further probing is
+needed, just list operations.<span style='mso-spacerun:yes'>  </span>No
+“active” flags are needed either.<span style='mso-spacerun:yes'> 
+</span>Instead, remove just removes the list element, and that entry never gets
+found again.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'>This is the simplest way to make a hash table that works decently.<span
+style='mso-spacerun:yes'>  </span>In fact, all the hash tables I’ve seen in
+practice (maybe 5 cases), were done this way.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'>In some cases separate chaining may be a little slower than quadratic
+probing, because it causes memory references that hop around in memory
+more.<span style='mso-spacerun:yes'>  </span>This could be important for very
+large hash tables.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'>Weiss, 4<sup>th</sup> ed. only, has an implementation of separate
+chaining MyHashSet.java, p. 799. <span class=GramE>Just one page of code.</span>
+This should be available on his code website.<span style='mso-spacerun:yes'> 
+</span>The only difficult point is creating the array. It “should be” new
+Node&lt;<span class=SpellE>AnyType</span><span class=GramE>&gt;[</span><span
+class=SpellE>numLists</span>], but this array of <span class=SpellE>parametrized</span>
+type is illegal. See pg. 157.<span style='mso-spacerun:yes'>  </span>Instead,
+Weiss uses the “raw type” Node to create the array. This will cause a warning
+about using raw types, but will work.<span style='mso-spacerun:yes'> 
+</span>Note that it’s really only the raw types that have code—read about type
+erasure on pg. 154. A way to avoid this nasty juncture is to provide an
+intermediate object for the hash entry, say <span class=SpellE>HashEntry</span>,
+that HAS-A Node&lt;<span class=SpellE>AnyType</span>&gt;, i.e., the pattern in
+the <span class=SpellE>qual</span> solution, where <span class=SpellE>LineUsageData</span>
+HAS-A <span class=SpellE>SingleLinkedList</span>&lt;Usage&gt;, and then is used
+as an array entry.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Linear Probing<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'>This is probably the first thing you’d think of.<span
+style='mso-spacerun:yes'>  </span>If b = h(x) is already in use, try b+1, then
+b+2, etc., wrapping around to b = 0 if you hit M, the <span class=SpellE>tablesize</span>,
+i.e. b = (b + 1) % M.<span style='mso-spacerun:yes'>  </span>As soon as you
+find an empty spot, take it, and place an object containing the key.<span
+style='mso-spacerun:yes'>  </span>On lookup, hash the key and check if it
+matches the one in the hash slot, if not, try the next (wrapping if necessary),
+etc., until you find the matching one or an empty one.<span
+style='mso-spacerun:yes'>  </span>A little more work is needed to support
+deletion, since it can break a sequence of full spots.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'>This works, but its performance isn’t great, because stretches of the
+array get filled up and probes have to go further and further.<span
+style='mso-spacerun:yes'>  </span>Also, you can’t delete entries in a simple <span
+class=GramE>way,</span> just removing them, because they have been used as
+stepping stones in other key’s probing sequences.<span
+style='mso-spacerun:yes'>  </span>Read about this in Weiss.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Quadratic
+Probing (used in Weiss’s main implementation of <span class=SpellE>HashSet</span>)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'>Quadratic probing fixes the local-fill-up problem with linear
+probing.<span style='mso-spacerun:yes'>  </span>We assume M is <span
+class=GramE>prime</span>.<span style='mso-spacerun:yes'>  </span>Instead of plodding
+one by one through the array from the original bucket, jump by bigger and
+bigger steps:<span style='mso-spacerun:yes'>  </span>b + 1, b + 4, b + <span
+class=GramE>9, ...</span> b + i^2, where again these wrap around to b = 0 if
+necessary.<span style='mso-spacerun:yes'>  </span>Because of jumping further
+and further, the clustering effect is lessened.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>Quadratic
+probing works<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'>However, we need to show that these probe sequences don’t start cycling
+around some smallish set of values.<span style='mso-spacerun:yes'> 
+</span>Suppose they did. Then, for M a prime <span class=SpellE>tablesize</span>:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><span style='mso-tab-count:1'>      </span><span
+style='mso-spacerun:yes'>           </span>b + i^2<span
+style='mso-spacerun:yes'>   </span>=<span style='mso-spacerun:yes'>   </span>b
++ j^2<span style='mso-spacerun:yes'>   </span>(mod M<span class=GramE>)<span
+style='mso-spacerun:yes'>  </span>for</span> <span class=SpellE>i</span> and j,
+different probe numbers.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><span style='mso-spacerun:yes'>                </span><span class=GramE>i^</span>2<span
+style='mso-spacerun:yes'>  </span>=<span style='mso-spacerun:yes'>  </span>j^2
+(mod M)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><span style='mso-tab-count:3'>                  </span><span class=GramE>i^</span>2
+– j^2 = 0<span style='mso-spacerun:yes'>  </span>(mod M)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><span style='mso-tab-count:3'>                  </span>(<span
+class=SpellE>i</span> – j)(<span class=SpellE>i</span> + j) = 0 (mod M), i.e. (<span
+class=SpellE>i</span> – j<span class=GramE>)(</span><span class=SpellE>i</span>
++ j) is divisible by M, a prime, i.e., <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><span style='mso-tab-count:3'>                  </span><span class=GramE>the</span>
+prime factors of (<span class=SpellE>i</span> - j)(<span class=SpellE>i</span>
++ j) contain M<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'>Recall from cs320 that any number can be written uniquely as a product of
+primes. So if the product of two numbers contains a prime factor of M, one of
+the two factors must contain it. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'>Thus we have the conclusion that (<span class=SpellE>i</span> – j) or (<span
+class=SpellE>i</span> + j) has a prime factor of M.<span
+style='mso-spacerun:yes'>  </span>If we restrict ourselves to M/2 probes, so <span
+class=SpellE>i</span> &lt;=M/2 and j &lt;= M/2, neither of these can happen. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'>You might worry that we need <span class=SpellE>i</span>&lt;M/2 and
+j&lt;M/2 so that (<span class=SpellE>i+j</span>) &lt; M, but in fact it is
+sufficient to require that <span class=SpellE>i</span>&lt;=M/2 and j&lt;=M/2
+since <span class=SpellE>i</span> and j are different and so cannot both be
+exactly M/2, so in fact (<span class=SpellE>i+j</span>) &lt; M in this case
+too.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'>Thus we have the result that if we keep the hash table no more than half
+full (a good idea anyway), we can always insert another key using quadratic
+probing.<span style='mso-spacerun:yes'>  </span>With up to M/2 different probes
+to work with, we’ve got to find an empty slot! <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-.5in;tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 436.0pt right 6.5in'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

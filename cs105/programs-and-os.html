@@ -1,0 +1,130 @@
+<h1>Programs and Operating Systems</h1>
+
+We learn about what programs are, and go in depth in the discussion of one particular program, the operating system.
+
+<h2>Programs</h2>
+<ul>
+  <li>Computer scientists write programs.  But what's a program?
+    <ul>
+      <li>Series of instructions, which the computer executes to perform some function.</li>
+      <li>Examples: word processor, web browser, operating system.</li>
+      <li>Programs contain instructions (i.e. code) which are in some language.
+	<ul>
+	  <li>Machine readable code (e.g. code in executables) is called machine code.
+	    <ul>
+	      <li>Machine code is represented using bytes.</li>
+	      <li>It is tedious to read and write.</li>
+	      <li>It is all that a processor (CPU) understands.</li>
+	      <li>Each family of processor (x86, ARM) understands different machine languages.</li>
+	      <li>The human readable form of machine language is called assembly language.</li>
+	    </ul>
+	  </li>
+	  <li>Source code is human readable, but closer to human language than assembly.
+	    <ul>
+	      <li>Unlike assembly language, source code is relatively independent of the processor (it is abstract).</li>
+	      <li>Humans write in source code.</li>
+	      <li>There are interpreted languages and compiled languages (not a hard distinction).</li>
+	    </ul>
+	  </li>
+	</ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    Compiled languages are converted directly into a machine code executable, which can be run as a program.
+    <ul>
+      <li>Written code needs to be compiled using a special program called a compiler.</li>
+      <li>The result is an executable, which can be run.</li>
+    </ul>
+  </li>
+  <li>
+    Code in interpreted languages must be run with the help of an interpreter.
+    <ul>
+      <li>Written code can be executed using an interpreter.</li>
+      <li>Interpreter translates code into an executable on the fly.</li>
+    </ul>
+  </li>
+  <li>
+    The difference between compilation and interpretation can be understood analogously.
+    <ul>
+      <li>Suppose you are offshoring your work to some young foreigner.</li>
+      <li>You specify your work in an English document (source code).</li>
+      <li>Your co-worker only understands Chinese.</li>
+      <li>You can translate (compile) the English document into Chinese, then give it to your co-worker to read and follow.</li>
+      <li>Or you can give the document to someone who knows both languages (the interpreter), who will read it, and tell the instructions to your co-worker in Chinese.</li>
+    </ul>
+  </li>
+  <li>Refer to handout to see examples of assembly, machine, compiled and interpreted code.</li>
+</ul>
+
+<h2>Operating Systems</h2>
+<ul>
+  <li>Originally, everyone who used a computer was a programmer.
+    <ul>
+      <li>You could only communicate with the computer through code.</li>
+      <li>The computer only ran one program at a time.</li>
+    </ul>
+  </li>
+  <li>Eventually, someone figured out that you can write a program, which makes operating the computer easier.
+    <ul>
+      <li>Hence the term "operating system" (OS).</li>
+      <li>OS's are the first program to run, and all other programs run on top of it.</li>
+      <li>OS's manage the hardware, and all other programs interface with the hardware through the OS.</li>
+      <li>Some examples of OS responsibilities: scheduling, input/output, memory management.</li>
+      <li>Diagram from http://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Operating_system_placement.svg/165px-Operating_system_placement.svg.png:</li>
+      <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Operating_system_placement.svg/165px-Operating_system_placement.svg.png"/>
+    </ul>
+  </li>
+  <li>
+    Scheduling allows multiple programs to run at the same time.
+    <ul>
+      <li>For programs to run means for programs to take up CPU time.</li>
+      <li>Running multiple programs simultaneously is achieved by allocating small amounts of time to each running program.</li>
+      <li>Round robin scheduling means each program takes up the same amount of time.</li>
+      <li>Priority scheduling allows high-priority programs (e.g. web browser) to take up more CPU time than others (e.g. antivirus scan).</li>
+    </ul>
+  </li>
+  <li>
+    Keyboard and mouse input is handled through interrupts.
+    <ul>
+      <li>When you type a key, it is handled immediately by the OS.</li>
+      <li>The currently running program is saved.</li>
+      <li>The interrupt is handled by some function.</li>
+      <li>The previously running program is restored.</li>
+      <li>Aside from inputs, crashing programs also generate interrupts.</li>
+    </ul>
+  </li>
+  <li>
+    OS creates virtual memory out of physical memory for programs.
+    <ul>
+      <li>Each program is assigned a block of virtual memory.</li>
+      <li>Programs use memory to store data (images, audio, strings, etc.).</li>
+      <li>Virtual memory is an abstraction of physical memory.</li>
+      <li>Virtual memory is larger than physical memory; virtual memory that doesn't fit into physical memory is stored on the hard disk.</li>
+      <li>The OS separates memory for programs.</li>
+      <li>Figure taken from http://upload.wikimedia.org/wikipedia/commons/6/6e/Virtual_memory.svg:</li>
+        <img width="400px" height="400px" src="http://upload.wikimedia.org/wikipedia/commons/6/6e/Virtual_memory.svg"/>
+    </ul>
+  </li>
+  <li>
+    Most (but not all) operating systems derive from Unix.
+    <ul>
+     <li>Unix was created in 1970.</li>
+     <li>Linux (for example, Android) and Mac OSX derive from Unix.</li>
+     <li>Windows NT derives from DOS, and is independent of the Unix familiy.</li>
+     <li>Taken from http://upload.wikimedia.org/wikipedia/commons/7/77/Unix_history-simple.svg</li>
+     <img width="1000px" src="http://upload.wikimedia.org/wikipedia/commons/7/77/Unix_history-simple.svg"/>
+     <li>Incidentally, the creators of Unix also wrote C, a language in which most operating systems, compilers, drivers, etc. are written.</li>    </ul>
+  </li>
+</ul>
+
+<h2>Suggested readings</h2>
+<ul>
+  <li>A comparison of the hello world program in example machine, assembly, compiled, and interpreted languages: <a href="hello.odt">hello.odt</a></li>
+  <li>An article about operating systems: <a href="http://en.wikipedia.org/wiki/Operating_system">http://en.wikipedia.org/wiki/Operating_system</a>
+    <ul>
+      <li>Read introduction, section on interrupts, memory management, and multitasking.</li>
+    </ul>
+  </li>
+</ul>
+

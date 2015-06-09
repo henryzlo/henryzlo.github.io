@@ -1,0 +1,406 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:p="urn:schemas-microsoft-com:office:powerpoint" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:oa="urn:schemas-microsoft-com:office:activation" xmlns:m="http://schemas.microsoft.com/office/2004/12/omml" xmlns="http://www.w3.org/TR/REC-html40"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="ProgId" content="Word.Document">
+<meta name="Generator" content="Microsoft Word 12">
+<meta name="Originator" content="Microsoft Word 12">
+<link rel="File-List" href="http://www.cs.umb.edu/cs310/index_files/filelist.xml">
+<link rel="Edit-Time-Data" href="http://www.cs.umb.edu/cs310/index_files/editdata.mso">
+
+<title>UMB CS310 Home Page - Spring 2014</title>
+
+<link rel="themeData" href="http://www.cs.umb.edu/cs310/index_files/themedata.thmx">
+<link rel="colorSchemeMapping" href="http://www.cs.umb.edu/cs310/index_files/colorschememapping.xml">
+
+</head>
+
+<body><p link="blue" vlink="blue" style="tab-interval:.5in" lang="EN-US">
+
+</p><p class="Section1">
+
+</p><h2 style="text-align:center" align="center">CS310: Advanced Data
+Structures and Algorithms<br>
+Spring 2014</h2>
+
+<p class="MsoNormal" style="text-align:center" align="center"><b><a href="http://www.cs.umb.edu/">Department of Computer Science</a></b> <br>
+<b><a href="http://www.umb.edu/">UMass Boston</a></b></p>
+
+<p><b>Class: <span class="SpellE">Tu, Th</span> 5:30–6:45 in M-1-614<o:p></o:p></b></p>
+
+<p><b>Instructor:</b> <a href="http://www.cs.umb.edu/%7Enurith"><span style="color:windowtext">Nurit Haspel</span></a> <br>
+email: <a href="mailto:nurith@cs.umb.edu"><span style="color:windowtext">nurith@cs.umb.edu</span></a>
+<br>
+Office: S-3-71<br>
+Office hours: <span class="SpellE">Tu Th</span> 3:00–4:00PM</p>
+
+<p><b>TA:</b> <span style="color:windowtext">Binh Tran</span> <br>
+email: <a href="mailto:binhdt@cs.umb.edu"><span style="color:windowtext">binhdt@cs.umb.edu</span></a>
+<br>
+Office: Unix lab<br>
+Office hours: <span class="SpellE">Mo We</span> 3:00–3:50PM</p>
+<br>
+
+<b>Course Description:</b> A systematic study of the methods of structuring and
+manipulating data in computing. Application programming interfaces, data
+abstraction, and the encapsulation of implementations. <span class="GramE">The
+design and analysis of algorithms.</span> <span class="GramE">Advanced techniques
+for program development and organization.</span> <p></p>
+
+<p><b>See the course <a href="http://www.cs.umb.edu/cs310/Syllabus.html">syllabus</a> for a detailed list
+of topics.</b></p>
+
+<p><span class="GramE"><b>Prerequisites</b> CS210, CS240, Math 140.</span> There
+will be a qualifying programming assignment given on the first day of class
+(and posted on this page) that will allow you and me to determine how well you're
+prepared for the course.</p>
+
+<div class="MsoNormal" style="text-align:center;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" align="center">
+
+<hr align="center" size="2" width="100%">
+
+</div>
+
+<h2 style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><span class="SpellE">Homeworks</span> and programming assignments 
+      </h2>
+<p>Late days on programming assignments:  All written <strong>(homework) assignments</strong> should be submitted on time! Each student has 5 late days for use over the <strong>programming assignments</strong>.
+  Any number of days can be used on each assignment, totaling no more 
+than 5 over the term. Write a note in your README file saying you are 
+using late days so I will know.</p>
+<p class="MsoNormal">
+ <a href="http://www.cs.umb.edu/cs310/qual.pdf"><span class="GramE">Qualifying Assignment</span></a><span class="GramE">, due in class
+Thu. Jan. 30.</span> <span><a href="http://www.cs.umb.edu/cs310/SinglyLinkedList.java">SinglyLinkedList.java</a>.
+<a href="http://www.cs.umb.edu/cs310/qualsoln.zip">Solution</a>.</span></p>
+<p class="MsoNormal"><a href="http://www.cs.umb.edu/cs310/a01.pdf"><span class="GramE">HW1</span></a><span class="GramE"> due Tue.</span>
+<span class="GramE"></span><span class="GramE">, Feb. 4, in class, on paper.
+</span> <a href="http://www.cs.umb.edu/cs310/a01_sol.pdf">Solution</a>.
+</p><p class="MsoNormal"><a href="http://www.cs.umb.edu/cs310/a02.pdf"><span class="GramE">HW2</span></a><span class="GramE"> due Tue.</span><span class="GramE">, Feb. 11, in class, on paper (except q1 which should be submitted in your account). 
+<a href="http://www.cs.umb.edu/cs310/a02_sol.pdf">Solution</a>.</span>
+</p><p class="MsoNormal"><a href="http://www.cs.umb.edu/cs310/pa01.pdf"><span class="GramE">PA1</span></a>
+<span class="GramE"> due Thu.</span><span class="GramE">, Feb. 20, midnight at your $cs310/pa1 directory. <!--
+<a href="pa1soln.zip">Solution</a>.</span>-->
+</span></p><p class="MsoNormal"><a href="http://www.cs.umb.edu/cs310/a03.pdf"><span class="GramE">HW3</span></a><span class="GramE"> due Tue.</span><span class="GramE"></span><span class="GramE">, Mar. 4, in class.</span> <a href="http://www.cs.umb.edu/cs310/hw3soln.zip">Solution</a>. 
+</p><p class="MsoNormal"><a href="http://www.cs.umb.edu/cs310/pa02.pdf"><span class="GramE">PA2</span></a><span class="GramE"> due Thu.</span><span class="GramE"></span><span class="GramE">, Mar. 13, midnight at your $cs310/pa2 directory. 
+<a href="http://www.cs.umb.edu/cs310/pa2soln.tar.gz">Solution</a>.</span>
+</p><p class="MsoNormal"><a href="http://www.cs.umb.edu/cs310/a04.pdf"><span class="GramE">HW4</span></a>
+<span class="GramE"> due Tue.</span><span class="GramE"></span><span class="GramE">, Mar. 25, in class.</span> <a href="http://www.cs.umb.edu/cs310/hw4soln.zip">Solution</a>.
+</p><p class="MsoNormal"><a href="http://www.cs.umb.edu/cs310/pa03.pdf"><span class="GramE">PA3</span></a>
+<span class="GramE"> due Thu.</span><span class="GramE"></span>
+<span class="GramE">, April 3, midnight at your $cs310/pa3 directory. 
+<a href="http://www.cs.umb.edu/cs310/MakeChangeExample.html">Handout - Make change</a> .
+<a href="http://www.cs.umb.edu/cs310/Grid.java">Handout - Grid</a>. </span><a href="http://www.cs.umb.edu/cs310/pa3soln.zip">Solution</a>.
+</p><p class="MsoNormal"><a href="http://www.cs.umb.edu/cs310/pa04.pdf"><span class="GramE">PA4</span></a>
+<span class="GramE"> due Thu.</span><span class="GramE"></span><span class="GramE">, 
+Apr. 10, midnight at your $cs310/pa4 directory (q1 is due in class on that day). 
+<a href="http://www.cs.umb.edu/cs310/games.pdf">Introduction to the PA4 and PA5</a>. <a href="http://www.cs.umb.edu/cs310/pa4soln.zip">Solution</a>.</span>
+</p><p class="MsoNormal"><a href="http://www.cs.umb.edu/cs310/pa05.pdf"><span class="GramE">PA5</span></a>
+<span class="GramE"> due Tue.</span><span class="GramE"></span><span class="GramE">, Apr. 22, midnight at your $cs310/pa5 directory. <a href="http://www.cs.umb.edu/cs310/pa5soln.zip">Solution</a>.
+</span>
+</p><p class="MsoNormal"><a href="http://www.cs.umb.edu/cs310/a05.pdf"><span class="GramE">HW5</span></a><span class="GramE"> due Tue.</span><span class="GramE"></span><span class="GramE">, Apr. 29, in class. </span><a href="http://www.cs.umb.edu/cs310/a05_sol.pdf">Solution</a>
+</p><p class="MsoNormal"><a href="http://www.cs.umb.edu/cs310/pa06.pdf"><span class="GramE">PA6</span></a><span class="GramE"> due Thu.</span><span class="GramE"></span><span class="GramE">, May 8, midnight at your $cs310/pa6 directory.  <a href="http://www.cs.umb.edu/cs310/pa6soln.zip">Solution</a>.</span> 
+ 
+
+</p><hr align="center" size="2" width="100%">
+<p class="MsoNormal"><b><span style="font-size:18.0pt;mso-fareast-font-family:
+&quot;MS Mincho&quot;">Class Notes<o:p></o:p></span></b></p>
+<p class="MsoNormal"><span class="GramE">Tue.</span>
+<span class="GramE"><span style="mso-fareast-font-family:&quot;MS Mincho&quot;">, Jan. 28. </span>
+<span style="mso-fareast-font-family:&quot;MS Mincho&quot;"><a href="http://www.cs.umb.edu/cs310/class01.pdf">notes</a>. 
+<a href="http://www.cs.umb.edu/cs310/class01.html">More notes</a>. Intro to qualifying assignment, review of encapsulation, APIs.
+ </span></span></p><p class="MsoNormal"><span class="GramE">Thu.</span>
+<span class="GramE"><span style="mso-fareast-font-family:&quot;MS Mincho&quot;">, Jan. 30. </span>
+<span style="mso-fareast-font-family:&quot;MS Mincho&quot;"><a href="http://www.cs.umb.edu/cs310/class02.pdf">notes</a>
+ <span style="mso-fareast-font-family:&quot;MS Mincho&quot;">. <a href="http://www.cs.umb.edu/cs310/class02.html">More notes</a>. 
+ Review of runtime analysis and growth order.</span>
+</span></span></p><p class="MsoNormal"><span class="GramE">Tue.</span>
+<span class="GramE"><span style="mso-fareast-font-family:&quot;MS Mincho&quot;">, Feb. 4</span>. 
+<span style="mso-fareast-font-family:&quot;MS Mincho&quot;"><a href="http://www.cs.umb.edu/cs310/class03.pdf">notes</a>
+ <span style="mso-fareast-font-family:&quot;MS Mincho&quot;">. <a href="http://www.cs.umb.edu/cs310/class03.html">More notes</a>. 
+ <a href="http://www.cs.umb.edu/cs310/UMLDiagrams.html">Handout - UML diagram of Collection Interface</a>. 
+ Collection classes; The list interface.</span></span>
+</span></p><p class="MsoNormal"><span class="GramE">Thu.</span>
+<span class="GramE"><span style="mso-fareast-font-family:&quot;MS Mincho&quot;">, Feb. 6</span> 
+<span style="mso-fareast-font-family:&quot;MS Mincho&quot;"><a href="http://www.cs.umb.edu/cs310/class04.pdf">notes</a>. <a href="http://www.cs.umb.edu/cs310/class04.html">More notes</a>.
+ <span style="mso-fareast-font-family:&quot;MS Mincho&quot;"> Collection classes; Sets and Maps.</span></span>
+ <span style="mso-fareast-font-family:&quot;MS Mincho&quot;"></span></span></p>
+<p class="MsoNormal"><span class="GramE">Tue.</span>
+<span class="GramE"><span style="mso-fareast-font-family:&quot;MS Mincho&quot;">, Feb. 11 </span>
+<span style="mso-fareast-font-family:&quot;MS Mincho&quot;"><a href="http://www.cs.umb.edu/cs310/class05.pdf">notes</a>. <a href="http://www.cs.umb.edu/cs310/class05.html">More notes</a>.
+ <span style="mso-fareast-font-family:&quot;MS Mincho&quot;"> Maps, Hash tables, Hash functions.</span></span>
+ <span style="mso-fareast-font-family:&quot;MS Mincho&quot;"></span></span></p>
+<p class="MsoNormal"><span class="GramE">Thu.</span>
+<span class="GramE"><span style="mso-fareast-font-family:&quot;MS Mincho&quot;">, Feb. 20. </span>
+<span style="mso-fareast-font-family:&quot;MS Mincho&quot;"><a href="http://www.cs.umb.edu/cs310/class06.pdf">notes</a>. 
+<a href="http://www.cs.umb.edu/cs310/class06.html">More notes</a>.
+ <span style="mso-fareast-font-family:&quot;MS Mincho&quot;"> Hash functions, linear and quadratic probing.</span>
+<span style="mso-fareast-font-family:&quot;MS Mincho&quot;"></span></span></span></p>
+<p class="MsoNormal"><span class="GramE">Tue.</span>
+<span class="GramE"><span style="mso-fareast-font-family:&quot;MS Mincho&quot;">, Feb. 25 </span>
+<span style="mso-fareast-font-family:&quot;MS Mincho&quot;"><a href="http://www.cs.umb.edu/cs310/class07.pdf">notes</a>. 
+<a href="http://www.cs.umb.edu/cs310/class07.html">More notes</a>.
+ <span style="mso-fareast-font-family:&quot;MS Mincho&quot;"> Resolving collisions, HashSet implementation, deletion.</span>
+ </span><span style="mso-fareast-font-family:&quot;MS Mincho&quot;"></span></span></p>
+<p class="MsoNormal"><span class="GramE">Thu.</span>
+<span class="GramE"><span style="mso-fareast-font-family:&quot;MS Mincho&quot;">, Feb. 27 </span>
+<span style="mso-fareast-font-family:&quot;MS Mincho&quot;"><a href="http://www.cs.umb.edu/cs310/class08.pdf">notes</a>. <a href="http://www.cs.umb.edu/cs310/class08.html">More notes</a>. 
+<a href="http://www.cs.umb.edu/cs310/UMLSetsMaps.html">Handout - UML diagram of sets and maps</a>.
+ <span style="mso-fareast-font-family:&quot;MS Mincho&quot;"> Rehashing, set operations.</span>
+ </span><span style="mso-fareast-font-family:&quot;MS Mincho&quot;"></span></span></p>
+<p class="MsoNormal"><span class="GramE">Tue.</span>
+<span class="GramE"><span style="mso-fareast-font-family:&quot;MS Mincho&quot;">, Mar. 4 </span> 
+<span style="mso-fareast-font-family:&quot;MS Mincho&quot;">
+<a href="http://www.cs.umb.edu/cs310/class09.pdf">notes</a>. <a href="http://www.cs.umb.edu/cs310/class09.html">More notes</a>.
+ <span style="mso-fareast-font-family:&quot;MS Mincho&quot;"> Set operations. </span>
+ </span><span style="mso-fareast-font-family:&quot;MS Mincho&quot;"></span><a href="http://www.cs.umb.edu/cs310/ExamplePrivateInnerClassIterator.html">Handout - Private inner class example</a>. </span></p>
+<p class="MsoNormal"><span class="GramE">Thu.</span>
+<span class="GramE"><span style="mso-fareast-font-family:&quot;MS Mincho&quot;">, Mar. 6 </span><span style="mso-fareast-font-family:&quot;MS Mincho&quot;">
+<a href="http://www.cs.umb.edu/cs310/class10.pdf">notes</a>. <a href="http://www.cs.umb.edu/cs310/class10.html">More notes</a>. 
+ <span style="mso-fareast-font-family:&quot;MS Mincho&quot;"> Bit-sets, Priority queues, event driven simulations.</span>  
+ </span><span style="mso-fareast-font-family:&quot;MS Mincho&quot;"></span></span></p>
+<p class="MsoNormal"><span class="GramE">Tue.</span>
+<span class="GramE"><span style="mso-fareast-font-family:&quot;MS Mincho&quot;">, Mar. 11 </span>
+<span style="mso-fareast-font-family:&quot;MS Mincho&quot;"><a href="http://www.cs.umb.edu/cs310/class11.pdf">notes</a>.  <a href="http://www.cs.umb.edu/cs310/class11.html">More notes</a>.
+ <span style="mso-fareast-font-family:&quot;MS Mincho&quot;">Event driven simulations, algorithmic techniques - introduction.
+ </span></span><span style="mso-fareast-font-family:&quot;MS Mincho&quot;"></span></span></p>
+<p class="MsoNormal"><span class="GramE">Thu.</span>
+<span class="GramE"><span style="mso-fareast-font-family:&quot;MS Mincho&quot;">, Mar. 13 </span>
+<span style="mso-fareast-font-family:&quot;MS Mincho&quot;"><a href="http://www.cs.umb.edu/cs310/class12.pdf">notes</a>. 
+<a href="http://www.cs.umb.edu/cs310/class12.html">More notes</a>.  Algorithmic techniques - sorting and searching, intro. to Dynamic programming.</span>
+<span style="mso-fareast-font-family:&quot;MS Mincho&quot;"></span></span></p> 
+<p class="MsoNormal"><span class="GramE">Thu.</span>
+<span class="GramE"><span style="mso-fareast-font-family:&quot;MS Mincho&quot;">, Mar. 25 </span>
+<span style="mso-fareast-font-family:&quot;MS Mincho&quot;"><a href="http://www.cs.umb.edu/cs310/class12.pdf">notes</a>. 
+<a href="http://www.cs.umb.edu/cs310/class12.html">More notes</a>. Dynamic programming and greedy algorithms.<a href="http://www.cs.umb.edu/cs310/mid_f2013_sol.pdf">Midterm example (solved)</a>
+</span></span></p><p class="MsoNormal"><span class="GramE">Tue.</span>
+<span class="GramE"><span style="mso-fareast-font-family:&quot;MS Mincho&quot;">, Apr. 1. </span>
+<span style="mso-fareast-font-family:&quot;MS Mincho&quot;">
+<a href="http://www.cs.umb.edu/cs310/class13.pdf">notes</a> 
+<span style="mso-fareast-font-family:&quot;MS Mincho&quot;">. <a href="http://www.cs.umb.edu/cs310/class13.html"> 
+More notes</a> Intro to game project. </span></span></span></p>
+<p class="MsoNormal"><span class="GramE">Thu.</span>
+<span class="GramE"><span style="mso-fareast-font-family:&quot;MS Mincho&quot;">, Apr. 3 </span>
+<span style="mso-fareast-font-family:&quot;MS Mincho&quot;"><a href="http://www.cs.umb.edu/cs310/class14.pdf">notes</a>. 
+<a href="http://www.cs.umb.edu/cs310/class14.html">More notes</a>. 
+ <span style="mso-fareast-font-family:&quot;MS Mincho&quot;"> Fun and games - the Game project.</span>
+ </span><span style="mso-fareast-font-family:&quot;MS Mincho&quot;"></span> 
+ <a href="http://www.cs.umb.edu/cs310/GamesUML.html">Handout - Game UML diagram</a>.
+ <a href="http://www.cs.umb.edu/cs310/games.zip">Handout - the Game package</a>. 
+ <a href="http://www.cs.umb.edu/cs310/GamesCoreAPIJavadocs.html">Handout - Core documentation</a>.</span></p><!--
+<p class=MsoNormal><span class=GramE>Thu.</span>
+<span class=GramE><span style='mso-fareast-font-family:"MS Mincho"'>, Oct. 24. </span>
+<span style='mso-fareast-font-family:"MS Mincho"'><a href="class14.pdf">notes</a>. 
+<a href="class14.html">More notes</a>
+ <span style='mso-fareast-font-family:"MS Mincho"'>The game project.</span>
+ <a href="gamesAPI.html">Handout - Game API</a>.
+ </span><span style='mso-fareast-font-family:"MS Mincho"'></span></p>-->
+<p class="MsoNormal"><span class="GramE">Tue.</span>
+<span class="GramE"><span style="mso-fareast-font-family:&quot;MS Mincho&quot;">, Apr. 8 </span>
+<span style="mso-fareast-font-family:&quot;MS Mincho&quot;"><a href="http://www.cs.umb.edu/cs310/class16.pdf">notes</a>. 
+<a href="http://www.cs.umb.edu/cs310/class16.html">More notes</a> 
+<span style="mso-fareast-font-family:&quot;MS Mincho&quot;"> Wrap up on games, compression and coding.</span>
+ </span><span style="mso-fareast-font-family:&quot;MS Mincho&quot;"></span><a href="http://www.cs.umb.edu/cs310/gamesAPI.html">Handout - Game API</a><!--
+<a href="mid1_s2013.pdf">Midterm practice exam</a>. 
+<a href="mid1_s2013_solved.pdf">Solution</a>.
+<p class=MsoNormal><span class=GramE>Thu.</span>
+<span class=GramE><span style='mso-fareast-font-family:"MS Mincho"'>, Oct. 31</span>
+<span style='mso-fareast-font-family:"MS Mincho"'> 
+<a href="mid_f2013_sol.pdf"> Midterm Exam (solved)</a>. </span> </p>-->
+</span></p><p class="MsoNormal"><span class="GramE">Thu.</span>
+<span class="GramE"><span style="mso-fareast-font-family:&quot;MS Mincho&quot;">, Apr. 10. </span>
+<span style="mso-fareast-font-family:&quot;MS Mincho&quot;"><a href="http://www.cs.umb.edu/cs310/class17.pdf">notes</a>. 
+<a href="http://www.cs.umb.edu/cs310/class17.html">More notes</a>
+ <span style="mso-fareast-font-family:&quot;MS Mincho&quot;"> Huffman and prefix coding.</span></span><span style="mso-fareast-font-family:&quot;MS Mincho&quot;"></span></span></p>
+<p class="MsoNormal"><span class="GramE">Thu.</span>
+<span class="GramE"><span style="mso-fareast-font-family:&quot;MS Mincho&quot;">, 
+Apr. 15. </span><span style="mso-fareast-font-family:&quot;MS Mincho&quot;">
+<a href="http://www.cs.umb.edu/cs310/class18.pdf">notes</a>. <a href="http://www.cs.umb.edu/cs310/class18.html">More notes</a>
+ <span style="mso-fareast-font-family:&quot;MS Mincho&quot;"> Huffman and prefix coding, unicode and UTF.</span>
+ </span><span style="mso-fareast-font-family:&quot;MS Mincho&quot;"></span></span></p>
+<p class="MsoNormal"><span class="GramE">Thu.</span>
+<span class="GramE"><span style="mso-fareast-font-family:&quot;MS Mincho&quot;">, Apr. 17 </span>
+<span style="mso-fareast-font-family:&quot;MS Mincho&quot;"><a href="http://www.cs.umb.edu/cs310/class19.pdf">notes</a>. 
+<a href="http://www.cs.umb.edu/cs310/class19.html">More notes</a>. <span style="mso-fareast-font-family:&quot;MS Mincho&quot;"> 
+Introduction to graphs.</span> <span><a href="http://www.cs.umb.edu/cs310/jgrapht.zip">Handout - the Graph package</a>. 
+<a href="http://www.cs.umb.edu/cs310/CS310GraphIntro.html">Handout - graph intro</a></span></span></span></p>
+<p class="MsoNormal"><span class="SpellE">Tue.
+</span><span class="GramE"><span style="mso-fareast-font-family:&quot;MS Mincho&quot;">, Apr. 22</span>. 
+<span style="mso-fareast-font-family:&quot;MS Mincho&quot;"><a href="http://www.cs.umb.edu/cs310/class20.pdf">notes</a>. 
+<a href="http://www.cs.umb.edu/cs310/class20.html">More notes</a>
+<span style="mso-fareast-font-family:&quot;MS Mincho&quot;"> Directed acyclic graphs (DAG), 
+topological sort, Depth-first search (DFS).</span> 
+<span><a href="http://www.cs.umb.edu/cs310/DFSJGraphT.html">Handout - DFS code and demo.</a></span></span></span></p>
+<p class="MsoNormal"><span class="GramE">Thu.</span>
+ <span class="GramE"><span style="mso-fareast-font-family:&quot;MS Mincho&quot;">, Apr. 24 </span>
+ <span style="mso-fareast-font-family:&quot;MS Mincho&quot;"><a href="http://www.cs.umb.edu/cs310/class21.pdf">notes</a>. 
+ <a href="http://www.cs.umb.edu/cs310/class21.html">More notes</a>. <span style="mso-fareast-font-family:&quot;MS Mincho&quot;"> 
+ Depth-first search (DFS), Breadth-first search (BFS), Unweighted single source shortest paths.</span> 
+ <span><a href="http://www.cs.umb.edu/cs310/UnweightedJGraphT.html">Handout - Unweighted.</a></span></span></span></p>
+<p class="MsoNormal"><span class="GramE">Tue. </span>
+<span class="GramE"><span style="mso-fareast-font-family:&quot;MS Mincho&quot;">, Apr. 29 </span> </span>
+<span style="mso-fareast-font-family:&quot;MS Mincho&quot;"><a href="http://www.cs.umb.edu/cs310/class22.pdf">notes</a>. <a href="http://www.cs.umb.edu/cs310/class22.html">More notes</a>. 
+<span style="mso-fareast-font-family:&quot;MS Mincho&quot;">Single source weighted shortest paths - 
+Dijkstra's algorithm.</span></span></p>
+<p class="MsoNormal"><span class="SpellE"><span class="GramE">Thu.</span><span class="GramE">
+<span style="mso-fareast-font-family:&quot;MS Mincho&quot;">, May 1.</span>
+<span style="mso-fareast-font-family:&quot;MS Mincho&quot;"><a href="http://www.cs.umb.edu/cs310/class23.pdf">notes</a>. 
+<span style="mso-fareast-font-family:&quot;MS Mincho&quot;">Single source weighted shortest paths - 
+Dijkstra's algorithm.</span></span></span></span></p>
+<p class="MsoNormal"><span class="SpellE"><span class="GramE">Tue.</span><span class="GramE">
+<span style="mso-fareast-font-family:&quot;MS Mincho&quot;">, May 6.</span>
+<span style="mso-fareast-font-family:&quot;MS Mincho&quot;"><a href="http://www.cs.umb.edu/cs310/class24.pdf">notes</a>. 
+<span style="mso-fareast-font-family:&quot;MS Mincho&quot;">Bellman-Ford's algorithm, transitive closure, 
+Minimum spanning tree (MST).</span></span></span></span></p>
+<p class="MsoNormal"><span class="SpellE"><span class="GramE">Thu.</span></span>
+<span class="GramE"><span style="mso-fareast-font-family:&quot;MS Mincho&quot;">, Dec. 5 </span>
+<span style="mso-fareast-font-family:&quot;MS Mincho&quot;"><a href="http://www.cs.umb.edu/cs310/class25.pdf">notes</a>. 
+<span style="mso-fareast-font-family:&quot;MS Mincho&quot;">Minimum spanning tree (MST).</span></span></span></p>
+<p class="MsoNormal"><span class="SpellE"><span class="GramE">Tue.</span></span>
+<span class="GramE"><span style="mso-fareast-font-family:&quot;MS Mincho&quot;">, May 13.</span> 
+<span style="mso-fareast-font-family:&quot;MS Mincho&quot;">Final practice.</span> 
+<a href="http://www.cs.umb.edu/cs310/final_f2013_sol.pdf">Practice exam (mostly solved)</a>.</span></p>
+<!--<p class=MsoNormal><span class=SpellE><span class=GramE>Mon.</span></span><span class=GramE><span style='mso-fareast-font-family:"MS Mincho"'>, Dec. 12</span><span
+style='font-size:18.0pt;mso-fareast-font-family:"MS Mincho"'> </span><span style='mso-fareast-font-family:"MS Mincho"'><a href="class27.pdf">notes</a>. <span style='mso-fareast-font-family:"MS Mincho"'>Introduction to flow networks.</span></span></p>
+<p class=MsoNormal><span class=SpellE><span class=GramE>Tue.</span></span><span class=GramE><span style='mso-fareast-font-family:"MS Mincho"'>, May 10</span><span
+style='font-size:18.0pt;mso-fareast-font-family:"MS Mincho"'> </span><span style='mso-fareast-font-family:"MS Mincho"'><a href="final_review.pdf">notes</a>. <span style='mso-fareast-font-family:"MS Mincho"'>Final review. <a href="final_review_f11.pdf">Handout - sample questions.</a> <a href="mid_f11_solved.pdf">Handout - solved midterm.</span></span></p>-->
+
+<div class="MsoNormal" style="text-align:center" align="center">
+
+<hr align="center" size="2" width="100%">
+
+</div>
+
+<p><b><span style="font-size:18.0pt">Textbooks</span></b> </p>
+
+<p>Required: </p>
+
+<p><a href="http://users.cs.fiu.edu/%7Eweiss/#dsj4">Mark Allen Weiss, Data
+Structures and Problem Solving in <span class="GramE">JAVA<span style="mso-spacerun:yes">, </span>(</span>4th Edition)</a>, Addison Wesley
+2010). The <a href="http://users.cs.fiu.edu/%7Eweiss/dsj4/code/code.html">source
+code</a> is available on line. </p>
+
+<p><span class="GramE"><b style="mso-bidi-font-weight:normal">Recommended
+supplement to help with JAVA.</b></span> </p>
+
+<a href="http://www.horstmann.com/corejava.html"><i>Core Java 2, Volume
+I--Fundamentals</i></a>, by Cay <span class="SpellE">Horstmann</span> and Gary
+Cornell, Sun/Prentice Hall, 7th or 8th edition, ISBN 0-13-148202-5
+or&nbsp;0-13-235476-4, <a href="http://www.amazon.com/dp/0132354764/">at Amazon</a><div class="MsoNormal" style="text-align:center" align="center">
+
+<hr align="center" size="2" width="100%">
+
+</div>
+
+<h2>Your <span class="GramE">Unix</span> account</h2>
+
+<p class="MsoNormal">You will do all your work on the Department's network of UNIX
+systems, or deliver working code there. Apply for an account as soon as
+possible, following the instructions posted in the <span class="GramE">Unix</span>
+lab (S-3-158). You need to apply for cs310 even if you already have a UNIX
+account here.</p>
+
+<div class="MsoNormal" style="text-align:center" align="center">
+
+<hr align="center" size="2" width="100%">
+
+</div>
+
+<h2><span class="GramE">email</span> </h2>
+
+<p class="MsoNormal">When your application for a course account has been approved
+you will have been added to the cs310 mailing list. You should check for email
+at least several times per week.<span style="mso-spacerun:yes"> </span>If you
+wish, you can put a .forward file in your home directory to forward your email
+to another mailbox.<span style="mso-spacerun:yes"></span>This file simply
+contains your other mail address, such as user@yahoo.com.</p>
+
+<div class="MsoNormal" style="text-align:center" align="center">
+
+<hr align="center" size="2" width="100%">
+
+</div>
+
+<h2>On line material </h2>
+
+<p class="MsoNormal">All material for this course will be kept in <code><span style="font-size:10.0pt">/courses/cs310/<span class="SpellE">public_html</span></span></code>,
+which we will abbreviate as <code><span style="font-size:10.0pt">$cs310</span></code>.
+It is visible from our <span class="GramE">Unix</span> network and on the Web as
+http://www.cs.umb.edu/cs310. This file is <code><span style="font-size:10.0pt">$cs310/<span class="GramE">index.html<span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;"> .</span></span></span></code> </p>
+
+<div class="MsoNormal" style="text-align:center" align="center">
+
+<hr align="center" size="2" width="100%">
+
+</div>
+
+<h2>Written work </h2>
+
+<pre><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;">There will be about 6 programming assignments and about 5 written <span class="SpellE">homeworks</span>, a midterm and a final exam. For more information, see the syllabus.<o:p></o:p></span></pre>
+
+<div class="MsoNormal" style="text-align:center;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" align="center">
+
+<hr align="center" size="2" width="100%">
+
+</div>
+<h2 style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><span class="SpellE">Grade Composition</span>
+      </h2>
+<ul>
+<li>Final exam: 40%</li>
+<li>Midterm exam: 30%</li>
+<li>Homework assignemnts: 15%</li>
+<li>Programming assignments: 15%</li>
+</ul>
+<p><strong>Also, you will have to pass the final exam to pass the entire course.</strong></p>
+<hr align="center" size="2" width="100%">
+
+<h2 style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Honesty</h2>
+
+<p style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">You
+ must do your own work in this course. You are encouraged to discuss 
+problems/projects with classmates, or to ask for help with debugging. 
+When you
+do share ideas or get help you must acknowledge that help in writing. 
+However <b>IT
+IS NOT ALLOWED TO USE ANOTHER STUDENTS CODE IN ANY WAY WHILE DOING YOUR
+HOMEWORK</b>, even if you acknowledge that.<span style="font-size:11.0pt;
+font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><b><span style="font-size:18.0pt;mso-fareast-font-family:&quot;MS Mincho&quot;">Working from home <o:p></o:p></span></b></p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">All
+the software you need to work from home is available for free.<span style="mso-spacerun:yes"> </span>We have written a primer on setting up your
+home pc <a href="http://www.cs.umb.edu/cs310/DevelopmentSetup.html">here</a>. Warning: In the past, many
+students have had problems setting up their home computers. We will provide
+some informal help with this task (and some of you may be able to help others)
+but we cannot provide technical support for your home computer. Difficulties
+you encounter working from home will not be accepted as excuses for late
+assignments.<span style="mso-spacerun:yes"> </span>You may bring your laptop
+to office hours for some help (no guarantees!) <span style="color:black"><o:p></o:p></span></p>
+
+<h2 style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Resources</h2>
+
+<ul style="margin-top:0in" type="disc">
+ <ul style="margin-top:0in" type="circle">
+  <li class="MsoNormal" style="mso-list:l1 level2 lfo3;tab-stops:list 1.0in"><b><a href="http://java.sun.com/javase/6/docs/api/">Java API Documentation</a><o:p></o:p></b></li>
+  <li class="MsoNormal" style="mso-list:l1 level2 lfo3;tab-stops:list 1.0in"><b><a href="http://users.cs.fiu.edu/%7Eweiss/dsj4/errata/">Textbook Errata</a><o:p></o:p></b></li>
+  <li class="MsoNormal" style="mso-list:l1 level2 lfo3;tab-stops:list 1.0in"><b><a href="http://www.cs.fiu.edu/%7Eweiss/dsj4/code/code.html">Textbook Code</a><o:p></o:p></b></li>
+  <li class="MsoNormal" style="mso-list:l1 level2 lfo3;tab-stops:list 1.0in"><b><a href="http://www.cs.umb.edu/cs310/Generics.html">Notes on Generics</a><o:p></o:p></b></li>
+  <li class="MsoNormal" style="mso-list:l1 level2 lfo3;tab-stops:list 1.0in"><b><a href="http://docs.oracle.com/javase/tutorial/">Java Tutorials</a> <o:p></o:p></b></li>
+  <li class="MsoNormal" style="mso-list:l1 level2 lfo3;tab-stops:list 1.0in"><b><a href="http://www.oracle.com/technetwork/java/codeconv-138413.html">Java Coding Conventions</a><o:p></o:p></b></li>
+  <li class="MsoNormal" style="mso-list:l1 level2 lfo3;tab-stops:list 1.0in"><b><a href="http://www.cs.umb.edu/cs310/DevelopmentSetup.html">Install at home instructions</a><o:p></o:p></b></li>
+  <li class="MsoNormal" style="mso-list:l1 level2 lfo3;tab-stops:list 1.0in"><b><a href="http://wicket.sourceforge.net/wicket-quickstart/demos/EclipseDemo.html">Eclipse demo</a><o:p></o:p></b></li>
+  <li class="MsoNormal" style="mso-list:l1 level2 lfo3;tab-stops:list 1.0in"><b><a href="http://www.cs.umb.edu/%7Ebobw/CS210/">cs210 material</a>
+     <o:p></o:p></b></li>
+<li class="MsoNormal" style="mso-list:l1 level2 lfo3;tab-stops:list 1.0in"><b><a href="http://96.126.105.215/umb_classes_html/umb_html/unix_cs_students.html">Basic Unix tutorial</a>
+     <o:p></o:p></b></li>
+ </ul>
+</ul>
+
+<p style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><o:p>&nbsp;</o:p></p>
+
+
+
+
+
+
+</body></html>

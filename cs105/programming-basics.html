@@ -1,0 +1,250 @@
+<h1>Programming Basics</h1>
+
+Programming is the art of putting instructions together to do something useful.  This lecture discusses the basic building blocks of code, which will later be used to build up algorithms and programs.
+
+<h2>Data Types</h2>
+<ul>
+  <li>Three categories of primitive data types: numerical, string, and boolean.</li>
+  <li>A numerical variable represents a number.
+    <ul>
+      <li>Some languages make a distinction between integers and floats.</li>
+      <li>Integers are whole numbers, like <code>-1</code>, <code>0</code>, and <code>23</code>.</li>
+      <li>Floats represent decimals and fractions like <code>0.6</code>, <code>2.0/3.0</code>, and <code>pi</code>.</li>
+      <li>In these languages, an expression involving two integers, like <code>2/3</code>, will give you back an integer.</li>
+      <li>To get back a float, at least one of the numbers must be a float, like <code>2/3.0</code>.</li>
+    </ul>
+  </li>
+  <li>A string variable represents text, for example <code>"2"</code> and <code>"asdf"</code>.
+    <ul>
+      <li><code>"2"</code> and <code>2</code> are NOT the same: <code>"2"</code> is a string, and <code>2</code> is a number.</li>
+      <li>Some languages distinguish between a character and a string, which has multiple characters.</li>
+      <li>In these languages, a character is delineated with single quotes, e.g. <code>'['</code> or <code>'a'</code>.</li>
+      <li>A string is delineated with double quotes, e.g. <code>"some string"</code>.</li>
+      <li>In this class, we do not make the distinction, and use single and double quotes interchangeably.</li>
+    </ul>
+  </li>
+  <li>
+    A boolean represents either <code>true</code> or <code>false</code>.
+  </li>
+  <li>
+    There are other data types, such as objects and arrays, but these are not primitive and will be discussed later.
+  </li>
+</ul>
+
+<h2>Expressions</h2>
+<ul>
+  <li>
+    An expression is a piece of code that evaluates to a value.
+    <ul> 
+      <li>For example, <code>3+2</code> is an expression that evaluates to the value 5.</li>
+      <li>Note the distinction between the expression (<code>3+2</code>) and its value (<code>5</code>).</li>
+      <li>Some expressions don't always return a value.</li>
+      <li>Three general kinds of expressions are numerical expressions, boolean expressions, and string expressions.</li>
+    </ul>
+  </li>
+  <li>
+    Numerical expressions always return a numerical value.
+    <ul>
+      <li>Example: <code>(4+2)*5</code></li>
+      <li>Numerical expressions can be composed of other numerical expressions.</li>
+      <li>Numerical operators (such as <code>+</code>,<code>-</code>,<code>*</code>,<code>/</code>) create numerical expressions, e.g. 5/2 is a numerical expression.</li>
+      <li>Calls to numerical functions are numerical expressions, e.g. <code>average(3,4)</code>.</li>
+      <li>In general, anything that results in a number is a numerical expression.</li>
+    </ul>
+  </li>
+  <li>
+    String expressions return a string value.
+    <ul>
+      <li>Anything resulting in a string is a string expression</li>
+      <li>String concatenation is a string expression - e.g. <code>"hi" + " you"</code> results in the string <code>"hi you"</code>.</li>
+      <li>Calls to string functions are string expressions, e.g. <code>substring("something",0,3)</code> yields the string <code>"some"</code>.</li>
+    </ul>
+  </li>
+  <li>
+    Boolean expressions return either <code>true</code> or <code>false</code>.
+    <ul>
+     <li><code>true</code> and <code>false</code>, and anything that results in them, is a boolean expression.</li>
+     <li>Relational operators (<code>==</code>,<code><</code>,<code>></code>, etc.) result in boolean values, and thus are boolean expressions. </li>
+     <li>For example, <code>3 < 4</code>, <code>5 == 5</code>, <code> 5 > 2</code> all are either <code>true</code> or <code>false</code>, and hence are boolean expressions.</li>
+     <li>Equality (<code>==</code>) is a relational operator, and can be used to create boolean expressions, e.g. <code>"apples"=="oranges"</code> and <code>3==3</code>.</li>
+     <li>Boolean expressions can be created from other boolean expressions using boolean operators <code>and</code>, <code>or</code>, and <code>not</code>.</li>
+     <li>The output of these operators are given by truth tables.</li>
+     <li>Truth table for <code>and</code>:
+       <table>
+         <tr><th>x</th><th>y</th><th>x and y</th></tr>
+         <tr><td>true</td><td>true</td><td>true</td></tr>
+         <tr><td>true</td><td>false</td><td>false</td></tr>
+         <tr><td>false</td><td>true</td><td>false</td></tr>
+         <tr><td>false</td><td>false</td><td>false</td></tr>
+       </table>
+     </li>
+     <li>Truth table for <code>or</code>:
+       <table>
+         <tr><th>x</th><th>y</th><th>x or y</th></tr>
+         <tr><td>true</td><td>true</td><td>true</td></tr>
+         <tr><td>true</td><td>false</td><td>true</td></tr>
+         <tr><td>false</td><td>true</td><td>true</td></tr>
+         <tr><td>false</td><td>false</td><td>false</td></tr>
+       </table>
+     </li>
+     <li>Truth table for <code>not</code>:
+       <table>
+         <tr><th>x</th><th>not x</th></tr>
+         <tr><td>true</td><td>false</td></tr>
+         <tr><td>false</td><td>true</td></tr>
+       </table>
+     </li>
+     <li>Example: <code>(5+3) > 6</code> is a boolean expression which evaluates to <code>true</code></li>
+     <li>Example: <code>3==4 or 5==3</code> is a boolean expression which evaluates to <code>false</code></li>
+     <li>Example: <code>(not 7==4) and (not 6==3)</code> is a boolean expression which evaluates to <code>true</code></li>
+    </ul>
+  </li>
+  <li>
+    Function calls are always expressions.
+    <ul>
+      <li>Function calls look like <code>function_name(input)</code>, where <code>function_name</code> is the function name, and <code>input</code> is the input to the function.</li>
+      <li>For example, <code>print("Hi")</code> is a call to the <code>print</code> function, and the string <code>"Hi"</code> is the input fed to the function.</li>
+      <li>Functions can have multiple or no inputs, for example <code>average(4,5)</code> and <code>ls()</code>.</li>
+      <li>Functions return either one value (numerical, string, boolean, or other) or nothing.</li>
+      <li>For example, <code>delete(filename)</code> returns nothing, and <code>average(4,5)</code> returns a number.</li>
+      <li>Function calls always have a function name, followed immediately by an open parens (, then its inputs, if any, and finally ended by a close parens ).</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Statements</h2>
+<ul>
+  <li>A statement does NOT return a value, but does something.</li>
+    <ul>
+      <li>Some expressions, such as function calls, are also statements.</li>
+      <li>Every statement is one or more lines of code.</li>
+      <li>Every expression is always inside a statement.</li>
+    </ul>
+  <li>Assignment statements create a variable to store some value.</li>
+    <ul>
+      <li>Assignment statements look like <code>variable_name = some_expression</code>.  <code>some_expression</code> is ALWAYS some kind of expression.</li>
+      <li>After this statement is run, <code>variable_name</code> now stores the value of <code>some_expression</code>.</li>
+      <li>For example, <code>a_variable=4+6</code> assigns the value <code>10</code> to <code>a_variable</code>.</li>
+      <li><code>a_variable + 5</code> now yields <code>15</code>, and <code>print(a_variable)</code> will print out <code>10</code>.</li>
+      <li>A common type of assignment statement looks like <code>var = var + 1</code>.</li>
+      <li>This takes the current value of <code>var</code>, adds one to it, then assigns that value back to the variable <code>var</code>.</li>
+      <li>For example, if <code>var</code> was 5 before this line of code runs, then <code>var</code> will be 6 after it.</li>
+    </ul>
+  </li>
+  <li><code>if</code> statements, <code>while</code> loops, and <code>for</code> loops are called flow control statements</li>
+    <ul>
+      <li>So called because they make the program skip or repeat some lines of code.</li>
+    </ul>
+  </li>
+  <li>
+    <code>if</code> statements branch, depending on a boolean expression.
+    <ul>
+      <li>Always look like: <br/>
+<code>
+if (boolean_expression) <br/>
+{ <br/>
+&nbsp // some code <br/>
+} <br/>
+else <br/>
+{ <br/>
+&nbsp // other code <br/>
+} <br/>
+</code>
+      </li>
+      <li><code>boolean_expression</code> MUST be a boolean expression.</li>
+      <li>If <code>boolean_expression</code> evaluates to <code>true</code>, then the first block of code (some code) is run.</li>
+      <li>If <code>boolean_expression</code> evaluates to <code>false</code>, then the second block of code (other code) is run.</li>
+      <li>Exactly one of the two blocks of code is run.</li>
+      <li>The <code>else</code> part and second line of code are optional.  In this case, if <code>boolean_expression</code> is false, then we don't execute the first block of code, and then continue as normal.</code></li>
+      <li>Example:</br>
+<code>
+if (true) <br/>
+{ <br/>
+&nbsp print("its true!") <br/>
+} <br/>
+else <br/>
+{ <br/>
+&nbsp print("its false!") <br/>
+} <br/>
+</code>
+always prints <code>"its true!"</code></li>
+      <li>Example:</br>
+<code>
+if (x>70) <br/>
+{ <br/>
+&nbsp print("you pass") <br/>
+} <br/>
+else <br/>
+{ <br/>
+&nbsp print("you fail") <br/>
+} <br/>
+</code>
+prints <code>"you pass"</code> if <code>x</code> is 70 or less, and prints <code>"you fail"</code> otherwise.
+    </li>
+    <li>
+      There are other data types, such as objects and arrays, but these are not primitive and will be discussed later.
+    </li>
+  </ul>
+  <li><code>while</code> loops keep running some code while a boolean expression is false.</li>
+  <ul>
+    <li>Always look like: <br/>
+<code>
+while (boolean_expression) <br/>
+{ <br/>
+&nbsp // some code <br/>
+} 
+</code></li>
+    <li><code>boolean_expression</code> is always a boolean expression.</li>
+    <li>If <code>boolean_expression</code> returns <code>true</code>, then the block of code (some code) is run, otherwise, we skip the block.</li>
+    <li>After the block of code is run, we check the <code>boolean_expression</code> again.  If it is <code>true</code>, then run block of code again, etc.</li>
+    <li>Example: <br/>
+<code>
+i=3 <br/>
+while (i>0) <br/>
+{ <br/>
+&nbsp i=i-1 <br/>
+&nbsp print(i) <br/>
+} 
+</code>
+</li>
+    <li>When we first enter the loop, <code>i</code> is 3.  So we reduce <code>i</code> by 1, then print it.  The first run prints a 2.</li>
+    <li>Now we check the boolean expression again.  Now <code>i</code> is 2, which is still greater than 0.  So we run the block of code again, which reduces <code>i</code> to 1, then prints it.</li>
+    <li><code>i</code> is now 1, which is still greater than 0.  Reduce to 0 and print.</li>
+    <li>Finally the boolean expression is false: <code>i</code> is not less than 0.</li>
+    <li>We skip the block of code (break out of the loop) and do whatever comes next.</li>
+  </ul>
+  <li><code>for</code> loops usually are a more concise form of a <code>while</code> loop.</li>
+  <ul>
+    <li>Looks like: <br/>
+<code>
+for (assignment_statement; boolean_expression; statement) <br/>
+{ <br/>
+&nbsp // some code <br/>
+} 
+</code></li>
+    <li><code>assignment_statement</code> is always an assignment statement; <code>boolean_expression</code> is always a boolean expression; <code>statement</code> is usually an assignment statement.</li>
+    <li><code>assignment_statement</code> is run only once, before the loop is entered.</li>
+    <li><code>statement</code> is run every time AFTER the code in the loop is run.</li>
+    <li><code>boolean_expression</code> is checked every time AFTER <code>statement</code> is run.</li>
+    <li>The example <code>while</code> can be written as the following <code>for</code> loop: <br/>
+<code>
+for (i=3; i>0; i=i-1) <br/>
+{ <br/>
+&nbsp print(i) <br/>
+} 
+</code></li>
+    <li>These loops do exactly the same thing.</li>
+  </ul> 
+  <li>Loops that don't end correctly (e.g. <code>while(true)</code>) repeat forever.  This is called an infinite loop.
+  </li>
+  <li>Function definitions are also statements.  These will be discussed later.</li>
+</ul>
+
+<h2>Suggested readings</h2>
+<ul>
+  <li>An article about expressions: <a href="http://en.wikipedia.org/wiki/Expression_(computer_science)">http://en.wikipedia.org/wiki/Expression_(computer_science)</a></li>
+  <li>An article about boolean expressions in particular: <a href="http://en.wikipedia.org/wiki/Boolean_expression">http://en.wikipedia.org/wiki/Boolean_expression</a></li>
+  <li>An article about if statements: <a href="http://en.wikipedia.org/wiki/Conditional_(programming)">http://en.wikipedia.org/wiki/Conditional_(programming)</a></li>
+  <li>An article about while loops: <a href="http://en.wikipedia.org/wiki/While_loop">http://en.wikipedia.org/wiki/While_loop</a></li>
+</ul>
+

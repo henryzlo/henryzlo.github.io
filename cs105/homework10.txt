@@ -1,0 +1,14 @@
+CS105 Homework 10
+
+Instructions: Please print or write your answers LEGIBLY, and turn in a hard copy of the assignment in class.
+
+1.  How are power supplies measured?
+2.  Where are the USB, keyboard, and mouse connectors?
+3.  Where does a graphics card attach to the motherboard?
+4.  What are PCI slots for?
+5.  Why does the heatsink consist of deep grooves?
+6.  What is RAM for?
+7.  What is the hard disk for?
+8.  What is the BIOS?
+9.  How does the hard drive store data?
+10. How does a CD store data?

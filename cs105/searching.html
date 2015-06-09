@@ -1,0 +1,199 @@
+<h1>Searching</h1>
+
+We explore ways to search for items in an array and in a graph / tree.  We assume that we are looking for an element x, and consider worst / best case scenarios and time complexity.
+
+<h2>Searching in an Array</h2>
+<ul>
+  <li>Suppose we want to find an element x in an unsorted array <code>my_array</code>.
+    <ul>
+      <li>We can do this using linear search, by checking <code>my_array[0], my_array[1], ...</code> to see if they are equal to x.
+      </li>
+      <li>Example from http://www.oxfordmathcenter.com/images/notes/31-00.png:
+        <br/>
+        <img src="http://www.oxfordmathcenter.com/images/notes/31-00.png"/>
+      </li>
+      <li>In the best case:
+        <ul>
+          <li>x is the first element checked.</li>
+          <li>We perform one comparison.</li>
+          <li>This runs in O(1) time.</li>
+        </ul>
+      </li>
+      <li>In the worst case:
+        <ul>
+          <li>x is the last element checked, or it doesn't exist.</li>
+          <li>We perform <code>n</code> comparisons, where <code>n</code> is the length of the array.</li>
+          <li>This runs in O(n) time.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Now suppose <code>my_array</code> is sorted.  Does this improve linear search?
+    <ul>
+      <li>Quick answer: no.</li>
+      <li>Sorting with mergesort or similar algorithm adds an overhead of O(nlogn).</li>
+      <li>Assume we are sorted with smallest item to the left and largest to the right.</li>
+      <li>Best case:
+        <ul>
+          <li>x is first element.</li>
+          <li>One computation, O(1) time.</li>
+        </ul>
+      </li>
+      <li>Worst case:
+        <ul>
+          <li>x is the last element checked (larger than every element in list).</li>
+          <li><code>n</code> elements checked.</li>
+          <li>This runs in O(n) time.</li>
+        </ul>
+      </li>
+      <li>The worst case changes slightly, but runtime is the same for linear search, whether or not the list is sorted.</li>
+    </ul>
+  </li>
+  <li>Binary search improves on linear search, but requires an ordered list.
+    <ul>
+      <li>Binary search first checks the middle element of the list, and compares it to x.</li>
+      <li>If middle element is smaller than x, that means x is in the second half of the list.</li>
+      <li>If middle element is larger, then x is in the first half.</li>
+      <li>Now we consider only the relevant half, and look at its middle element.</li>
+      <li>Compare it against x, and determine whether x is in the first half or the second half of the relevant section of the array.</li>
+      <li>This is repeated until x is found.</li>
+      <li>Note that after each comparison, we can ignore half of the current search space.</li>
+      <li>Example for a list of characters, sorted alphabetically, from http://brev.pbworks.com/f/1258413942/binary-search2.png
+      <br/><img src="http://brev.pbworks.com/f/1258413942/binary-search2.png"/></li>
+      <li>Best case:
+        <ul>
+          <li>x is the middle element, so we find it at the first comparison.</li>
+          <li><code>1</code> element checked.</li>
+          <li>O(1) time.</li>
+        </ul>
+      </li>
+      <li>Worst case:
+        <ul>
+          <li>The worst case occurs when we do the maximum number of checks.</li>
+          <li>How many checks can we do if, after every check, we reduce the search space by 1/2?</li>
+          <li>In other words, how many times can we divide the search space by 2, until we get pieces of size 1?</li>
+          <li>The answer is the same number of "split" steps in mergesort: log_2(n)</li>
+          <li>Thus in the worst case, binary search runs in O(log(n)) time.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    Thus in a sorted list, binary search is faster than linear search for reasonably large input.
+  </li>
+  <li>
+    Taken from http://www.qikkwit.com/wp-content/uploads/2013/01/linearSearch.jpg:
+    <br/>
+    <img width=400px src="http://www.qikkwit.com/wp-content/uploads/2013/01/linearSearch.jpg"/>
+  </li>
+  <li>However, a binary search requires the overhead of sorting the list.
+    <ul>
+      <li>Sorting the list: O(n log(n))</li>
+      <li>Binary search: O(log(n))</li>
+      <li>Sorting + binary search: O(n log(n)) + O(log(n)) = O((n+1) log(n)) = O(n log(n))</li>
+      <li>Linear search: O(n)</li>
+      <li>So for a single search, linear search is faster.</li>
+      <li>We can only get better performance out of binary search if we are sorting very few times and searching many times.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Searching in a Graph / Tree</h2>
+<ul>
+  <li>
+    Breadth-first search (BFS) and depth-first search (DFS) are the basic methods of searching in a tree.
+    <ul>
+      <li>Both methods start at the root (topmost element, with no parents), then move down to its children, to find a given element x.</li>
+      <li>BFS begins by searching all of the root's children.
+        <ul>
+          <li>If the element is not found, it continues by searching all of the children's children.</li>
+          <li>This continues until either all levels are searched, or the element is found.</li>
+          <li>In the following example, the nodes are labeled in the order that they are visited.</li>
+          <li>Taken from http://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Breadth-first-tree.svg/390px-Breadth-first-tree.svg.png:
+          <br/><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Breadth-first-tree.svg/390px-Breadth-first-tree.svg.png"/>
+          </li>
+        </ul>
+      </li>
+      <li>DFS begins by searching the leftmost path, from top to bottom.
+        <ul>
+          <li>If the element is not found, we go back along the same path, until we can find the next leftmost path.</li>
+          <li>Then we follow that path to the bottom.</li>
+          <li>We continue backtracking and going down paths until all nodes are searched, or x is found.</li>
+          <li>In the following example, the nodes are labeled in the order that they are visited.</li>
+          <li>Taken from http://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Depth-first-tree.svg/390px-Depth-first-tree.svg.png:
+          <br/><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Depth-first-tree.svg/390px-Depth-first-tree.svg.png"/>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    BFS is implemented with a queue, which contains nodes we need to visit.
+    <ul>
+      <li>We use the BFS example above.</li>
+      <li>At the beginning, the queue only contains the root.</li>
+      <li>The queue is popped, giving the root node.</li>
+      <li>We visit the popped node, then add its children to the queue.</li>
+      <li>We pop one element, which is node 2, and visit it.</li>
+      <li>We add its children to the queue.</li>
+      <li>We pop the next element, which is node 3, and visit it, and repeat.</li>
+      <li>Every time we pop an element, we check to see if it is x.</li>
+      <li>This continues until all nodes are visited.</li>
+    </ul>
+  </li>
+  <li>
+    DFS is implemented with a stack, which contains the current path.
+    <ul>
+      <li>We use the DFS example above.</li>
+      <li>At the beginning, the stack contains only contains the root.</li>
+      <li>We visit the root, and find its leftmost child.</li>
+      <li>We add this child (2) to the stack, then visit it.</li>
+      <li>We find 2's leftmost child, 3, add it to the stack, and then visit it.</li>
+      <li>We find 3's leftmost child, 4, add it to the stack, and then visit it.</li>
+      <li>4 has no children.</li>
+      <li>We pop it off the stack, and visit the next element, 3.</li>
+      <li>We visit 3's leftmost child that is not already visited (5), and add it to the stack.</li>
+      <li>Every time we push an element, we check to see if it is x.</li>
+      <li>This continues until all nodes are visited.</li>
+    </ul>
+  </li>
+  <li>
+    The runtime of BFS and DFS are essentially the same.
+    <ul>
+      <li>In the best case, x is the root, so searching for it is O(1).</li>
+      <li>In the worst case, x is the last element visited, so searching for it is O(n).</li>
+      <li>Note that the worst cases are different.
+        <ul>
+          <li>In BFS, the last element is the rightmost element of the furthest generation.  See node 12 in the first picture.</li>
+          <li>In DFS, the last element is the end of the rightmost path.  See node 12 in the second picture.</li>
+        </ul>
+      </li>
+      <li>Some considerations:
+        <ul>
+          <li>BFS tends to run out of memory when there are many children per level, which happens quite often.</li>
+          <li>DFS runs out of memory when paths are very long, but note that the number of children in a level is much more than the depth of the level.</li>
+          <li>BFS, unlike DFS, always finds the shortest path to x.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>DFS and BFS can be applied to graphs as well.
+    <ul>
+      <li>However, we have to avoid cycles, since there is no point comparing elements already searched.</li>
+      <li>Note that removing cycles in a graph gives a tree; hence, searching a tree and a graph are very similar.</li>
+      <li>BFS in a graph is like searching for something starting from the closest elements first.</li>
+      <li>Taken from http://www.stoimen.com/blog/wp-content/uploads/2012/09/2.-BFS-Wave.png:
+        <br/><img src="http://www.stoimen.com/blog/wp-content/uploads/2012/09/2.-BFS-Wave.png"/>
+      </li>
+      <li>DFS in a graph is like picking a random path and going down it until the end.</li>
+      <li>For example, following the left wall in a maze until you reach the end.</li>
+      <li>This will not always yield the shortest path.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Suggested readings</h2>
+<ul>
+  <li>Efficiency of binary search and linear search: <a href="http://www.csit.parkland.edu/~mbrandyberry/CS1Java/Lessons/Lesson27/BinarySearchEfficiency.htm">http://www.csit.parkland.edu/~mbrandyberry/CS1Java/Lessons/Lesson27/BinarySearchEfficiency.htm</a></li>
+  <li>An article about BFS and DFS: <a href="http://franzejr.wordpress.com/2012/08/13/bfs-and-dfs-algorithms/">http://franzejr.wordpress.com/2012/08/13/bfs-and-dfs-algorithms/</a></li>
+</ul>

@@ -1,0 +1,63 @@
+\documentclass{article}
+\usepackage{amsthm}
+\usepackage{amsmath}
+
+\newtheorem{problem}{Problem}
+
+\begin{document}
+\title{Programming Assignment 3}
+\author{Henry Z. Lo}
+\date{Due: Tuesday, July 8 at midnight}
+\maketitle
+
+\section{Goals}
+This assignment will help you with the following:
+
+\begin{enumerate}
+\item Write a game-playing AI.
+\item Learn the game package.
+\item Review dynamic programming (memoization).
+\end{enumerate}
+
+\section{Overview}
+You will write an intelligent AI for playing games in general.  There are several games in the \texttt{Game} package, but by writing a \texttt{Player} class, you will be able to play any of them in a general way.
+
+You will need to fill in the \texttt{findBest} method in \texttt{Backtrack} to use the minimax algorithm to find the best move for the given player.  You will also write another player \texttt{Dynamic}, which does the same thing, but uses memoization to save computations.
+
+\section{Instructions}
+\begin{enumerate}
+\item Replace \texttt{findBest} in \texttt{Backtrack} in the cs310 folder, using a minimax algorithm.
+\begin{itemize}
+\item You may need a recursive subfunction to return ints, rather than moves. 
+\item Remember to make moves on Game copies, so that you can backtrack. 
+\item You will need to find out whose turn it is (\texttt{game.whoseTurn()}) to find the right move.
+\end{itemize}
+\item Use \texttt{PlayGame} to make sure your \texttt{Backtrack} player works, and write down times for several games.
+\item Create another \texttt{Player} subclass called \texttt{Dynamic}, which memoizes results in the computation tree.
+\begin{itemize}
+\item Use a map to memoize results for subtrees.
+\item Your code should look very similar to BackTrack.
+\end{itemize}
+\item Use \texttt{PlayGame} to test \texttt{Dynamic} and \texttt{Backtrack} for  several games.  
+\begin{itemize}
+\item Show that they perform the same moves.
+\item Show that dynamic saves time.
+\end{itemize}
+\item Classes must compile.
+\item Put all deliverables in your cs310/pa3 folder.  Deliverables include:
+\begin{itemize}
+\item Backtrack.java
+\item Dynamic.java
+\item memo.txt
+\end{itemize}
+\item Answer the questions in section 4, put answers in memo.txt.
+\end{enumerate}
+
+\section{Questions}
+\begin{enumerate}
+\item Play 2 games (you choose which) with \texttt{Backtrack}, save the result.
+\item Play the same two games with \texttt{Dynamic}.
+\item Show the runtime difference between \texttt{Backtrack} and \texttt{Dynamic}.  Use games where this difference is noticeable.
+\item Play two AI players against each other.
+\end{enumerate}
+\end{document}
