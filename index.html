@@ -1,10 +1,24 @@
 ---
 layout: default
-title: awesome beginning
-slug: asdf
+title: Home Page
+slug: home-page
 ---
-{% include head.html %}
-<h1>Minimalist Web Page</h1>
+<h2>Posts</h2>
+<div class="ui relaxed items">
+{% for post in site.posts %}
+<div class="ui item">
+  <div class="ui small image"><img src="{{ post.thumbnail }}"></div>
+  <div class="content">
+    <div class="header">
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </div>
+    <div class="description">
+      {{ post.excerpt }}
+    </div>
+  </div>
+</div>
+{% endfor %}
+</div>
 
 <a href="cs310/index.html">CS310</a><br/>
 <a href="cs105/index.html">CS105</a><br/>
