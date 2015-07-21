@@ -7,7 +7,9 @@ slug: home-page
 <div class="ui relaxed items">
 {% for post in site.posts %}
 <div class="ui item">
-  <div class="ui small image"><img src="{{ post.thumbnail }}"></div>
+  <div class="ui middle aligned small image">
+    <img src="{{ post.thumbnail }}">
+  </div>
   <div class="content">
     <div class="header">
       <a href="{{ post.url }}">{{ post.title }}</a>
