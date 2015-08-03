@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="27cm" height="12cm" viewBox="329 350 524 221" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #ffffff" x="382" y="351" width="287.2" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="382" y="351" width="287.2" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="525.6" y="370">Employee</text>
+    <rect style="fill: #ffffff" x="382" y="379" width="287.2" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="382" y="379" width="287.2" height="20"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="385" y="393">-salary: int</text>
+    <rect style="fill: #ffffff" x="382" y="399" width="287.2" height="52"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="382" y="399" width="287.2" height="52"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="385" y="413">#validateSalary(salary:int): boolean</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="385" y="429">+setSalary(salary:int): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="385" y="445">+getSalary(): int</text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="382,425 331,425 331,536.6 372.164,536.6 "/>
+    <polygon style="fill: #000000" points="379.664,536.6 369.664,541.6 372.164,536.6 369.664,531.6 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="379.664,536.6 369.664,541.6 372.164,536.6 369.664,531.6 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="781.9" y="455.5" width="71.05" height="36"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="781.9" y="455.5" width="71.05" height="36"/>
+    <text font-size="22.4" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="817.425" y="480.5">Main</text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="781.9,455.5 725.55,455.5 725.55,425 678.936,425 "/>
+    <polygon style="fill: #000000" points="671.436,425 681.436,420 678.936,425 681.436,430 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="671.436,425 681.436,420 678.936,425 681.436,430 "/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="335.9" y="468.4">
+    <tspan x="335.9" y="468.4">calls overriden</tspan>
+    <tspan x="335.9" y="484.4">protected method</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="381.9" y="490.6" width="287.2" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="381.9" y="490.6" width="287.2" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="525.5" y="509.6">Manager</text>
+    <rect style="fill: #ffffff" x="381.9" y="518.6" width="287.2" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="381.9" y="518.6" width="287.2" height="8"/>
+    <rect style="fill: #ffffff" x="381.9" y="526.6" width="287.2" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="381.9" y="526.6" width="287.2" height="20"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="384.9" y="540.6">#validateSalary(salary:int): boolean</text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="525.6,469.236 525.6,478.8 525.5,478.8 525.5,490.6 "/>
+    <polygon style="fill: #ffffff" points="533.6,469.236 525.6,453.236 517.6,469.236 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="533.6,469.236 525.6,453.236 517.6,469.236 "/>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="677" y="398.1">
+    <tspan x="677" y="398.1">call setSalary()</tspan>
+    <tspan x="677" y="414.1">on Manager object</tspan>
+  </text>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="781.9,491.5 725.5,491.5 725.5,536.6 689.1,536.6 "/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="669.1" y1="536.6" x2="673.1" y2="536.6"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="675.767" y1="536.6" x2="679.767" y2="536.6"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="682.433" y1="536.6" x2="686.433" y2="536.6"/>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="682.9" y="551.5">
+    <tspan x="682.9" y="551.5">cannot access</tspan>
+    <tspan x="682.9" y="567.5"></tspan>
+  </text>
+</svg>
