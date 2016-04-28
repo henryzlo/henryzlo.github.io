@@ -1,3 +1,9 @@
+---
+layout: default
+title: Bias-Variance Tradeoff
+slug: bias-variance
+thumbnail: assets/bias-variance/BiasVariance_8_1.png
+---
 
 The Bias-Variance Tradeoff
 ==========================
