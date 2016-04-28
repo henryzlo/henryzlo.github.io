@@ -209,7 +209,7 @@ pass
 ```
  
 
-![png](assets/bias-variance/BiasVariance_4_0.png)
+![png](/assets/bias-variance/BiasVariance_4_0.png)
 
 
 Here are the results of $k$-nearest neighbor regression for several values of $k$.
@@ -239,11 +239,9 @@ pass
 ```
 
 
-    <matplotlib.figure.Figure at 0x7fc08a31dfd0>
 
 
-
-![png](assets/bias-variance/BiasVariance_6_1.png)
+![png](/assets/bias-variance/BiasVariance_6_1.png)
 
 
 Since we know our target function $f$, we can generate infinite datasets $\mathcal{D}$ from it.  This allows us to estimate $\bar{g}$ by averaging $k$-NN predictions for many training sets.  With the approximate $\bar{g}$ and $f$, we can calculate bias and variance explicitly.
@@ -316,11 +314,10 @@ pass
 ```
 
 
-    <matplotlib.figure.Figure at 0x7fc087bcbf50>
 
 
 
-![png](assets/bias-variance/BiasVariance_8_1.png)
+![png](/assets/bias-variance/BiasVariance_8_1.png)
 
 
 Now we can estimate bias and variance for the models that we trained.  Recall that:
@@ -379,12 +376,11 @@ plt.legend((err_bar[0], bias_bar[0], var_bar[0]),
 
 
 
-    <matplotlib.legend.Legend at 0x7fc087683590>
 
 
 
 
-![png](assets/bias-variance/BiasVariance_10_1.png)
+![png](/assets/bias-variance/BiasVariance_10_1.png)
 
 
 How do these estimates compare with the theory?  Recall that the breakdown of error was calculated to be:
@@ -442,12 +438,10 @@ plt.legend((bias_bar[0], var_bar[0], t_err_bar[0], t_bias_bar[0], t_var_bar[0]),
 
 
 
-    <matplotlib.legend.Legend at 0x7fc085cfb7d0>
 
 
 
-
-![png](assets/bias-variance/BiasVariance_12_1.png)
+![png](/assets/bias-variance/BiasVariance_12_1.png)
 
 
 Acknowledgements
