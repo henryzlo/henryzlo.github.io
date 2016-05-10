@@ -1,21 +1,67 @@
-<h2>Posts</h2>
-<div class="ui relaxed items">
-{% for post in site.posts %}
-<div class="ui item">
-  <div class="ui middle aligned small image">
-    <img src="{{ post.thumbnail }}">
-  </div>
-  <div class="content">
-    <div class="header">
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </div>
-    <div class="description">
-      {{ post.excerpt }}
-    </div>
-  </div>
-</div>
-{% endfor %}
-</div>
+<html>
+  <head>
+    <title>Henry Z. Lo</title>
+  </head>
+  <body>
+    <h2>About Me</h2>
 
-<a href="cs310/index.html">CS310</a><br/>
-<a href="cs105/index.html">CS105</a><br/>
+    <img width=200px src="files/me.jpg"/>
+    <br/>
+    My name is Henry Z. Lo.  I am:
+    <ul>
+      <li>
+	a (graduating) PhD student at UMass Boston 
+	studying machine learning, specifically neural networks (deep learning) and optimization.
+      </li><li>
+	a full-stack web developer, with work experience in Python, PHP, etc.
+      </li><li>
+	co-founder, with <a href="http://josephpcohen.com/">Joseph Paul Cohen</a> of the Institute for Reproducible Research, a (pending) nonprofit with several online projects
+      </li>
+      <li>
+	an occasional instructor and lecturer
+      </li>
+      <li>
+	sorry that you had to see the website in this preliminary state
+      </li>
+    </ul>
+    
+    <h2>Links</h2>
+    Personal stuff:
+    <ul>
+      <li>
+	<a href="files/resume.pdf">Resume</a>
+      </li><li>
+	<a href="https://github.com/henryzlo">GitHub</a>
+      </li><li>
+	<a href="https://www.linkedin.com/in/henry-z-lo-6a11461b">LinkedIn</a>
+      </li>
+    </ul>
+    Things I like to read / listen to:
+    <ul>
+      <li>
+	<a href="http://www.thetalkingmachines.com/">Talking Machines</a>
+      </li><li>
+	<a href="http://www.offconvex.org/">Off the Convex Path</a>
+      </li>
+    </ul>
+
+    <h2>Teaching</h2>
+    At University of Massachusetts Boston, unless otherwise noted.
+    <br>
+    Courses I've taught:
+    <ul>
+      <li>
+	<a href="cs310/index.html">CS310: Advanced Algorithms and Data Structures</a><br/>
+      </li><li>
+	<a href="cs105/index.html">CS105: Introduction to Computer Concepts</a><br/>
+      </li>
+    </ul>
+    Guest lectures:
+    <ul>
+      <li>
+	<a href="notebooks/bias-variance">Bias-Variance Tradeoff</a> for 
+	<i>Applied Machine Learning</i>, 2016
+      </li>
+    </ul>
+  </body>
+</html>
