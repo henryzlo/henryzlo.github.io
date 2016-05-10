@@ -1,0 +1,191 @@
+<html>
+  <body>
+    <h1>Java Access Modifiers</h1>
+    All objects have a public face, which others can interact with, and
+    private inner workings, which others should never touch.  <i>Access
+    modifiers</i> are used to enforce how an object's members can be
+    interacted with and by whom.  These keywords are integral to
+    <i>encapsulating</i> an object's functionality and enforcing, and thus are
+    commonly used in Java and other object-oriented languages.
+
+    The Java access modifiers are <code>public</code>, <code>private</code>, 
+    <code>protected</code>, and
+    package-private, which applies when no access modifier is explicitly
+    stated.  These keywords can be applied any class members, whether
+    attributes or methods; <code>public</code> and package-private can also be
+    applied to classes.
+
+    <h2>Public vs. Private</h2>
+    
+    Only members marked <code>public</code> can be interacted with by the outside
+    world.  These methods and attributes are those which we want other
+    classes to know about, and to use when interacting with the object.
+
+    <code>private</code> members are hidden from the outside world, and accessing
+    them from other classes results in a compile-time error.  Privacy is
+    often used to hide implementation details, i.e. the functionality that
+    a class needs to do its job, but that others do not need to know
+    about.
+    
+    In object-oriented programming (OOP), it is considered best practice
+    to make everything as private as possible.  This manages complexity by
+    limiting the number of ways classes can interact.  This is the notion
+    of <i>encapsulation</i>.
+
+    <h2>Example: Employee</h2>
+
+    Consider a class, <code>Employee</code>.  The application interacts with
+    <code>Employee</code>s only by getting or setting their salaries.  There are two
+    ways to design this:
+    
+    <ul>
+      <li>Expose a <code>salary</code> attribute, which others can set or get
+	directly.</li>
+      <li>Expose <code>getSalary</code> and <code>setSalary</code> methods.</li>
+    </ul>
+    
+    The difference is subtle.  The first approach allows direct access
+    into the employee's <code>salary</code>, while the second allows <code>Employee</code> to
+    control how the setting or getting happens.  For example, in
+    <code>setSalary</code>, we can first check the salary is valid via
+    <code>validateSalary</code>; this type of validation cannot be done within
+    <code>Employee</code> in the simpler approach.
+
+    <br/>
+    <img src='img/employee.svg' width='500px'/>
+    <br/>
+
+    In the OOP approach, all attributes are private.  To interact with
+    <code>salary</code>, the application must use the public <code>getSalary</code> and
+    <code>setSalary</code> methods (+ signs).
+    
+    The <code>validateSalary</code> method is also <code>private</code>. As it only exists to
+    support the public functionality of <code>Employee</code>, and hence is only
+    relevant to <code>Employee</code>, it does not need to be accessed anywhere else.
+    
+    Private members are not completely inaccessible to the outside world,
+    but can only be accessed indirectly through the public functions.
+    
+    The code:
+    
+<pre>
+public class Employee {
+  private int salary;
+
+  public int getSalary() {
+    return salary;
+  }
+
+  public void setSalary(int s) {
+    if (validateSalary(s)) 
+      salary = s;
+  }
+
+  private boolean validateSalary(int s) {
+    return s >= 0;
+  }
+}
+</pre>
+
+<h2>Package Private and Protected</h2>
+
+
+Having no access modifiers on a member makes in <i>package-private</i>,
+which means that the member is public to all classes within the same
+package, but private to everything outside of it.
+
+Package-private is generally considered bad form, as there are few
+use-cases for it.  
+
+<code>protected</code> members are package-private members which are passed on to
+<code>subclasses</code>.  Actual <code>private</code> members are hidden even from
+subclasses, and do not get inherited.
+
+In some situations though, it may be more elegant (though probably
+poor OOP) to inherit <code>private</code> methods from a parent.  For example, if
+we have multiple employees (say, a manager), and each has a different
+method of validating salary, then it may make sense to override
+<code>validateSalary</code> in the manager class.
+
+<br/>
+<img src='img/manager.svg' width='500px'/>
+<br/>
+
+In this UML diagram, <code>validateSalary</code> is changed to be <code>protected</code>,
+and is overriden by the subclass <code>Manager</code>.  Now, setting the salary
+for a <code>Manager</code> is done as follows:
+
+<ul>
+  <li>Call <code>setSalary</code> on a <code>Manager</code> object</li>
+  <li>This calls <code>Employee</code>'s <code>setSalary</code> method</li>
+  <li><code>setSalary</code> calls the overriden <code>validateSalary</code> in <code>Manager</code>.</li>
+</ul>
+
+This strategy introduces stronger dependencies between the two classes
+than would otherwise be present if <code>Manager</code> were merely subclassing
+<code>Employee</code>.  For this reason, <code>protected</code> is generally avoided and
+considered bad OO practice.
+
+The code (must change <code>setSalary</code> to <code>protected</code> in <code>Employee</code>):
+
+<pre>
+class Manager extends Employee {
+  protected boolean validateSalary(int s) {
+    return s > 40000;
+  }
+}
+</pre>
+
+<h2>Members and Classes</h2>
+
+There are two types of class members: attributes and methods.
+Attributes are almost always <code>private</code>, as they are considered
+implementation details.  How methods are affected by access modifiers
+are summarized below:
+
+<table>
+  <thead>
+    <tr>
+      <th>Accessible from...</th>
+      <th>Class</th>
+      <th>Package</th>
+      <th>Subclasses</th>
+      <th>Everywhere</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>public</code></td>
+      <td class="positive">Y</td>
+      <td class="positive">Y</td>
+      <td class="positive">Y</td>
+      <td class="positive">Y</td>
+    </tr>
+    <tr>
+      <td><code>protected</code></td>
+      <td class="positive">Y</td>
+      <td class="positive">Y</td>
+      <td class="positive">Y</td>
+      <td class="negative">N</td>
+    </tr>
+    <tr>
+      <td>(default)</td>
+      <td class="positive">Y</td>
+      <td class="positive">Y</td>
+      <td class="negative">N</td>
+      <td class="negative">N</td>
+    </tr>
+    <tr>
+      <td><code>private</code></td>
+      <td class="positive">Y</td>
+      <td class="negative">N</td>
+      <td class="negative">N</td>
+      <td class="negative">N</td>
+    </tr>
+  </tbody>
+</table>
+
+The access modifiers <code>public</code> and package-private can also apply to
+classes and interfaces (<code>private</code> and <code>protected</code> make little sense in
+this context).  This just specifies whether the class or interface can
+be used from outside a package or not.
