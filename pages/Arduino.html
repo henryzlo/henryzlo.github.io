@@ -1,0 +1,474 @@
+<html>
+  <body>
+    <h1>Arduino Basics</h1>
+    <p>
+      The best way to learn programming.  The <a href="https://www.arduino.cc/">Arduino</a>
+      makes the distinct excitement of affecting the *physical* world through code
+      accessible to newcomers.  In this post, we introduce programming the Arduino
+      via simple applications utilizing I/O devices like sensors, speakers, lights.
+    </p>
+    <p>
+      These demos were presented at the
+      <a href="http://josephpcohen.com/fosshackinginnovation/index.html">FOSS/Hacking/Innovation event</a>
+      at the Boston Museum of Science.
+    </p>
+    
+    <h2>Overview</h2>
+
+    <img src="img/arduino_ide.png"/>
+
+    <p>
+      We go over the basics of programming the Arduino via example projects.  This
+      tutorial should be accessible by itself, but if you want to follow along, you
+      will need the following:
+    </p>
+
+    <ul>
+      <li>
+	an Arduino board (the <a href="https://www.arduino.cc/en/Main/ArduinoBoardUno">Uno</a>
+	is a good start)
+      </li><li>
+	the Arduino <a href="https://www.arduino.cc/en/Main/Software">software</a> (see right)
+      </li>
+    </ul>
+    
+    This tutorial will cover the following projects, which each have their own 
+    hardware requirements:
+
+    <ul>
+      <li>
+	<code>blink</code>, an LED turning on and off (originally from Arduino examples)
+      </li><li>
+	<code>pressure</code>, a sensor which lights 4 LEDs depending on pressure applied
+      </li><li>
+	<code>rangefinder</code>, a sensor which outputs to a seven segment display distance in
+	feet
+      </li><li>
+	<code>soundboard</code>, a keypad which drives a speaker to say different phrases
+      </li>
+    </ul>
+    
+    <h2>Blink Demo</h2>
+    
+    <img width="500px" src="img/arduino_blink.jpg"/>
+
+    <p>
+      You can find <code>blink</code> in the Arduino software examples, or copy it from the
+      code below.  This sketch introduces the basic overview of an Arduino
+      program, and how to do output.
+    </p>
+    <p>
+      This simple sketch repeatedly turns an LED on and off.  The <code>blink</code> program
+      requires an LED with the <code>+</code> end (shaped like a hook) plugged in digital pin
+      10, and the <code>-</code> end (the larger head) attached to the GND pin.  See left.
+    </p>
+    <p>
+      When attached correctly, you can upload the following code
+      <a href="code/blink.pde">blink.pde</a>
+      to continuously blink the LED:
+    </p>
+    <pre>
+// the setup routine runs once when you press reset:
+void setup() {
+  // initialize the digital pin as an output.
+  pinMode(10, OUTPUT);
+}
+
+// the loop routine runs over and over again forever:
+void loop() {
+  digitalWrite(10, HIGH);    // turn the LED on (HIGH voltage)
+  delay(1000);               // wait for a second
+  digitalWrite(10, LOW);     // turn the LED off (LOW voltage)
+  delay(1000);               // wait for a second
+}
+</pre>
+
+    All Arduino programs require two functions:
+
+    <ul>
+      <li>
+	<code>setup</code>, which runs once.
+      </li><li>
+	<code>loop</code>, which runs continually.
+      </li>
+    </ul>
+    
+    <p>
+      In this sketch, <code>setup</code> sets digital pin 10 to <code>OUTPUT</code> using the <code>pinMode</code>
+      function.  This sets pin 10 to provide power, rather than detecting signal
+      (<code>INPUT</code>).  This only needs to happen once.
+    </p>
+    
+    <p>
+      Some Arduino models initialize pins to <code>INPUT</code>, but it's good to always set
+      a pin's mode to be sure.
+    </p>
+    
+    <p>
+      In the <code>loop</code>, <code>digitalWrite</code> sends from pin 10 a high-volt signal to the <code>+</code>
+      end of the LED.  This lights up the LED.  The Arduino then pauses for one
+      second before sending a low-volt signal, which is not enough to light the LED.
+      The board then pauses again, before repeating indefinitely.
+    </p>
+
+    <p>
+      <code>digitalWrite</code>, <code>pinMode</code>, <code>HIGH</code>, <code>LOW</code>, <code>delay</code> are all defined in the
+      <a href="https://www.arduino.cc/en/Reference/HomePage">Arduino documentation</a>.
+    </p>
+
+    <h2>Pressure Demo</h2>
+
+    <p>
+      The <code>pressure</code> demo consists of programming four LEDs to measure force on a
+      pressure sensor.  This example will demonstrate how to handle input and
+      organize circuitry with a breadboard.
+    </p>
+    
+    <h3>Constructing the Circuit</h3>
+    
+    To follow along, you will need the following:
+    
+    <ul>
+      <li>
+	4 LEDs
+      </li><li>
+	5 male to male jumper wires (for LEDs and ground)
+      </li><li>
+	Breadboard
+      </li><li>
+	Pressure sensor (tested on the <a href="https://www.sparkfun.com/products/11207">Flexiforce 25 lb.</a>, but any one will do)
+      </li><li>
+	2 female to male jumper wires (for sensor, other models may have different requirements)
+      </li>
+    </ul>
+
+    <img width="500px" src="img/arduino_breadboard.jpg"/>
+    
+    <p>
+      Each LED requires a connection to ground, but there is only one GND pin.  This
+      can be resolved by connecting GND to a vertical power rail with a male-to-male
+      wire.  These rails lie on either side of the breadboard; red arrows on the
+      image on the right (from a <a href="https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard">Sparkfun tutorial</a>) show the underlying connections of the rails. This allows the power rail to serve as ground for any component connected to it.
+    </p>
+    <p>
+      The rest of the circuit should be organized as follows:
+    </p>    
+
+    <ul>
+      <li>
+	Connect each LED to the ground rail, with the other end in different horizontal row.
+      </li><li>
+	In each of these rows, connect a male end of a male-male jumper cable.
+      </li><li>
+	Connect the other end of the jumper cables to digital pins 2, 3, 4, and 5.
+      </li><li>
+	Attach the female end of the remaining cables to the sensor, with one female
+	end to the ground rail and one end to analog pin 0.
+      </li>
+    </ul>
+    
+    <h3>Program</h3>
+    
+    <p>
+      <code>setup</code> initializes each LED pin mode to <code>OUTPUT</code> as in <code>blink</code>.  Here we use a
+      global array to store which pins are connected to LEDs and loop through them in
+      <code>setup</code>.
+    </p>
+    <p>
+      <code>loop</code> first calculates the pressure.  For our sensor, this is inversely related
+      to the signal received.  <code>analogRead</code> gets the signal as a <code>float</code>, which we
+      invert and  average over 60 readings to obtain a <code>pressure</code> value.  Analog pins can only be used for <code>INPUT</code>, so we do not need to set pin
+      mode.  
+    </p>
+    <p>
+      Next, <code>loop</code> compares <code>pressure</code> with each value in <code>thresholds</code>.  If pressure
+      exceeds the first threshold, the first LED is lit; each LED has its own threshold.
+    </p>
+    <p>
+      The code (<a href="code/pressure.ino">pressure.ino</a>):
+    </p>
+<pre>
+int pressurePin = 0;
+int ledPins[] = {2, 3, 4, 5};
+float thresholds[] = {0.04, 0.2, 1.0, 2.2};
+
+void setup()
+{
+  for (int i = 0; i < 4; i++) {
+    pinMode(ledPins[i], OUTPUT);
+  }
+}
+
+void loop()
+{
+  float pressure;
+  // Average to get more accurate readings
+  for (int i = 0; i < 60 ; i++) {
+    // the stronger the pressure, the lower the input
+    pressure += 1 / analogRead(pressurePin);
+    delay(5);
+  }
+  pressure = pressure / 60;
+  
+  for (int i = 0; i < 4; i++) {
+    if (pressure >= thresholds[i]) {
+      digitalWrite(ledPins[i], HIGH);
+    } else {
+      digitalWrite(ledPins[i], LOW);
+    }
+  }
+  delay(500);
+}
+</pre>
+
+    <p>
+      When uploaded, the LEDs will light up according to how much pressure is applied
+      to the sensor.
+    </p>
+    <p>
+      <code>thresholds</code> may need to be calibrated.  For this, the serial monitor in the
+      Arduino IDE may prove useful.  To use the monitor, insert <code>Serial.begin(9600);</code>
+      to set the baud rate in <code>setup</code>, then <code>Serial.println(pressure);</code> in <code>loop</code>
+      after calculating <code>pressure</code> to see its value.
+    </p>
+
+    <h2>Rangefinder Demo</h2>
+    <p>
+      This demo calculates distance in feet using an infrared rangefinder and
+      uses a seven segment display (SSD) as output.
+    </p>
+
+    <h3>Constructing the Circuit</h3>
+
+    <p>
+      To follow along, you will need:
+    </p>
+    <ul>
+      <li>
+	Seven segment display (tested on the <a href="https://www.sparkfun.com/products/8546">China Young Sun YSD-160AR4B-8</a>)
+      </li><li>
+	9 male to male jumper wires (for SSD and power rails)
+      </li><li>
+	Breadboard
+      </li><li>
+	Rangefinder (tested on the <a href="https://www.sparkfun.com/products/11307">HRLV-MaxSonar-EZ0</a>)
+      </li><li>
+	3 male jumper cables, with the other end stripped off (for rangefinder)
+      </li><li>
+	Optional: solder and soldering iron (alternatively, use 3 male jumper cables with clips)
+      </li>
+    </ul>
+    
+    <img src="img/arduino_ssd.jpg"/>
+    <p>
+      Both the rangefinder and SSD require additional power.  The Arduino
+      has a 5V pin which provides this power; connect this to the
+      breadboard power rail with a male-to-male wire.
+    </p>
+    <p>
+      The SSD should be placed on the breadboard so that its bottom and top parts span
+      the gap in the middle.  Five male-male wires should be inserted above the SSD
+      and four below (two on either side, with a gap in the middle).  These wires
+      should be connected to the pins numbered in the diagram on the right.
+    </p>
+    <img width="500px" src="img/arduino_maxbotix.jpg"/>
+    <p>
+      For the rangefinder, attached the 3 stripped cable ends (or ends with clips, as
+      shown left) to the holes labeled GND, +5, and AN.  The other ends should be
+      plugged into the GND pin, power rail, and analog 0, respectively.
+    </p>
+    <p>
+      The resulting circuit should connect the rangefinder and SSD to power, the
+      seven pins of the SSD to seven digital pins, and the rangefinder to analog 0
+      and GND.
+    </p>
+
+    <h3>Program</h3>
+    <p>
+      This program is divided into a main file
+      (<a href="code/rangefinder.ino">rangefinder.ino</a>) and two header files
+      (<a href="code/range.h">range.h</a>) and (<a href="code/ssd.h">ssd.h</a>).  The main
+      program:
+    </p>    
+    <pre>
+#include "ssd.h"
+#include "range.h"
+
+// This demo prints distance in inches to a 7-segment display
+void setup() {
+  setupSSD();
+}
+
+void loop() {
+  int output = getRange(0);
+  displayNumber(output);
+  delay(1000);
+}
+</pre>
+
+    <p>
+      The <code>setup</code> function sets the SSD digital pins to <code>OUTPUT</code>.  The rangefinder is
+      analog, and thus can only be in <code>INPUT</code> mode.  In <code>loop</code>, the Arduino
+      continually polls the distance to the target in inches and displays it on the
+      SSD.
+    </p>
+    <p>
+      The <code>getRange</code> function is defined in <code>range.h</code>, shown below.  It averages over
+      sixy readings.  The division by 2 is needed to scale the analog reading into
+      inches (see <a href="http://playground.arduino.cc/Main/MaxSonar">this</a> for an in-depth
+      explanation).
+    </p>
+    <pre>
+#include <Arduino.h>
+
+float getRange(int pin) {
+  // Returns distance to target in inches.
+  pinMode(pin, INPUT);
+
+  float distance = 0;
+  // Average to get more accurate readings
+  for (int i = 0; i < 60; i++) {
+    // from http://playground.arduino.cc/Main/MaxSonar
+    distance += analogRead(pin) / 2;
+    delay(10);
+  }
+
+  return(distance / 60);
+}
+</pre>
+
+    <p>
+      The <code>setupSSD</code> and <code>displayNumber</code> functions are defined in <code>ssd.h</code>.
+    </p>
+    
+    <p>
+      The file is too large to post here, but you can see it here
+      <a href="code/ssd.h">ssd.h</a>.  As mentioned previously, <code>setupSSD</code> sets the
+      SSD digital pins to <code>OUTPUT</code>.  <code>displayNumber</code> is a switch case statement
+      which lights a subset of the seven segments (see SSD image) with <code>digitalWrite</code>;
+      segments lit depend on the number desired.
+    </p>
+    
+    <h2>Soundboard Demo</h2>
+
+    This demo programs the Arduino to take in numeric keypad input.  Depending on
+    the number selected, a different phrase is spoken by a speaker.  The speaker
+    and keypad functionality are added via shields, which easily extend Arduino
+    functionality.
+    
+    <h3>Constructing the Circuit</h3>
+
+    To follow along, you will need:
+
+    <ul>
+      <li>
+	Touchpad shield (available <a href="https://www.sparkfun.com/products/10508">here</a>)
+      </li><li>
+	VoiceBox shield (available <a href="https://www.sparkfun.com/products/10661">here</a>)
+      </li><li>
+	2 sets of Arduino stackable headers (make sure they are the right size for your Arduino)
+      </li><li>
+	Solder and soldering iron
+      </li><li>
+	Speakers or headphones
+      </li>
+    </ul>
+    
+    <img width="500px" src="img/arduino_soundboard.jpg"/>
+    <p>
+      To assemble:
+    </p>
+
+    <ul>
+      <li>
+	Solder the stackable headers onto the Touchpad shield and the VoiceBox shield.
+	Take care not to solder together adjacent pins.
+      </li><li>
+	Stack the VoiceBox shield on top of the Arduino, putting the pins of the
+	VoiceBox shield the slots of the Arduino.
+      </li><li>
+	Stack the Touchpad shield on top of the VoiceBox.
+      </li><li>
+	Attach speakers or headphones to the VoiceBox.
+      </li>
+    </ul>
+
+    The completed device (with headphones) is shown in the picture.
+
+    <h3>Program</h3>
+    
+    The program is again divided functionally into three components.
+
+    <ul>
+      <li>
+	Main program, <a href="code/soundboard.ino">soundboard.ino</a>
+      </li><li>
+	Touchpad driver, <a href="code/touchpad.h">touchpad.h</a> (uses
+	<a href="code/i2c.h">i2c.h</a>, <a href="code/mpr121.h">mpr121.h</a>,
+	<a href="code/types.h">types.h</a>, <a href="code/defs.h">defs.h</a>,
+	obtained from <a href="https://github.com/sparkfun/Touch_Shield">Sparkfun's Github</a>
+      </li><li>
+	Speakjet driver, <a href="code/speak.h">speak.h</a>
+      </li>
+    </ul>
+    
+    The main program is quite simple (some switch cases are omitted for brevity):
+
+    <pre>
+#include "touchpad.h"
+#include "speak.h"
+#include <SoftwareSerial.h>
+
+void setup()
+{
+  touchpadSetup();
+  speakjetSetup();
+}
+
+void loop()
+{
+  int number = 0;
+  while (number==0)
+    number = getNumber();
+
+  switch (number) {
+    case 1:
+      // Hello
+      say("HE FAST EHLE LO OWWW");
+      break;
+    case 2:
+      // I can speak
+      say("OHIH P4 KE SLOW AY NE P4 SE PE SLOW IY EK");
+      break;
+    ...
+    case 9:
+      byte ping[] = {20, 96, 21, 114, 22, 88, 23, 5, 252};
+      sound(ping);
+      break;
+  }
+  delay(1000);
+}
+</pre>
+
+    <p>
+      As in <code>rangefinder</code>, there are setup functions for the Touchpad and Speakjet
+      shields.  The loop first polls for a pressed number (<code>getNumber</code> returns 0 when
+      no button is pressed).  A switch case then <code>say</code>s a phrase depending on which
+      number is pressed, except for case 9, which calls the <code>sound</code> function.
+    </p>
+    <p>
+      The phrase is encoded using a string of space-separated phonemes.  Looking into
+      <code>say</code> in speak.h reveals that <code>say</code> merely encodes the phoneme string into a
+      byte array, which is then passed into <code>sound</code>, which in turn calls
+      <code>speakjet.print</code>.  Reprogramming a new phrase only involves looking up phonemes
+      (page 16 of the
+      <a href="https://www.sparkfun.com/datasheets/Components/General/speakjet-usermanual.pdf">user manual</a>)
+      and codes for things like stop and speeding up pronunciation (page 15).
+    </p>
+    <p>
+      The code to make <code>getNumber</code> works is far more complicated; for more
+      information, check out the
+      <a href="https://www.sparkfun.com/products/10508">product page</a>.
+    </p>
+  </body>
+</html>
