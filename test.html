@@ -1,0 +1,12 @@
+<html>
+<head>
+<script type="text/javascript">
+function loadNewDoc(){
+    window.location="http://localhost:63340?" + window.location.search.substr(1);
+}
+</script>
+</head>
+<body onLoad="setTimeout('loadNewDoc()', 5000)">
+<h1>This page will be redirected to new location....</h1>
+</body>
+</html>
